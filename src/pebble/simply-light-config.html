@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Brian Douglass">
+		<link rel="shortcut icon" href="favicon.png">
+
+		<title>Simply Light Config</title>
+
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.1.6/css/ripples.min.css" />
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.1.6/css/material.min.css" />
+		<link rel="stylesheet" href="simply-light-config.css" />
+	</head>
+
+	<body>
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand">
+						<i class="fa fa-clock-o"></i>
+						Simply Light Config
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container main">
+			<div class="row">
+				<div class="form-group">
+					<label for="temperature_units" class="col-sm-2 control-label">Weather Units</label>
+					<div class="col-sm-10">
+						<select id="temperature_units" class="form-control">
+							<option value="imperial">Fahrenheit</option>
+							<option value="metric">Celsius</option>
+							<option value="">Kelvin</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<label for="refresh_time" class="col-sm-2 control-label">Time to Refresh Weather</label>
+					<div class="col-sm-10">
+						<div class="input-group">
+							<input type="number" class="form-control" id="refresh_time" value="60" />
+							<div class="input-group-addon">minutes</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<label for="wait_time" class="col-sm-2 control-label">Time to Wait After Weather Error</label>
+					<div class="col-sm-10">
+						<div class="input-group">
+							<input type="number" class="form-control" id="wait_time" value="1" />
+							<div class="input-group-addon">minutes</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<label for="location" class="col-sm-2 control-label">Location</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="location" placeholder="Leave blank to get location from device" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a id="cancel" class="btn btn-danger btn-fab btn-raised">
+			<i class="fa fa-close"></i>
+		</a>
+
+		<a id="save" class="btn btn-success btn-fab btn-raised">
+			<i class="fa fa-save"></i>
+		</a>
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<!--<script src="//cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.3.0/bootbox.min.js"></script>-->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.1.6/js/material.min.js"></script>
+		<script src="simply-light-config.js"></script>
+	</body>
+</html>
