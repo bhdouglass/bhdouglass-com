@@ -1,0 +1,31 @@
+.clickable {
+	cursor: pointer;
+}
+
+#headerwrap a {
+	color: #384452;
+}
+
+#headerwrap a:hover {
+	color: #428bca;
+}
+
+#headerwrap i {
+	font-size: 60px;
+	padding: 15px;
+	color: #f7f7f7;
+}
+
+#twrap a {
+	color: #384452;
+	font-style: italic;
+	border-bottom: 1px dashed #384452;
+}
+
+#twrap a:hover {
+	color: #428bca;
+}
+
+#twrap h1 {
+	margin-top: 100px;
+}
