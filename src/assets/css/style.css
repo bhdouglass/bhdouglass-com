@@ -29,3 +29,15 @@
 #twrap h1 {
 	margin-top: 100px;
 }
+
+.he-wrap.tpl6 {
+	display: inline-block;
+}
+
+.portfolio-item.graphic-design {
+	display: inline-block;
+}
+
+.pebble #headerwrap {
+	padding-bottom: 20px;
+}
