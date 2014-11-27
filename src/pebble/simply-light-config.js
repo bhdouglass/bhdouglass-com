@@ -1,87 +1,123 @@
-$(document).ready(function() {
-	console.log('version 1.1');
+var app = angular.module('app', []);
 
-	var save = $('#save');
-	var cancel = $('#cancel');
-	var saving = false;
+app.config(function($locationProvider) {
+	$locationProvider.html5Mode({
+		enabled: true,
+		requireBase: false
+	});
+});
 
-	var fields = {
-		temperature_units: $('#temperature_units'),
-		refresh_time: $('#refresh_time'),
-		wait_time: $('#wait_time'),
-		location: $('#location'),
+app.controller('indexCtrl', function ($scope, $http, $location, $timeout) {
+	$scope.saving = false;
+	$scope.version = 1.1;
+	$scope.temperature_units = [
+		{
+			label: 'Fahrenheit',
+			value: 'imperial'
+		}, {
+			label: 'Celsius',
+			value: 'metric'
+		}, {
+			label: 'Kelvin',
+			value: ''
+		}
+	];
+
+	$scope.color_invert = [
+		{
+			label: 'White Background with Black Text',
+			value: 0
+		}, {
+			label: 'Black Background with White Text',
+			value: 1
+		}
+	];
+
+	$scope.config_ints = ['refresh_time', 'wait_time'];
+
+	$scope.config = {
+		temperature_units: 'imperial',
+		refresh_time: 30,
+		wait_time: 1,
+		location: '',
+		color_invert: 0,
+	};
+
+	$scope.errors = {
+		refresh_time: false,
+		wait_time: false,
+		location: false,
+	};
+
+	function validateInt(value, error) {
+		if (parseInt(value) === value && parseInt(value) > 0) {
+			error = false;
+			value = parseInt(value);
+		}
+		else {
+			value = 1;
+			error = true;
+		}
+
+		return value;
 	}
 
-	var data = window.location.hash.replace('#', '');
-	if (data) {
-		var config = JSON.parse(decodeURIComponent(data));
-		console.log(config);
-		for (key in config) {
-			if (fields[key]) {
-				fields[key].val(config[key]);
+	angular.forEach($scope.config_ints, function(name) {
+		$scope.$watch('config.' + name, function() {
+			validateInt($scope.config[name], $scope.errors[name]);
+		});
+	});
+
+	$scope.cancel = function() {
+		if ($scope.saving) {
+			return;
+		}
+
+		window.location.href = 'pebblejs://close#cancel';
+	};
+
+	$scope.save = function() {
+		if ($scope.saving) {
+			return;
+		}
+
+		$scope.saving = true;
+
+		var error = false;
+		angular.forEach($scope.errors, function(err) {
+			if (err) {
+				error = true;
 			}
+		});
+
+		$scope.saving = false;
+		if (!error) {
+			console.log($scope.config);
+			window.location.href = 'pebblejs://close#' + encodeURIComponent(JSON.stringify($scope.config));
 		}
+	};
+
+	var hash = $location.hash();
+	if (hash) {
+		var config = JSON.parse(decodeURIComponent(hash));
+		console.log(config);
+
+		angular.forEach(config, function(value, key) {
+			if ($scope.config[key] !== undefined) {
+				if ($scope.config_ints.indexOf(key) >= 0) {
+					$scope.config[key] = validateInt(value);
+				}
+				else {
+					$scope.config[key] = value;
+				}
+			}
+		});
+		console.log($scope.config);
 	}
 
-	save.click(function() {
-		if (saving) {
-			return;
-		}
-
-		saving = true;
-		save.find('i').removeClass('fa-save');
-		save.find('i').addClass('fa-spin');
-		save.find('i').addClass('fa-spinner');
-		save.prop('disabled', true);
-		cancel.prop('disabled', true);
-
-		var valid = true;
-
-		var refresh_time = fields.refresh_time.val();
-		if ($.isNumeric(refresh_time)) {
-			refresh_time = parseInt(refresh_time);
-			fields.refresh_time.closest('.form-group').removeClass('has-error');
-		}
-		else {
-			valid = false;
-			fields.refresh_time.closest('.form-group').addClass('has-error');
-		}
-
-		var wait_time = fields.wait_time.val();
-		if ($.isNumeric(wait_time)) {
-			wait_time = parseInt(wait_time);
-			fields.wait_time.closest('.form-group').removeClass('has-error');
-		}
-		else {
-			valid = false;
-			fields.wait_time.closest('.form-group').addClass('has-error');
-		}
-
-		if (valid) {
-			var config = {
-				temperature_units: fields.temperature_units.val(),
-				refresh_time: refresh_time,
-				wait_time: wait_time,
-				location: fields.location.val(),//TODO validate location
-			};
-
-			console.log(config);
-			location.href = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(config));
-		}
-
-		saving = false;
-		save.find('i').addClass('fa-save');
-		save.find('i').removeClass('fa-spin');
-		save.find('i').removeClass('fa-spinner');
-		save.prop('disabled', false);
-		cancel.prop('disabled', false);
-	});
-
-	cancel.click(function() {
-		if (saving) {
-			return;
-		}
-
-		location.href = 'pebblejs://close#cancel'
-	});
+	var query = $location.search();
+	if (query.version) {
+		$scope.version = parseFloat(query.version);
+	}
+	console.log('version: ' + $scope.version);
 });
