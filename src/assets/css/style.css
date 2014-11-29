@@ -41,3 +41,7 @@
 .pebble #headerwrap {
 	padding-bottom: 20px;
 }
+
+.remindor #headerwrap {
+	min-height: 400px;
+}
