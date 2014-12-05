@@ -10,6 +10,7 @@ app.config(function($locationProvider) {
 app.controller('indexCtrl', function ($scope, $http, $location, $timeout) {
 	$scope.saving = false;
 	$scope.version = 1.1;
+	$scope.latestVersion = 1.3;
 	$scope.temperature_units = [
 		{
 			label: 'Fahrenheit',
@@ -33,6 +34,16 @@ app.controller('indexCtrl', function ($scope, $http, $location, $timeout) {
 		}
 	];
 
+	$scope.night_auto_switch = [
+		{
+			label: 'Do no automatically invert colors',
+			value: 0
+		}, {
+			label: 'Automatically invert colors after sunset',
+			value: 1
+		}
+	];
+
 	$scope.config_ints = ['refresh_time', 'wait_time'];
 
 	$scope.config = {
@@ -41,6 +52,7 @@ app.controller('indexCtrl', function ($scope, $http, $location, $timeout) {
 		wait_time: 1,
 		location: '',
 		color_invert: 0,
+		night_auto_switch: 0,
 	};
 
 	$scope.errors = {
