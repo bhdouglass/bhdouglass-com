@@ -1,5 +1,7 @@
 # bhdouglass.com #
 
+[ ![Codeship Status for bhdouglass.com](https://www.codeship.io/projects/571b1aa0-63e1-0132-1973-32c060907738/status?branch=master)](https://codeship.com/projects/52455)
+
 My personal website - [bhdouglass.com](http://bhdouglass.com)
 
 ## Libraries & Resources ##
