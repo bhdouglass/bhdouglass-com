@@ -44,3 +44,8 @@ Redirect 301 /static/remindor/date.html /remindor/manual.html
 Redirect 301 /static/remindor/preferences.html /remindor/manual.html
 Redirect 301 /static/remindor/time.html /remindor/manual.html
 Redirect 301 /static/remindor/services.html /remindor/manual.html
+
+#Pebble
+Redirect 301 /pebble/simply-light-config.html /pebble/simply-light-config/index.html
+Redirect 301 /pebble/simply-light-config.css /pebble/simply-light-config/main.css
+Redirect 301 /pebble/simply-light-config.js /pebble/simply-light-config/app.js
