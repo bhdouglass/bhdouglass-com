@@ -20,7 +20,7 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
 		<!--<script src="//cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.3.0/bootbox.min.js"></script>-->
 		<!--<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.1.6/js/material.min.js"></script>-->
-		<script src="simply-light-config.js"></script>
+		<script src="simply-light-config.js?v=1.4"></script>
 	</head>
 
 	<body ng-controller="indexCtrl">
@@ -123,11 +123,23 @@
 
 				<div class="row" ng-show="version >= 1.3">
 					<div class="form-group">
-						<label for="night_auto_switch" class="col-sm-2 control-label">Auto Invert Colors After Sunset</label>
+						<label for="night_auto_switch" class="col-sm-2 control-label">Auto Invert Colors At Night</label>
 						<div class="col-sm-10">
 							<select id="night_auto_switch" class="form-control" ng-model="config.night_auto_switch" ng-options="o.value as o.label for o in night_auto_switch"></select>
 							<p class="small-note pull-right">
 								*Sunset data is based on your location
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row" ng-show="version >= 1.4">
+					<div class="form-group">
+						<label for="show_am_pm" class="col-sm-2 control-label">Show AM/PM</label>
+						<div class="col-sm-10">
+							<select id="show_am_pm" class="form-control" ng-model="config.show_am_pm" ng-options="o.value as o.label for o in show_am_pm"></select>
+							<p class="small-note pull-right">
+								*Only when using a 12 hour clock
 							</p>
 						</div>
 					</div>

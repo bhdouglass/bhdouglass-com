@@ -10,7 +10,7 @@ app.config(function($locationProvider) {
 app.controller('indexCtrl', function ($scope, $http, $location, $timeout) {
 	$scope.saving = false;
 	$scope.version = 1.1;
-	$scope.latestVersion = 1.3;
+	$scope.latestVersion = 1.4;
 	$scope.temperature_units = [
 		{
 			label: 'Fahrenheit',
@@ -39,7 +39,17 @@ app.controller('indexCtrl', function ($scope, $http, $location, $timeout) {
 			label: 'Do no automatically invert colors',
 			value: 0
 		}, {
-			label: 'Automatically invert colors after sunset',
+			label: 'Automatically invert colors at night',
+			value: 1
+		}
+	];
+
+	$scope.show_am_pm = [
+		{
+			label: 'Do not show AM/PM',
+			value: 0
+		}, {
+			label: 'Show AM/PM',
 			value: 1
 		}
 	];
@@ -53,6 +63,7 @@ app.controller('indexCtrl', function ($scope, $http, $location, $timeout) {
 		location: '',
 		color_invert: 0,
 		night_auto_switch: 0,
+		show_am_pm: 0,
 	};
 
 	$scope.errors = {
@@ -131,5 +142,7 @@ app.controller('indexCtrl', function ($scope, $http, $location, $timeout) {
 	if (query.version) {
 		$scope.version = parseFloat(query.version);
 	}
+
 	console.log('version: ' + $scope.version);
+	console.log('lastest version: ' + $scope.latestVersion);
 });
