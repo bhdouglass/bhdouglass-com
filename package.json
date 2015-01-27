@@ -1,0 +1,24 @@
+{
+  "name": "bhdouglass.com",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhdouglass/bhdouglass.com.git"
+  },
+  "author": "Brian Douglass",
+  "license": "GPL3",
+  "bugs": {
+    "url": "https://github.com/bhdouglass/bhdouglass.com/issues"
+  },
+  "homepage": "https://github.com/bhdouglass/bhdouglass.com",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.1",
+    "grunt-contrib-connect": "^0.7.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^0.4.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
