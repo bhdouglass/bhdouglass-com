@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en" itemscope itemtype="http://schema.org/WebPage">
+        <title>Brian Douglass</title>
+        <link rel="shortcut icon" href="/favicon.png">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+
+        <meta name="description" content="Software Engineer" />
+
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="Brian Douglass" />
+        <meta itemprop="description" content="Software Engineer" />
+        <meta itemprop="image" content="/img/logo.png" />
+
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@bhdouglass" />
+        <meta name="twitter:title" content="Brian Douglass" />
+        <meta name="twitter:description" content="Software Engineer" />
+        <meta name="twitter:image:src" content="/img/logo.png" />
+
+        <!-- Open Graph data -->
+        <meta property="og:title" content="Brian Douglass" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://bhdouglass.com" />
+        <meta property="og:image" content="/img/logo.png" />
+        <meta property="og:description" content="Software Engineer" />
+        <meta property="og:site_name" content="Brian Douglass" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/libs.css" />
+        <link rel=stylesheet href="/main.css" />
+
+        <!-- JS -->
+        <script src="app.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-material-blue">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="/">
+                        Brian Douglass
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li {% if page == 'projects' %} class="active" {% endif %}><a href="/projects.html">Projects</a></li>
+                        <li {% if page == 'skills' %} class="active" {% endif %}><a href="/skills.html">Skills</a></li>
+                        <li><a href="http://blog.bhdouglass.com/">Blog</a></li>
+                        <li {% if page == 'contact' %} class="active" {% endif %}><a href="/contact.html">Contact Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        {% block content %}
+        {% endblock %}
+
+        <footer class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <h4><i class="fa fa-code"></i> Code</h4>
+                    <p>
+                        <a href="https://github.com/bhdouglass">
+                            <i class="fa fa-fw fa-github-alt"></i>
+                            GitHub
+                        </a>
+                        <br/>
+                        <a href="https://code.launchpad.net/~bhdouglass/">
+                            <i class="fa fa-fw fa-rocket"></i>
+                            Launchpad
+                        </a>
+                        <br/>
+                        <a href="https://www.npmjs.com/~bhdouglass">
+                            <i class="fa fa-fw fa-file-code-o"></i>
+                            NPM
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-xs-4">
+                    <h4><i class="fa fa-phone"></i> Contact</h4>
+                    <p>
+                        <a href="/contact.html" rel="facebox">
+                            <i class="fa fa-fw fa-envelope"></i>
+                            Email
+                        </a>
+                        <br/>
+                        <a href="https://twitter.com/bhdouglass">
+                            <i class="fa fa-fw fa-twitter"></i>
+                            Twitter
+                        </a>
+                        <br/>
+                        <a href="http://careers.stackoverflow.com/bhdouglass">
+                            <i class="fa fa-fw fa-stack-overflow"></i>
+                            Careers 2.0
+                        </a>
+                        <br/>
+                        <a href="http://www.linkedin.com/pub/brian-douglass/36/8a5/b0">
+                            <i class="fa fa-fw fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-xs-4">
+                    <h4><i class="fa fa-map-marker"></i> Home Base</h4>
+                    <div class="hline-w"></div>
+                    <p>
+                        DuBois, PA
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

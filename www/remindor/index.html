@@ -1,0 +1,110 @@
+{% set page = "remindor" %}
+{% extends "template.html" %}
+
+{% block content %}
+<div class="container">
+	<div class="row text-center">
+		<div class="col-md-12">
+			<h1>Remindor Apps</h1>
+		</div>
+	</div>
+
+	<div class="row text-center">
+		<div class="col-md-6">
+			<img src="/img/remindor/indicator-remindor.png" />
+			<h2>Indicator Remindor</h2>
+		</div>
+		<div class="col-md-6">
+			<img src="/img/remindor/remindor-qt.png" />
+			<h2>Remindor Qt</h2>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<blockquote>
+				Built for people that want more than an alarm clock, the
+				Remindor Apps are designed to give the user fully customizable
+				and repeatable reminders. The Remindor apps are more than
+				alarm clocks because they allow you to express dates and
+				times in plain English (and other languages to a lesser
+				extent) and they allow reminders to repeat in many different
+				ways. Reminders can pop up a notification, play a sound,
+				run a command, or even send reminders to your phone (via
+				Boxcar or Pushbullet). All this wrapped in an easy-to-use interface.
+			</blockquote>
+		</div>
+		<div class="col-md-6">
+			<blockquote>
+				There are many situations in which you'll find Indicator Remindor useful:
+				you can use it to set reminders about important events, to get a
+				notification when your favourite TV show is about to start or to wake you
+				up in the morning, etc.
+				<a href="http://www.webupd8.org/2012/07/schedule-alarms-reminders-in-ubuntu.html">
+					<small>
+						Alin Andrei on
+						<cite title="Schedule Alarms / Reminders In Ubuntu With Indicator Remindor">
+							WebUpd8
+						</cite>
+					</small>
+				</a>
+			</blockquote>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4">
+			<h3 class="centered">Install Indicator Remindor</h3>
+			<h4 class="centered">Ubuntu 12.04, 14.04, &amp; 14.10</h4>
+			<pre>sudo apt-add-repository ppa:bhdouglass/indicator-remindor
+
+sudo apt-get update
+
+sudo apt-get install indicator-remindor</pre>
+			<p>
+				<a href="https://launchpad.net/~bhdouglass/+archive/ubuntu/indicator-remindor">
+					100% Open Source
+				</a>
+				<br/>
+				<a href="manual.html">
+					User Manual
+				</a>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h3 class="centered">Install Remindor Qt</h3>
+			<h4 class="centered">Ubuntu 12.04, 14.04, &amp; 14.10</h4>
+			<pre>sudo apt-add-repository ppa:bhdouglass/indicator-remindor
+
+sudo apt-get update
+
+sudo apt-get install remindor-qt</pre>
+			<p>
+				<a href="https://github.com/bhdouglass/remindor-qt">
+					100% Open Source
+				</a>
+				<br/>
+				<a href="manual.html">
+					User Manual
+				</a>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h3 class="centered">Install Remindor Shell</h3>
+			<h4 class="centered">Gnome Shell extension for Gnome 3.10 &amp; 3.12</h4>
+			<pre>wget https://github.com/bhdouglass/remindor-shell/archive/master.zip
+
+unzip master.zip
+
+mkdir -p ~/.local/share/gnome-shell/extensions/
+
+mv ~/.local/share/gnome-shell/extensions/remindor-shell@bhdouglass.com/</pre>
+			<p>
+				<a href="https://github.com/bhdouglass/remindor-shell">
+					100% Open Source
+				</a>
+			</p>
+		</div>
+	</div>
+</div>
+{% endblock %}

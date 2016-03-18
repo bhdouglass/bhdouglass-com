@@ -1,0 +1,130 @@
+{% set page = "index" %}
+{% extends "template.html" %}
+
+{% block content %}
+<div class="container index">
+    <div class="row">
+        <div class="col-sm-3 col-sm-offset-3">
+            <h1>Brian Douglass</h1>
+        </div>
+        <div class="col-sm-6">
+            <h2>Senior Software Engineer</h2>
+            <h2>@ <a href="http://www.showroomlogic.com/">Showroom Logic</a></h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class ="col-sm-4">
+            <div class="text-center">
+                <i class="fa fa-laptop fa-3x"></i>
+            </div>
+
+            <h3 class="text-center">Current Work</h3>
+            <h4><a href="http://www.showroomlogic.com/">Showroom Logic</a></h4>
+            <p>
+                Full stack development of advertising solutions. Including
+                maintaining large scale web apps, architecting creative
+                solutions, and managing a small team of remote developers.
+                Primary development in AngularJS, PHP, and Python.
+            </p>
+        </div>
+        <div class ="col-sm-4">
+            <div class="text-center">
+                <i class="fa fa-desktop fa-3x"></i>
+            </div>
+
+            <h3 class="text-center">Past Work</h3>
+            <h4><a href="http://diversilabs.com/">DiversiLabs</a></h4>
+            <p>
+                Developed medical software for desktops that assisted in complex
+                radiological treatment plans.
+                Primary development in Qt/C++, Matlab, and HTML.
+            </p>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="text-center">
+                <i class="fa fa-university fa-3x"></i>
+            </div>
+
+            <h3 class="text-center">Education</h3>
+            <h4><a href="http://www.messiah.edu">Messiah College</a></h4>
+            <p>
+                Bachelor of Science in Computer and Information Science
+            </p>
+            <p>
+                <a href="http://adwords.google.com">Google AdWords</a> Certified
+            </p>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <h2>Projects</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <a href="https://uappexplorer.com/">
+                <img src="/img/uappexplorer.png" alt="uApp Explorer" class="center-block" />
+            </a>
+            <h3 class="text-center">
+                <a href="https://uappexplorer.com/">uApp Explorer</a>
+            </h3>
+
+            <p>
+                The number 1 source for information about Ubuntu Touch Apps and
+                the unofficial apps store on the web! Find out everything about
+                Ubuntu Touch apps including screenshots, reviews, and more.
+                uApp Explorer sports a frontend built with React and an NodeJS
+                based api.
+            </p>
+
+            <a href="https://uappexplorer.com/">Browse</a>
+            <a href="https://github.com/bhdouglass/uappexplorer" class="pull-right">Source</a>
+        </div>
+        <div class="col-sm-4">
+            <a href="/pebble/">
+                <img src="/img/simply-light.png" alt="Simply Light" class="center-block" />
+            </a>
+            <h3 class="text-center">
+                <a href="/pebble/">Simply Light</a>
+            </h3>
+
+            <p>
+                Weather at a glance on your wrist! Simply Light is a highly
+                customizable watchface for both Pebble and Pebble Time smartwatches.
+                Development of Simply Light takes place in C for the watchface
+                and JavaScript for the application logic with a configuration
+                page built on AngularJS.
+            </p>
+
+            <a href="https://apps.getpebble.com/applications/5472c040c13ebf3ddf000045">Download</a>
+            <a href="https://github.com/bhdouglass/simply-light" class="pull-right">Source</a>
+        </div>
+        <div class="col-sm-4">
+            <a href="http://rockwork.bhdouglass.com/">
+                <img src="/img/rockwork.png" alt="Rockwork" class="center-block" />
+            </a>
+            <h3 class="text-center">
+                <a href="http://rockwork.bhdouglass.com/">Rockwork</a>
+            </h3>
+
+            <p>
+                Rockwork is a collaborative effort to support Pebble smartwatches
+                on the Ubuntu Touch operating system. It already supports most
+                of the features of the official Android and iOS apps plus some
+                extras! Rockwork is a daemon written in C++/Qt with a QML client app.
+            </p>
+
+            <a href="https://open.uappexplorer.com/app/rockwork.mzanetti">Install</a>
+            <a href="https://code.launchpad.net/~mzanetti/rockwork/trunk" class="pull-right">Source</a>
+        </div>
+    </div>
+
+    <div clas="row">
+        <h4 class="pull-right">
+            <a href="/projects.html">More Projects <i class="fa fa-external-link"></i></a>
+        </h4>
+    </div>
+</div>
+{% endblock %}

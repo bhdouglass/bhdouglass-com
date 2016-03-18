@@ -1,0 +1,441 @@
+{% set page = "remindor" %}
+{% extends "template.html" %}
+
+{% block content %}
+<div class="container">
+	<div class="row text-center">
+		<div class="col-md-12">
+			<h1>Remindor Apps</h1>
+		</div>
+	</div>
+
+	<div class="row text-center">
+		<div class="col-md-6">
+			<img src="/img/remindor/indicator-remindor.png" />
+			<h2>Indicator Remindor</h2>
+		</div>
+		<div class="col-md-6">
+			<img src="/img/remindor/remindor-qt.png" />
+			<h2>Remindor Qt</h2>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2>User Manual</h2>
+			Indicator Remindor &amp; Remindor-Qt are indicator apps
+			that allows you to schedule reminders. A reminder can be
+			configured to show a notification, play a sound, and/or
+			run a command. Reminders can be scheduled on one day or
+			they can be set to repeat every day, every monday, every
+			30 days, etc. They can also be set to repeat minutely or hourly.
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2><a id="add">Add Reminder Window</a></h2>
+			<h3>Reminder Tab</h3>
+			<ul>
+				<li>Label: The title for your reminder</li>
+				<li>Time: Time of day when you want the reminder to run</li>
+				<li>Date: Dates when you want the reminder to run</li>
+				<li>Command: Command to run when the reminder runs (can contain <a href="#inserts">inserts</a>)</li>
+				<li>Notes: Notes for your reminder (shown under the label in the notification window) (can contain <a href="#inserts">inserts</a>)</li>
+			</ul>
+
+			<h3>Notification Tab</h3>
+			<ul>
+				<li>Popup: Whether or not to pop up a notification</li>
+				<li>Dialog: Whether or not to pop up a dialog window</li>
+				<li>Boxcar: Whether or not to send a notification to <a href="http://boxcar.io/">Boxcar</a> (configured in <a href="#preferences">preferences</a>)</li>
+				<li>Pushbullet: The device to send a notification via <a href="http://pushbullet.com/">Pushbullet</a> (configured in <a href="#preferences">preferences</a>)</li>
+			</ul>
+
+			<h3>Sound Tab</h3>
+			<ul>
+				<li>Play Sound: Whether or not to play a sound when the reminder runs</li>
+				<li>Sound File: Music file to play when the reminder run</li>
+				<li>Play Length: Play the file for x amount of seconds (0 to play the whole file)</li>
+				<li>Loop Sound: Whether or not to loop the sound file for the amount of times specified in <a href="#preferences">preferences</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2><a id="simple">Simple Reminder Window</a></h2>
+			<p>
+				For each reminder the [ ] denote option attributes.
+				<span class="italics">label</span> is any label you desire.
+				<span class="italics">date</span> can be any valid
+				<a href="#single-date">singular date</a>.
+				<span class="italics">time</span> can be any valid
+				<a href="#single-date">singular time</a>.
+				<span class="italics">X</span> is any positive integer. If no time is
+				specified it is assumed to be the current time.
+			</p>
+
+			<pre>label every X (days|weeks|months|years) [at time]</pre>
+			<ul>
+				<li>Repeating reminder runs every X days, weeks, months, or years at the specifed time</li>
+			</ul>
+			<pre>label on date [at time]</pre>
+			<ul>
+				<li>Singular reminder for the specifed date and time.
+			</ul>
+			<pre>label at time</pre>
+			<ul>
+				<li>Singular reminder for the specifed time today.</li>
+				<li>If the time specifed has already passed, the reminder is scheduled for tomorrow.</li>
+			</ul>
+			<pre>label every X (minutes|hours)</pre>
+			<ul>
+				<li>Repeating reminder every X minutes or hours for today's date.</li>
+			</ul>
+			<pre>label in X (minutes|hours)</pre>
+			<ul>
+				<li>Singular reminder for X minutes or hours from now.</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2><a id="preferences">Preferences Window</a></h2>
+			<h3>Standard Reminder</h3>
+			<ul>
+				<li>Default Label: The title for regular reminder</li>
+				<li><a href="#time">Default Time</a>: Time of day when you want reminders to run</li>
+				<li><a href="#date">Default Date</a>: Dates when you want reminders to run</li>
+				<li>Default Command: Command to run when reminders run</li>
+				<li>Minutes to Postpone: Number minutes to postpone reminders</li>
+			</ul>
+
+			<h3>Notifications</h3>
+			<ul>
+				<li>Popup: Whether or not to pop up a notification</li>
+				<li>Dialog: Whether or not to pop up a dialog window</li>
+				<li>Change Indicator Icon on Reminder: Whether or not to change the indicator icon when an alarm runs (similar to the message menu's behavior for new messages)</li>
+			</ul>
+
+			<h3>Sound</h3>
+			<ul>
+				<li>Default Sound: Music to play when reminders run</li>
+				<li>Default Play Length: Play the file for x amount of seconds (0 to play the whole file)</li>
+				<li>Loop Sound: Whether or not to loop the sound file</li>
+				<li>Times to Loop: Number of times to loop the sound file</li>
+			</ul>
+
+			<h3>Quick Reminders</h3>
+			<ul>
+				<li>Default Quick Label: The default title for quick reminder</li>
+				<li>Default Quick Time: The default time (minutes/hours/days) from now for quick reminder</li>
+				<li>Default Quick Unit: The default time unit for quick reminders (minutes/hours/days)</li>
+				<li>Use Slider: When On, use a slider to select minutes for a quick reminder. When Off, use a spin box</li>
+				<li>Popup Notification: Whether or not show a popup notification with quick reminder</li>
+				<li>Dialog Notification: Whether or not show a dialog notification with quick reminder</li>
+				<li>Use standard reminder sound settings: Whether or not to use the sound settings for standard reminder with quick reminder</li>
+				<li>Show info on dialog: Whether or not show information about notifications on the quick reminder window</li>
+			</ul>
+
+			<h3>Interface Options</h3>
+			<ul>
+				<li>Today's Color: Color for "Today's Reminders" background</li>
+				<li>Future Color: Color for "Future Reminders" background</li>
+				<li>Past Color: Color for "Past Reminders" background</li>
+				<li>Hide Indicator: Hides the indicator (Only use this option if you know what you are doing! Use the command "indicator-remindor -p" to open the preferences)</li>
+			</ul>
+
+			<h3>Format</h3>
+			<ul>
+				<li>Time Format: Format for displaying times</li>
+				<li>Date Format: Format for displaying and specifying dates</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2><a id="inserts">Inserts</a></h2>
+			<p>
+				You can add special text to notes and commands that will expand to something meaningful when the reminder is run.
+				<br/>
+				Ex: <pre>It is currently +dayname+ and you are listening to +soundfile+!</pre>
+				Translation: <pre>It is currently Thursday and you are listening to alarm01.ogg</pre>
+			</p>
+			<br/>
+			<br/>
+
+			<pre>+date+</pre>
+			<ul>
+				<li>The current date as specified by the format in preferences</li>
+				<li>Ex: 12/13/2012</li>
+			</ul>
+			<pre>+month+</pre>
+			<ul>
+				<li>The current month as a number</li>
+				<li>Ex: 12</li>
+			</ul>
+			<pre>+monthname+</pre>
+			<ul>
+				<li>The full name of the current month</li>
+				<li>Ex: December</li>
+			</ul>
+			<pre>+day+</pre>
+			<ul>
+				<li>The current day of the month</li>
+				<li>Ex: 13</li>
+			</ul>
+			<pre>+dayname+</pre>
+			<ul>
+				<li>The current day of the week</li>
+				<li>Ex: Thursday</li>
+			</ul>
+			<pre>+yearday+</pre>
+			<ul>
+				<li>The current day of the year</li>
+				<li>Ex: 235</li>
+			</ul>
+			<pre>+year+</pre>
+			<ul>
+				<li>The current year</li>
+				<li>Ex: 2012</li>
+			</ul>
+			<pre>+time+</pre>
+			<ul>
+				<li>The current time as specified by the format in preferences</li>
+				<li>Ex: 8:44PM</li>
+			</ul>
+			<pre>+hour+</pre>
+			<ul>
+				<li>The current hour (in 24 hour time)</li>
+				<li>Ex: 14</li>
+			</ul>
+			<pre>+hour12+</pre>
+			<ul>
+				<li>The current hour (in 12 hour time)</li>
+				<li>Ex: 1</li>
+			</ul>
+			<pre>+minute+</pre>
+			<ul>
+				<li>The current minute</li>
+				<li>Ex: 44</li>
+			</ul>
+			<pre>+second+</pre>
+			<ul>
+				<li>The current seconds</li>
+				<li>Ex: 01</li>
+			</ul>
+			<pre>+microsecond+</pre>
+			<ul>
+				<li>The current microsecond</li>
+				<li>Ex: 023</li>
+			</ul>
+			<pre>+soundfullfile+</pre>
+			<ul>
+				<li>The soundfile (with the path) used in this reminder</li>
+				<li>Ex: /home/user/music/alarm01.ogg</li>
+			</ul>
+			<pre>+soundfile+</pre>
+			<ul>
+				<li>The soundfile (without the path) used in this reminder</li>
+				<li>Ex: alarm01.ogg</li>
+			</ul>
+			<pre>+command+</pre>
+			<ul>
+				<li>The command used in this reminder</li>
+				<li>Ex: firefox http://google.com</li>
+				<li>Note: you can't use this as an insert for commands</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2><a id="date">Valid Dates</a></h2>
+			<h3><a id="single-date">Valid Singular Dates</a></h3>
+			<p>
+				Translation examples assume today's date is September 26, 2012 and date format is '12/31/2000'.
+				(All dates are case insensitive)
+			</p>
+			<pre>today</pre>
+			<ul>
+				<li>Translation: 09/26/2012</li>
+			</ul>
+			<pre>tomorrow</pre>
+			<ul>
+				<li>Translation: 09/27/2012</li>
+			</ul>
+			<pre>yesterday</pre>
+			<ul>
+				<li>Translation: 09/25/2012</li>
+			</ul>
+			<pre>monday</pre>
+			<ul>
+				<li>Translation: 10/01/2012</li>
+				<li>Any day of the week is valid</li>
+				<li>See also <a href="#short">Abbreviations</a></li>
+			</ul>
+			<pre>next monday</pre>
+			<ul>
+				<li>Translation: 10/08/2012</li>
+				<li>Any day of the week is valid</li>
+				<li>See also <a href="#short">Abbreviations</a></li>
+			</ul>
+			<pre>October 28, 2012</pre>
+			<ul>
+				<li>Translation: 10/28/2012</li>
+			</ul>
+			<pre>oct 28</pre>
+			<ul>
+				<li>Translation: 10/28/2012</li>
+			</ul>
+			<pre>9/28/2012</pre>
+			<ul>
+				<li>Translation: 09/28/2012</li>
+			</ul>
+			<pre>9/28</pre>
+			<ul>
+				<li>Translation: 09/28/2012</li>
+			</ul>
+			<pre>9-28-2012</pre>
+			<ul>
+				<li>Translation: 09/28/2012</li>
+			</ul>
+			<pre>9-28</pre>
+			<ul>
+				<li>Translation: 09/28/2012</li>
+			</ul>
+			<pre>5</pre>
+			<ul>
+				<li>Translation: 10/01/2012</li>
+				<li>Five days from today</li>
+			</ul>
+			<pre>-5</pre>
+			<ul>
+				<li>Translation: 09/21/2012</li>
+				<li>Five days before today</li>
+			</ul>
+			<pre>next 31</pre>
+			<ul>
+				<li>Translation: 10/31/2012</li>
+				<li>Next 31st of the month (since Sept only has 30 days, this becomes Oct 31)</li>
+			</ul>
+			<pre>christmas</pre>
+			<ul>
+				<li>Translation: 12/25/2012</li>
+			</ul>
+
+			<h3><a id="repeating-date">Valid Repeating Dates</a></h3>
+			<p>
+				For each repeating date the [ ] denote option attributes. start and
+				end can be any of the above <a href="#singular">singular dates</a>.
+				X is any positive integer.
+			</p>
+			<p class="p">
+				*Any where 'month' is mentioned it is interpreted as 30 days no matter what the month is currently.
+			</p>
+			<pre>every monday [from start [to end]]</pre>
+			<ul>
+				<li>Every monday starting on/after start and ending on end</li>
+				<li>If no end date is specified, the date repeats forever</li>
+				<li>Any day of the week is valid</li>
+				<li>See also <a href="#short">Abbreviations</a></li>
+			</ul>
+			<pre>every (day|week|month|year) [from start [to end]]</pre>
+			<ul>
+				<li>Every day, week, month, or year starting on start and ending on end</li>
+				<li>If no end date is specified, the date repeats forever</li>
+			</ul>
+			<pre>every X [from start [to end]]</pre>
+			<ul>
+				<li>Every Xth of the month starting on/after start and ending on end</li>
+				<li>Valid integers for X are between 0 and 31 (including 0 and 31)</li>
+				<li>If no end date is specified, the date repeats forever</li>
+			</ul>
+			<pre>every X (days|weeks|months|years) [from start [to end]]</pre>
+			<ul>
+				<li>Every X days, weeks, months, or years starting on start and ending on end</li>
+				<li>If no start date is specified, today's date becomes the start date</li>
+				<li>If no end date is specified, the date repeats forever</li>
+			</ul>
+			<pre>every weekday [from start [to end]]</pre>
+			<ul>
+				<li>Every weekday (monday to friday) starting on/after start and ending on end</li>
+				<li>If no end date is specified, the date repeats forever</li>
+			</ul>
+			<pre>every weekend [from start [to end]]</pre>
+			<ul>
+				<li>Every weekend day (saturday and sunday) starting on/after start and ending on end</li>
+				<li>If no end date is specified, the date repeats forever</li>
+			</ul>
+			<pre>every other [from start [to end]]</pre>
+			<ul>
+				<li>Every other day starting on start and ending on end</li>
+				<li>If no start date is specified, today's date becomes the start date</li>
+				<li>If no end date is specified, the date repeats forever</li>
+			</ul>
+			<pre>next X days [from start]</pre>
+			<ul>
+				<li>Every day for the next X days starting on start</li>
+				<li>If no start date is specified, today's date becomes the start date</li>
+			</ul>
+
+			<h3><a id="abbr-date">Valid Abbreviations</a></h3>
+			<ul>
+				<li>monday - mon</li>
+				<li>tuesday - tues</li>
+				<li>wednesday - wed</li>
+				<li>thursday - thurs</li>
+				<li>friday - fri</li>
+				<li>saturday - sat</li>
+				<li>sunday - sun</li>
+				<li>tomorrow - tom</li>
+				<li>every - ev</li>
+				<li>next - nx</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2><a id="time">Valid Times</a></h2>
+			<h3><a id="single-time">Valid Singular Times</a></h3>
+			<pre>now</pre>
+			<ul>
+				<li>The current time</li>
+			</ul>
+			<pre>noon</pre>
+			<ul>
+				<li>12:00pm or 12:00</li>
+			</ul>
+			<pre>midday</pre>
+			<ul>
+				<li>12:00pm or 12:00</li>
+			</ul>
+			<pre>midnight</pre>
+			<ul>
+				<li>12:00am or 00:00</li>
+			</ul>
+			<pre>1:00pm</pre>
+			<pre>1:00 pm</pre>
+			<pre>13:00</pre>
+			<pre>13</pre>
+			<pre>1300</pre>
+			<pre>1pm</pre>
+
+			<h3><a id="repeating-time">Valid Repeating Times</a></h3>
+			<p>
+				For each repeating time the [ ] denote option attributes. start and
+				end can be any of the above <a href="#single-time">singular times</a>.
+				X is any positive integer.
+			</p>
+			<pre>every hour [from start to end]</pre>
+			<pre>every minute [from start to end]</pre>
+			<pre>every X minutes [from start to end]</pre>
+			<pre>every X hours  [from start to end]</pre>
+		</div>
+	</div>
+</div>
+{% endblock %}
