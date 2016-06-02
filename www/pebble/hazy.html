@@ -1,0 +1,49 @@
+{% set page = "hazy" %}
+{% extends "template.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-12">
+            <h1>Hazy</h1>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-4 hidden-sm">
+            <img src="/img/hazy/hazy1.png" />
+        </div>
+        <div class="col-md-4">
+            <img src="/img/hazy/hazy2.png" />
+        </div>
+        <div class="col-md-4 hidden-sm">
+            <img src="/img/hazy/hazy3.png" />
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class ="col-md-6">
+            <i class="fa fa-clock-o fa-3x"></i>
+            <h3>Get It</h3>
+            <p>
+                <a href="https://apps.getpebble.com/en_US/application/574537f64b706803bc000002">
+                    Get Hazy on your Pebble watch.
+                </a>
+
+                <div class="small-note">
+                    (Hazy is powered by KiezelPay and costs $2 after a 24 hour trial period.)
+                </div>
+            </p>
+        </div>
+
+        <div class ="col-md-6">
+            <i class="fa fa-info-circle fa-3x"></i>
+            <h3>About it</h3>
+            <p>
+                Hazy is a Pebble watchface that dynamically changes colors based
+                on your local AQI, and it works anywhere in the world!
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

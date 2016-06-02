@@ -1,64 +1,63 @@
-{% set page = "simply-light" %}
+{% set page = "pebble" %}
 {% extends "template.html" %}
 
 {% block content %}
 <div class="container">
-	<div class="row text-center">
-		<div class="col-md-12">
-			<h1>Simply Light</h1>
-		</div>
-	</div>
+    <div class="row text-center">
+        <div class="col-md-12">
+            <h1>Watchfaces</h1>
+        </div>
+    </div>
 
-	<div class="row text-center">
-		<div class="col-md-4 hidden-sm">
-			<img src="/img/simply-light/simply-light1.png" />
-		</div>
-		<div class="col-md-4">
-			<img src="/img/simply-light/simply-light2.png" />
-		</div>
-		<div class="col-md-4 hidden-sm">
-			<img src="/img/simply-light/simply-light3.png" />
-		</div>
-	</div>
+    <div class="row text-center">
+        <div class="col-md-6">
+            <a href="/pebble/simply-light.html">
+                <img src="/img/simply-light/simply-light2.png" />
+            </a>
+            <h2>
+                <a href="/pebble/simply-light.html">Simply Light</a>
+            </h2>
+        </div>
 
-	<div class="row text-center">
-		<div class ="col-md-4">
-			<i class="fa fa-clock-o fa-3x"></i>
-			<h3>Get It</h3>
-			<p>
-				<a href="https://apps.getpebble.com/applications/5472c040c13ebf3ddf000045">
-					Get Simply Light on your Pebble watch.
-				</a>
-			</p>
-		</div>
+        <div class="col-md-6">
+            <a href="/pebble/hazy.html">
+                <img src="/img/hazy/hazy2.png" />
+            </a>
+            <h2>
+                <a href="/pebble/hazy.html">Hazy</a>
+            </h2>
+        </div>
+    </div>
 
-		<div class ="col-md-4">
-			<i class="fa fa-info-circle fa-3x"></i>
-			<h3>About it</h3>
-			<p>
-				Simply Light is a Pebble watchface with time, weather, and battery status.
-				It gets data from
-				<a href="http://openweathermap.org/">OpenWeatherMap</a>,
-				<a href="https://www.yahoo.com/?ilc=401">Yahoo</a>,
-				<a href="http://yr.no/">Yr.no</a>,
-				<a href="http://forecast.io/">forecast.io</a>,
-				and <a href="http://aqicn.org/">AQIcn.org</a>.
-				It uses the great icon font by erikflowers,
-				<a href="http://erikflowers.github.io/weather-icons/">
-					Weather Icons
-				</a>.
-			</p>
-		</div>
+    <div class="row text-center">
+        <div class="col-md-12">
+            <h1>Libraries</h1>
+        </div>
+    </div>
 
-		<div class ="col-md-4">
-			<i class="fa fa-code fa-3x"></i>
-			<h3>Hack It</h3>
-			<p>
-				<a href="https://github.com/bhdouglass/simply-light">
-					Simply Light is 100% open source!
-				</a>
-			</p>
-		</div>
-	</div>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h3>
+                <a href="https://github.com/bhdouglass/angular-slate">Angular Slate</a>
+            </h3>
+
+            Angular bindings for the <a href="https://github.com/pebble/slate">Pebble Slate</a> framework.
+        </div>
+        <div class="col-md-4">
+            <h3 class="text-center">
+                <a href="https://github.com/bhdouglass/pebble-helpers">Pebble C Helpers</a>
+            </h3>
+
+            Shortcuts and nice things for Pebble developers.
+        </div>
+        <div class="col-md-4">
+            <h3 class="text-center">
+                <a href="https://github.com/bhdouglass/pebble-template">Pebble Template</a>
+            </h3>
+
+            An opinionated Pebble app template with automatic configuration
+            generation.
+        </div>
+    </div>
 </div>
 {% endblock %}
