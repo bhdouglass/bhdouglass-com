@@ -52,8 +52,8 @@ var paths = {
         ],
     },
     other: [
-        'CNAME',
         'www/favicon.png',
+        //'www/falcon/**/*'
     ],
     dist: {
         base: 'dist/',
@@ -63,7 +63,7 @@ var paths = {
 };
 
 gulp.task('clean', function() {
-    del.sync(paths.dist);
+    del.sync(paths.dist + '**/*');
 });
 
 gulp.task('lesslint', function() {
@@ -135,7 +135,7 @@ gulp.task('build-img', function() {
 });
 
 gulp.task('build-other', function() {
-    return gulp.src(paths.other)
+    return gulp.src(paths.other, {base: 'www'})
         .pipe(gulp.dest(paths.dist.base));
 });
 
