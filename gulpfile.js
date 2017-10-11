@@ -5,12 +5,10 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var nunjucks = require('gulp-nunjucks');
 var connect = require('gulp-connect');
-var gopen = require('gulp-open');
 var sourcemaps = require('gulp-sourcemaps');
 var htmlmin = require('gulp-htmlmin');
 var minifyCSS = require('gulp-cssnano');
 var less = require('gulp-less');
-var lesshint = require('gulp-lesshint');
 var autoprefixer = require('gulp-autoprefixer');
 var surge = require('gulp-surge');
 var del = require('del');
@@ -66,20 +64,12 @@ gulp.task('clean', function() {
     del.sync(paths.dist + '**/*');
 });
 
-gulp.task('lesslint', function() {
-    return gulp.src(paths.lint.less)
-        .pipe(lesshint())
-        .pipe(lesshint.reporter());
-});
-
-gulp.task('jslint', function() {
+gulp.task('lint', function() {
     return gulp.src(paths.lint.js)
         .pipe(jshint())
         .pipe(jshint.reporter(stylish))
         .pipe(jshint.reporter('fail'));
 });
-
-gulp.task('lint', ['lesslint', 'jslint']);
 
 gulp.task('build-js', function() {
     return gulp.src(paths.src.js)
@@ -141,7 +131,7 @@ gulp.task('build-other', function() {
 
 gulp.task('watch', function() {
     gulp.watch(paths.src.js, ['jslint', 'build-js']);
-    gulp.watch(paths.src.less, ['lesslint', 'build-less']);
+    gulp.watch(paths.src.less, ['build-less']);
     gulp.watch(paths.src.html, ['build-html']);
     gulp.watch(paths.src.css, ['build-css']);
     gulp.watch(paths.src.fonts, ['build-fonts']);
@@ -151,16 +141,11 @@ gulp.task('watch', function() {
 gulp.task('build', ['lint', 'build-html', 'build-less', 'build-js', 'build-css', 'build-fonts', 'build-img', 'build-other']);
 
 gulp.task('serve', ['build', 'watch'], function() {
-    connect.server({
+    return connect.server({
         root: paths.dist.base,
         ip: '0.0.0.0',
         port: 8080,
     });
-
-    return gulp.src(paths.src.html)
-        .pipe(gopen({
-            uri: 'http://localhost:8080'
-        }));
 });
 
 gulp.task('deploy', ['build'], function() {
