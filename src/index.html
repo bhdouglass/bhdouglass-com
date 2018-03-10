@@ -1,0 +1,72 @@
+{% set page = "index" %}
+{% extends "template.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="p-strip">
+            <h1>Brian Douglass</h1>
+            <h2>Software Engineer @ <a href="https://purecars.com/">PureCars</a></h2>
+
+            <p class="description">
+                I'm a full stack engineer with a keen interest in using software
+                to improve peoples lives by solving interesting problems. I've
+                developed websites, web apps, apis, mobile apps, and more. I'm
+                a member of many open source projects and lead developer of multiple.
+                I welcome new opportunities to learn,
+                <a href="/contact.html">chat with me today</a>!
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="row project">
+                <img src="/img/openstore.svg" alt="OpenStore" class="u-float-left" />
+                <h3>
+                    <a href="https://open-store.io/">
+                        OpenStore Lead Developer
+                    </a>
+                </h3>
+                <p>The official app store for Ubuntu Touch</p>
+            </div>
+
+            <div class="row project">
+                <img src="/img/cli.svg" alt="Clickable" class="u-float-left" />
+                <h3>
+                    <a href="http://clickable.bhdouglass.com/">
+                        Clickable Lead Developer
+                    </a>
+                </h3>
+                <p>Command line tool for easy app development</p>
+            </div>
+
+            <div class="row project">
+                <img src="/img/ubports.png" alt="UBports" class="u-float-left" />
+                <h3>
+                    <a href="https://ubports.com/foundation/ubports-foundation">
+                        UBports Foundation Board of Trustees Member
+                    </a>
+                </h3>
+                <p>Foundation to support the continued development and proliferation of Ubuntu Touch</p>
+            </div>
+
+            <div class="row project">
+                <img src="/img/code.svg" alt="Open Source" class="u-float-left" />
+                <h3>
+                    <a href="https://github.com/search?q=user%3Abhdouglass+user%3AUbuntuOpenStore&type=Repositories">
+                        Open Source Engineer
+                    </a>
+                </h3>
+                <p>I live and breath Open Source, find my projects on GitHub</p>
+            </div>
+
+            <div class="row project">
+                <img src="/img/email.svg" alt="Contact Me" class="u-float-left" />
+                <h3>
+                    <a href="/contact.html">
+                        Contact Me
+                    </a>
+                </h3>
+                <p>I'm always up for a chat or freelance work!</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

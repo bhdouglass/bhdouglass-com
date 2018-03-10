@@ -1,25 +1,28 @@
 {
   "name": "bhdouglass.com",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulp.js",
+  "version": "2.0.0",
+  "description": "bhdouglass.com",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bhdouglass/bhdouglass.com.git"
+  },
   "author": "Brian Douglass",
   "license": "GPL-3.0",
-  "devDependencies": {
+  "bugs": {
+    "url": "https://github.com/bhdouglass/bhdouglass.com/issues"
+  },
+  "homepage": "https://github.com/bhdouglass/bhdouglass.com#readme",
+  "dependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-connect": "^5.5.0",
     "gulp-cssnano": "^2.1.2",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-jshint": "^2.0.4",
-    "gulp-less": "^3.3.2",
-    "gulp-nunjucks": "^3.0.0",
-    "gulp-sourcemaps": "^2.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-nunjucks": "^3.1.1",
+    "gulp-sass": "^3.1.0",
     "gulp-surge": "^0.1.0",
-    "gulp-uglify": "^3.0.0",
-    "jshint": "^2.9.5",
-    "jshint-stylish": "^2.2.1"
+    "vanilla-framework": "^1.6.6"
   }
 }

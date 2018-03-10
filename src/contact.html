@@ -1,0 +1,37 @@
+{% set page = "contact" %}
+{% extends "template.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="p-strip">
+            <h1>Contact Me</h1>
+
+            <form action="https://jumprock.co/mail/bhdouglass" method="post" class="p-form p-form--stacked">
+                <div class="p-form__group">
+                    <label for="name" class="p-form__label">Name</label>
+                    <div class="p-form__control">
+                        <input type="text" id="name" name="name" required="required" />
+                    </div>
+                </div>
+
+                <div class="p-form__group">
+                    <label for="email" class="p-form__label">Email Address</label>
+                    <div class="p-form__control">
+                        <input type="text" id="email" name="email" required="required" />
+                    </div>
+                </div>
+
+                <div class="p-form__group">
+                    <label for="message" class="p-form__label">Message</label>
+                    <div class="p-form__control">
+                        <textarea type="text" id="message" name="message" required="required" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <input type="hidden" name="after" value="https://bhdouglass.com/thank-you.html">
+
+                <button class="p-button--positive u-float-right" type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
