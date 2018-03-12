@@ -8,6 +8,7 @@ $shelves-max-width: 1200px;
 
 .p-navigation .p-navigation__links .p-navigation__link>a, .p-navigation .p-navigation__links>a {
     background-color: $color-brand;
+    color: #F7F7F7;
 }
 
 .description {
@@ -46,4 +47,8 @@ body, h1, h2, h3, h4, h5, h6 {
 
 .pebble .row {
     margin-top: 0;
+}
+
+a:visited {
+    color: #007AA6;
 }
