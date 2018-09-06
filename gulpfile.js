@@ -64,7 +64,7 @@ gulp.task('serve', ['build', 'watch'], function() {
     return connect.server({
         root: 'build',
         ip: '0.0.0.0',
-        port: 8080,
+        port: 5555,
     });
 });
 
