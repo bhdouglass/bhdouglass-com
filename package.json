@@ -5,14 +5,14 @@
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/bhdouglass/bhdouglass.com.git"
+    "url": "git+ssh://git@gitlab.com/bhdouglass/bhdouglass-com.git"
   },
   "author": "Brian Douglass",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/bhdouglass/bhdouglass.com/issues"
+    "url": "https://gitlab.com/bhdouglass/bhdouglass-com/issues"
   },
-  "homepage": "https://github.com/bhdouglass/bhdouglass.com#readme",
+  "homepage": "https://bhdouglass.com",
   "dependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
