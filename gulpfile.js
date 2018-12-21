@@ -21,8 +21,9 @@ const img_paths = [
     'src/img/*.png',
 ];
 
-gulp.task('clean', function() {
+gulp.task('clean', function(done) {
     del.sync('build/**/*');
+    done();
 });
 
 gulp.task('build-scss', function() {
@@ -53,26 +54,26 @@ gulp.task('build-img', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(html_paths, ['build-html']);
-    gulp.watch(scss_paths, ['build-scss']);
-    gulp.watch(img_paths, ['build-img']);
+    gulp.watch(html_paths, gulp.series('build-html'));
+    gulp.watch(scss_paths, gulp.series('build-scss'));
+    gulp.watch(img_paths, gulp.series('build-img'));
 });
 
-gulp.task('build', ['clean', 'build-html', 'build-scss', 'build-img']);
+gulp.task('build', gulp.series('clean', 'build-html', 'build-scss', 'build-img'));
 
-gulp.task('serve', ['build', 'watch'], function() {
+gulp.task('serve', gulp.parallel('build', 'watch', function() {
     return connect.server({
         root: 'build',
         ip: '0.0.0.0',
         port: 5555,
     });
-});
+}));
 
-gulp.task('default', ['build']);
+gulp.task('default', gulp.series('build'));
 
-gulp.task('deploy', ['build'], function() {
+gulp.task('deploy', gulp.series('build', function() {
     return surge({
         project: 'build',
         domain: 'bhdouglass.com',
     });
-});
+}));
