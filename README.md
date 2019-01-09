@@ -5,8 +5,8 @@
 ## Icons
 
 - OpenStore logo by the OpenStore
+- Clickable logo by Joan CiberSheep
 - UBports logo by the UBports Foundation
-- Command-line Interface by Rabee Balakrishnan from the Noun Project
 - code by Aneeque Ahmed from the Noun Project
 - Email by Gregor Cresnar from the Noun Project
 
