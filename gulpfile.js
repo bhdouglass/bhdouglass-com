@@ -5,7 +5,6 @@ const htmlmin = require('gulp-htmlmin');
 const cssnano = require('gulp-cssnano');
 const autoprefixer = require('gulp-autoprefixer');
 const nunjucks = require('gulp-nunjucks');
-const surge = require('gulp-surge');
 const del = require('del');
 
 const scss_paths = [
@@ -70,10 +69,3 @@ gulp.task('serve', gulp.parallel('build', 'watch', function() {
 }));
 
 gulp.task('default', gulp.series('build'));
-
-gulp.task('deploy', gulp.series('build', function() {
-    return surge({
-        project: 'build',
-        domain: 'bhdouglass.com',
-    });
-}));
