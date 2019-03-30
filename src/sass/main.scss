@@ -23,13 +23,11 @@ $shelves-max-width: 1200px;
     }
 
     h3 {
-        margin-left: 3em;
-        margin-top: 0;
+        margin: 0 0 0 3em;
     }
 
     p {
-        margin-top: 0;
-        margin-left: 5.5em;
+        margin: 0 0 1.1em 5.5em;
     }
 }
 
@@ -45,8 +43,8 @@ h2 {
     font-family: 'sans';
 }
 
-.p-navigation .p-navigation__links .p-navigation__link.is-selected>a {
-    border-bottom-color: #cdcdcd;
+.p-navigation__link.is-selected > a::before {
+    background-color: #cdcdcd;
 }
 
 .pebble .row {
