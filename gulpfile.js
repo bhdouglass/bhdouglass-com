@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const connect = require('gulp-connect');
 const sass = require('gulp-sass');
 const htmlmin = require('gulp-htmlmin');
-const cssnano = require('gulp-cssnano');
+const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const nunjucks = require('gulp-nunjucks');
 const del = require('del');
@@ -32,7 +32,7 @@ gulp.task('build-scss', function() {
             cascade: false,
             remove: false,
         }))
-        .pipe(cssnano())
+        .pipe(cleanCSS())
         .pipe(gulp.dest('build'));
 });
 
