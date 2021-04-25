@@ -6,7 +6,6 @@
 
 - OpenStore logo by the OpenStore
 - Clickable logo by Joan CiberSheep
-- UBports logo by the UBports Foundation
 - code by Aneeque Ahmed from the Noun Project
 - Email by Gregor Cresnar from the Noun Project
 
