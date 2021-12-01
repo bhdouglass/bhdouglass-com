@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const connect = require('gulp-connect');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const htmlmin = require('gulp-htmlmin');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');

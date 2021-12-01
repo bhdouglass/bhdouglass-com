@@ -19,17 +19,18 @@
   },
   "homepage": "https://bhdouglass.com",
   "dependencies": {
-    "del": "^4.0.0",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-connect": "^5.7.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-nunjucks": "^4.0.0",
-    "gulp-sass": "^4.0.2",
-    "node-sass": "^4.14.1",
+    "gulp-nunjucks": "^5.1.0",
+    "gulp-sass": "^5.0.0",
+    "node-gyp": "^8.4.1",
+    "sass": "^1.44.0",
     "vanilla-framework": "^1.8.1"
   },
   "devDependencies": {
-    "gulp-clean-css": "^4.0.0"
+    "gulp-clean-css": "^4.3.0"
   }
 }
