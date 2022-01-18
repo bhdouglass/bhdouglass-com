@@ -1,0 +1,72 @@
+[
+    {
+        "title": "Senior Software Engineer",
+        "company": "Enerflo",
+        "link": "https://enerflo.com/",
+        "years": {
+            "start": 2020,
+            "end": "now"
+        },
+        "description": "Developing new apis with NestJS, Typescript, GraphQL, and PostgreSQL. Also building interfaces with React and maintaining systems built with Laravel. Team lead and mentor for Jr Developers."
+    },
+    {
+        "title": "Senior Software Engineer",
+        "company": "iFit",
+        "link": "https://ifit.com/",
+        "years": {
+            "start": 2019,
+            "end": 2020
+        },
+        "description": "Developed lambda microservices in Node.js and Typescript. Built interfaces using React. Also created developer tools to improve error tracking and implemented testing solutions using Docker."
+    },
+    {
+        "title": "Senior Developer",
+        "company": "eFlex Systems",
+        "link": "https://www.eflexsystems.com/",
+        "years": {
+            "start": 2018,
+            "end": 2019
+        },
+        "description": "Migrated legacy C# api and C++ processes to Node.js. Developed full stack applications using Koa, Ember.js, and CoffeeScript."
+    },
+    {
+        "title": "Software Engineer",
+        "company": "PureCars",
+        "link": "http://www.purecars.com/",
+        "years": {
+            "start": 2017,
+            "end": 2018
+        },
+        "description": "Showroom Logic was acquired by PureCars in 2017. Maintained legacy systems in Python and PHP. Architected new solutions for web scraping using serverless functions."
+    },
+    {
+        "title": "Senior Software Engineer",
+        "company": "Showroom Logic",
+        "link": "https://www.showroomlogic.com/",
+        "years": {
+            "start": 2013,
+            "end": 2017
+        },
+        "description": "Developed fullstack applications using PHP and AngularJS. Created new full stack applications using Python and Django. Lead a small project team and optimized systems for scaling up massively"
+    },
+    {
+        "title": "Software Engineer and Product Manager",
+        "company": "DiversiLabs, LLC",
+        "link": "http://diversilabs.com/",
+        "years": {
+            "start": 2010,
+            "end": 2013
+        },
+        "description": "Developed new Qt based interfaces for aging Matlab application. Developed new company website."
+    },
+    {
+        "title": "B.S. Computer and Information Science",
+        "company": "Messiah College",
+        "link": "https://www.messiah.edu/",
+        "years": {
+            "start": 2009,
+            "end": 2012
+        },
+        "description": "Graduated through the Honors Program Magna Cum Laude GPA: 3.83/4.0"
+    }
+]

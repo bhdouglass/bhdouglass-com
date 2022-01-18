@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import workHistory from '../data/work-history.json';
+
+import '../styles/index.css';
+---
+
+<BaseLayout>
+  <section class="text-center">
+    <h1>Hi, I'm Brian Douglass</h1>
+    <h2>
+      {workHistory[0].title} @ <a href={workHistory[0].link} rel="noopener noreferrer">{workHistory[0].company}</a>
+    </h2>
+  </section>
+
+  <section>
+    <h3>About Me</h3>
+    <p>
+      I'm a full stack engineer with a keen interest in using software to improve peoples lives by solving interesting problems.
+      I've developed websites, web apps, apis, mobile apps, and more. I've worked in Node.js, Python, PHP, React, Vue.js, C++, Qt, and much more.
+      I'm a member of many open source projects and lead developer of multiple.
+      I welcome new opportunities to learn!
+    </p>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="col text-center">
+        <h3>
+          <a href="https://stackoverflow.com/cv/bhdouglass" rel="noopener noreferrer">
+            Full Stack<br/>Engineer
+          </a>
+        </h3>
+
+        <p>
+          I've worked on a variety of different projects, spanning the backend and frontend.
+          And I've developed in a variety of different languages.
+        </p>
+      </div>
+      <div class="col text-center">
+        <h3>
+          <a href="https://gitlab.com/bhdouglass" rel="noopener noreferrer">
+            OpenStore Lead<br/>Developer
+          </a>
+        </h3>
+
+        <p>
+          The official app store for Ubuntu Touch.
+          Built with a Node.js, Express, and Mongo API,
+          a Vue.js frontend, and a QML/C++ app.
+        </p>
+      </div>
+      <div class="col text-center">
+        <h3>
+          <a href="https://clickable-ut.dev/">
+            Clickable Lead<br/>Developer
+          </a>
+        </h3>
+
+        <p>
+          Command line tool for easy Ubuntu Touch app development.
+          Built with Python and uses Docker.
+        </p>
+      </div>
+      <div class="col text-center">
+        <h3>
+          <a href="https://open-store.io/">
+            Open Source<br/>Engineer
+          </a>
+        </h3>
+
+        <p>
+          I live and breath Open Source, find my projects on
+          <a href="https://gitlab.com/bhdouglass" rel="noopener noreferrer">GitLab</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Work History</h3>
+    <ul class="work-history">
+      {workHistory.map((job) => (
+        <li>
+          <h4>
+            {job.title} @ <a href={job.link}>{job.company}</a>
+          </h4>
+          <p>
+            {job.years.start} → {job.years.end}
+            <br/>
+            {job.description}
+          </p>
+        </li>
+      ))}
+
+      <li>
+        <a href="https://stackoverflow.com/cv/bhdouglass" rel="noopener noreferrer">Full Resume</a>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Projects</h3>
+
+    <div class="row">
+      <div class="col-4">
+        <a href="https://blog.bhdouglass.com/">Blog</a>
+      </div>
+
+      <div class="col-4">
+        <a href="https://open-store.io/">OpenStore</a>
+      </div>
+
+      <div class="col-4">
+        <a href="https://clickable-ut.dev/">Clickable</a>
+      </div>
+
+      <div class="col-4">
+        <a href="https://gitlab.com/bhdouglass" rel="noopener noreferrer">GitLab</a>
+      </div>
+
+      <div class="col-4">
+        <a href="https://open-store.io/?sort=name&search=author%3ABrian%20Douglass">Ubuntu Touch Apps</a>
+      </div>
+
+      <div class="col-4">
+        <a href="https://www.npmjs.com/~bhdouglass" rel="noopener noreferrer">NPM Modules</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <a id="contact"></a>
+    <h3>Contact Me</h3>
+    <script type="text/javascript" src="https://form.jotform.com/jsform/220156014395146"></script>
+  </section>
+</BaseLayout>

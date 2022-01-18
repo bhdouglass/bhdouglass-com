@@ -1,12 +1,13 @@
 {
   "name": "bhdouglass.com",
-  "version": "2.0.0",
-  "description": "bhdouglass.com",
-  "main": "gulpfile.js",
+  "version": "3.0.0",
+  "private": true,
   "scripts": {
-    "build": "gulp build",
-    "serve": "gulp serve",
-    "deploy": "./deploy.sh"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "npm run build && surge ./dist/ --domain https://bhdouglass.com"
   },
   "repository": {
     "type": "git",
@@ -18,19 +19,11 @@
     "url": "https://gitlab.com/bhdouglass/bhdouglass-com/issues"
   },
   "homepage": "https://bhdouglass.com",
-  "dependencies": {
-    "del": "^6.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-connect": "^5.7.0",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-nunjucks": "^5.1.0",
-    "gulp-sass": "^5.0.0",
-    "node-gyp": "^8.4.1",
-    "sass": "^1.44.0",
-    "vanilla-framework": "^1.8.1"
-  },
   "devDependencies": {
-    "gulp-clean-css": "^4.3.0"
+    "astro": "^0.22.13",
+    "surge": "^0.23.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
   }
 }

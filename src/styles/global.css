@@ -1,0 +1,30 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  /** TODO optimize loading the image */
+  background-image: url(/images/background.jpg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #001140;
+}
+
+section {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  max-width: 800px;
+  background-color: rgba(0, 17, 63, 0.7);
+  padding: 2em;
+}
+
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  max-width: 800px;
+  background-color: rgba(0, 17, 63, 0.7);
+  padding: 1em;
+}

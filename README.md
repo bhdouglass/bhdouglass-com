@@ -4,14 +4,13 @@
 
 ## Icons
 
-- OpenStore logo by the OpenStore
-- Clickable logo by Joan CiberSheep
-- code by Aneeque Ahmed from the Noun Project
-- Email by Gregor Cresnar from the Noun Project
+- [Brain icon by parkjisun from NounProject.com](https://thenounproject.com/icon/brain-206188/)
+- [Curly Bracket icons by Three Six Five from NounProject.com](https://thenounproject.com/icon/curly-bracket-1418243/)
+- [Background vector created by starline - www.freepik.com](https://www.freepik.com/free-vector/abstact-hexagon-background-memphis-style_14649409.htm)
 
 ## License
 
-Copyright (C) 2018 [Brian Douglass](http://bhdouglass.com/)
+Copyright (C) 2022 [Brian Douglass](http://bhdouglass.com/)
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3, as published
 by the Free Software Foundation.

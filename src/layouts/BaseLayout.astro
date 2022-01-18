@@ -1,0 +1,61 @@
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brian Douglass | Senior Software Engineer</title>
+
+    <meta name="description" content="Senior Software Engineer" />
+
+    <!-- Schema.org markup -->
+    <meta itemprop="name" content="Brian Douglass" />
+    <meta itemprop="description" content="Senior Software Engineer" />
+    <meta itemprop="image" content="https://bhdouglass.com/images/logo.png" />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Brian Douglass" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bhdouglass.com" />
+    <meta property="og:image" content="https://bhdouglass.com/images/logo.png" />
+    <meta property="og:description" content="Senior Software Engineer" />
+    <meta property="og:site_name" content="Brian Douglass" />
+
+    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')} />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container justify-content-start">
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo.svg" alt="" width="32" height="32" class="d-inline-block align-text-top">
+          <span class="d-none d-sm-inline">Brian Douglass</span>
+        </a>
+        <ul class="navbar-nav flex-row ms-4">
+          <li class="nav-item me-4">
+            <a class="nav-link" href="https://gitlab.com/bhdouglass" rel="noopener noreferrer">GitLab</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="https://blog.bhdouglass.com/">Blog</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="#contact">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container text-light">
+      <slot />
+    </div>
+
+    <footer class="text-light text-center">
+      <small>
+        Icons from the NounProject.com:
+        <a href="https://thenounproject.com/icon/brain-206188/" rel="noopener noreferrer">1</a>,
+        <a href="https://thenounproject.com/icon/curly-bracket-1418243/" rel="noopener noreferrer">2</a>,
+        <a href="https://thenounproject.com/icon/curly-brackets-1418245/" rel="noopener noreferrer">3</a>.
+        <a href="https://www.freepik.com/free-vector/abstact-hexagon-background-memphis-style_14649409.htm" rel="noopener noreferrer">Background image</a> from freepik.com.
+        Built using <a href="https://astro.build/" rel="noopener noreferrer">astro</a> 🚀.
+      </small>
+    </footer>
+  </body>
+</html>
