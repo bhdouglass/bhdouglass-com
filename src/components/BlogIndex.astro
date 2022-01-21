@@ -1,0 +1,31 @@
+---
+import format from 'date-fns/format';
+
+const { posts, nextUrl, prevUrl, title, tagline, feedUrl } = Astro.props;
+---
+
+<section class="text-center">
+  <h1>{title}</h1>
+  <h2>{tagline}</h2>
+</section>
+
+<section>
+  <h3>All Posts</h3>
+
+  <ul class="list-unstyled">
+    {posts.map((post) => (
+      <li class="mb-1">
+        <b><a href={post.url}>{post.title}</a></b> - {format(new Date(post.date), 'MMMM d, yyyy')}
+      </li>
+    ))}
+  </ul>
+
+  <div>
+    {nextUrl && (<a href={nextUrl}>&lt; Older Posts</a>)}
+    {prevUrl && (<a href={prevUrl}>Newer Posts &gt;</a>)}
+  </div>
+
+  <div class="mt-2">
+    <a href={feedUrl}>RSS Feed</a>
+  </div>
+</section>

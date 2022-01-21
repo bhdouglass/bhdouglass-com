@@ -1,25 +1,70 @@
+---
+const { redirect, title, feedUrl, prism, isBlogPost } = Astro.props;
+
+const pageTitle = title || 'Brian Douglass | Senior Software Engineer';
+---
+
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Brian Douglass | Senior Software Engineer</title>
+    <title>{pageTitle}</title>
 
     <meta name="description" content="Senior Software Engineer" />
 
     <!-- Schema.org markup -->
-    <meta itemprop="name" content="Brian Douglass" />
-    <meta itemprop="description" content="Senior Software Engineer" />
+    <meta itemprop="name" content={pageTitle} />
+    <meta itemprop="description" content="Brian Douglass, Senior Software Engineer" />
     <meta itemprop="image" content="https://bhdouglass.com/images/logo.png" />
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="Brian Douglass" />
+    <meta property="og:title" content={pageTitle} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bhdouglass.com" />
     <meta property="og:image" content="https://bhdouglass.com/images/logo.png" />
-    <meta property="og:description" content="Senior Software Engineer" />
+    <meta property="og:description" content="Brian Douglass, Senior Software Engineer" />
     <meta property="og:site_name" content="Brian Douglass" />
 
-    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')} />
+    {redirect && (<meta http-equiv="refresh" content={`0; URL=${redirect}`} />)}
+
+    {feedUrl && (<link rel="alternate" href={feedUrl} type="application/rss+xml" title="RSS feed">)}
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    {prism && (<link rel="stylesheet" href="/css/prism.css" />)}
+
+    <style global>
+      body {
+        background-image: url(/images/background.jpg);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: #001140;
+      }
+
+      section, article {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        max-width: 800px;
+        background-color: rgba(0, 17, 63, 0.9);
+        padding: 2em;
+      }
+
+      footer {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        max-width: 800px;
+        background-color: rgba(0, 17, 63, 0.9);
+        padding: 1em;
+      }
+
+      a, a:hover, a:visited {
+        color: #e94100;
+      }
+    </style>
   </head>
 
   <body>
@@ -34,10 +79,10 @@
             <a class="nav-link" href="https://gitlab.com/bhdouglass" rel="noopener noreferrer">GitLab</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="https://blog.bhdouglass.com/">Blog</a>
+            <a class="nav-link" href="/blog">Blogs</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="#contact">Contact Me</a>
+            <a class="nav-link" href="/#contact">Contact Me</a>
           </li>
         </ul>
       </div>

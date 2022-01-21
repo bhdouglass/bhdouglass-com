@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import '../../styles/blog.css';
+---
+
+<BaseLayout>
+  <section>
+    <h1>Blogs by Brian Douglass</h1>
+
+    <div class="row mt-2">
+      <div class="col">
+        <h2>
+          <a href="/blog/tech">Software Space</a>
+        </h2>
+        <p>
+          Random remarks about software development and open source
+        </p>
+      </div>
+
+      <div class="col">
+        <h2>
+          <a href="/blog/saga">Saga</a>
+        </h2>
+        <p>
+          Random remarks about non-software things
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

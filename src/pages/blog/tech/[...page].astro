@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import BlogIndex from '../../../components/BlogIndex.astro';
+
+import '../../../styles/blog.css';
+
+const title = 'Software Space by Brian Douglass';
+const tagline = 'Random remarks about software development and open source';
+const feedUrl = '/feeds/tech.xml';
+
+export async function getStaticPaths({ paginate, rss }) {
+  // For some reason you can't pass in variable from outside this scope into here
+
+  const posts = Astro.fetchContent('./*.md');
+  posts.sort((a, b) => (new Date(b.date).valueOf() - new Date(a.date).valueOf()))
+
+  rss({
+    title: 'Software Space by Brian Douglass',
+    description: 'Random remarks about software development and open source',
+    items: posts.map(item => ({
+      title: item.title,
+      description: item.description,
+      link: item.url,
+      pubDate: item.date,
+    })),
+    dest: "/feeds/tech.xml",
+  });
+
+  return paginate(posts, { pageSize: 30 });
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title={title} feedUrl={feedUrl}>
+  <BlogIndex
+    title={title}
+    tagline={tagline}
+    posts={page.data}
+    nextUrl={page.url.next}
+    prevUrl={page.url.prev}
+    feedUrl={feedUrl}
+  />
+</BaseLayout>

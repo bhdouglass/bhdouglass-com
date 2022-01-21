@@ -1,0 +1,14 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+
+import '../styles/blog.css';
+
+const { content } = Astro.props;
+---
+
+<BaseLayout title={`${content.title} | Saga by Brian Douglass`}>
+  <BlogPost title={content.title} date={content.date} blogUrl="/blog/saga" blogTitle="Saga">
+    <slot />
+  </BlogPost>
+</BaseLayout>

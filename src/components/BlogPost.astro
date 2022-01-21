@@ -1,0 +1,14 @@
+---
+import format from 'date-fns/format';
+
+const { title, date, blogTitle, blogUrl } = Astro.props;
+---
+
+<article>
+  <h1 class="mb-2">{title}</h1>
+  <p class="mb-4">
+    Published {format(new Date(date), 'MMMM d, yyyy')} in <a href={blogUrl}>{blogTitle}</a> by <a href="/">Brian Douglass</a>
+  </p>
+  <!-- TODO tags/categories -->
+  <slot />
+</article>
