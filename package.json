@@ -2,6 +2,7 @@
   "name": "bhdouglass.com",
   "version": "3.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -9,7 +10,8 @@
     "build": "npm run copy-bootstrap && astro build && npm run fix-404",
     "fix-404": "sed -i 's=../assets=/assets=g' dist/404.html",
     "preview": "astro preview",
-    "deploy": "npm run build && surge ./dist/ --domain https://bhdouglass.com"
+    "deploy": "npm run build && surge ./dist/ --domain https://bhdouglass.com",
+    "new-post": "node scripts/new-post.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,9 @@
   "devDependencies": {
     "astro": "^0.22.13",
     "autoprefixer": "^10.4.2",
+    "chalk": "^5.0.0",
     "date-fns": "^2.28.0",
+    "inquirer": "^8.2.0",
     "surge": "^0.23.1"
   },
   "dependencies": {
