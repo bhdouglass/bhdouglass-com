@@ -3,6 +3,10 @@ import format from 'date-fns/format';
 import { tagTitleCase } from '../utilites';
 
 const { title, date, blogTitle, blogUrl, tags } = Astro.props;
+const { url } = Astro.request;
+
+const pathParts = url.pathname.split('/');
+
 ---
 
 <article>
@@ -12,7 +16,7 @@ const { title, date, blogTitle, blogUrl, tags } = Astro.props;
     <br/>
     Filed under {tags.map((tag, index) => (
       <span class="tag">
-        <a href={`./${tag}`}>{tagTitleCase(tag)}</a>{((index + 1) < tags.length) ? ',' : ''}
+        <a href={`/${pathParts[1]}/${pathParts[2]}/${tag}`}>{tagTitleCase(tag)}</a>{((index + 1) < tags.length) ? ',' : ''}
       </span>
     ))}
   </p>
