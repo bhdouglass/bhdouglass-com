@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore Badges"
 date:   2019-08-07 23:22:00 -0400
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 A few weeks back (before vacation and a business trip), Ben from the OpenStore

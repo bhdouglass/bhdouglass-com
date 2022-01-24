@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Simply Light v5"
 date:   2016-04-10 11:56:00 -0400
-categories: simply-light pebble
+categories: pebble releases
 ---
 
 Version 5 of my Simply Light watchface has been released! This version brings

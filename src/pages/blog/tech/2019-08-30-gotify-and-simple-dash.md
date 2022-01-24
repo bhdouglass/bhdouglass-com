@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Gotify and Simple Dash"
 date:   2019-08-30 23:58:00 -0400
-categories: apps ubuntu-touch
+categories: ubuntu-touch-apps releases
 ---
 
 This past week I've released two new apps for Ubuntu Touch: [Gotify](https://open-store.io/app/gotify.bhdouglass)

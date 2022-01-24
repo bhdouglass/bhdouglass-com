@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "dev": "astro dev --verbose",
+    "start": "npm run dev",
     "copy-bootstrap": "cp node_modules/bootstrap/dist/css/bootstrap.min.css* public/css/",
     "build": "npm run copy-bootstrap && astro build && npm run fix-404",
     "fix-404": "sed -i 's=../assets=/assets=g' dist/404.html",

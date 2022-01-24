@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "The OpenStore Upgrade"
 date:   2017-05-02 00:03:00 -0400
-categories: openstore web
+categories: openstore releases
 ---
 
 I'm very excited to announce that the OpenStore is now open to any app, not

@@ -1,7 +1,8 @@
 ---
 import format from 'date-fns/format';
+import { tagTitleCase } from '../utilites';
 
-const { posts, nextUrl, prevUrl, title, tagline, feedUrl } = Astro.props;
+const { posts, nextUrl, prevUrl, title, tagline, feedUrl, tag } = Astro.props;
 ---
 
 <section class="text-center">
@@ -10,7 +11,7 @@ const { posts, nextUrl, prevUrl, title, tagline, feedUrl } = Astro.props;
 </section>
 
 <section>
-  <h3>All Posts</h3>
+  <h3>{tag ? tagTitleCase(tag) : 'All'} Posts</h3>
 
   <ul class="list-unstyled">
     {posts.map((post) => (

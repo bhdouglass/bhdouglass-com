@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Clickable Updates"
 date:   2017-06-22 00:50:00 -0400
-categories: clickable ubuntu-touch
+categories: clickable releases
 ---
 
 Clickable has grown in popularity recently due to Canonical discontinuing support

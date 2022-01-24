@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Full Circle 3.0 (PDF Reader)"
 date:   2016-06-26 01:06:00 -0400
-categories: fullcircle ubuntu
+categories: ubuntu-touch-apps releases
 ---
 
 Hot on the heels of version 2.0 comes the next greatest version of the Full Circle

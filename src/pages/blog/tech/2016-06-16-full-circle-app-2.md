@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Full Circle 2.0 (Convergence)"
 date:   2016-06-16 22:55:00 -0400
-categories: fullcircle ubuntu
+categories: ubuntu-touch-apps releases
 ---
 
 I recently finished version 2.0 of the official

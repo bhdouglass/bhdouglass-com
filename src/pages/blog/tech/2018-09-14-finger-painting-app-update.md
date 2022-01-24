@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Finger Painting App Update"
 date:   2018-09-14 20:01:00 -0400
-categories: finger-painting ubuntu-touch
+categories: ubuntu-touch-apps releases
 ---
 
 Today I released version 3.0.0 of my

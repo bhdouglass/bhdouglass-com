@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Recipe Boss"
 date:   2018-02-26 00:21:00 -0400
-categories: recipe-boss web
+categories: web releases
 ---
 
 Fresh out of its beta status, I'm pleased to release Recipe Boss. Recipe Boss is my

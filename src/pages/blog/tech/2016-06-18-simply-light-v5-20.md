@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Simply Light v5.20 (Master Key)"
 date:   2016-06-18 11:11:00 -0400
-categories: simply-light pebble
+categories: pebble releases
 ---
 
 About a week ago I learned about the new service, [Master Key](https://www.pmkey.xyz/).

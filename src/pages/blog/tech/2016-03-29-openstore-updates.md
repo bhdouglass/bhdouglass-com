@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore Updates - March 29, 2016"
 date:   2016-03-29 01:06:00 -0400
-categories: openstore web
+categories: openstore releases
 ---
 
 I have just released several improvements to the

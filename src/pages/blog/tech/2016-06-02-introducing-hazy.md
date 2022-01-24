@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Introducing Hazy"
 date:   2016-06-02 00:32:00 -0400
-categories: hazy pebble
+categories: pebble releases
 ---
 
 I'm proud to introduce my newest watchface for Pebble smartwatches, Hazy!

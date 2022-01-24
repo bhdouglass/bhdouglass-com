@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore Xenial Support - Phase 3"
 date:   2018-06-08 11:42:00 -0400
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 Phase 3 of Xenial support in the OpenStore is now complete! This is the last

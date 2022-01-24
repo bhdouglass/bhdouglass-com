@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Full Circle Redesign"
 date:   2018-12-12 11:49:00 -0400
-categories: fullcircle ubuntu
+categories: ubuntu-touch-apps releases
 ---
 
 Recently I had been talking with Joan CiberSheep about how his apps tend to look

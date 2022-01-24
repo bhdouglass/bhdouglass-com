@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Simply Light v5.1"
 date:   2016-05-19 11:57:00 -0400
-categories: simply-light pebble
+categories: pebble releases
 ---
 
 I've just recently released Simply Light version 5.10 to the

@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore App Videos"
 date:   2017-07-11 13:25:00 -0400
-categories: openstore web
+categories: openstore releases
 ---
 
 Today the OpenStore has just released a fun new feature, app videos!

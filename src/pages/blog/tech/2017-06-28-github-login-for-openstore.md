@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "GitHub Login for the OpenStore"
 date:   2017-06-28 16:27:00 -0400
-categories: openstore web
+categories: openstore releases
 ---
 
 I'm pleased to announce that the OpenStore now has an option to login with GitHub.

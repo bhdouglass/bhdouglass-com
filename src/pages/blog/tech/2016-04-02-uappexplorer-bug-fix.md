@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "uApp Explorer Bug Fix #73"
 date:   2016-04-02 11:50:00 -0400
-categories: uappexplorer web
+categories: uappexplorer releases
 ---
 
 Just a minor bug fix release for uApp Explorer yesterday. There was a bug that

@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Simply Light Updates"
 date:   2016-03-22 00:07:00 -0400
-categories: simply-light pebble
+categories: pebble releases
 ---
 
 I just finished a round of minor updates to my

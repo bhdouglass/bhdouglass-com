@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Bitcoin Auditor and Vue.js"
 date:   2017-02-02 00:52:00 -0400
-categories: bitcoin-auditor web
+categories: web
 ---
 
 I recently took the time to learn Vue.js and found that it's a rather facinating

@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Calculator App Maintainer"
 date:   2017-10-28 01:07:00 -0400
-categories: calculator ubuntu-touch
+categories: ubuntu-touch-apps releases
 ---
 
 A few weeks ago I became the maintainer for the Ubuntu Touch Calculator app.

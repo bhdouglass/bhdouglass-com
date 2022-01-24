@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Packaging Node.js Projects as Snaps"
 date:   2016-08-06 17:56:00 -0400
-categories: nodejs snap
+categories: snap tutorial
 ---
 
 ## Introduction

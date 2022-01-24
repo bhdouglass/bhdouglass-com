@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "New OpenStore Website"
 date:   2017-12-19 00:28:00 -0500
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 If you take a look at the OpenStore website today you will

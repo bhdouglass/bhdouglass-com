@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "uApp Explorer CLI"
 date:   2016-08-03 00:07:00 -0400
-categories: uappexplorer cli
+categories: uappexplorer releases
 ---
 
 Just for the fun of it, I've created a command line program for browsing

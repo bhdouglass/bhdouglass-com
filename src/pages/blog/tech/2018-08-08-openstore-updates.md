@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore Updates"
 date:   2018-08-08 00:45:00 -0400
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 I've recently spent some time clearing up some minor issues that were present in

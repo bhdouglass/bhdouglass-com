@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Ubuntu Touch Web App Plugins"
 date:   2018-02-04 00:36:00 -0500
-categories: webapp ubuntu-touch
+categories: ubuntu-touch-apps releases
 ---
 
 Over the past few weeks I've been working on some plugins for Ubuntu Touch

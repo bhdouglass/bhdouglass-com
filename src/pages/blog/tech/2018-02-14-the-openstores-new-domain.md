@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "The OpenStore's New Domain"
 date:   2018-02-14 01:39:00 -0500
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 Yesterday the OpenStore team was pleased to announce our acquisition of a new

@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Simply Light v6"
 date:   2016-10-30 21:15:00 -0400
-categories: simply-light pebble
+categories: pebble releases
 ---
 
 Version 6 of my Pebble watchface, [Simply Light](https://apps.getpebble.com/en_US/application/5472c040c13ebf3ddf000045)

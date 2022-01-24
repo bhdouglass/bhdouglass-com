@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Recipe Boss: Grocery List"
 date:   2019-05-22 11:41:00 -0400
-categories: recipe-boss web
+categories: web releases
 ---
 
 I recently released a new version of Recipe Boss with a great new feature, a

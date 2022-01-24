@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore App v2"
 date:   2017-09-23 00:46:00 -0400
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 I'm happy to announce that version 2 of the OpenStore app is now available

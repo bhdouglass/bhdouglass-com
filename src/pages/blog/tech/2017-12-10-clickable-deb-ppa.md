@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Clickable Deb & PPA"
 date:   2017-12-10 00:12:00 -0500
-categories: clickable ubuntu-touch
+categories: clickable releases
 ---
 
 I'm very pleased to announce that clickable now is available via PPA as a .deb

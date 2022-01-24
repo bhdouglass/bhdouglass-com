@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "New Ubuntu Touch App: Finger Painting"
 date:   2016-03-14 19:52:52 -0400
-categories: finger-painting ubuntu-touch
+categories: ubuntu-touch-apps releases
 ---
 
 I recently submitted a new app called "Finger Painting"

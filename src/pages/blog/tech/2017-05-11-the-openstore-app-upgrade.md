@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "The OpenStore App Upgrade"
 date:   2017-05-11 10:48:00 -0400
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 Hot on the heels of the OpenStore site upgrade, is the OpenStore app upgrade!

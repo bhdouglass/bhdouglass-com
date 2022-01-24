@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore App v2.10 - NSFW Filtering"
 date:   2017-11-24 01:51:00 -0400
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 This week brings a few new updates to the OpenStore app by the wonderful Stefano V.

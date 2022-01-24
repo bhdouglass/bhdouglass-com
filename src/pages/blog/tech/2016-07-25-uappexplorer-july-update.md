@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "uApp Explorer's July Update"
 date:   2016-07-25 00:57:00 -0400
-categories: uappexplorer web
+categories: uappexplorer releases
 ---
 
 A new batch of changes has been released for uApp Explorer. I've added a new

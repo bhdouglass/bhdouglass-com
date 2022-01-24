@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Clickable November Update"
 date:   2018-11-19 00:03:00 -0400
-categories: clickable ubuntu-touch
+categories: clickable releases
 ---
 
 Clickable has gone through several minor versions over the past month since

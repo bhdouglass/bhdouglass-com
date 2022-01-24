@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore's Content Policy"
 date:   2018-02-23 15:26:00 -0500
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 The OpenStore has continued to grow at an amazing rate as we see apps being

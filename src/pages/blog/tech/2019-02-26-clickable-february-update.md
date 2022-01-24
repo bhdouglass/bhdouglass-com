@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Clickable February Update"
 date:   2019-02-27 00:02:00 -0400
-categories: clickable ubuntu-touch
+categories: clickable releases
 ---
 
 There has been a ton of development on Clickabe over the last month followed by

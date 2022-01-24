@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Indicator Weather Updates"
 date:   2017-01-08 00:53:00 -0400
-categories: indicator-weather ubuntu-touch
+categories: ubuntu-touch-apps releases
 ---
 
 Since I launched [Indicator Weather](https://open.uappexplorer.com/app/indicator-weather.bhdouglass)

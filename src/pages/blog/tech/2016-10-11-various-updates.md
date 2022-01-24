@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Various Updates (Oct 2016)"
 date:   2016-10-11 11:17:00 -0400
-categories: various
+categories: pebble ubuntu-touch-apps releases
 ---
 
 It's been a while since I've updated my blog. I've been working hard at my day

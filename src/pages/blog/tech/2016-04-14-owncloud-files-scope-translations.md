@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "ownCloud Files Scope Translations"
 date:   2016-04-14 00:42:00 -0400
-categories: owncloud-files-scope ubuntu-touch
+categories: ubuntu-touch-apps releases
 ---
 
 I've just setup my

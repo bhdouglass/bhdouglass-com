@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore's August Updates"
 date:   2017-08-26 00:10:00 -0400
-categories: openstore web
+categories: openstore releases
 ---
 
 Over the course of this month there have been several new features and bug fixes

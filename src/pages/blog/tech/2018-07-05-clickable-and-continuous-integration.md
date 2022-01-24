@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Clickable & Continuous Integration"
 date:   2018-07-05 16:21:00 -0400
-categories: clickable ubuntu-touch
+categories: clickable releases
 ---
 
 The latest release of Clickable contained a new command for publishing apps to

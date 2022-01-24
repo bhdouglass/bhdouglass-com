@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
+import { categoriesToTags } from '../utilites';
 
 import '../styles/blog.css';
 
@@ -8,7 +9,7 @@ const { content } = Astro.props;
 ---
 
 <BaseLayout title={`${content.title} | Software Space by Brian Douglass`} prism={true}>
-  <BlogPost title={content.title} date={content.date} blogUrl="/blog/tech" blogTitle="Software Space">
+  <BlogPost title={content.title} date={content.date} blogUrl="/blog/tech" blogTitle="Software Space" tags={categoriesToTags(content.categories)}>
     <slot />
   </BlogPost>
 </BaseLayout>

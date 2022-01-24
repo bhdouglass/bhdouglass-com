@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "ownCloud Files Scope v1.8"
 date:   2016-05-06 00:16:00 -0400
-categories: owncloud-files-scope ubuntu-touch
+categories: ubuntu-touch-apps releases
 ---
 
 Version 1.8 of my ownCloud Files Scope was just release into the wild.

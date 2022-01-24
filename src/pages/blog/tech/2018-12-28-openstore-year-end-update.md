@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore Year End Updates"
 date:   2018-12-28 03:00:00 -0400
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 The end of 2018 brings a few updates to the OpenStore. The website is now

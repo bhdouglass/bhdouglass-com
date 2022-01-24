@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "uApp Explorer: Next Steps"
 date:   2017-04-07 00:27:00 -0400
-categories: uappexplorer web
+categories: uappexplorer
 ---
 
 With [the recent news](https://insights.ubuntu.com/2017/04/05/growing-ubuntu-for-cloud-and-iot-rather-than-phone-and-convergence/)

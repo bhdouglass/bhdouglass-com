@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "uApp Explorer + OpenStore"
 date:   2017-06-12 09:23:00 -0400
-categories: uappexplorer web
+categories: uappexplorer
 ---
 
 I am very pleased to announce that uApp Explorer now supports apps from the

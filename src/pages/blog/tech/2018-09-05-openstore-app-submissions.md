@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore App Submissions"
 date:   2018-09-05 00:17:00 -0400
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 Thanks to UBport's release of OTA-4 for Ubuntu Touch, Xenial is now stable for

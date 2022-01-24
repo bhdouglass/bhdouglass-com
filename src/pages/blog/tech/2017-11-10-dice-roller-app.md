@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Dice Roller App"
 date:   2017-11-10 11:11:00 -0400
-categories: dice-roller ubuntu-touch
+categories: ubuntu-touch-apps releases
 ---
 
 This morning I released my fork of the Dice Roller app for Ubuntu Touch. The

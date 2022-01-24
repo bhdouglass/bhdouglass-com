@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore Xenial Support"
 date:   2018-05-10 10:00:00 -0500
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 Xenial support has always been an important next step for the OpenStore. Because

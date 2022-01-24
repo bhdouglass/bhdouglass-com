@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Introducing Indicator Weather"
 date:   2016-12-12 01:05:00 -0400
-categories: indicator-weather ubuntu-touch
+categories: ubuntu-touch-apps releases
 ---
 
 I'm pleased to release my next app for Ubuntu Touch, Indicator Weather. It's

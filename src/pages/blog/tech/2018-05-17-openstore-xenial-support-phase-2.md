@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore Xenial Support - Phase 2"
 date:   2018-05-17 00:07:00 -0400
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 About a week ago the OpenStore gained support for Xenial in the website. Today

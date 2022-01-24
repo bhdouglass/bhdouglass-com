@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "uApp Explorer's Big April Update"
 date:   2016-04-23 11:07:00 -0400
-categories: uappexplorer web
+categories: uappexplorer releases
 ---
 
 Today I've just released one of my bigger updates for uApp Explorer. The major

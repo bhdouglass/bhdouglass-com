@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Recipe Boss Translations"
 date:   2018-11-24 00:08:00 -0400
-categories: recipe-boss web
+categories: web releases
 ---
 
 Recently I've released several minor updates to Recipe Boss with rather large

@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "The Open(Snap)Store"
 date:   2016-06-26 00:55:00 -0400
-categories: openstore web
+categories: openstore releases
 ---
 
 There has been a major update to the OpenStore today. We now fully support snaps!

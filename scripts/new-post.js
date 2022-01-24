@@ -18,10 +18,8 @@ categories:
 `;
 
 const fileTitle = answers.title.toLowerCase()
-  .replace(' ', '-')
-  .replace(':', '')
-  .replace('.', '')
-  .replace('!', '');
+  .replace(/ /g, '-')
+  .replace(/[:.!?]/g, '');
 const path = `src/pages/blog/${answers.blog}/${format(new Date(), 'yyyy-MM-dd')}-${fileTitle}.md`;
 
 await fs.writeFile(path, content);

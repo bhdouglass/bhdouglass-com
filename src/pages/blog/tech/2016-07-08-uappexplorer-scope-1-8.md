@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "uApp Explorer Scope v1.8"
 date:   2016-07-08 21:43:00 -0400
-categories: uappexplorer ubuntu-touch
+categories: uappexplorer ubuntu-touch-apps releases
 ---
 
 Today I've uploaded a new minor version to

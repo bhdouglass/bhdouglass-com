@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "OpenStore Multi Arch"
 date:   2019-12-01 00:30:00 -0400
-categories: openstore ubuntu-touch
+categories: openstore releases
 ---
 
 Update (Dec 12): Multi arch support is now in the production OpenStore!

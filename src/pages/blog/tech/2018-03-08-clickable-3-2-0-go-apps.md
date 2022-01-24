@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Clickable 3.2.0 - Go Apps"
 date:   2018-03-08 02:05:00 -0500
-categories: clickable ubuntu-touch
+categories: clickable releases
 ---
 
 Version 3.2.0 of Clickable has just been release and built in the PPA! This

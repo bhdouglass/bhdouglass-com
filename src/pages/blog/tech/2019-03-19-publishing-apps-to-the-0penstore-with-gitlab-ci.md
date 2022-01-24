@@ -2,7 +2,7 @@
 layout: ../../../layouts/TechPostLayout.astro
 title:  "Publishing apps to the OpenStore with GitLab CI"
 date:   2019-03-19 00:02:00 -0400
-categories: clickable tutorial
+categories: clickable openstore tutorial
 ---
 
 Updated 09/16/2019: Updated for Clickable v6 changes
