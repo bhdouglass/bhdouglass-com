@@ -8,6 +8,11 @@
 - [Curly Bracket icons by Three Six Five from NounProject.com](https://thenounproject.com/icon/curly-bracket-1418243/)
 - [Background vector created by starline - www.freepik.com](https://www.freepik.com/free-vector/abstact-hexagon-background-memphis-style_14649409.htm)
 
+## Built with Astro
+
+This site is built with [Astro](https://astro.build/)! For more information
+check out [my blog post](https://bhdouglass.com/blog/tech/2022-02-07-built-with-astro/).
+
 ## License
 
 Copyright (C) 2022 [Brian Douglass](http://bhdouglass.com/)

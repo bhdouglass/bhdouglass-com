@@ -10,7 +10,7 @@ const answers = await inquirer.prompt([
 ]);
 
 const content = `---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/${answers.blog[0].toUpperCase()}${answers.blog.substring(1)}PostLayout.astro
 title: "${answers.title}"
 date: ${format(new Date(), 'yyyy-MM-dd HH:mm:ss xx')}
 categories:
