@@ -17,12 +17,18 @@ export async function getStaticPaths({ paginate, rss }) {
   rss({
     title: 'Software Space by Brian Douglass',
     description: 'Random remarks about software development and open source',
-    items: posts.map(item => ({
-      title: item.title,
-      description: item.description,
-      link: item.url,
-      pubDate: item.date,
-    })),
+    items: posts.map(item => {
+      let description = item.astro.html.replace(/<[^>]*>/g, '');
+      const space = description.substring(0, 200).lastIndexOf(' ');
+      description = `${description.substring(0, space)}...`;
+
+      return {
+        title: item.title,
+        description,
+        link: item.url,
+        pubDate: item.date,
+      };
+    }),
     dest: "/feeds/tech.xml",
   });
 
