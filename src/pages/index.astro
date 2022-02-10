@@ -1,6 +1,8 @@
 ---
+import { format } from 'date-fns';
+
 import BaseLayout from '../layouts/BaseLayout.astro';
-import workHistory from '../data/work-history.json';
+import resume from '../data/resume.json';
 ---
 
 <style>
@@ -27,7 +29,7 @@ import workHistory from '../data/work-history.json';
   <section class="text-center">
     <h1>Hi, I'm Brian Douglass</h1>
     <h2>
-      {workHistory[0].title} @ <a href={workHistory[0].link} rel="noopener noreferrer">{workHistory[0].company}</a>
+      {resume.work[0].position} @ <a href={resume.work[0].url} rel="noopener noreferrer">{resume.work[0].name}</a>
     </h2>
   </section>
 
@@ -98,21 +100,21 @@ import workHistory from '../data/work-history.json';
   <section>
     <h3>Work History</h3>
     <ul class="work-history">
-      {workHistory.map((job) => (
+      {resume.work.filter((job) => !job.position.includes("Freelance")).map((job) => (
         <li>
           <h4>
-            {job.title} @ <a href={job.link}>{job.company}</a>
+            {job.position} @ <a href={job.url}>{job.name}</a>
           </h4>
           <p>
-            {job.years.start} → {job.years.end}
+            {format(new Date(job.startDate), 'MMM yyyy')} → {job.endDate ? format(new Date(job.endDate), 'MMM yyyy') : 'Present'}
             <br/>
-            {job.description}
+            {job.summary}
           </p>
         </li>
       ))}
 
       <li>
-        <a href="https://stackoverflow.com/cv/bhdouglass" rel="noopener noreferrer">Full Resume</a>
+        <a href="/resume">Full Resume</a>
       </li>
     </ul>
   </section>

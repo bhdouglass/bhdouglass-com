@@ -1,0 +1,349 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Brian Douglass",
+    "label": "Senior Software Engineer",
+    "image": "https://s.gravatar.com/avatar/12e1b1f99e0d928cd8fd8f8e270f0b93?s=256",
+    "email": "bhdouglass@gmail.com",
+    "url": "https://bhdouglass.com/",
+    "summary": "Hello, I'm Brian Douglass a full stack engineer with over a decade of experience building software. I have a keen interest in solving interesting problem. And I find it especially rewarding when the solutions help improve peoples lives. I specialize in JavaScript/TypeScript, Node.js and building APIs. But I also have extensive experience with Python, PHP, React, Vue.js, C++, and Qt, just to name a few. I'm always looking to improve myself and the people around me. ",
+    "profiles": [
+      {
+        "network": "GitLab",
+        "username": "bhdouglass",
+        "url": "https://gitlab.com/bhdouglass"
+      },
+      {
+        "network": "GitHub",
+        "username": "bhdouglass",
+        "url": "https://github.com/bhdouglass/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Enerflo",
+      "location": "Huntington Beach, CA",
+      "description": "",
+      "position": "Senior Software Engineer",
+      "url": "https://enerflo.com/",
+      "startDate": "2020-02",
+      "summary": "Developing new apis with NestJS, Typescript, GraphQL, and PostgreSQL. Also building interfaces with React and maintaining systems built with Laravel. Team lead and mentor for Jr Developers.",
+      "highlights": [
+        "Build apis with NestJS, Typescript, GraphQL, and PostgreSQL",
+        "Build interfaces with React",
+        "Maintain web apps with Laravel & Javascript",
+        "Lead a team of 5-6 developers",
+        "Interface directly with stakeholders to determine direction and scope of projects",
+        "Mentoring Jr Developers and reviewing code pull requests",
+        "Interviewing and onboarding new developers"
+      ]
+    },
+    {
+      "name": "iFit",
+      "location": "Logan, UT",
+      "description": "",
+      "position": "Senior Software Engineer",
+      "url": "https://ifit.com/",
+      "startDate": "2019-05",
+      "endDate": "2020-01",
+      "summary": "Developed lambda microservices in Node.js and Typescript. Built interfaces using React. Also created developer tools to improve error tracking and implemented testing solutions using Docker.",
+      "highlights": [
+        "Develop web apps with React.",
+        "Maintain and improve microservices.",
+        "Improve testing solutions with docker.",
+        "Create developer tools to improve error tracking."
+      ]
+    },
+    {
+      "name": "eFlex Systems",
+      "location": "Rochester Hills, MI",
+      "description": "",
+      "position": "Senior Developer",
+      "url": "https://www.eflexsystems.com/",
+      "startDate": "2018-07",
+      "endDate": "2019-03",
+      "summary": "Migrated legacy C# api and C++ processes to Node.js. Developed full stack applications using Koa, Ember.js, and CoffeeScript.",
+      "highlights": [
+        "Developed full stack solutions to improve efficiency for manufacturing clients.",
+        "Migrated legacy api from C# to Node.js and legacy C++ process to Node.js.",
+        "Autonomous and self motivated telecommuter."
+      ]
+    },
+    {
+      "name": "PureCars",
+      "location": "Atlanta, GA",
+      "description": "",
+      "position": "Software Engineer",
+      "url": "http://www.purecars.com/",
+      "startDate": "2017-10",
+      "endDate": "2018-07",
+      "summary": "Showroom Logic was acquired by PureCars in 2017. Maintained legacy systems in Python and PHP. Architected new solutions for web scraping using serverless functions.",
+      "highlights": [
+        "Architected improved web scraping technologies utilizing serverless functions.",
+        "Solely responsible for maintaining legacy systems.",
+        "Optimized systems running in AWS.",
+        "Driven and autonomous telecommuter."
+      ]
+    },
+    {
+      "name": "Showroom Logic",
+      "location": "Miami, FL",
+      "description": "",
+      "position": "Senior Software Engineer",
+      "url": "https://www.showroomlogic.com/",
+      "startDate": "2013-06",
+      "endDate": "2017-09",
+      "summary": "Developed fullstack applications using PHP and AngularJS. Created new full stack applications using Python and Django. Lead a small project team and optimized systems for scaling up massively.",
+      "highlights": [
+        "Technical lead for small project teams.",
+        "Develop api interactions with Google AdWords, BingAds, Facebook, and AutoWeb.",
+        "Self organizing and autonomous telecommuting.",
+        "Maintained services hosted in AWS.",
+        "Developing large scale ad generation systems with Python and Django.",
+        "Rebuilt ad generation system to maximize performance syncing tens of thousands of ads.",
+        "Maintaining legacy systems using PHP, Doctrine2, and AngularJS."
+      ]
+    },
+    {
+      "name": "DiversiLabs",
+      "location": "Philadelphia, PA",
+      "description": "",
+      "position": "Software Engineer and Product Manager",
+      "url": "http://diversilabs.com/",
+      "startDate": "2010-05",
+      "endDate": "2013-06",
+      "summary": "Developed new Qt based interfaces for aging Matlab application. Developed new company website.",
+      "highlights": [
+        "Developed new graphical user interface for aging app.",
+        "Interfaced Matlab backend with new Qt interface.",
+        "Rewrote company website.",
+        "Self motivated and driven telecommuter."
+      ]
+    },
+    {
+      "name": "Business MAPS",
+      "location": "Austin, TX",
+      "description": "",
+      "position": "Freelance Software Engineer",
+      "url": "https://www.mymapscoach.com/",
+      "startDate": "2019-06",
+      "summary": "Architected and built a full stack application to meet growing business needs.",
+      "highlights": [
+        "Developed an application using PHP, Larvel, JavaScript, and Vue.js.",
+        "Interfaced closely with executives to develop solutions to business problems.",
+        "Replaced legacy scripts for payment calculations with modern solutions."
+      ]
+    },
+    {
+      "name": "At Your Service, Inc",
+      "location": "Brookville, PA",
+      "description": "",
+      "position": "Freelance Software Engineer",
+      "url": "http://www.plylers.net/",
+      "startDate": "2014-04",
+      "endDate": "2021-05",
+      "summary": "Created new applications using Python, Django, JavaScript, and Vue.js. Replaced aging spreadsheet tracking with modern applications.",
+      "highlights": [
+        "Architected and developed full stack solutions for work order management.",
+        "Created progressive web app for mobile work order input.",
+        "Interfaced closely with the client's employees to meet their needs."
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "UBports",
+      "position": "UBports App Dev Steering Committee Head",
+      "url": "https://ubports.com/",
+      "startDate": "2018-08",
+      "endDate": "2021-04",
+      "summary": "Lead the UBports App Development committee and championed developer experience for the Ubuntu Touch operating system.",
+      "highlights": [
+        "Support and develop the open source Ubuntu Touch operating system.",
+        "Organize global contributors to develop apps and write documentation.",
+        "Built and maintained UI toolkits and themes for app development.",
+        "Pioneered quality of life improvements for core app developers."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Messiah College",
+      "url": "https://www.messiah.edu/",
+      "area": "Computer and Information Science ",
+      "studyType": "Bachelor of Science",
+      "startDate": "2009-09",
+      "endDate": "2012-05",
+      "score": "3.83",
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "Backend Development",
+      "keywords": [
+        "Node.js",
+        "ExpressJS",
+        "NestJS",
+        "Jest",
+        "Python",
+        "Django",
+        "Flask",
+        "PHP",
+        "Laravel",
+        "REST",
+        "GraphQL",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Serverless",
+        "OpenAPI/Swagger"
+      ]
+    },
+    {
+      "name": "Frontend Development",
+      "keywords": [
+        "JavaScript",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "Vue.js",
+        "React",
+        "Ember.js",
+        "Astro"
+      ]
+    },
+    {
+      "name": "Development",
+      "keywords": [
+        "Git",
+        "Docker",
+        "Linux",
+        "Qt",
+        "QML",
+        "C++"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Board Games",
+      "keywords": [
+        "Terraforming Mars",
+        "Agricola",
+        "Ticket to Ride",
+        "Catan"
+      ]
+    },
+    {
+      "name": "Open Source",
+      "keywords": [
+        "Linux",
+        "Ubuntu Touch",
+        "Self Hosting"
+      ]
+    },
+    {
+      "name": "Video Games",
+      "keywords": [
+        "Fire Emblem",
+        "XCOM",
+        "Civilization"
+      ]
+    },
+    {
+      "name": "Cooking",
+      "keywords": []
+    }
+  ],
+  "projects": [
+    {
+      "name": "OpenStore",
+      "description": "The official app store for Ubuntu Touch",
+      "highlights": [
+        "Built an API first web service built using TypeScript, Node.js, Express, and MongoDB.",
+        "Created custom web client for searching and managing apps using JavaScript and Vue.js",
+        "Continued to maintain Qt/QML Ubuntu Touch app for installing applications."
+      ],
+      "startDate": "2015-04",
+      "url": "https://open-store.io/",
+      "roles": [
+        "Lead Developer"
+      ],
+      "type": "application"
+    },
+    {
+      "name": "Clickable",
+      "description": "A tool to build and compile Ubuntu Touch apps easily from the command line.",
+      "highlights": [
+        "Built a Python command line tool to vastly improve developer experience.",
+        "Configured docker containers for easily reproducible builds.",
+        "Lead a small international team."
+      ],
+      "startDate": "2016-04",
+      "url": "https://clickable-ut.dev/",
+      "roles": [
+        "Lead Developer"
+      ],
+      "type": "application"
+    },
+    {
+      "name": "Recipe Boss",
+      "description": "Recipe manager that makes your recipes work for you",
+      "highlights": [
+        "Created a mobile first web app in Vue.js for managing recipes,",
+        "Built without an api, leveraging the remote storage library"
+      ],
+      "startDate": "2018-01",
+      "endDate": "2021-01",
+      "url": "https://recipes.bhdouglass.com/",
+      "roles": [
+        "Lead Developer"
+      ],
+      "type": "application"
+    },
+    {
+      "name": "Ubuntu Touch Apps",
+      "description": "Development and maintenance of various apps for Ubuntu Touch",
+      "highlights": [
+        "Built apps with native Qt and QML.",
+        "Created apps using web technologies.",
+        "Maintained and improved apps abandoned by other developers."
+      ],
+      "startDate": "2015-03",
+      "url": "https://open-store.io/?sort=relevance&search=author%3ABrian%20Douglass",
+      "roles": [
+        "Lead Developer",
+        "Maintainer"
+      ],
+      "type": "application"
+    },
+    {
+      "name": "Personal Blog",
+      "description": "Tutorials about various technologies and release announcements for my projects",
+      "highlights": [
+        "Wrote tutorials spanning technologies from Node.js to Ubuntu Touch Apps.",
+        "Created release announcements for various projects."
+      ],
+      "startDate": "2016-03",
+      "url": "https://bhdouglass.com/blog/tech/",
+      "roles": [
+        "Writer"
+      ],
+      "type": "blog"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00",
+    "theme": "kendall"
+  }
+}

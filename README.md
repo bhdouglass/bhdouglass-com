@@ -13,6 +13,11 @@
 This site is built with [Astro](https://astro.build/)! For more information
 check out [my blog post](https://bhdouglass.com/blog/tech/2022-02-07-built-with-astro/).
 
+## JSON Resume
+
+My resume is built using [JSON Resume](https://jsonresume.org/).
+It can be viewed on [my own site](https://bhdouglass.com/resume) or on the [JSON Resume Registry](https://registry.jsonresume.org/bhdouglass).
+
 ## License
 
 Copyright (C) 2022 [Brian Douglass](http://bhdouglass.com/)
