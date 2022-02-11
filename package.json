@@ -12,8 +12,8 @@
     "preview": "astro preview",
     "deploy": "npm run build && surge ./dist/ --domain https://bhdouglass.com",
     "new-post": "node scripts/new-post.js",
-    "resume-export": "resume export --theme kendall --resume src/data/resume.json public/resume/index.html",
-    "resume-serve": "resume serve --theme kendall --resume src/data/resume.json --dir .tmp"
+    "resume-export": "resume export --theme kendall-projects --resume src/data/resume.json public/resume/index.html",
+    "resume-serve": "resume serve --theme kendall-projects --resume src/data/resume.json --dir .tmp"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "date-fns": "^2.28.0",
     "inquirer": "^8.2.0",
     "jsonresume-theme-kendall": "^0.2.0",
+    "jsonresume-theme-kendall-projects": "^0.2.1",
     "resume-cli": "^3.0.5",
     "surge": "^0.23.1"
   },

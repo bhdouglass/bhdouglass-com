@@ -19,3 +19,4 @@ yarn-error.log*
 bootstrap.*
 ._sync_*
 public/resume/index.html
+.tmp
