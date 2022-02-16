@@ -10,7 +10,7 @@ const tagline = 'Random remarks about software development and open source';
 const feedUrl = '/feeds/tech.xml';
 
 export async function getStaticPaths({ paginate }) {
-  const posts = Astro.fetchContent('../*.md');
+  let posts = Astro.fetchContent('../*.md');
   if (process.env.NODE_ENV !== 'development') {
     posts = posts.filter((post) => !post.draft);
   }

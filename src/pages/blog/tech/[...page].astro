@@ -12,7 +12,6 @@ export async function getStaticPaths({ paginate, rss }) {
   // For some reason you can't pass in variable from outside this scope into here
 
   let posts = Astro.fetchContent('./*.md');
-  console.log(process.env.NODE_ENV);
   if (process.env.NODE_ENV !== 'development') {
     posts = posts.filter((post) => !post.draft);
   }
