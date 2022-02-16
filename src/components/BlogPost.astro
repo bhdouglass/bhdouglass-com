@@ -2,7 +2,7 @@
 import format from 'date-fns/format';
 import { tagTitleCase } from '../utilites';
 
-const { title, date, blogTitle, blogUrl, tags } = Astro.props;
+const { title, date, blogTitle, blogUrl, tags, draft } = Astro.props;
 const { url } = Astro.request;
 
 const pathParts = url.pathname.split('/');
@@ -10,7 +10,7 @@ const pathParts = url.pathname.split('/');
 ---
 
 <article>
-  <h1 class="mb-2">{title}</h1>
+  <h1 class="mb-2">{title} {draft && '(DRAFT)'}</h1>
   <p class="mb-4">
     Published {format(new Date(date), 'MMMM d, yyyy')} in <a href={blogUrl}>{blogTitle}</a> by <a href="/">Brian Douglass</a>
     <br/>

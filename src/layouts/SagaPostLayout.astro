@@ -6,10 +6,14 @@ import { categoriesToTags } from '../utilites';
 import '../styles/blog.css';
 
 const { content } = Astro.props;
+
+const hide = content.draft && process.env.NODE_ENV !== 'development';
 ---
 
 <BaseLayout title={`${content.title} | Saga by Brian Douglass`}>
-  <BlogPost title={content.title} date={content.date} blogUrl="/blog/saga" blogTitle="Saga" tags={categoriesToTags(content.categories)}>
-    <slot />
-  </BlogPost>
+  {hide ? (<h1 class="text-center mt-2">There isn't anything here yet!</h1>) : (
+    <BlogPost title={content.title} date={content.date} blogUrl="/blog/saga" blogTitle="Saga" tags={categoriesToTags(content.categories)} draft={content.draft}>
+      <slot />
+    </BlogPost>
+  )}
 </BaseLayout>

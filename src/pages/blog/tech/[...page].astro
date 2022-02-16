@@ -11,7 +11,12 @@ const feedUrl = '/feeds/tech.xml';
 export async function getStaticPaths({ paginate, rss }) {
   // For some reason you can't pass in variable from outside this scope into here
 
-  const posts = Astro.fetchContent('./*.md');
+  let posts = Astro.fetchContent('./*.md');
+  console.log(process.env.NODE_ENV);
+  if (process.env.NODE_ENV !== 'development') {
+    posts = posts.filter((post) => !post.draft);
+  }
+
   posts.sort((a, b) => (new Date(b.date).valueOf() - new Date(a.date).valueOf()))
 
   rss({

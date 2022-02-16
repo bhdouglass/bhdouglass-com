@@ -11,6 +11,9 @@ const feedUrl = '/feeds/saga.xml';
 
 export async function getStaticPaths({ paginate }) {
   const posts = Astro.fetchContent('../*.md');
+  if (process.env.NODE_ENV !== 'development') {
+    posts = posts.filter((post) => !post.draft);
+  }
   posts.sort((a, b) => (new Date(b.date).valueOf() - new Date(a.date).valueOf()))
 
   const categories = Array.from(new Set(posts.reduce((acc, cur) => {

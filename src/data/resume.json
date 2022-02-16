@@ -30,13 +30,14 @@
       "startDate": "2020-02",
       "summary": "Developing new apis with NestJS, Typescript, GraphQL, and PostgreSQL. Also building interfaces with React and maintaining systems built with Laravel. Team lead and mentor for Jr Developers.",
       "highlights": [
-        "Build apis with NestJS, Typescript, GraphQL, and PostgreSQL",
-        "Build interfaces with React",
-        "Maintain web apps with Laravel & Javascript",
-        "Lead a team of 5-6 developers",
-        "Interface directly with stakeholders to determine direction and scope of projects",
-        "Mentoring Jr Developers and reviewing code pull requests",
-        "Interviewing and onboarding new developers"
+        "Build apis with NestJS, Typescript, GraphQL, and PostgreSQL.",
+        "Build interfaces with React.",
+        "Maintain web apps with Laravel & Javascript.",
+        "Lead a team of 5-6 developers.",
+        "Interface directly with stakeholders to determine direction and scope of projects.",
+        "Mentoring Jr Developers and reviewing code pull requests.",
+        "Interviewing and onboarding new developers.",
+        "Championed documentation and developed best practices for teams."
       ]
     },
     {

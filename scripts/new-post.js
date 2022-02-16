@@ -14,6 +14,7 @@ layout: ../../../layouts/${answers.blog[0].toUpperCase()}${answers.blog.substrin
 title: "${answers.title}"
 date: ${format(new Date(), 'yyyy-MM-dd HH:mm:ss xx')}
 categories:
+draft: true
 ---
 `;
 
