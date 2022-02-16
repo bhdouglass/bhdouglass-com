@@ -18,7 +18,11 @@ check out [my blog post](https://bhdouglass.com/blog/tech/2022-02-07-built-with-
 My resume is built using [JSON Resume](https://jsonresume.org/).
 It can be viewed on [my own site](https://bhdouglass.com/resume) or on the [JSON Resume Registry](https://registry.jsonresume.org/bhdouglass).
 
-## License
+## Blog Post License
+
+The blog posts are licensed under [Creative Commons Attribution Share Alike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+
+## Code License
 
 Copyright (C) 2022 [Brian Douglass](http://bhdouglass.com/)
 
