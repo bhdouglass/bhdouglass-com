@@ -28,7 +28,7 @@ export async function getStaticPaths({ paginate, rss }) {
       return {
         title: item.title,
         description,
-        link: item.url,
+        link: item.url + '?utm_source=rss',
         pubDate: item.date,
       };
     }),
