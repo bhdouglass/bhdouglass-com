@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/OldClickablePostLayout.astro
 title:  "Clickable Updates"
 date:   2017-06-22 00:50:00 -0400
 categories: clickable releases

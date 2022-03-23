@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/OldClickablePostLayout.astro
 title:  "Clickable 3.2.0 - Go Apps"
 date:   2018-03-08 02:05:00 -0500
 categories: clickable releases

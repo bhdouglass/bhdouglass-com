@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/OldClickablePostLayout.astro
 title:  "Clickable Deb & PPA"
 date:   2017-12-10 00:12:00 -0500
 categories: clickable releases

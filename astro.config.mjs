@@ -5,4 +5,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     site: 'https://bhdouglass.com',
     sitemap: true,
   },
+  devOptions: {
+    hostname: '0.0.0.0',
+  },
 });

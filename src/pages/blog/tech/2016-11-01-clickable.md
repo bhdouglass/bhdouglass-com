@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/OldClickablePostLayout.astro
 title:  "Clickable: Making Ubuntu Touch Apps Easy"
 date:   2016-11-01 00:10:00 -0400
 categories: clickable releases
