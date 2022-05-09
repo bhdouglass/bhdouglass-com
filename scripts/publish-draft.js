@@ -25,6 +25,8 @@ const newName = `${format(new Date(), 'yyyy-MM-dd')}-${fileName.substring(11)}`;
 const newPath = path.join(dirPath, newName);
 
 await fs.writeFile(newPath, content.join('\n'));
-await fs.unlink(filePath);
+if (filePath != newPath) {
+  await fs.unlink(filePath);
+}
 
 console.log(chalk.green(`Publishing draft to ${newPath}`));
