@@ -5,9 +5,9 @@ import { categoriesToTags } from '../../../../utilites';
 
 import '../../../../styles/blog.css';
 
-const title = 'Saga by Brian Douglass';
-const tagline = 'Random remarks about non-software things';
-const feedUrl = '/feeds/saga.xml';
+const title = 'The Chef, the Family and the Garden';
+const tagline = 'Recipes, gardening, and family related short posts';
+const feedUrl = '/feeds/garden.xml';
 
 export async function getStaticPaths({ paginate }) {
   let posts = Astro.fetchContent('../*.md');

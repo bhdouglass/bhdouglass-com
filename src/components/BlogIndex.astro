@@ -6,8 +6,9 @@ const { posts, nextUrl, prevUrl, title, tagline, feedUrl, tag } = Astro.props;
 ---
 
 <section class="text-center">
-  <h1>{title}</h1>
-  <h2>{tagline}</h2>
+  <h1 class="mb-4">{title}</h1>
+  <h2>by Brian Douglass</h2>
+  <h3>{tagline}</h3>
 </section>
 
 <section>

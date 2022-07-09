@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/SagaPostLayout.astro
+layout: ../../../layouts/GardenPostLayout.astro
 title: "Indoor Seed Starting"
 date: 2022-04-05 18:26:40 +0000
 categories: seeds gardening

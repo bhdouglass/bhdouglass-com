@@ -4,8 +4,8 @@ import BlogIndex from '../../../components/BlogIndex.astro';
 
 import '../../../styles/blog.css';
 
-const title = 'Software Space by Brian Douglass';
-const tagline = 'Random remarks about software development and open source';
+const title = 'The Voyage of a Software Developer';
+const tagline = 'Short posts about software enginering and open source';
 const feedUrl = '/feeds/tech.xml';
 
 export async function getStaticPaths({ paginate, rss }) {
@@ -19,8 +19,8 @@ export async function getStaticPaths({ paginate, rss }) {
   posts.sort((a, b) => (new Date(b.date).valueOf() - new Date(a.date).valueOf()))
 
   rss({
-    title: 'Software Space by Brian Douglass',
-    description: 'Random remarks about software development and open source',
+    title: 'The Voyage of a Software Developer by Brian Douglass',
+    description: 'Short posts about software enginering and open source',
     items: posts.map(item => {
       let description = item.astro.html.replace(/<[^>]*>/g, '');
       const space = description.substring(0, 200).lastIndexOf(' ');

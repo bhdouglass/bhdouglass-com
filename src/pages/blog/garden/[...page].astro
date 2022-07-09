@@ -4,9 +4,9 @@ import BlogIndex from '../../../components/BlogIndex.astro';
 
 import '../../../styles/blog.css';
 
-const title = 'Saga by Brian Douglass';
-const tagline = 'Random remarks about non-software things';
-const feedUrl = '/feeds/saga.xml';
+const title = 'The Chef, the Family and the Garden';
+const tagline = 'Recipes, gardening, and family related short posts';
+const feedUrl = '/feeds/garden.xml';
 
 export async function getStaticPaths({ paginate, rss }) {
   // For some reason you can't pass in variable from outside this scope into here
@@ -18,8 +18,8 @@ export async function getStaticPaths({ paginate, rss }) {
   posts.sort((a, b) => (new Date(b.date).valueOf() - new Date(a.date).valueOf()))
 
   rss({
-    title: 'Saga by Brian Douglass',
-    description: 'Random remarks about non-software things',
+    title: 'The Chef, the Family and the Garden by Brian Douglass',
+    description: 'Recipes, gardening, and family related short posts',
     items: posts.map(item => {
       let description = item.astro.html.replace(/<[^>]*>/g, '');
       const space = description.substring(0, 200).lastIndexOf(' ');
@@ -32,7 +32,7 @@ export async function getStaticPaths({ paginate, rss }) {
         pubDate: item.date,
       };
     }),
-    dest: "/feeds/saga.xml",
+    dest: "/feeds/garden.xml",
   });
 
   return paginate(posts, { pageSize: 30 });

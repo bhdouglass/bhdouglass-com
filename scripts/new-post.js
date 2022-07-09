@@ -3,17 +3,19 @@ import chalk from 'chalk';
 import { format } from 'date-fns';
 import fs from 'fs/promises';
 
-// TODO crawl existing files for blog names and categories
+const blogs = (await fs.readdir('src/pages/blog/')).filter((name) => !name.endsWith('.astro'));
+
 const answers = await inquirer.prompt([
-  { type: 'list', name: 'blog', message: 'Which Blog?', choices: [ 'tech', 'saga' ] },
+  { type: 'list', name: 'blog', message: 'Which Blog?', choices: blogs },
   { type: 'input', name: 'title', message: 'What is the post\'s title?' },
+  { type: 'input', name: 'categories', message: 'What categories?' },
 ]);
 
 const content = `---
 layout: ../../../layouts/${answers.blog[0].toUpperCase()}${answers.blog.substring(1)}PostLayout.astro
 title: "${answers.title}"
 date: ${format(new Date(), 'yyyy-MM-dd HH:mm:ss xx')}
-categories:
+categories: ${answers.categories}
 draft: true
 ---
 `;

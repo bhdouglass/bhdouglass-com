@@ -10,9 +10,9 @@ const { content } = Astro.props;
 const hide = content.draft && process.env.NODE_ENV !== 'development';
 ---
 
-<BaseLayout title={`${content.title} | Saga by Brian Douglass`} feedUrl="/feeds/saga.xml">
+<BaseLayout title={`${content.title} | The Chef, the Family and the Garden by Brian Douglass`} feedUrl="/feeds/garden.xml">
   {hide ? (<h1 class="text-center mt-2">There isn't anything here yet!</h1>) : (
-    <BlogPost title={content.title} date={content.date} blogUrl="/blog/saga" blogTitle="Saga" tags={categoriesToTags(content.categories)} draft={content.draft}>
+    <BlogPost title={content.title} date={content.date} blogUrl="/blog/garden" blogTitle="The Chef, the Family and the Garden" tags={categoriesToTags(content.categories)} draft={content.draft}>
       <slot />
     </BlogPost>
   )}
