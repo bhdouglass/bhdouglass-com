@@ -413,7 +413,7 @@ If you have an questions or suggestions feel free to reach out to me via
 - [Mocha Documentation](https://mochajs.org/#getting-started)
 - [Chai Documentation](https://www.chaijs.com/api/)
 - [factory-girl Tutorial](https://github.com/aexmachina/factory-girl/blob/master/docs/tutorial.md)
-- [Sinon Documentation](https://sinonjs.org/releases/v7.3.2/)
+- [Sinon Documentation](https://sinonjs.org/releases/v7/)
 - [sinon-chai Documentation](https://github.com/domenic/sinon-chai#assertions)
 - [SuperTest Documentation](https://github.com/visionmedia/supertest)
 - [ESLint Documentation](https://eslint.org/docs/rules/)

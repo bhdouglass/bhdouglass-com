@@ -24,4 +24,4 @@ referenced above), was added for managing custom dice and collection. You can
 now long press on the minus button to clear all the dice. And in a similar manner
 you can long press a single die to remove it.
 
-[Get Dice Roller in the OpenStore!](https://open.uappexplorer.com/app/dice-roller.bhdouglass)
+[Get Dice Roller in the OpenStore!](https://open-store.io/app/dice-roller.bhdouglass)

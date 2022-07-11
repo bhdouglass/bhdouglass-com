@@ -22,7 +22,7 @@ can find on my [Github page](https://github.com/bhdouglass/usdk-tools).
 Including usdk-target also provides one less external dependency which has made
 it easier to package as a snap. Unfortunately the snap for clickable cannot be
 found in the offical snap store, but it is availabe
-[in the OpenStore](https://open.uappexplorer.com/snap/clickable). Clickable is a
+[in the OpenStore](https://open-store.io/snap/clickable). Clickable is a
 classic snap so it requires manual review, and therefor hasn't be accepted into
 the offical store yet.
 

@@ -29,7 +29,7 @@ If you are familiar with [Clickable](http://clickable.bhdouglass.com/en/latest/)
 Once you have [Clickable installed](http://clickable.bhdouglass.com/en/latest/install.html), run `clickable create` to start a new click project.
 Clickable will then walk you through several options to get you setup. Once you have a new app created, move to the project's root directory.
 From there you can run `clickable` to compile, package, and install the app on your device for testing.
-Once the app is ready to be published, [create a new GitLab repo](https://docs.gitlab.com/ee/gitlab-basics/create-project.html)
+Once the app is ready to be published, [create a new GitLab repo](https://docs.gitlab.com/ee/user/project/working_with_projects.html#create-a-project)
 for pushing your code.
 After that log into your OpenStore account and navigate to the [submission page](https://open-store.io/submit).
 Enter the app's name and title. It is very important to use the same app name as in your manifest.json or you will not be able to publish your app.

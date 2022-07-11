@@ -10,7 +10,7 @@ and built my first snap package. The snap I created was for my
 [click-parser](https://github.com/bhdouglass/click-parser) npm module. While
 it is an npm module, it also has a command line tool packaged with it.
 Click-parser is a small library used by both [uApp Explorer](https://uappexplorer.com/)
-and [OpenStore](https://open.uappexplorer.com/) to extract data from click
+and [OpenStore](https://open-store.io/) to extract data from click
 and snap packages.
 
 Creating the snap was very simple as snapcraft already has a npm module "part".

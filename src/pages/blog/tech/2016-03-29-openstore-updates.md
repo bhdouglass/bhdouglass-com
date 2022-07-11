@@ -21,7 +21,7 @@ Additionally I modified the app view to also
 display the type of package (app/scope/etc) to
 help avoid confusion when installing scopes.
 
-[Browse the OpenStore](https://open.uappexplorer.com/)
+[Browse the OpenStore](https://open-store.io/)
 
 [Check out the code](https://code.launchpad.net/~openstore-team/openstore-web/openstore-web)
 

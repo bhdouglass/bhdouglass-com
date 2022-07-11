@@ -32,4 +32,4 @@ times for the app. By switching to server side paging we dramatically speed
 up the startup of the app. And with all these great new features there were
 also many bugs squashed.
 
-[Download the updated app from the OpenStore](https://open.uappexplorer.com/app/openstore.openstore-team)
+[Download the updated app from the OpenStore](https://open-store.io/app/openstore.openstore-team)

@@ -14,7 +14,7 @@ After that it was just a matter of integrating snaps fully into the website.
 
 Additionally the OpenStore can now serve as an alternative snap store for your
 snapd instance. Just check out
-[docs for into on how to set that up](https://open.uappexplorer.com/docs#snap-store).
+[docs for into on how to set that up](https://open-store.io/docs#snap-store).
 
 Have a snap package you want to get in the OpenStore? Just head on over to our
-[submission page](https://open.uappexplorer.com/submit) to get started!
+[submission page](https://open-store.io/submit) to get started!

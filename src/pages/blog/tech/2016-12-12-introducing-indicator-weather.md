@@ -23,6 +23,6 @@ my work here will help enable other developers to create their own indicators.
 If you're interested in building and indicator check out [the source](https://github.com/bhdouglass/ut-indicator-weather)
 for more information.
 
-You can grab Indicator Weather in the [OpenStore](https://open.uappexplorer.com/app/indicator-weather.bhdouglass).
+You can grab Indicator Weather in the [OpenStore](https://open-store.io/app/indicator-weather.bhdouglass).
 
 ![Indicator Weather](/images/blog/indicator-weather/screenshot1.png)

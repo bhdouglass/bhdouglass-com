@@ -5,7 +5,7 @@ date:   2017-01-08 00:53:00 -0400
 categories: ubuntu-touch-apps releases
 ---
 
-Since I launched [Indicator Weather](https://open.uappexplorer.com/app/indicator-weather.bhdouglass)
+Since I launched [Indicator Weather](https://open-store.io/app/indicator-weather.bhdouglass)
 for Ubuntu Touch last month, I've uploaded 12 new releases. It has been quite a
 few, but many have been minor bug fixes and translation updates. One major
 highlight of the releases was v1.10. This release allowed users with non-writable
@@ -23,4 +23,4 @@ login so we don't track downloads by user. So every user that upgrades will coun
 multiple times. That being said, release v1.10 had the most downloads, clocking
 in at 221.
 
-You can grab the latest Indicator Weather in the [OpenStore](https://open.uappexplorer.com/app/indicator-weather.bhdouglass).
+You can grab the latest Indicator Weather in the [OpenStore](https://open-store.io/app/indicator-weather.bhdouglass).

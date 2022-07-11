@@ -23,4 +23,4 @@ issues that still apply today. And with that I want to improve the user
 experience of the calculator app as a whole.
 
 Download the latest version of the calculator app
-[fresh from the OpenStore](https://open.uappexplorer.com/app/com.ubuntu.calculator).
+[fresh from the OpenStore](https://open-store.io/app/com.ubuntu.calculator).

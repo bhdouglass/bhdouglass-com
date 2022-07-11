@@ -27,4 +27,4 @@ happened spontaneously around this little app was amazing and I can't wait to
 work with Joan again on the next project. A huge thank you to both Joan and
 Robert!
 
-[Get Dice Roller in the OpenStore!](https://open.uappexplorer.com/app/dice-roller.bhdouglass)
+[Get Dice Roller in the OpenStore!](https://open-store.io/app/dice-roller.bhdouglass)

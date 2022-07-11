@@ -14,6 +14,6 @@ It also includes a section of categories and a search page for you to browse and
 easily finding new apps.
 
 A huge thank you to all the contributors of the OpenStore. Get the app fresh
-from the [OpenStore](https://open.uappexplorer.com/app/openstore.openstore-team).
+from the [OpenStore](https://open-store.io/app/openstore.openstore-team).
 If you don't have the OpenStore app yet check out our
-[install docs](https://open.uappexplorer.com/docs#install).
+[install docs](https://open-store.io/docs#install).

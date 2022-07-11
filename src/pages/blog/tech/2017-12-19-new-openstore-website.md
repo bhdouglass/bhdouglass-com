@@ -17,7 +17,7 @@ You can now filter by category and app type (app, web app, and scope).
 With the filtering you can now sort the apps as well. Another neat
 feature is the stats view page. It lists various stats about the apps listed
 in the OpenStore (Wayne should be very excited about this!). You can
-find the stats page [on the bottom of any page](https://open.uappexplorer.com/stats).
+find the stats page [on the bottom of any page](https://open-store.io/stats).
 There are many other improvements and tweaks that also went into this update.
 
 Behind the scenes the site has switched from being based on Angular 1 and
@@ -32,5 +32,5 @@ I've also setup a [third repo](https://github.com/UbuntuOpenStore/openstore-web-
 with all the necessary bits to get you started developing on the OpenStore's website.
 
 If you run into any issues with this release please don't hesitate
-to reach out to us on [Telegram](https://open.uappexplorer.com/telegram) or
+to reach out to us on [Telegram](https://open-store.io/telegram) or
 though an [issue on GitHub](https://github.com/UbuntuOpenStore/openstore-meta/issues)!

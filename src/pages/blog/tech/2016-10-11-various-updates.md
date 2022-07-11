@@ -19,7 +19,7 @@ In addition to the sdk upgrade, Hazy is now Free and
 "experiment", so a huge thank you to the few people that did buy the watchface!
 
 Thanks to [Uptime Robot](https://uptimerobot.com/), [uApp Explorer](https://uappexplorer.com/)
-and the [OpenStore](https://open.uappexplorer.com/) both have a shiny new
+and the [OpenStore](https://open-store.io/) both have a shiny new
 [status page](http://status.uappexplorer.com/). You can find links to this page
 at the bottom of both websites.
 
