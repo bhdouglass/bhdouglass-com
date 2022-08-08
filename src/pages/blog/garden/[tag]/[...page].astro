@@ -18,10 +18,10 @@ export async function getStaticPaths({ paginate }) {
 
   const categories = Array.from(new Set(posts.reduce((acc, cur) => {
     return [...acc, ...categoriesToTags(cur.categories)];
-  }, [])));
+  }, []))).filter((category) => !!category);
 
   return categories.map((tag) => {
-    const filteredPosts = posts.filter((post) => post.categories.includes(tag));
+    const filteredPosts = posts.filter((post) => post.categories && post.categories.includes(tag));
     return paginate(filteredPosts, {
       params: { tag },
       pageSize: 30

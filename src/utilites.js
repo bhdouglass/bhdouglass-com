@@ -9,5 +9,5 @@ export function tagTitleCase(tag) {
 };
 
 export function categoriesToTags(categories) {
-  return categories.trim().split(' ').map((category) => category.trim());
+  return (categories ?? '').trim().split(' ').map((category) => category.trim());
 }
