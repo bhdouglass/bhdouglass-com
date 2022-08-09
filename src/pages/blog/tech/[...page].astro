@@ -1,40 +1,18 @@
 ---
+import rss from '@astrojs/rss';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import BlogIndex from '../../../components/BlogIndex.astro';
+import { sortPosts } from '../../../utilities';
 
 import '../../../styles/blog.css';
 
 const title = 'The Voyage of a Software Developer';
-const tagline = 'Short posts about software enginering and open source';
+const tagline = 'Short posts about software engineering and open source';
 const feedUrl = '/feeds/tech.xml';
 
-export async function getStaticPaths({ paginate, rss }) {
-  // For some reason you can't pass in variable from outside this scope into here
-
-  let posts = Astro.fetchContent('./*.md');
-  if (process.env.NODE_ENV !== 'development') {
-    posts = posts.filter((post) => !post.draft);
-  }
-
-  posts.sort((a, b) => (new Date(b.date).valueOf() - new Date(a.date).valueOf()))
-
-  rss({
-    title: 'The Voyage of a Software Developer by Brian Douglass',
-    description: 'Short posts about software enginering and open source',
-    items: posts.map(item => {
-      let description = item.astro.html.replace(/<[^>]*>/g, '');
-      const space = description.substring(0, 200).lastIndexOf(' ');
-      description = `${description.substring(0, space)}...`;
-
-      return {
-        title: item.title,
-        description,
-        link: item.url + '?utm_source=rss',
-        pubDate: item.date,
-      };
-    }),
-    dest: "/feeds/tech.xml",
-  });
+export async function getStaticPaths({ paginate }) {
+  // This is a separate scope, you cannot pass in variables: https://docs.astro.build/en/reference/api-reference/#getstaticpaths
+  let posts = sortPosts(await Astro.glob('./*.md'));
 
   return paginate(posts, { pageSize: 30 });
 }

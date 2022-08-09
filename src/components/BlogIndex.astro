@@ -1,6 +1,6 @@
 ---
 import format from 'date-fns/format';
-import { tagTitleCase } from '../utilites';
+import { tagTitleCase } from '../utilities';
 
 const { posts, nextUrl, prevUrl, title, tagline, feedUrl, tag } = Astro.props;
 ---
@@ -17,8 +17,8 @@ const { posts, nextUrl, prevUrl, title, tagline, feedUrl, tag } = Astro.props;
   <ul class="list-unstyled">
     {posts.map((post) => (
       <li class="mb-1">
-        <b><a href={post.url}>{post.title}</a></b> - {format(new Date(post.date), 'MMMM d, yyyy')}
-        {post.draft && '(DRAFT)'}
+        <b><a href={post.url}>{post.frontmatter.title}</a></b> - {format(new Date(post.frontmatter.date), 'MMMM d, yyyy')}
+        {post.frontmatter.draft && '(DRAFT)'}
       </li>
     ))}
   </ul>

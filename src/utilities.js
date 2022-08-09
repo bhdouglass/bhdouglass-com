@@ -11,3 +11,12 @@ export function tagTitleCase(tag) {
 export function categoriesToTags(categories) {
   return (categories ?? '').trim().split(' ').map((category) => category.trim());
 }
+
+export function sortPosts(posts) {
+  if (process.env.NODE_ENV !== 'development') {
+    posts = posts.filter((post) => !post.frontmatter.draft);
+  }
+
+  posts.sort((a, b) => (new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()))
+  return posts;
+}

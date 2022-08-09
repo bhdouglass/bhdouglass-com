@@ -1,11 +1,13 @@
-// @ts-check
-export default /** @type {import('astro').AstroUserConfig} */ ({
-  renderers: [],
-  buildOptions: {
-    site: 'https://bhdouglass.com',
-    sitemap: true,
+import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
+
+export default defineConfig({
+  site: 'https://bhdouglass.com',
+  server: {
+    host: true,
   },
-  devOptions: {
-    hostname: '0.0.0.0',
+  markdown: {
+    syntaxHighlight: 'prism',
   },
+  integrations: [sitemap()],
 });

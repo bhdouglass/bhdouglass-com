@@ -30,7 +30,9 @@
   },
   "homepage": "https://bhdouglass.com",
   "devDependencies": {
-    "astro": "^0.22.13",
+    "@astrojs/rss": "^0.2.2",
+    "@astrojs/sitemap": "^0.3.0",
+    "astro": "^1.0.0-rc.8",
     "autoprefixer": "^10.4.2",
     "chalk": "^5.0.0",
     "date-fns": "^2.28.0",
