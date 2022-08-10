@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 import { categoriesToTags } from '../utilities';
+import { TECH_BLOG } from '../constants';
 
 import '../styles/blog.css';
 
@@ -10,9 +11,9 @@ const { content } = Astro.props;
 const hide = content.draft && process.env.NODE_ENV !== 'development';
 ---
 
-<BaseLayout title={`${content.title} | The Voyage of a Software Developer by Brian Douglass`} prism={true} feedUrl="/feeds/tech.xml">
+<BaseLayout title={`${content.title} | ${TECH_BLOG.title} by Brian Douglass`} prism={true} feedUrl="/feeds/tech.xml">
   {hide ? (<h1 class="text-center mt-2">There isn't anything here yet!</h1>) : (
-    <BlogPost title={content.title} date={content.date} blogUrl="/blog/tech" blogTitle="The Voyage of a Software Developer" tags={categoriesToTags(content.categories)} draft={content.draft}>
+    <BlogPost title={content.title} date={content.date} blogUrl="/blog/tech" blogTitle={TECH_BLOG.title} tags={categoriesToTags(content.categories)} draft={content.draft}>
       <div class="mb-4 alert alert-light" role="alert">
         This post is for an older release of Clickable, check out the
         <a href="https://clickable-ut.dev/en/latest/changelog.html">docs</a> for current information.

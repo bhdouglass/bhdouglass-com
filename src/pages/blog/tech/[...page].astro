@@ -3,12 +3,9 @@ import rss from '@astrojs/rss';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import BlogIndex from '../../../components/BlogIndex.astro';
 import { sortPosts } from '../../../utilities';
+import { TECH_BLOG } from '../../../constants';
 
 import '../../../styles/blog.css';
-
-const title = 'The Voyage of a Software Developer';
-const tagline = 'Short posts about software engineering and open source';
-const feedUrl = '/feeds/tech.xml';
 
 export async function getStaticPaths({ paginate }) {
   // This is a separate scope, you cannot pass in variables: https://docs.astro.build/en/reference/api-reference/#getstaticpaths
@@ -20,13 +17,13 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 ---
 
-<BaseLayout title={title} feedUrl={feedUrl}>
+<BaseLayout title={TECH_BLOG.title} feedUrl={TECH_BLOG.feedUrl}>
   <BlogIndex
-    title={title}
-    tagline={tagline}
+    title={TECH_BLOG.title}
+    tagline={TECH_BLOG.tagline}
     posts={page.data}
     nextUrl={page.url.next}
     prevUrl={page.url.prev}
-    feedUrl={feedUrl}
+    feedUrl={TECH_BLOG.feedUrl}
   />
 </BaseLayout>

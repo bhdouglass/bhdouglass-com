@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { TECH_BLOG, GARDEN_BLOG } from '../../constants';
 
 import '../../styles/blog.css';
 ---
@@ -10,19 +11,19 @@ import '../../styles/blog.css';
 
     <div class="row mt-2">
       <h2>
-        <a href="/blog/tech">The Voyage of a Software Developer</a>
+        <a href="/blog/tech">{TECH_BLOG.title}</a>
       </h2>
       <p>
-        Short posts about software engineering and open source.
+        {TECH_BLOG.tagline}
       </p>
     </div>
 
     <div class="row">
       <h2>
-        <a href="/blog/garden">The Chef, the Family and the Garden</a>
+        <a href="/blog/garden">{GARDEN_BLOG.title}</a>
       </h2>
       <p>
-        Recipes, gardening, and family related short posts.
+        {GARDEN_BLOG.tagline}
       </p>
     </div>
   </section>
