@@ -1,0 +1,22 @@
+image: node:latest
+
+# Ref: https://docs.gitlab.com/ee/ci/caching/#cache-nodejs-dependencies
+cache:
+  key:
+    files:
+      - package-lock.json
+  paths:
+    - .npm/
+
+before_script:
+  - npm ci --cache .npm --prefer-offline
+
+# Ref: https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_from_scratch.html
+pages:
+  script:
+    - npm run build
+    - rm -rf public
+    - mv dist public
+  artifacts:
+    paths:
+      - public
