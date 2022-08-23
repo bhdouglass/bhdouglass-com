@@ -1,0 +1,110 @@
+---
+import { Fraction } from 'fractional';
+import { URL } from 'node:url';
+
+import '../styles/recipe.css';
+
+const { id, image } = Astro.props;
+
+const response = await fetch(`https://${import.meta.env.TANDOOR_DOMAIN}/api/recipe/${id}`, {
+  headers: { Authorization: `Token ${import.meta.env.TANDOOR_TOKEN}`}
+});
+const recipe = await response.json();
+
+const ingredients = recipe.steps.flatMap((step) => {
+  return step.ingredients;
+});
+
+function displayIngredientAmount(ingredient) {
+  const amount = (new Fraction(ingredient.amount)).toString();
+  return `${amount} ${ingredient.unit?.name ?? ''}`;
+}
+
+function displayIngredient(ingredient) {
+  return ingredient.food.name;
+}
+
+function displayStep(step) {
+  let instruction = step.instruction.replace(/\n/g, '<br/>').replace(/\{# [\w\s]+ #\}/g, '');
+  for (const index in step.ingredients) {
+    const regex = new RegExp(`\\{\\{ ingredients\\[${index}\\] \\}\\}`, 'g');
+    const ingredientString = `${displayIngredientAmount(step.ingredients[index])} ${displayIngredient(step.ingredients[index])}`
+    instruction = instruction.replace(regex, ingredientString);
+  }
+
+  return instruction;
+}
+
+let source = '';
+if (recipe.description.startsWith('Source:')) {
+  source = recipe.description.trim().replace('Source: ', '');
+}
+
+let sourceDisplay = source;
+let sourceIsUrl = false;
+if (source.startsWith('http')) {
+  sourceIsUrl = true;
+  sourceDisplay = (new URL(source)).hostname;
+  if (sourceDisplay.startsWith('www.')) {
+    sourceDisplay = sourceDisplay.replace('www.', '');
+  }
+}
+
+// TODO pinterest link
+---
+
+<div class="recipe">
+  <div class="head">
+    <div class="title">
+      <h2>{recipe.name}</h2>
+      {source && (
+        <div class="source">
+          Adapted from a recipe from:
+          {sourceIsUrl && (<a href={source}>{sourceDisplay}</a>)}
+          {!sourceIsUrl && ({source})}
+        </div>
+      )}
+    </div>
+
+    {image && (
+      <div class="image">
+        <img alt={recipe.name} src={image} />
+      </div>
+    )}
+  </div>
+
+
+  <div class="times">
+    {recipe.working_time && (<div class="time">Prep Time: {recipe.working_time} minutes</div>)}
+    {recipe.waiting_time && (<div class="time">Cook Time: {recipe.waiting_time} minutes</div>)}
+    {(recipe.working_time || recipe.waiting_time) && (<div class="time">Total Time: {recipe.working_time + recipe.waiting_time} minutes</div>)}
+  </div>
+
+  <div class="ingredients">
+    <h3>Ingredients</h3>
+    <ul class="list-unstyled ingredients">
+      {ingredients.map((ingredient) => (
+        <li class="ingredient">
+          <input type="checkbox" id={`ingredient-${ingredient.id}`} />
+          <label for={`ingredient-${ingredient.id}`}>
+            <span class="amount">{displayIngredientAmount(ingredient)}</span>
+            {displayIngredient(ingredient)}
+            {ingredient.note && (<span class="note">({ingredient.note})</span>)}
+          </label>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="instructions">
+    <h3>Instructions</h3>
+    <div>
+      {recipe.steps.map((step, index) => (
+        <div class="instruction">
+          <div class="number">{index + 1}</div>
+          <div set:html={displayStep(step)}></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

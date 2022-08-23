@@ -13,11 +13,11 @@
     "fix-404": "sed -i 's=../assets=/assets=g' dist/404.html",
     "analytics-to-resume": "sed -i 's|</head>|<script defer data-domain=\"bhdouglass.com\" src=\"https://stats.bhdouglass.com/js/plausible.js\"></script></head>|g' dist/resume/index.html",
     "preview": "NODE_ENV=development astro preview",
-    "deploy": "npm run build && surge ./dist/ --domain https://bhdouglass.com",
     "new-post": "node scripts/new-post.js",
     "publish-draft": "node scripts/publish-draft.js",
     "resume-export": "resume export --theme kendall-projects --resume src/data/resume.json public/resume/index.html",
-    "resume-serve": "resume serve --theme kendall-projects --resume src/data/resume.json --dir .tmp"
+    "resume-serve": "resume serve --theme kendall-projects --resume src/data/resume.json --dir .tmp",
+    "optimize-jpeg": "jpegoptim --strip-all --overwrite --max=90"
   },
   "repository": {
     "type": "git",
@@ -40,8 +40,7 @@
     "inquirer": "^9.1.0",
     "jsonresume-theme-kendall": "^0.2.0",
     "jsonresume-theme-kendall-projects": "^0.2.1",
-    "resume-cli": "^3.0.5",
-    "surge": "^0.23.1"
+    "resume-cli": "^3.0.5"
   },
   "dependencies": {
     "bootstrap": "^5.2.0",
