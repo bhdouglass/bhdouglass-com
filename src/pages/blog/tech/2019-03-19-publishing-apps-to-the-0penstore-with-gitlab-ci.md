@@ -20,13 +20,13 @@ apps and have written this tutorial to help others get setup with GitLab CI and 
 
 - [A GitLab account](https://gitlab.com/users/sign_in)
 - [An OpenStore account](https://open-store.io/login)
-- A click app built with [Clickable](http://clickable.bhdouglass.com/en/latest/) (If you don't, start with the section title "Start a new project")
+- A click app built with [Clickable](http://clickable-ut.dev/en/latest/) (If you don't, start with the section title "Start a new project")
 
 ## Start a new project
 
-If you are familiar with [Clickable](http://clickable.bhdouglass.com/en/latest/) or already have an app setup feel free to skip this section.
+If you are familiar with [Clickable](http://clickable-ut.dev/en/latest/) or already have an app setup feel free to skip this section.
 
-Once you have [Clickable installed](http://clickable.bhdouglass.com/en/latest/install.html), run `clickable create` to start a new click project.
+Once you have [Clickable installed](http://clickable-ut.dev/en/latest/install.html), run `clickable create` to start a new click project.
 Clickable will then walk you through several options to get you setup. Once you have a new app created, move to the project's root directory.
 From there you can run `clickable` to compile, package, and install the app on your device for testing.
 Once the app is ready to be published, [create a new GitLab repo](https://docs.gitlab.com/ee/user/project/working_with_projects.html#create-a-project)
@@ -91,7 +91,7 @@ The first stage is `build`, which uses clickable to build your app.
 This will run any time you push commits to GitLab and for every merge request made against your project.
 It will not get run when you push new tags to GitLab as they will be used for publishing new releases.
 `build` uses the `clickable/ci-16.04-armhf` Docker `image`, this image comes prebuilt with Clickable setup in
-[container mode](http://clickable.bhdouglass.com/en/latest/commands.html#clickable-any-command-container-mode).
+[container mode](http://clickable-ut.dev/en/latest/commands.html#clickable-any-command-container-mode).
 As mentioned previously, this stage will not build new tags, as specified in the `except` section.
 The `script` section runs a standard Clickable build to produce a click package.
 If you need to add anything more to your build script you can add additional lines here
@@ -163,4 +163,4 @@ If you have an questions or suggestions feel free to reach out to me via
 
 - [GitLab docs for .gitlab-ci.yml](https://docs.gitlab.com/ee/ci/yaml/)
 - [GitLab docs for CI variables](https://docs.gitlab.com/ee/ci/variables/)
-- [Clickable Docs](http://clickable.bhdouglass.com/en/latest/)
+- [Clickable Docs](http://clickable-ut.dev/en/latest/)

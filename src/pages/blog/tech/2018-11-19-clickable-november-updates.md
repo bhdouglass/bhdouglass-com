@@ -28,10 +28,10 @@ Now if your app relies on a third party library that you compile you can add it
 as another step in your build process. Once the lib is it will not need to be
 rebuilt until you manually do so. This can save development time especially if
 you are working with a large library. For more information on getting this setup
-with you app, just checkout the [docs](http://clickable.bhdouglass.com/en/latest/clickable-json.html#clickable-json-libraries).
+with you app, just checkout the [docs](http://clickable-ut.dev/en/latest/clickable-json.html#clickable-json-libraries).
 Again a huge thank you to Jonatan and his work on Clickable!
 
 For the full change log check out the
-[Clickable docs](http://clickable.bhdouglass.com/en/latest/changelog.html).
+[Clickable docs](http://clickable-ut.dev/en/latest/changelog.html).
 If you run into any issues with Clickable please report them in the
 [GitLab Issues](https://gitlab.com/clickable/clickable/issues).

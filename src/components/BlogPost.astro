@@ -18,7 +18,7 @@ const pathParts = Astro.url.pathname.split('/');
         <span>
           Filed under {tags.map((tag, index) => (
             <span class="tag">
-              <a href={`/${pathParts[1]}/${pathParts[2]}/${tag}`}>{tagTitleCase(tag)}</a>{((index + 1) < tags.length) ? ',' : ''}
+              <a href={`/${pathParts[1]}/${pathParts[2]}/${tag}/`}>{tagTitleCase(tag)}</a>{((index + 1) < tags.length) ? ',' : ''}
             </span>
           ))}
         </span>
