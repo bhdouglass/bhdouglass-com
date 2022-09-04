@@ -20,3 +20,10 @@ export function sortPosts(posts) {
   posts.sort((a, b) => (new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()))
   return posts;
 }
+
+export function getRssLink(url, base) {
+  const rssUrl = new URL(`${url}/`, base);
+  rssUrl.searchParams.append('utm_source', 'rss');
+  rssUrl.searchParams.append('utm_medium', 'rss');
+  return rssUrl.href.replace(/&/g, '&amp;'); // @astrojs/rss does not escape the url
+}

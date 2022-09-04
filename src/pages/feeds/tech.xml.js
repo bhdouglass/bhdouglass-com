@@ -1,5 +1,5 @@
 import rss from '@astrojs/rss';
-import { sortPosts } from '../../utilities';
+import { sortPosts, getRssLink } from '../../utilities';
 import { TECH_BLOG } from '../../constants';
 
 const postImportResult = import.meta.glob('../blog/tech/*.md', { eager: true });
@@ -17,7 +17,8 @@ export const get = () => rss({
     return {
       title: item.frontmatter.title,
       description,
-      link: item.url + '?utm_source=rss',
+      // Create a full url, otherwise the utm params will have a / appended to them by @astrojs/rss
+      link: getRssLink(item.url, import.meta.env.SITE),
       pubDate: item.frontmatter.date,
     };
   }),
