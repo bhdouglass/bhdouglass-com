@@ -20,3 +20,4 @@ bootstrap.*
 ._sync_*
 public/resume/index.html
 .tmp
+public/modernizr.js

@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "NODE_ENV=development astro dev --verbose",
+    "dev": "npm run copy-bootstrap && npm run modernizr && NODE_ENV=development astro dev --verbose",
     "start": "npm run dev",
     "copy-bootstrap": "cp node_modules/bootstrap/dist/css/bootstrap.min.css* public/css/",
-    "pre-build": "npm run resume-export && npm run copy-bootstrap",
+    "pre-build": "npm run resume-export && npm run copy-bootstrap && npm run modernizr",
     "build": "npm run pre-build && NODE_ENV=production astro build --verbose && npm run post-build",
     "post-build": "npm run fix-404 && npm run analytics-to-resume",
     "fix-404": "sed -i 's=../assets=/assets=g' dist/404.html",
@@ -17,7 +17,8 @@
     "publish-draft": "node scripts/publish-draft.js",
     "resume-export": "resume export --theme kendall-projects --resume src/data/resume.json public/resume/index.html",
     "resume-serve": "resume serve --theme kendall-projects --resume src/data/resume.json --dir .tmp",
-    "optimize-jpeg": "jpegoptim --strip-all --overwrite --max=90"
+    "optimize-jpeg": "jpegoptim --strip-all --overwrite --max=90",
+    "modernizr": "modernizr -c ./modernizr.json -d public/modernizr.js"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "inquirer": "^9.1.0",
     "jsonresume-theme-kendall": "^0.2.0",
     "jsonresume-theme-kendall-projects": "^0.2.1",
+    "modernizr": "^3.12.0",
     "resume-cli": "^3.0.5"
   },
   "dependencies": {
