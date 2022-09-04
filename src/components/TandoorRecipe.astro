@@ -16,7 +16,15 @@ const ingredients = recipe.steps.flatMap((step) => {
 });
 
 function displayIngredientAmount(ingredient) {
-  const amount = (new Fraction(ingredient.amount)).toString();
+  if (!ingredient.amount) {
+    return ingredient.unit?.name ?? '';
+  }
+
+  let amount = (new Fraction(ingredient.amount)).toString();
+  if (amount === '67/100') {
+    amount = '2/3';
+  }
+
   return `${amount} ${ingredient.unit?.name ?? ''}`;
 }
 
