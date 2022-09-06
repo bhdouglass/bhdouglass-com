@@ -1,5 +1,8 @@
 image: node:latest
 
+stages:
+  - deploy
+
 # Ref: https://docs.gitlab.com/ee/ci/caching/#cache-nodejs-dependencies
 cache:
   key:
@@ -13,6 +16,7 @@ before_script:
 
 # Ref: https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_from_scratch.html
 pages:
+  stage: deploy
   script:
     - npm run build
     - rm -rf public
