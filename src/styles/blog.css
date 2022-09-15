@@ -5,3 +5,7 @@ h1 {
 pre {
   margin-bottom: 1em;
 }
+
+article img {
+  max-width: 100%;
+}
