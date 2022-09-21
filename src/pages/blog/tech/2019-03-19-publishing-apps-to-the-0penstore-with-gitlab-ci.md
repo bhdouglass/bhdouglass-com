@@ -5,7 +5,8 @@ date:   2019-03-19 00:02:00 -0400
 categories: clickable openstore tutorial
 ---
 
-Updated 09/16/2019: Updated for Clickable v6 changes
+- Updated 09/16/2019: Updated for Clickable v6 changes.
+- Updated 09/20/2022: Updated for Clickable v7 changes, added link to OpenStore submission guide, and updated for the new GitLab CI format.
 
 Recently UBports completed a migration of the click based core apps to GitLab.
 You can find them all in our [GitLab organization](https://gitlab.com/ubports/apps).
@@ -33,6 +34,7 @@ Once the app is ready to be published, [create a new GitLab repo](https://docs.g
 for pushing your code.
 After that log into your OpenStore account and navigate to the [submission page](https://open-store.io/submit).
 Enter the app's name and title. It is very important to use the same app name as in your manifest.json or you will not be able to publish your app.
+For more information, read [my guide to submitting apps to the OpenStore](../2022-09-15-how-to-publish-an-ubuntu-touch-app/).
 
 ![Submit Apps](/images/blog/gitlab-ci/submit-apps.png)
 
@@ -59,23 +61,29 @@ This means that someone making a merge request to your application can not make 
 After the project is setup in GitLab you can add this `.gitlab-ci.yml` to the root directory of your app:
 
 ```yaml
+stages:
+  - build
+  - publish
+
 build:
-  image: clickable/ci-16.04-armhf
-  except:
-    - tags
+  stage: build
+  image: clickable/ci-16.04-arm64
+  rules:
+  - if: $CI_COMMIT_TAG == null
   script:
-    - clickable clean build
+    - clickable build --clean
   artifacts:
     paths:
       - build/*/app/*.click
     expire_in: 1 week
 
 publish:
-  image: clickable/ci-16.04-armhf
-  only:
-    - tags
+  stage: publish
+  image: clickable/ci-16.04-arm64
+  rules:
+  - if: $CI_COMMIT_TAG
   script:
-    - clickable clean build
+    - clickable build --clean
     - clickable publish "$CI_COMMIT_MESSAGE"
   artifacts:
     paths:
@@ -87,12 +95,12 @@ What does this file do? It directs GitLab's CI to build the app in two stages, o
 
 ### Build
 
-The first stage is `build`, which uses clickable to build your app.
+The first stage is `build`, which uses Clickable to build your app.
 This will run any time you push commits to GitLab and for every merge request made against your project.
 It will not get run when you push new tags to GitLab as they will be used for publishing new releases.
-`build` uses the `clickable/ci-16.04-armhf` Docker `image`, this image comes prebuilt with Clickable setup in
-[container mode](http://clickable-ut.dev/en/latest/commands.html#clickable-any-command-container-mode).
-As mentioned previously, this stage will not build new tags, as specified in the `except` section.
+`build` uses the `clickable/ci-16.04-arm64` Docker `image`, this image comes prebuilt with Clickable setup in
+[container mode](https://clickable-ut.dev/en/latest/commands.html#container-mode-1).
+As mentioned previously, this stage will not build new tags, as specified in the `rules` section.
 The `script` section runs a standard Clickable build to produce a click package.
 If you need to add anything more to your build script you can add additional lines here
 (for example, the weather app injects an OpenWeatherMap api key from a GitLab CI variable).
@@ -105,7 +113,7 @@ Since this also happens for every merge request it is simple to download and tes
 
 The second stage is `publish`, this uses Clickable's OpenStore integration to publish new git tags as new versions in the OpenStore.
 It is mostly identical to the `build` stage, using the same `image` and `artifacts`.
-It will `only` run when a new git tag is pushed.
+It will only run when a new git tag is pushed, as per the `rules` section.
 And as was setup in the previous section, these tags must match the pattern `v*` so you can use the OpenStore api key that was setup as a CI variable.
 The `script` part of the `publish` stage uses the same clean build as the `build` section,
 but once the click file has been built it will run `clickabe publish` to send the new version to the OpenStore.
@@ -155,7 +163,8 @@ Once GitLab receives the commits and tags it will start building your app and pu
 ## Closing
 
 This setup can be viewed in action with any of the UBports core apps
-(for example: [the weather app](https://gitlab.com/ubports/apps/weather-app/pipelines)).
+(for example: [the weather app](https://gitlab.com/ubports/development/apps/weather-app/-/pipelines)) and also
+in this [test repository](https://gitlab.com/clickable/clickable-gitlab-ci-test).
 If you have an questions or suggestions feel free to reach out to me via
 [my website](https://bhdouglass.com/contact.html)
 
