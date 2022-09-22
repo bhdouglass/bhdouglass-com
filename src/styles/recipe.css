@@ -78,7 +78,12 @@
   padding-top: 0;
 }
 
-.recipe .instruction .number {
+.recipe .instructions ul {
+  padding-left: 0;
+}
+
+.recipe .instruction::before {
+  content: counter(list-item);
   background-color: var(--border-color);
   width: 1.5em;
   height: 1.5em;
@@ -92,6 +97,7 @@
 }
 
 .recipe .instruction {
+  list-style: none;
   position: relative;
   border-top: 1px solid #f0f2f5;
   padding-top: 1.5em;
