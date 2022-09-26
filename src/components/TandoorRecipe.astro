@@ -89,9 +89,9 @@ if (source.startsWith('http')) {
 
 
   <div class="times">
-    {recipe.working_time && (<div class="time">Prep Time: {recipe.working_time} minutes</div>)}
-    {recipe.waiting_time && (<div class="time">Cook Time: {recipe.waiting_time} minutes</div>)}
-    {(recipe.working_time || recipe.waiting_time) && (<div class="time">Total Time: {recipe.working_time + recipe.waiting_time} minutes</div>)}
+    {recipe.working_time ? (<div class="time">Prep Time: {recipe.working_time} minutes</div>) : ''}
+    {recipe.waiting_time ? (<div class="time">Cook Time: {recipe.waiting_time} minutes</div>) : ''}
+    {(recipe.working_time && recipe.waiting_time) ? (<div class="time">Total Time: {recipe.working_time + recipe.waiting_time} minutes</div>) : ''}
   </div>
 
   <div class="ingredients">
