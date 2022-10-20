@@ -41,6 +41,10 @@ function displayIngredient(ingredient) {
 function displayStep(step) {
   let instruction = step.instruction.replace(/\n/g, '<br/>').replace(/\{# [\w\s]+ #\}/g, '');
   for (const index in step.ingredients) {
+    if (step.ingredients[index].is_header) {
+      continue;
+    }
+
     const regex = new RegExp(`\\{\\{ ingredients\\[${index}\\] \\}\\}`, 'g');
     const ingredientString = `${displayIngredientAmount(step.ingredients[index])} ${displayIngredient(step.ingredients[index])}`
     instruction = instruction.replace(regex, ingredientString);
@@ -99,12 +103,16 @@ if (source.startsWith('http')) {
     <ul class="list-unstyled ingredients">
       {ingredients.map((ingredient) => (
         <li class="ingredient">
-          <input type="checkbox" id={`ingredient-${ingredient.id}`} />
-          <label for={`ingredient-${ingredient.id}`}>
-            <span class="amount">{displayIngredientAmount(ingredient)}</span>
-            {displayIngredient(ingredient)}
-            {ingredient.note && (<span class="note">({ingredient.note})</span>)}
-          </label>
+          {ingredient.is_header ? (
+            <div class="mt-2 fw-bold">{ingredient.note}</div>
+          ) : (
+            <input type="checkbox" id={`ingredient-${ingredient.id}`} />
+            <label for={`ingredient-${ingredient.id}`} class="mx-2 d-inline-block">
+              <span class="amount">{displayIngredientAmount(ingredient)}</span>
+              {displayIngredient(ingredient)}
+              {ingredient.note && (<span class="note">({ingredient.note})</span>)}
+            </label>
+          )}
         </li>
       ))}
     </ul>
