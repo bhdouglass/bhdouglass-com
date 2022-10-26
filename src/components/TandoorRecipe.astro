@@ -16,8 +16,10 @@ const ingredients = recipe.steps.flatMap((step) => {
 });
 
 function displayIngredientAmount(ingredient) {
+  const unit = ingredient.no_amount ? '' : ingredient.unit?.name ?? '';
+
   if (!ingredient.amount) {
-    return ingredient.unit?.name ?? '';
+    return unit;
   }
 
   let amount = (new Fraction(ingredient.amount)).toString();
@@ -31,7 +33,7 @@ function displayIngredientAmount(ingredient) {
     amount = '1/8';
   }
 
-  return `${amount} ${ingredient.unit?.name ?? ''}`;
+  return `${amount} ${unit}`;
 }
 
 function displayIngredient(ingredient) {
@@ -54,7 +56,7 @@ function displayStep(step) {
 }
 
 let source = '';
-if (recipe.description.startsWith('Source:')) {
+if (recipe.description && recipe.description.startsWith('Source:')) {
   source = recipe.description.trim().replace('Source: ', '');
 }
 
