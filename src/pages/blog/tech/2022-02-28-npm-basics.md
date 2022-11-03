@@ -5,6 +5,8 @@ date: 2022-02-28 09:58:11 -0500
 categories: nodejs links
 ---
 
+- Updated 11/03/2022: Updated to the new `.npmrc` format
+
 [NodeSource](https://nodesource.com/) has recently released a 3-part blog series
 about NPM basics. This is a good resource for developers new to NPM and the package.json
 format. But it is a good refresher for experienced developers as well. I believe
@@ -18,12 +20,12 @@ dev dependencies, and installing modules globally. One new thing I picked up was
 Combine this with settings in your `.npmrc` file for the best experience. Here is an example
 of the configuration I have already been using:
 
-```plain
-init.author.name=Brian Douglass
-init.author.email=bhdouglass@gmail.com
-init.author.url=https://bhdouglass.com/
-init.license=GPL-3.0
-init.version=0.0.1
+```plaintext
+init-author-name=Brian Douglass
+init-author-email=bhdouglass@gmail.com
+init-author-url=https://bhdouglass.com/
+init-license=GPL-3.0
+init-version=0.0.1
 ```
 
 Check out the [NPM docs](https://docs.npmjs.com/cli/v8/using-npm/config#init-author-email)

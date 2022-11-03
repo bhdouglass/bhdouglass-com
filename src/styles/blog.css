@@ -4,6 +4,7 @@ h1 {
 
 pre {
   margin-bottom: 1em;
+  max-height: 25em;
 }
 
 article img {

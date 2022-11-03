@@ -17,6 +17,7 @@
     "resume-export": "resume export --theme kendall-projects --resume src/data/resume.json public/resume/index.html",
     "resume-serve": "resume serve --theme kendall-projects --resume src/data/resume.json --dir .tmp",
     "optimize-jpeg": "jpegoptim --strip-all --overwrite --max=90",
+    "optimize-png": "optipng",
     "modernizr": "modernizr -c ./modernizr.json -d public/modernizr.js"
   },
   "repository": {
@@ -45,6 +46,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.1",
-    "rehype-highlight": "^5.0.2"
+    "rehype-highlight": "^5.0.2",
+    "remark-toc": "^8.0.1"
   }
 }
