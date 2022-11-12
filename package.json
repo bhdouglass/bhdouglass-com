@@ -45,8 +45,11 @@
     "resume-cli": "^3.0.7"
   },
   "dependencies": {
+    "@astrojs/vue": "^1.2.1",
     "bootstrap": "^5.2.1",
     "rehype-highlight": "^5.0.2",
-    "remark-toc": "^8.0.1"
+    "remark-toc": "^8.0.1",
+    "remixicon": "^2.5.0",
+    "vue": "^3.2.45"
   }
 }

@@ -1,0 +1,499 @@
+[
+  {
+    "name": "Quasar Framework",
+    "githubRepo": "quasarframework/quasar",
+    "vue3": true,
+    "npmPackage": "quasar",
+    "description": "Build high-performance VueJS user interfaces in record time."
+  },
+  {
+    "name": "Vuetify",
+    "githubRepo": "vuetifyjs/vuetify",
+    "vue3": false,
+    "npmPackage": "vuetify",
+    "description": "A Vue UI Library with beautifully handcrafted Components using the Material Design specification."
+  },
+  {
+    "name": "Element",
+    "githubRepo": "ElemeFE/element",
+    "vue3": false,
+    "npmPackage": "element-ui",
+    "description": "A Vue 2.0 based component library for developers, designers and product managers."
+  },
+  {
+    "name": "Vue Material",
+    "githubRepo": "vuematerial/vue-material",
+    "vue3": false,
+    "npmPackage": "vue-material",
+    "description": "A simple, lightweight and built exactly according to the Google Material Design specs."
+  },
+  {
+    "name": "Muse-UI",
+    "githubRepo": "museui/muse-ui",
+    "vue3": false,
+    "npmPackage": "muse-ui",
+    "description": "Material Design UI library for Vuejs 2.0."
+  },
+  {
+    "name": "Buefy",
+    "githubRepo": "buefy/buefy",
+    "vue3": false,
+    "npmPackage": "buefy",
+    "description": "A lightweight library of responsive UI components for Vue.js based on Bulma framework and design."
+  },
+  {
+    "name": "vue-bulma-components",
+    "githubRepo": "vouill/vue-bulma-components",
+    "vue3": false,
+    "npmPackage": "vue-bulma-components",
+    "description": "Translate Bulma css api to vue components."
+  },
+  {
+    "name": "v-semantic",
+    "githubRepo": "eddow/v-semantic",
+    "vue3": false,
+    "npmPackage": "v-semantic",
+    "description": "Integration of semantic-ui2 with vue.js2"
+  },
+  {
+    "name": "BootstrapVue",
+    "githubRepo": "bootstrap-vue/bootstrap-vue",
+    "vue3": true,
+    "npmPackage": "bootstrap-vue",
+    "description": "One of the most comprehensive implementations of Bootstrap v4 for Vue.js."
+  },
+  {
+    "name": "Fish-ui",
+    "githubRepo": "myliang/fish-ui",
+    "vue3": false,
+    "npmPackage": "fish-ui",
+    "description": "A Vue.js 2.0 UI Toolkit for Web with semantic CSS Components"
+  },
+  {
+    "name": "Zircle-u",
+    "githubRepo": "zircleUI/zircleUI",
+    "vue3": true,
+    "npmPackage": "zircle",
+    "description": "An experimental frontend library to develop zoomable user interfaces"
+  },
+  {
+    "name": "VueFace",
+    "githubRepo": "sudheerj/vueface",
+    "vue3": false,
+    "npmPackage": "vueface",
+    "description": "UI Components for Vue "
+  },
+  {
+    "name": "Ant Design Vue",
+    "githubRepo": "vueComponent/ant-design-vue",
+    "vue3": true,
+    "npmPackage": "ant-design-vue",
+    "description": "An enterprise-class UI components based on Ant Design and Vue."
+  },
+  {
+    "name": "HeyUI",
+    "githubRepo": "heyui/heyui",
+    "vue3": true,
+    "npmPackage": "heyui",
+    "description": "UI Toolkit for Web, Vue3.0 "
+  },
+  {
+    "name": "Carvue.js",
+    "githubRepo": "CarvueJS/carbon-components-vue",
+    "vue3": false,
+    "npmPackage": "carvue",
+    "description": "A UI components library which is based on Carbon-Design and VueJS"
+  },
+  {
+    "name": "BalmUI",
+    "githubRepo": "balmjs/balm-ui",
+    "vue3": true,
+    "npmPackage": "balm-ui",
+    "description": "A modular and customizable UI library based on Material Design and Vue "
+  },
+  {
+    "name": "Osiris UI",
+    "githubRepo": "osiris-ui/osiris",
+    "vue3": false,
+    "npmPackage": "@osiris-ui/osiris",
+    "description": "A Vue.js 2.0 universal responsive UI component library."
+  },
+  {
+    "name": "N3-components",
+    "githubRepo": "N3-components/N3-components",
+    "vue3": false,
+    "npmPackage": "N3-components",
+    "description": "Powerful Vue UI Library."
+  },
+  {
+    "name": "Shards Vue",
+    "githubRepo": "designrevision/shards-vue",
+    "vue3": false,
+    "npmPackage": "shards-vue",
+    "description": "A free, beautiful and modern Vue.js UI kit based on Shards."
+  },
+  {
+    "name": "Fundamental Vue",
+    "githubRepo": "SAP/fundamental-vue",
+    "vue3": false,
+    "npmPackage": "fundamental-vue",
+    "description": "Vue.js components implementation of Fundamental Library Styles guidelines."
+  },
+  {
+    "name": "Framevuerk",
+    "githubRepo": "framevuerk/framevuerk",
+    "vue3": false,
+    "npmPackage": "framevuerk",
+    "description": "Fast, Responsive, Multi Language, Both Direction Support and Configurable UI Framework based on Vue.js."
+  },
+  {
+    "name": "Carbon Vue",
+    "githubRepo": "carbon-design-system/carbon-components-vue",
+    "vue3": false,
+    "npmPackage": "@carbon/vue",
+    "description": "Vue implementation of the Carbon Design System."
+  },
+  {
+    "name": "Inkline",
+    "githubRepo": "inkline/inkline",
+    "vue3": true,
+    "npmPackage": "@inkline/inkline",
+    "description": "An intuitive UI Components library that gives you a developer-friendly foundation for building high-quality, accessible, and customizable Vue.js 3 Design Systems. "
+  },
+  {
+    "name": "Vue Awesome Mui",
+    "githubRepo": "Wscats/vue-awesome-mui",
+    "vue3": false,
+    "npmPackage": "vue-awesome-mui",
+    "description": "Mui component for Vue.js"
+  },
+  {
+    "name": "MDBootstrap",
+    "githubRepo": "mdbootstrap/mdb-vue-ui-kit",
+    "vue3": true,
+    "npmPackage": "mdb-vue-ui-kit",
+    "description": "A collection of free Bootstrap templates, themes, design tools & resources."
+  },
+  {
+    "name": "Material Components for Vue",
+    "githubRepo": "pgbross/vue-material-adapter",
+    "vue3": true,
+    "npmPackage": "vue-material-adapter",
+    "description": "Vue components for Material Web Components which uses the \"Using Foundations and Adapters\" integration technique."
+  },
+  {
+    "name": "PrimeVue",
+    "githubRepo": "primefaces/primevue",
+    "vue3": true,
+    "npmPackage": "primevue",
+    "description": "A rich set of open source UI Components for Vue."
+  },
+  {
+    "name": "CoreUI for Vue.js",
+    "githubRepo": "coreui/coreui-vue",
+    "vue3": true,
+    "npmPackage": "@coreui/vue",
+    "description": "Vue.js Components Library built on top of Bootstrap 5 and TypeScript. "
+  },
+  {
+    "name": "dao-style",
+    "githubRepo": "DaoCloud/dao-style",
+    "vue3": false,
+    "npmPackage": "dao-style-vue",
+    "description": "A high quality component library built on Vue.js."
+  },
+  {
+    "name": "Chakra UI",
+    "githubRepo": "chakra-ui/chakra-ui-vue",
+    "vue3": false,
+    "npmPackage": "@chakra-ui/vue",
+    "description": "Build scalable and accessible Vue.js applications with ease."
+  },
+  {
+    "name": "Oruga UI",
+    "githubRepo": "oruga-ui/oruga",
+    "vue3": true,
+    "npmPackage": "@oruga-ui/oruga-next",
+    "description": "A lightweight library of UI components without CSS framework dependency."
+  },
+  {
+    "name": "Wave UI",
+    "githubRepo": "antoniandre/wave-ui",
+    "vue3": true,
+    "npmPackage": "wave-ui",
+    "description": "An emerging UI framework for Vue.js with only the bright side."
+  },
+  {
+    "name": "Vectre",
+    "githubRepo": "vectrejs/vectre",
+    "vue3": false,
+    "npmPackage": "@vectrejs/vectre",
+    "description": "A set of lightweight, simple and responsive Vue components based on Spectre CSS."
+  },
+  {
+    "name": "Element3",
+    "githubRepo": "hug-sun/element3",
+    "vue3": true,
+    "npmPackage": "element3",
+    "description": "A Vue.js 3.0 UI Toolkit for Web based on element-ui"
+  },
+  {
+    "name": "SuperBVue",
+    "githubRepo": "superbvue/SuperBVue",
+    "vue3": null,
+    "npmPackage": "superbvue",
+    "description": "The Most Complete Vue UI Component Library using bootstrap v5 "
+  },
+  {
+    "name": "Qui",
+    "githubRepo": "Qvant-lab/qui",
+    "vue3": false,
+    "npmPackage": "@qvant/qui",
+    "description": "A Vue.js Neumorphism Design System for Web"
+  },
+  {
+    "name": "Qui Max",
+    "githubRepo": "Qvant-lab/qui-max",
+    "vue3": true,
+    "npmPackage": "@qvant/qui-max",
+    "description": "A Vue 3.x Neumorphic design system for Web. Written in TypeScript with Composition API."
+  },
+  {
+    "name": "mijin",
+    "githubRepo": "lecoueyl/mijin",
+    "vue3": false,
+    "npmPackage": "mijin",
+    "description": "Tailwind CSS UI components build for Vue.js / Nuxt.js."
+  },
+  {
+    "name": "Vuestic UI",
+    "githubRepo": "epicmaxco/vuestic-ui",
+    "vue3": true,
+    "npmPackage": "vuestic-ui",
+    "description": "Free and Open Source UI Library for Vue 3."
+  },
+  {
+    "name": "Naive UI",
+    "githubRepo": "tusen-ai/naive-ui",
+    "vue3": true,
+    "npmPackage": "naive-ui",
+    "description": "A Vue 3 Component Library. Fairly Complete. Theme Customizable. Uses TypeScript. Fast."
+  },
+  {
+    "name": "Element Plus",
+    "githubRepo": "element-plus/element-plus",
+    "vue3": true,
+    "npmPackage": "element-plus",
+    "description": "A Vue.js 3 UI Library made by Element team."
+  },
+  {
+    "name": "AgnosticUI",
+    "githubRepo": "agnosticui/agnosticui",
+    "vue3": true,
+    "npmPackage": "agnostic-vue",
+    "description": "AgnosticUI is a set of UI primitives that start their lives in clean HTML and CSS. These standards compliant components are then copied to our framework implementations."
+  },
+  {
+    "name": "UngeUI",
+    "githubRepo": "UngeUI/ungeui",
+    "vue3": true,
+    "npmPackage": "ungeui",
+    "description": "A component library based on Vue3"
+  },
+  {
+    "name": "Vexip UI",
+    "githubRepo": "vexip-ui/vexip-ui",
+    "vue3": true,
+    "npmPackage": "vexip-ui",
+    "description": "Highly customizable property values, Full TypeScript, Performance should be good. "
+  },
+  {
+    "name": "Anu",
+    "githubRepo": "jd-solanki/anu",
+    "vue3": true,
+    "npmPackage": "anu-vue",
+    "description": "DX focused utility based vue component library built on top of UnoCSS & VueUse"
+  },
+  {
+    "name": "Framework7",
+    "githubRepo": "framework7io/framework7",
+    "vue3": true,
+    "npmPackage": "framework7-vue",
+    "description": "Full Featured Mobile HTML Framework For Building iOS & Android Apps."
+  },
+  {
+    "name": "Vux",
+    "githubRepo": "airyland/vux",
+    "vue3": false,
+    "npmPackage": "vux",
+    "description": "Mobile UI Components based on Vue & WeUI."
+  },
+  {
+    "name": "Onsen UI",
+    "githubRepo": "OnsenUI/OnsenUI",
+    "vue3": true,
+    "npmPackage": "onsenui",
+    "description": "An open source framework that makes it easy to create native-feeling Progressive Web Apps (PWAs) and hybrid apps."
+  },
+  {
+    "name": "Ionic Framework",
+    "githubRepo": "ionic-team/ionic-framework",
+    "vue3": true,
+    "npmPackage": "@ionic/vue",
+    "description": "An open source app development toolkit for building modern, fast, top-quality cross-platform native and Progressive Web Apps from a single codebase with JavaScript and the Web. "
+  },
+  {
+    "name": "Mint UI",
+    "githubRepo": "ElemeFE/mint-ui",
+    "vue3": false,
+    "npmPackage": "mint-ui",
+    "description": "Mobile UI elements for Vue.js."
+  },
+  {
+    "name": "Vant",
+    "githubRepo": "youzan/vant",
+    "vue3": true,
+    "npmPackage": "vant",
+    "description": "Lightweight Mobile UI Components built on Vue"
+  },
+  {
+    "name": "Cube UI",
+    "githubRepo": "didi/cube-ui",
+    "vue3": false,
+    "npmPackage": "cube-ui",
+    "description": "A fantastic mobile ui lib implement by Vue."
+  },
+  {
+    "name": "Mand Mobile",
+    "githubRepo": "didi/mand-mobile",
+    "vue3": false,
+    "npmPackage": "mand-mobile",
+    "description": "A mobile UI toolkit, based on Vue.js 2, designed for financial scenarios."
+  },
+  {
+    "name": "NUT UI",
+    "githubRepo": "jdf2e/nutui",
+    "vue3": true,
+    "npmPackage": "@nutui/nutui",
+    "description": "A Vue.js UI Toolkit for Mobile Web."
+  },
+  {
+    "name": "Vue Material Components web",
+    "githubRepo": "posva/vue-mdc",
+    "vue3": false,
+    "npmPackage": "vue-mdc",
+    "description": "This is the adaptation of Material Components web for Vue.js. Keeping them fast, easy to use and, SSR ready."
+  },
+  {
+    "name": "Keen UI",
+    "githubRepo": "JosephusPaye/Keen-UI",
+    "vue3": false,
+    "npmPackage": "keen-ui",
+    "description": "A lightweight Vue.js UI library with a simple API, inspired by Google's Material Design."
+  },
+  {
+    "name": "Vuikit",
+    "githubRepo": "vuikit/vuikit",
+    "vue3": false,
+    "npmPackage": "vuikit",
+    "description": "A responsive Vue 2 UI library for web site interfaces based on the UIkit 3 framework."
+  },
+  {
+    "name": "uiv",
+    "githubRepo": "uiv-lib/uiv",
+    "vue3": true,
+    "npmPackage": "uiv",
+    "description": "A Bootstrap 3 component lib implemented by Vue."
+  },
+  {
+    "name": "vue-strap",
+    "githubRepo": "wffranco/vue-strap",
+    "vue3": false,
+    "npmPackage": null,
+    "description": "A set of native Vue.js components based on Bootstrap's markup and CSS."
+  },
+  {
+    "name": "jsmod",
+    "githubRepo": "chaogao/jsmod-pc-vue",
+    "vue3": false,
+    "npmPackage": "jsmod-pc-vue",
+    "description": "The goal of jsmod is to provide a high degree of freedom (high scalability) ui components, and unified desktop and mobile usage, is a client-side component library."
+  },
+  {
+    "name": "SemVue",
+    "githubRepo": "guilhermewaess/SemVue",
+    "vue3": true,
+    "npmPackage": "semvue",
+    "description": "Semantic-ui modules/components in you Vue project."
+  },
+  {
+    "name": "Semantic UI Vue",
+    "githubRepo": "Semantic-UI-Vue/Semantic-UI-Vue",
+    "vue3": true,
+    "npmPackage": "semantic-ui-vue",
+    "description": "Semantic UI Vue is the Vue integration for Semantic UI."
+  },
+  {
+    "name": "vuesax",
+    "githubRepo": "lusaxweb/vuesax",
+    "vue3": false,
+    "npmPackage": "vuesax",
+    "description": "New Framework Components for Vue.js 2."
+  },
+  {
+    "name": "Banshee",
+    "githubRepo": "banshee-ui/banshee",
+    "vue3": false,
+    "npmPackage": "banshee-ui",
+    "description": "A mostly renderless Vue UI component and utility framework."
+  },
+  {
+    "name": "vue-uix",
+    "githubRepo": "juijs/vue-uix",
+    "vue3": false,
+    "npmPackage": "vue-uix",
+    "description": "Vue components based on the JUI components available in Vue.js."
+  },
+  {
+    "name": "Vue Dark Mode",
+    "githubRepo": "LeCoupa/vuedarkmode",
+    "vue3": false,
+    "npmPackage": "@growthbunker/vuedarkmode",
+    "description": "A minimalist dark design system for Vue.js. Based components designed for the insomniacs who enjoy dark interfaces as much as we do."
+  },
+  {
+    "name": "Vuent",
+    "githubRepo": "arturmiz/vuent",
+    "vue3": false,
+    "npmPackage": "vuent",
+    "description": "A set of reusable UI components for Vue created according to Microsoft Fluent Design."
+  },
+  {
+    "name": "VueTailwind",
+    "githubRepo": "alfonsobries/vue-tailwind",
+    "vue3": false,
+    "npmPackage": "vue-tailwind",
+    "description": "A set of Vue components created to be customized to adapt to your application's unique design."
+  },
+  {
+    "name": "Equal UI",
+    "githubRepo": "quatrochan/Equal",
+    "vue3": true,
+    "npmPackage": "equal-vue",
+    "description": "Equal UI is a Vue 3 components library with 30+ components based on TypeScript and personal design system."
+  },
+  {
+    "name": "slim-ui",
+    "githubRepo": "itzvinoth/slim-ui",
+    "vue3": false,
+    "npmPackage": "slim-ui",
+    "description": "Simple components library used for building lightweight vuejs projects."
+  },
+  {
+    "name": "element-pro-components",
+    "githubRepo": "tolking/element-pro-components",
+    "vue3": true,
+    "npmPackage": "element-pro-components",
+    "description": "A component library for Vue 3 base on element-plus."
+  }
+]

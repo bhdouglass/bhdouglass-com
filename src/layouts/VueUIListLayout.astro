@@ -1,0 +1,157 @@
+---
+import TechPostLayout from './TechPostLayout.astro';
+import { format, parseISO } from 'date-fns';
+import projects from '../data/vue-ui-frameworks.json';
+
+import 'remixicon/fonts/remixicon.css'
+import TableOfContents from '../components/TableOfContents.vue';
+import SelectorToggle from '../components/SelectorToggle.vue';
+
+const { content } = Astro.props;
+
+async function updateGitHubInfo(project) {
+  const response = await fetch(`https://api.github.com/repos/${project.githubRepo}`, {
+    headers: { 'Authorization': `Bearer ${import.meta.env.GITHUB_TOKEN}` }
+  });
+  const githubData = await response.json();
+
+  if (response.status !== 200) {
+    throw new Error(`Error fetching https://api.github.com/repos/${project.githubRepo}: ${JSON.stringify(githubData)}`);
+  }
+
+
+  return { ...project, github: githubData };
+}
+
+async function updateNpmInfo(project) {
+  if (!project.npmPackage) {
+    return project;
+  }
+
+  const response = await fetch(`https://registry.npmjs.com/${project.npmPackage}`);
+  const npmData = await response.json();
+
+  if (response.status !== 200) {
+    throw new Error(`Error fetching https://registry.npmjs.com/${project.npmPackage}: ${JSON.stringify(npmData)}`);
+  }
+
+  const downloadsResponse = await fetch(`https://api.npmjs.org/downloads/point/last-month/${project.npmPackage}`);
+  const downloadsData = await downloadsResponse.json();
+
+  const pageResponse = await fetch(`https://www.npmjs.com/package/${project.npmPackage}`);
+  const pageText = await pageResponse.text();
+  const typescript = (
+    pageText.includes('This package contains built-in TypeScript declarations') ||
+    pageText.includes('This package has TypeScript declarations provided by')
+  );
+
+  return { ...project, npm: { ...npmData, downloads: downloadsData, typescript } };
+}
+
+const enrichedProjects = await Promise.all(projects.filter((project) => Boolean(project.name)).map((project) => {
+  return updateGitHubInfo(project).then((updatedProject) => {
+    return updateNpmInfo(updatedProject);
+  });
+}));
+
+enrichedProjects.sort((a, b) => {
+  if (!a.github.stargazers_count) {
+    console.log(a.github);
+  }
+
+  if (a.github.stargazers_count > b.github.stargazers_count) return -1;
+  if (a.github.stargazers_count < b.github.stargazers_count) return 1;
+  return 0;
+})
+---
+
+<TechPostLayout content={content}>
+  <slot />
+
+  <p>
+    Last updated: {format(new Date(), 'M/d/yyyy')}
+    <br>
+    Vue 3 Support Last Updated: 11/11/2022
+  </p>
+
+  <div class="mb-4">
+    <TableOfContents client:load>
+      <ol>
+        {enrichedProjects.map((project) => (
+          <li>
+            <a href={`#${project.githubRepo.replace('/', '-')}`}>{project.name}</a>
+          </li>
+        ))}
+      </ol>
+    </TableOfContents>
+  </div>
+
+  <div class="mb-4">
+    <SelectorToggle
+      client:load
+      hide-label="Show only Vue 3 libraries"
+      show-label="Show all libraries"
+      selector=".no-vue3"
+    />
+  </div>
+
+  {enrichedProjects.map((project) => (
+    <div class={`card mb-4 ${project.vue3 ? '' : 'no-vue3'}`}>
+      <div class="card-header">
+        <h2>
+      <a id={project.githubRepo.replace('/', '-')}></a>
+      {project.name}
+    </h2>
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          From the project: {project.description}
+          <br>
+          Vue 3 Support: <i class={project.vue3 ? 'ri-checkbox-circle-line yes' : 'ri-close-circle-line no'} title={project.vue3 ? 'Supports Vue 3' : 'Does not support Vue 3'}></i>
+          <br>
+          TypeScript Support: <i class={project.npm?.typescript ? 'ri-checkbox-circle-line yes' : 'ri-close-circle-line no'} title={project.npm?.typescript ? 'Has TypeScript definitions' : 'Does not have TypeScript definitions'}></i>
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex text-center">
+          <div class="w-100" title="GitHub Stars">
+            <i class="ri-star-line"></i>
+            {project.github.stargazers_count.toLocaleString()}
+          </div>
+          <div class="w-100" title="NPM Downloads (last 30 days)">
+            <i class="ri-download-cloud-2-line"></i>
+            {project.npm?.downloads?.downloads?.toLocaleString() ?? '-'}
+          </div>
+          <div class="w-100" title="Version">
+            <i class="ri-code-box-line"></i>
+            {project.npm ? project.npm['dist-tags'].latest : '-'}
+          </div>
+        </li>
+        <li class="list-group-item d-flex text-center">
+          <div class="w-100">Updated: {format(parseISO(project.github.pushed_at), 'MMM, yyyy')}</div>
+          <div class="w-100">Created: {format(parseISO(project.github.created_at), 'MMM, yyyy')}</div>
+          <div class="w-100">
+            License: {project.github.license ? (<a href={project.github.license.url}>{project.github.license.name.replace('License', '').trim()}</a>) : 'Unknown'}
+          </div>
+        </li>
+      </ul>
+      <div class="card-footer d-flex text-center">
+        <div class="w-100">
+          <i class="ri-link"></i>
+          <br class="d-xs">
+          <a href={project.github.homepage}>Website</a>
+        </div>
+        <div class="w-100">
+          <i class="ri-github-fill"></i>
+          <br class="d-xs">
+          <a href={project.github.html_url}>GitHub</a>
+        </div>
+        <div class="w-100">
+          <i class="ri-npmjs-fill"></i>
+          <br class="d-xs">
+          <a href={`https://www.npmjs.com/package/${project.npmPackage}`}>NPM</a>
+        </div>
+      </div>
+    </div>
+  ))}
+</TechPostLayout>
