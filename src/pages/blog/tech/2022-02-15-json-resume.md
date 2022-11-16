@@ -32,7 +32,7 @@ resume tool and theme(s) into a local npm project. For example:
 
 After jumping through the hurdles with themes, I set up an HTML export of my
 JSON Resume to host on my website. You can check it out by going to [bhdouglass.com/resume](/resume).
-As I mentioned in [a previous post](/blog/tech/2022-02-07-built-with-astro) my
+As I mentioned in [a previous post](/blog/tech/2022-02-07-built-with-astro/) my
 new website is built using [Astro](https://astro.build/). I integrated the resume
 HTML into my site by placing it in the `/public/resume` directory. Then I was
 able to drive my job history on the main page with my `resume.json` file.

@@ -33,7 +33,7 @@ Setup a new Node.js project:
 npm init
 ```
 
-Check out my post about [NPM basics](/blog/tech/2022-02-28-npm-basics) for resources
+Check out my post about [NPM basics](/blog/tech/2022-02-28-npm-basics/) for resources
 for getting started with `npm`. I also have in that post configuration tips for
 faster project initialization.
 

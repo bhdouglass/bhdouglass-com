@@ -5,7 +5,7 @@ date: 2022-05-18 09:12:29 -0400
 categories: bash links
 ---
 
-As a short follow-up to [my recent post about Bash Oneliner](./2022-05-09-bash-oneliner),
+As a short follow-up to [my recent post about Bash Oneliner](../2022-05-09-bash-oneliner/),
 I was introduced to a command-line search engine called [Commands.dev](https://www.commands.dev/).
 It looks like a fairly young service that allows you to search for various commands.
 Right now the bulk of the commands are geared toward JavaScript development. However,

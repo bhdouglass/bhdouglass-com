@@ -17,7 +17,7 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 ---
 
-<BaseLayout title={TECH_BLOG.title} feedUrl={TECH_BLOG.feedUrl}>
+<BaseLayout title={`${TECH_BLOG.title} | Page ${page.currentPage}`} feedUrl={TECH_BLOG.feedUrl} siteName={TECH_BLOG.title}>
   <BlogIndex
     title={TECH_BLOG.title}
     tagline={TECH_BLOG.tagline}

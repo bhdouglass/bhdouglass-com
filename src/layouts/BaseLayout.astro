@@ -1,5 +1,5 @@
 ---
-const { redirect, title, feedUrl, prism, isBlogPost } = Astro.props;
+const { redirect, title, feedUrl, prism, isBlogPost, description, siteName } = Astro.props;
 
 const pageTitle = title || 'Brian Douglass | Senior Software Engineer';
 ---
@@ -10,11 +10,11 @@ const pageTitle = title || 'Brian Douglass | Senior Software Engineer';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{pageTitle}</title>
 
-    <meta name="description" content="Senior Software Engineer" />
+    <meta name="description" content={description || pageTitle} />
 
     <!-- Schema.org markup -->
     <meta itemprop="name" content={pageTitle} />
-    <meta itemprop="description" content="Brian Douglass, Senior Software Engineer" />
+    <meta itemprop="description" content={description || pageTitle} />
     <meta itemprop="image" content="https://bhdouglass.com/images/logo.png" />
 
     <!-- Open Graph data -->
@@ -22,8 +22,8 @@ const pageTitle = title || 'Brian Douglass | Senior Software Engineer';
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bhdouglass.com" />
     <meta property="og:image" content="https://bhdouglass.com/images/logo.png" />
-    <meta property="og:description" content="Brian Douglass, Senior Software Engineer" />
-    <meta property="og:site_name" content="Brian Douglass" />
+    <meta property="og:description" content={description || pageTitle} />
+    <meta property="og:site_name" content={siteName || 'Brian Douglass'} />
 
     {redirect && (<meta http-equiv="refresh" content={`0; URL=${redirect}`} />)}
 
