@@ -5,7 +5,7 @@ date:   2016-10-30 21:15:00 -0400
 categories: pebble releases
 ---
 
-Version 6 of my Pebble watchface, [Simply Light](https://apps.getpebble.com/en_US/application/5472c040c13ebf3ddf000045)
+Version 6 of my Pebble watchface, Simply Light
 was just yesterday released to the Pebble store. This latest release brings some
 great new customizations, fixes, and support for the new Pebble watches.
 
@@ -28,6 +28,6 @@ and Pebble Time 2 watches. Pebble Time 2 support is a bit basic for now (as the
 Time 2 is significantly large than the original Time), but I will continue to
 improve my watchface for the new Pebbles.
 
-Check out [Simply Light in the Pebble app store!](https://apps.getpebble.com/en_US/application/5472c040c13ebf3ddf000045)
+Check out [Simply Light in the Pebble app store!](https://web.archive.org/web/20180416040032/http://apps.getpebble.com/en_US/watchfaces)
 
 ![Simply Light](/images/blog/simply-light/banner.png)

@@ -18,7 +18,7 @@ output (which makes it easier to visually grep the output).
 Since it seems that Canonical will no longer maintain the usdk-target tool that
 clickable relies on, I've updated clickable to always look for it's own copy
 of the usdk-target binary. I've also forked the code for usdk-target, which you
-can find on my [Github page](https://github.com/bhdouglass/usdk-tools).
+can find on my [GitLab page](https://gitlab.com/bhdouglass/usdk-tools).
 Including usdk-target also provides one less external dependency which has made
 it easier to package as a snap. Unfortunately the snap for clickable cannot be
 found in the offical snap store, but it is availabe
@@ -32,8 +32,7 @@ This can be useful for quickly compiling an Ubuntu touch app that does not yet
 have a clickable.json.
 
 A wonderful contributor has also created a nice tutorial for getting started
-with clickable. You can find it in the
-[UBports wiki](https://wiki.ubports.com/wiki/Set-up-an-app-development-environment).
+with clickable. You can find it in the UBports wiki.
 
 If you run into any problems with the latest updates, please feel free to report
 a bug on the [Github repo](https://github.com/bhdouglass/clickable).

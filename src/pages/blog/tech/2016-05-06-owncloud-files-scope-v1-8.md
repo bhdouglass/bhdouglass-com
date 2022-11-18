@@ -12,6 +12,6 @@ support for ownCloud version 9. Previously users were unable to view folder
 contents when using an ownCloud 9 server. This has been resolved allowing
 full browsing on ownCloud 9. Lastly there is now a new option to ignore
 issues with self signed certificates. This is largely untested and I would
-love to hear [any feedback on the new option](https://github.com/bhdouglass/owncloud-files-scope/issues).
+love to hear [any feedback on the new option](https://gitlab.com/bhdouglass/owncloud-files-scope/-/issues).
 
 Check out the [ownCloud Files Scope on uApp Explorer](https://uappexplorer.com/app/owncloud-files-scope.bhdouglass).

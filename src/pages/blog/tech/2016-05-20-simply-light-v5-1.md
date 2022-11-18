@@ -6,7 +6,7 @@ categories: pebble releases
 ---
 
 I've just recently released Simply Light version 5.10 to the
-[Pebble app store](https://apps.getpebble.com/en_US/application/5472c040c13ebf3ddf000045).
+[Pebble app store](https://web.archive.org/web/20180416040032/http://apps.getpebble.com/en_US/watchfaces).
 This version brings with it two great new features!
 
 The first highlight is the new caching mechanism. Weather and/or AQI data is

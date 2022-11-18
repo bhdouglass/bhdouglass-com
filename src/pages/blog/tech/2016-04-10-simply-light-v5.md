@@ -21,7 +21,7 @@ for this release. The first iteration was much to unstable to be released. But
 after refactoring it to only do most actions when needed it improved stability
 and should help improve performance/battery life.
 
-Grab Simply Light fresh from the [Pebble app store](https://apps.getpebble.com/en_US/application/5472c040c13ebf3ddf000045).
+Grab Simply Light fresh from the [Pebble app store](https://web.archive.org/web/20180416040032/http://apps.getpebble.com/en_US/watchfaces).
 Or check out all the changes in the [source](https://github.com/bhdouglass/simply-light).
 
 ![Simply Light](/images/blog/simply-light/banner.png)

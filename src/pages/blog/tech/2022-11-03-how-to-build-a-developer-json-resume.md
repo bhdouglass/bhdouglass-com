@@ -7,7 +7,7 @@ categories: resume tutorials
 
 Looking for a great way to share your resume with the world? Miss the developer
 stories from Stack Overflow? Build your own resume with [JSON Resume](https://jsonresume.org/).
-I have [written before](/blog/tech/2022-02-15-json-resume) about JSON Resume, but
+I have [written before](/blog/tech/2022-02-15-json-resume/) about JSON Resume, but
 this post will be a full tutorial from start to finish.
 
 ![JSON Resume Example](/images/blog/json-resume/jsone-resume.png)

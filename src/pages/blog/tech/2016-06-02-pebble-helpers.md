@@ -5,7 +5,7 @@ date:   2016-06-02 00:49:00 -0400
 categories: pebble
 ---
 
-Thanks to my new watchface, [Hazy](http://bhdouglass.com/pebble/hazy.html),
+Thanks to my new watchface, [Hazy](https://github.com/bhdouglass/hazy),
 I've created several new open source projects/libraries to help with Pebble
 development. Hopefully someone other than myself might be able to find them useful.
 

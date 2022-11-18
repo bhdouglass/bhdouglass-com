@@ -25,4 +25,4 @@ window.location = {};
 document.createElement = null;
 ```
 
-[Find Simply Light in the app store](https://apps.getpebble.com/applications/5472c040c13ebf3ddf000045)
+[Find Simply Light in the app store](https://web.archive.org/web/20180416040032/http://apps.getpebble.com/en_US/watchfaces)

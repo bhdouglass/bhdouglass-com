@@ -16,7 +16,7 @@ which is very familiar to me.
 
 As part of my learning Vue.js I converted my webapp, "[Bitcoin Auditor](http://bitcoin.bhdouglass.com/)"
 to Vue.js. Bitcoin Auditor is a fairly simple app that displays data from the
-[Shush Pool bitcoin mining api](https://slushpool.com/dashboard/). It has served
+Shush Pool bitcoin mining api. It has served
 as a test bed for new JavaScript frameworks as it started out in AngularJS, moved
 to React and now to Vue.js.
 

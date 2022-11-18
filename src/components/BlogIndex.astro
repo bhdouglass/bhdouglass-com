@@ -24,8 +24,8 @@ const { posts, nextUrl, prevUrl, title, tagline, feedUrl, tag } = Astro.props;
   </ul>
 
   <div>
-    {nextUrl && (<a href={nextUrl}>&lt; Older Posts</a>)}
-    {prevUrl && (<a href={prevUrl}>Newer Posts &gt;</a>)}
+    {nextUrl && (<a href={`${nextUrl}/`}>&lt; Older Posts</a>)}
+    {prevUrl && (<a href={`${prevUrl}/`}>Newer Posts &gt;</a>)}
   </div>
 
   <div class="mt-2">

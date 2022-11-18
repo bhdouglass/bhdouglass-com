@@ -197,7 +197,7 @@ catch any issues with missing build-packages and the like.
 
 In order to publish a snap to the Ubuntu store you need to log in to both
 snapcraft and snap with your
-[myapps.developer.ubuntu.com](https://myapps.developer.ubuntu.com/) account.
+[snapcraft.io](https://snapcraft.io/) account.
 
 ```bash
 snapcraft login
@@ -205,7 +205,7 @@ snap login your@email.com
 ```
 
 In order to publish your snap you need to register a snap name, you can do this
-on [myapps](https://myapps.developer.ubuntu.com/dev/click-apps/register-name/)
+on [register snap](https://snapcraft.io/register-snap)
 or via the command line:
 
 ```bash
@@ -213,7 +213,7 @@ snapcraft register hello-node-snap
 ```
 
 When the upload finishes, you can then visit
-[myapps](https://myapps.developer.ubuntu.com/) to finalize any details before
+[snapcraft.io](https://snapcraft.io/) to finalize any details before
 publishing your snap to the store. An important thing to add is a support
 url, in case users run into any issues using your snap. You need to set your
 snap channels by clicking on the latest release (since this is the first

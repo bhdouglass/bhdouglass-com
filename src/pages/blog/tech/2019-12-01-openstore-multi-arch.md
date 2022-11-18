@@ -10,7 +10,7 @@ Thank you to everyone who tested!
 
 The OpenStore now has multi arch support, almost. Today I've pushed multi arch
 support to the new staging environment for the OpenStore. You can find this
-test bed at [staging.open-store.io](https://staging.open-store.io/) with is
+test bed at staging.open-store.io with is
 obnoxious red header. This is to serve as a place to test new OpenStore features
 before release to avoid any major issues. I would encourage anyone to test
 out the new multi arch support in staging. And to that end, the latest unreleased
