@@ -12,7 +12,12 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: 'prism'
   },
-  integrations: [sitemap(), vue()],
+  integrations: [
+    vue(),
+    sitemap({
+      filter: (page) => page !== 'https://bhdouglass.com/projects.html/' && page !== 'https://bhdouglass.com/contact.html/',
+    }),
+  ],
   markdown: {
     remarkPlugins: [remarkToc],
     extendDefaultPlugins: true

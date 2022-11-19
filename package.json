@@ -9,7 +9,7 @@
     "copy-bootstrap": "cp node_modules/bootstrap/dist/css/bootstrap.min.css* public/css/",
     "pre-build": "npm run resume-export && npm run copy-bootstrap && npm run modernizr",
     "build": "npm run pre-build && NODE_ENV=production astro build --verbose && npm run post-build",
-    "post-build": "npm run analytics-to-resume",
+    "post-build": "npm run analytics-to-resume && cp ./dist/sitemap-index.xml ./dist/sitemap.xml",
     "analytics-to-resume": "sed -i 's|</head>|<script defer data-domain=\"bhdouglass.com\" src=\"https://stats.bhdouglass.com/js/plausible.js\"></script></head>|g' dist/resume/index.html",
     "preview": "NODE_ENV=development astro preview",
     "new-post": "node scripts/new-post.js",
