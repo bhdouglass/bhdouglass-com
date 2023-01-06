@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { TECH_BLOG, GARDEN_BLOG } from '../../constants';
+import { TECH_BLOG } from '../../constants';
 
 import '../../styles/blog.css';
 ---
@@ -15,15 +15,6 @@ import '../../styles/blog.css';
       </h2>
       <p>
         {TECH_BLOG.tagline}
-      </p>
-    </div>
-
-    <div class="row">
-      <h2>
-        <a href="/blog/garden/">{GARDEN_BLOG.title}</a>
-      </h2>
-      <p>
-        {GARDEN_BLOG.tagline}
       </p>
     </div>
   </section>
