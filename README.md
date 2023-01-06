@@ -24,7 +24,7 @@ The blog posts are licensed under [Creative Commons Attribution Share Alike 4.0 
 
 ## Code License
 
-Copyright (C) 2022 [Brian Douglass](http://bhdouglass.com/)
+Copyright (C) 2023 [Brian Douglass](http://bhdouglass.com/)
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3, as published
 by the Free Software Foundation.

@@ -1,4 +1,6 @@
 ---
+import "bootstrap/dist/css/bootstrap.min.css";
+
 const { redirect, title, feedUrl, prism, isBlogPost, description, siteName } = Astro.props;
 
 const pageTitle = title || 'Brian Douglass | Senior Software Engineer';
@@ -29,7 +31,6 @@ const pageTitle = title || 'Brian Douglass | Senior Software Engineer';
 
     <link rel="alternate" href={feedUrl || '/feeds/tech.xml'} type="application/rss+xml" title="RSS feed">
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
     {prism && (<link rel="stylesheet" href="/css/prism.css" />)}
 
     <script src="/modernizr.js" is:inline></script>
