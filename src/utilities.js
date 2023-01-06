@@ -25,5 +25,5 @@ export function getRssLink(url, base) {
   const rssUrl = new URL(`${url}/`, base);
   rssUrl.searchParams.append('utm_source', 'rss');
   rssUrl.searchParams.append('utm_medium', 'rss');
-  return rssUrl.href.replace(/&/g, '&amp;'); // @astrojs/rss does not escape the url
+  return rssUrl.href;
 }
