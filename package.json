@@ -4,10 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npm run copy-bootstrap && npm run modernizr && NODE_ENV=development astro dev --verbose",
+    "dev": "NODE_ENV=development astro dev --verbose",
     "start": "npm run dev",
-    "copy-bootstrap": "cp node_modules/bootstrap/dist/css/bootstrap.min.css* public/css/",
-    "pre-build": "npm run resume-export && npm run copy-bootstrap && npm run modernizr",
+    "pre-build": "npm run resume-export",
     "build": "npm run pre-build && NODE_ENV=production astro build --verbose && npm run post-build",
     "post-build": "npm run analytics-to-resume && cp ./dist/sitemap-index.xml ./dist/sitemap.xml",
     "analytics-to-resume": "sed -i 's|</head>|<script defer data-domain=\"bhdouglass.com\" src=\"https://stats.bhdouglass.com/js/plausible.js\"></script></head>|g' dist/resume/index.html",
@@ -17,8 +16,7 @@
     "resume-export": "resume export --theme kendall-projects --resume src/data/resume.json public/resume/index.html",
     "resume-serve": "resume serve --theme kendall-projects --resume src/data/resume.json --dir .tmp",
     "optimize-jpeg": "jpegoptim --strip-all --overwrite --max=90",
-    "optimize-png": "optipng",
-    "modernizr": "modernizr -c ./modernizr.json -d public/modernizr.js"
+    "optimize-png": "optipng"
   },
   "repository": {
     "type": "git",
@@ -41,7 +39,6 @@
     "inquirer": "^9.1.4",
     "jsonresume-theme-kendall": "^0.2.0",
     "jsonresume-theme-kendall-projects": "^0.2.1",
-    "modernizr": "^3.12.0",
     "resume-cli": "^3.0.8"
   },
   "dependencies": {
@@ -50,7 +47,6 @@
     "@tailwindcss/typography": "^0.5.8",
     "astro-robots-txt": "^0.3.10",
     "astro-seo": "^0.6.1",
-    "bootstrap": "^5.2.3",
     "rehype-highlight": "^5.0.2",
     "remark-toc": "^8.0.1",
     "remixicon": "^2.5.0",
