@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Various Updates (Oct 2016)"
 date:   2016-10-11 11:17:00 -0400
 categories: pebble ubuntu-touch-apps releases

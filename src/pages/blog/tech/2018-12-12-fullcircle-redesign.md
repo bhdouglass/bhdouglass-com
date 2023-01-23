@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Full Circle Redesign"
 date:   2018-12-12 11:49:00 -0400
 categories: ubuntu-touch-apps releases

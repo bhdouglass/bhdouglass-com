@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore Improvements 5/15"
 date:   2017-05-15 01:21:00 -0400
 categories: openstore releases

@@ -1,13 +1,13 @@
 import rss from '@astrojs/rss';
 import { sortPosts, getRssLink } from '../../utilities';
-import { TECH_BLOG } from '../../constants';
+import { BLOG } from '../../constants';
 
 const postImportResult = import.meta.glob('../blog/tech/*.md', { eager: true });
 const posts = Object.values(postImportResult);
 
 export const get = () => rss({
-  title: `${TECH_BLOG.title} by Brian Douglass`,
-  description: TECH_BLOG.tagline,
+  title: `${BLOG.title} by Brian Douglass`,
+  description: BLOG.tagline,
   site: import.meta.env.SITE,
   items: sortPosts(posts).map(item => {
     let description = item.compiledContent().replace(/<[^>]*>/g, '');

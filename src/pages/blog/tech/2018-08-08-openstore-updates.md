@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore Updates"
 date:   2018-08-08 00:45:00 -0400
 categories: openstore releases

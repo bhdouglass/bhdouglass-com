@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title: "Self-hosting with Docker Compose: Migrating"
 date: 2022-06-07 09:03:06 -0400
 categories: docker self-hosting

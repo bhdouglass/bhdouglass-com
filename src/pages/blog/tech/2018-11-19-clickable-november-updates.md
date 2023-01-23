@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Clickable November Update"
 date:   2018-11-19 00:03:00 -0400
 categories: clickable releases

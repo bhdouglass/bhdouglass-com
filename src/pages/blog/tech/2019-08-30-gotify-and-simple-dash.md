@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Gotify and Simple Dash"
 date:   2019-08-30 23:58:00 -0400
 categories: ubuntu-touch-apps releases

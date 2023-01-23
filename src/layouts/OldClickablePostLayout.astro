@@ -1,13 +1,18 @@
 ---
-import TechPostLayout from './TechPostLayout.astro';
+import { Frontmatter } from '../types';
+import BlogPostLayout from './BlogPostLayout.astro';
 
-const { content } = Astro.props;
+export type Props = {
+  frontmatter: Frontmatter;
+};
+
+const { frontmatter } = Astro.props;
 ---
 
-<TechPostLayout content={content}>
+<BlogPostLayout frontmatter={frontmatter}>
   <div class="mb-4 alert alert-light" role="alert">
     This post is for an older release of Clickable, check out the
     <a href="https://clickable-ut.dev/en/latest/changelog.html">docs</a> for current information.
   </div>
   <slot />
-</TechPostLayout>
+</BlogPostLayout>

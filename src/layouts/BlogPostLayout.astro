@@ -1,0 +1,22 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+import { categoriesToTags } from '../utilities';
+import { BLOG } from '../constants';
+import { Frontmatter } from '../types';
+
+export type Props = {
+  frontmatter: Frontmatter;
+};
+
+const { frontmatter } = Astro.props;
+const hide = frontmatter.draft && process.env.NODE_ENV !== 'development';
+---
+
+<BaseLayout pageTitle={`${frontmatter.title} | ${BLOG.title} by Brian Douglass`} title={frontmatter.title} prism={true} siteName={BLOG.title} description={frontmatter.description || frontmatter.title} image={frontmatter.image} imageAlt={frontmatter.imageAlt}>
+  {hide ? (<h1 class="text-center mt-2">There isn't anything here yet!</h1>) : (
+    <BlogPost frontmatter={frontmatter}>
+      <slot />
+    </BlogPost>
+  )}
+</BaseLayout>

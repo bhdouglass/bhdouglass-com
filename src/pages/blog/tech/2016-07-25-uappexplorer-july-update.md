@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "uApp Explorer's July Update"
 date:   2016-07-25 00:57:00 -0400
 categories: uappexplorer releases

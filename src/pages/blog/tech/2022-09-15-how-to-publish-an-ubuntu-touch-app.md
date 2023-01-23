@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title: "How to Publish an Ubuntu Touch App"
 date: 2022-09-15 00:07:12 -0400
 categories: openstore tutorials

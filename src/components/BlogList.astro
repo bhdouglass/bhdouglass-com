@@ -1,0 +1,51 @@
+---
+import BlogListItem from "./BlogListItem.astro";
+import TextSection from "./TextSection.astro";
+import { tagTitleCase } from '../utilities';
+import { Frontmatter } from "../types";
+import { MarkdownInstance } from "astro";
+
+export type Props = {
+  posts: MarkdownInstance<Frontmatter>[];
+  nextUrl: string;
+  prevUrl: string;
+  tag?: string;
+}
+
+const { posts, nextUrl, prevUrl, tag } = Astro.props;
+---
+
+<TextSection header={`${tag ? tagTitleCase(tag) : 'All'} Posts`} />
+
+<section class="px-6 sm:px-6 py-6 sm:py-12 lg:py-16 mx-auto max-w-4xl">
+  <ul>
+    {
+      posts.map((post) => (
+        <li class="mb-8 md:mb-16">
+          <BlogListItem post={post} />
+        </li>
+      ))
+    }
+  </ul>
+
+  {
+    (prevUrl || nextUrl) && (
+      <div class="container flex">
+        <div class="flex flex-row mx-auto container justify-between">
+          <a href={prevUrl} class={`btn btn-ghost px-3 mr-2 ${!prevUrl ? 'invisible' : ''}`}>
+            <div class="flex flex-row align-middle">
+              <i class="ri-arrow-left-s-line"></i>
+              <p class="ml-2 underline">Newer posts</p>
+            </div>
+          </a>
+          <a href={nextUrl} class={`btn btn-ghost px-3 ${!nextUrl ? 'invisible' : ''}`}>
+            <div class="flex flex-row align-middle">
+              <span class="mr-2 underline">Older posts</span>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    )
+  }
+</section>

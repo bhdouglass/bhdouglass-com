@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title: "Updated Clickable GitLab CI Tutorial"
 date: 2022-09-21 00:13:00 -0400
 categories: clickable openstore

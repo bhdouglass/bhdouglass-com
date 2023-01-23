@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Simply Light Updates"
 date:   2016-03-22 00:07:00 -0400
 categories: pebble releases

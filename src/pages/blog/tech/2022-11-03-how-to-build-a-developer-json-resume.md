@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title: "How to Build a Developer JSON Resume 2023"
 date: 2022-11-03 00:01:37 -0400
 categories: resume tutorials

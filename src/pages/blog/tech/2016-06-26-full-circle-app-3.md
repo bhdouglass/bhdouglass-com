@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Full Circle 3.0 (PDF Reader)"
 date:   2016-06-26 01:06:00 -0400
 categories: ubuntu-touch-apps releases

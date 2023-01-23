@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "uApp Explorer CLI"
 date:   2016-08-03 00:07:00 -0400
 categories: uappexplorer releases

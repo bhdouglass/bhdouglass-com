@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "My First Snap Package"
 date:   2016-07-15 00:34:00 -0400
 categories: snap

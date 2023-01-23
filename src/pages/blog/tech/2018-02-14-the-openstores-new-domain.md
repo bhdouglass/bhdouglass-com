@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "The OpenStore's New Domain"
 date:   2018-02-14 01:39:00 -0500
 categories: openstore releases

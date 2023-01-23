@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "uApp Explorer: Next Steps"
 date:   2017-04-07 00:27:00 -0400
 categories: uappexplorer

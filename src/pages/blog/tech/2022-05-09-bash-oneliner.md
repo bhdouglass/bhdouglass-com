@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title: "Bash-Oneliner"
 date: 2022-05-09 09:11:27 -0400
 categories: bash links

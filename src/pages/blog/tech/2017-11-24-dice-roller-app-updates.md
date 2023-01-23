@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Dice Roller App Updates"
 date:   2017-11-24 01:37:00 -0400
 categories: ubuntu-touch-apps releases

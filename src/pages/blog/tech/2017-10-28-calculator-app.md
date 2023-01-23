@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Calculator App Maintainer"
 date:   2017-10-28 01:07:00 -0400
 categories: ubuntu-touch-apps releases

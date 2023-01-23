@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore June Update"
 date:   2017-06-03 00:24:00 -0400
 categories: openstore releases

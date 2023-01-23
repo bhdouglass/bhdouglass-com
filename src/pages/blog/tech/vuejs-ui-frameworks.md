@@ -21,5 +21,3 @@ your modern workflow.
 
 Found an issue with the list or want to add a new framework?
 [Contact me](/#contact) or file [an issue](https://gitlab.com/bhdouglass/bhdouglass-com/-/issues)!
-
-TODO add chart from: https://npmtrends.com/canvas-vs-commander-vs-express-vs-mocha

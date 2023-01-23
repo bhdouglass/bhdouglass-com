@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Recipe Boss"
 date:   2018-02-26 00:21:00 -0400
 categories: web releases

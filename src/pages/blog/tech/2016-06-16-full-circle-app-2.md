@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Full Circle 2.0 (Convergence)"
 date:   2016-06-16 22:55:00 -0400
 categories: ubuntu-touch-apps releases

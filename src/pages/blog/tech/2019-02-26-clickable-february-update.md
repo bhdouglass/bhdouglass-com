@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Clickable February Update"
 date:   2019-02-27 00:02:00 -0400
 categories: clickable releases

@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore Multi Arch"
 date:   2019-12-01 00:30:00 -0400
 categories: openstore releases

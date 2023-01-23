@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore's Content Policy"
 date:   2018-02-23 15:26:00 -0500
 categories: openstore releases

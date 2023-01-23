@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Pebble Helpers"
 date:   2016-06-02 00:49:00 -0400
 categories: pebble

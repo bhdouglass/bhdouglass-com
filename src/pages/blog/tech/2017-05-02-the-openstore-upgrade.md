@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "The OpenStore Upgrade"
 date:   2017-05-02 00:03:00 -0400
 categories: openstore releases

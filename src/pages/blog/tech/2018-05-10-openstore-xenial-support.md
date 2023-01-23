@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore Xenial Support"
 date:   2018-05-10 10:00:00 -0500
 categories: openstore releases

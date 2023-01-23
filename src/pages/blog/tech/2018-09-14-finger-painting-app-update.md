@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Finger Painting App Update"
 date:   2018-09-14 20:01:00 -0400
 categories: ubuntu-touch-apps releases

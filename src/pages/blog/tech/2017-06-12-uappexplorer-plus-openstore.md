@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "uApp Explorer + OpenStore"
 date:   2017-06-12 09:23:00 -0400
 categories: uappexplorer

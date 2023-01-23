@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Introducing Indicator Weather"
 date:   2016-12-12 01:05:00 -0400
 categories: ubuntu-touch-apps releases

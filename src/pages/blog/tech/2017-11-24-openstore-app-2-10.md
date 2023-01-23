@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore App v2.10 - NSFW Filtering"
 date:   2017-11-24 01:51:00 -0400
 categories: openstore releases

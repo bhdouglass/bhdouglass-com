@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore App Videos"
 date:   2017-07-11 13:25:00 -0400
 categories: openstore releases

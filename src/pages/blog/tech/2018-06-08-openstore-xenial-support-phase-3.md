@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore Xenial Support - Phase 3"
 date:   2018-06-08 11:42:00 -0400
 categories: openstore releases

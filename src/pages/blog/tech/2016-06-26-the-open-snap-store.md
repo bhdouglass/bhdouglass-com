@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "The Open(Snap)Store"
 date:   2016-06-26 00:55:00 -0400
 categories: openstore releases

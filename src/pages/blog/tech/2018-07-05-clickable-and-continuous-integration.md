@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Clickable & Continuous Integration"
 date:   2018-07-05 16:21:00 -0400
 categories: clickable releases

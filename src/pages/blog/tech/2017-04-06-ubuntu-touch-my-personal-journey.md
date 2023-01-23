@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Ubuntu Touch: My Personal Journey"
 date:   2017-04-06 23:50:00 -0400
 categories: ubuntu-touch-apps

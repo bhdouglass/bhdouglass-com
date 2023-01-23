@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "GitHub Login for the OpenStore"
 date:   2017-06-28 16:27:00 -0400
 categories: openstore releases

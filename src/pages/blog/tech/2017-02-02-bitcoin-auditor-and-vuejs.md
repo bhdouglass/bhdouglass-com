@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Bitcoin Auditor and Vue.js"
 date:   2017-02-02 00:52:00 -0400
 categories: web

@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "uApp Explorer Bug Fix #73"
 date:   2016-04-02 11:50:00 -0400
 categories: uappexplorer releases

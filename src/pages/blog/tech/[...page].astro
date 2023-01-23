@@ -1,11 +1,15 @@
 ---
-import rss from '@astrojs/rss';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import BlogIndex from '../../../components/BlogIndex.astro';
 import { sortPosts } from '../../../utilities';
-import { TECH_BLOG } from '../../../constants';
+import { BLOG } from '../../../constants';
+import BlogList from '../../../components/BlogList.astro';
+import Hero from '../../../components/Hero.astro';
+import { MarkdownInstance, Page } from 'astro';
+import { Frontmatter } from '../../../types';
 
-import '../../../styles/blog.css';
+export type Props = {
+  page: Page<MarkdownInstance<Frontmatter>>;
+};
 
 export async function getStaticPaths({ paginate }) {
   // This is a separate scope, you cannot pass in variables: https://docs.astro.build/en/reference/api-reference/#getstaticpaths
@@ -17,13 +21,15 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 ---
 
-<BaseLayout title={`${TECH_BLOG.title} | Page ${page.currentPage}`} feedUrl={TECH_BLOG.feedUrl} siteName={TECH_BLOG.title}>
-  <BlogIndex
-    title={TECH_BLOG.title}
-    tagline={TECH_BLOG.tagline}
+<BaseLayout pageTitle={`${BLOG.title} | Page ${page.currentPage}`} title={BLOG.title} siteName={BLOG.title} description={BLOG.tagline}>
+  <Hero header={BLOG.title}>
+    <h2>by Brian Douglass</h2>
+    <h3>{BLOG.tagline}</h3>
+  </Hero>
+
+  <BlogList
     posts={page.data}
     nextUrl={page.url.next}
     prevUrl={page.url.prev}
-    feedUrl={TECH_BLOG.feedUrl}
   />
 </BaseLayout>

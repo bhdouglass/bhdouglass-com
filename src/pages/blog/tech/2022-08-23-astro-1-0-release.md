@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title: "Astro 1.0 Release"
 date: 2022-08-23 16:45:38 -0400
 categories: astro

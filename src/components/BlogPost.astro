@@ -1,29 +1,65 @@
 ---
 import { format } from 'date-fns';
-import { tagTitleCase } from '../utilities';
+import { Frontmatter } from '../types';
+import { categoriesToTags } from '../utilities';
+import PostTags from './PostTags.astro';
 
-const { title, date, blogTitle, blogUrl, tags, draft } = Astro.props;
+export type Props = {
+  frontmatter: Frontmatter;
+};
 
-const pathParts = Astro.url.pathname.split('/');
+const { frontmatter } = Astro.props;
 
+const { title, date, categories, draft, description, image, imageAlt } = frontmatter;
+const tags = categoriesToTags(categories);
 ---
 
-<article>
-  <h1 class="mb-2">{title} {draft && '(DRAFT)'}</h1>
-  <p class="mb-4">
-    Published {format(new Date(date), 'MMMM d, yyyy')} in <a href={blogUrl}>{blogTitle}</a> by <a href="/">Brian Douglass</a>
-    <br/>
-    {
-      tags && tags.length > 0 && (
-        <span>
-          Filed under {tags.map((tag, index) => (
-            <span class="tag">
-              <a href={`/${pathParts[1]}/${pathParts[2]}/${tag}/`}>{tagTitleCase(tag)}</a>{((index + 1) < tags.length) ? ',' : ''}
-            </span>
-          ))}
-        </span>
-      )
-    }
-  </p>
-  <slot />
-</article>
+<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+  <article>
+    <header>
+      <div class="flex justify-between flex-col sm:flex-row max-w-3xl mx-auto mt-0 mb-2 px-4 sm:px-6 sm:items-center">
+        <p>
+          <time datetime={date}>{format(new Date(date), 'MMMM d, yyyy')}</time>
+        </p>
+      </div>
+      <h1
+        class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading"
+      >
+        {title} {draft && '(DRAFT)'}
+      </h1>
+
+      <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between flex-col sm:flex-row">
+        <PostTags tags={tags} class="mr-5" />
+      </div>
+
+      {description && (
+        <p
+          class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-gray-500 dark:text-slate-400 font-medium text-justify"
+        >
+          {description}
+        </p>
+      )}
+
+      {
+        image ? (
+          <img
+            src={image}
+            class="max-w-full lg:max-w-6xl mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
+            sizes="(max-width: 900px) 400px, 900px"
+            alt={imageAlt || ''}
+            loading="eager"
+          />
+        ) : (
+          <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <div class="border-t dark:border-slate-700" />
+          </div>
+        )
+      }
+    </header>
+    <div
+      class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-800 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+    >
+      <slot />
+    </div>
+  </article>
+</section>

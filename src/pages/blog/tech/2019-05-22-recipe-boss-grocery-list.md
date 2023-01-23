@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Recipe Boss: Grocery List"
 date:   2019-05-22 11:41:00 -0400
 categories: web releases

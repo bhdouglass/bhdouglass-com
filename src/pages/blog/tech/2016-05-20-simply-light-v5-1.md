@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Simply Light v5.1"
 date:   2016-05-19 11:57:00 -0400
 categories: pebble releases

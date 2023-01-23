@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "ownCloud Files Scope Translations"
 date:   2016-04-14 00:42:00 -0400
 categories: ubuntu-touch-apps releases

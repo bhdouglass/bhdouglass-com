@@ -1,21 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { TECH_BLOG } from '../../constants';
+import { BLOG } from '../../constants';
+import Hero from '../../components/Hero.astro';
+import TextSection from '../../components/TextSection.astro';
 
-import '../../styles/blog.css';
 ---
 
-<BaseLayout title="Blogs by Brian Douglass">
-  <section>
-    <h1>Blogs by Brian Douglass</h1>
-
-    <div class="row mt-2">
-      <h2>
-        <a href="/blog/tech/">{TECH_BLOG.title}</a>
-      </h2>
-      <p>
-        {TECH_BLOG.tagline}
-      </p>
-    </div>
-  </section>
+<BaseLayout pageTitle="Blogs by Brian Douglass" title="Brian's Blogs" description="Blogs written by Brian Douglass">
+  <Hero header="Blogs by Brian Douglass" />
+  <TextSection header={`<a href="/blog/tech/" class="underline">${BLOG.title}</a>`}>
+    <p class="text-center">
+      {BLOG.tagline}
+    </p>
+  </TextSection>
 </BaseLayout>

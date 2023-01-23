@@ -1,0 +1,37 @@
+---
+export interface Props {
+  header: string;
+  img?: string;
+  imgAlt?: string;
+}
+
+const { img, imgAlt, header } = Astro.props;
+---
+
+<section>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="py-6 md:py-12">
+      <div class={`text-center max-w-5xl mx-auto ${img ? 'pb-10 md:pb-16' : ''}`}>
+        <h1 class="text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading">
+          {header}
+        </h1>
+        <div class="max-w-3xl mx-auto">
+          <p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
+            <slot/>
+          </p>
+        </div>
+      </div>
+      {img && (
+        <div>
+          <div class="relative m-auto max-w-4xl">
+            <img
+              src={img}
+              class="mx-auto rounded-md w-full"
+              alt={imgAlt}
+            />
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</section>

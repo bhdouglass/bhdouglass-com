@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore Year End Updates"
 date:   2018-12-28 03:00:00 -0400
 categories: openstore releases

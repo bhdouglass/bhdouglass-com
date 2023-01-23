@@ -1,20 +1,19 @@
 ---
+import TextSection from '../components/TextSection.astro';
 import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
-<BaseLayout title="Donate | Brian Douglass">
-  <section>
-    <h1>Donations</h1>
-
+<BaseLayout pageTitle="Donate | Brian Douglass" title="Donate to Brian Douglass" description="Donate to Brian Douglass' open source work.">
+  <TextSection header="Donations" h1={true}>
     <p>
       I'm <a href="/">Brian Douglass</a>, a software engineer by day and open source developer by night.
       My development has varied between web, desktop, and more, but my current focus
-      is on building awesome things with <a href="https://ubuntu-touch.io/">Ubuntu Touch</a>.
-      I'm the lead developer for the <a href="https://open-store.io/">OpenStore</a>,
+      is on building awesome things with <a href="https://ubuntu-touch.io/" class="underline">Ubuntu Touch</a>.
+      I'm the lead developer for the <a href="https://open-store.io/" class="underline">OpenStore</a>,
       an open source app store for Ubuntu Touch. I'm also the lead developer for
-      <a href="http://clickable-ut.dev/en/latest/">Clickable</a> an open source tool
+      <a href="http://clickable-ut.dev/en/latest/" class="underline">Clickable</a> an open source tool
       for building and maintaining Ubuntu Touch applications. I've also build several
-      <a href="https://open-store.io/?sort=relevance&search=author%3ABrian%20Douglass">apps for Ubuntu Touch</a>.
+      <a href="https://open-store.io/?sort=relevance&search=author%3ABrian%20Douglass" class="underline">apps for Ubuntu Touch</a>.
     </p>
 
     <p>
@@ -24,8 +23,8 @@ import BaseLayout from '../layouts/BaseLayout.astro'
     </p>
 
     <p>
-      You can support me on <a href="https://liberapay.com/bhdouglass/">Liberapay</a>,
-      <a href="https://paypal.me/bhdouglass">Paypal</a>, or via Bitcoin: bc1q9cpc2m5ly8e63uvlg33e27td037c892qf382qt .
+      You can support me on <a href="https://liberapay.com/bhdouglass/" class="underline">Liberapay</a>,
+      or via Bitcoin: bc1q9cpc2m5ly8e63uvlg33e27td037c892qf382qt .
     </p>
-  </section>
+  </TextSection>
 </BaseLayout>

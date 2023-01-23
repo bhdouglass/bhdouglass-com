@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "New OpenStore Website"
 date:   2017-12-19 00:28:00 -0500
 categories: openstore releases

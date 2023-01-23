@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title: "Discoveries Sep 30"
 date: 2022-09-30 22:41:09 -0400
 categories: discoveries

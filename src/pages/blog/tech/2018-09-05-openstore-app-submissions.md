@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore App Submissions"
 date:   2018-09-05 00:17:00 -0400
 categories: openstore releases

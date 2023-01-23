@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Gearboy Color 4.0.0"
 date:   2020-03-02 19:47:00 -0400
 categories: ubuntu-touch-apps releases

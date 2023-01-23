@@ -1,0 +1,31 @@
+---
+export interface Props {
+  header: string;
+  img?: string;
+  h1?: boolean;
+}
+
+const {
+  header = await Astro.slots.render('header'),
+  h1
+} = Astro.props;
+---
+
+<section>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="py-4 md:py-8">
+      <div class="max-w-5xl mx-auto">
+        {h1 ? (
+          <h1 class="text-center text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading" set:html={header}></h1>
+        ) : (
+          <h2 class="text-center text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading" set:html={header}></h2>
+        )}
+        <div class="max-w-3xl mx-auto">
+          <div class="text-xl text-gray-600 mb-6 dark:text-slate-400">
+            <slot/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

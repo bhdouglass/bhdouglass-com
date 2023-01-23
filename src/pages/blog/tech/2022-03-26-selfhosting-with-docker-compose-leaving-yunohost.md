@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title: "Self-hosting with Docker Compose: Leaving Yunohost"
 date: 2022-03-26 02:41:03 +0000
 categories: docker self-hosting

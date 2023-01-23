@@ -1,0 +1,73 @@
+---
+interface Item {
+  title: string;
+  description?: string;
+}
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  highlight?: string;
+  items: Item[];
+  items2?: Item[];
+  altColor?: boolean;
+}
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  highlight,
+  items = [],
+  items2 = [],
+  altColor,
+} = Astro.props;
+---
+
+<section class={`${altColor ? 'bg-white dark:bg-slate-900' : 'bg-primary-50 dark:bg-slate-800'} scroll-mt-16`} id="features">
+  <div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
+    {
+      (title || subtitle || highlight) && (
+        <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+          {highlight && (
+            <p
+              class="text-base text-primary-800 dark:text-primary-200 font-semibold tracking-wide uppercase"
+              set:html={highlight}
+            />
+          )}
+          {title && (
+            <h2
+              class="text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+              set:html={title}
+            />
+          )}
+          {subtitle && (
+            <p class="max-w-3xl mx-auto sm:text-center text-xl text-gray-600 dark:text-slate-400" set:html={subtitle} />
+          )}
+        </div>
+      )
+    }
+    <div class={`grid mx-auto space-y-6 md:space-y-0 ${items2.length > 0 ? 'md:grid-cols-2' : ''}`}>
+      <div class="space-y-8 sm:px-8">
+        {items.map(({ title, description }) => (
+          <div class={`flex flex-row ${items2.length > 0 ? 'max-w-md' : ''}`}>
+            <div>
+              <h3 class="mb-3 text-xl font-bold" set:html={title}></h3>
+              <p class="text-gray-600 dark:text-slate-400" set:html={description} />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {items2.length > 0 && (
+        <div class="space-y-8 sm:px-8">
+          {items2.map(({ title, description }) => (
+            <div class="flex flex-row max-w-md">
+              <div>
+                <h3 class="mb-3 text-xl font-bold" set:html={title}></h3>
+                {description && (<p class="text-gray-600 dark:text-slate-400" set:html={description} />)}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</section>

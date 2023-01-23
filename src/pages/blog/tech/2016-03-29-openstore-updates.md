@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore Updates - March 29, 2016"
 date:   2016-03-29 01:06:00 -0400
 categories: openstore releases

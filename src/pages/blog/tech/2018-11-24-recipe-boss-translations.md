@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Recipe Boss Translations"
 date:   2018-11-24 00:08:00 -0400
 categories: web releases

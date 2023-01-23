@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore Search Improvements"
 date:   2018-01-01 13:30:00 -0500
 categories: openstore releases

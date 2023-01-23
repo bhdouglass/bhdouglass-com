@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title: "Commands.dev"
 date: 2022-05-18 09:12:29 -0400
 categories: bash links

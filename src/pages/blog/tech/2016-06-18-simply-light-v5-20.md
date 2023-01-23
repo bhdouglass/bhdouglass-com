@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "Simply Light v5.20 (Master Key)"
 date:   2016-06-18 11:11:00 -0400
 categories: pebble releases

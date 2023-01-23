@@ -10,16 +10,14 @@ const { selector, showLabel, hideLabel } = defineProps({
 const show = ref(true);
 
 const toggle = () => {
-  console.log(show.value, selector);
   if (show.value) {
     document.querySelectorAll(selector).forEach((element) => {
-      console.log(element);
-      element.classList.add('d-none');
+      element.classList.add('hidden');
     });
   }
   else {
     document.querySelectorAll(selector).forEach((element) => {
-      element.classList.remove('d-none');
+      element.classList.remove('hidden');
     });
   }
 

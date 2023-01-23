@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title: "JSON Manipulation with PostgreSQL"
 date: 2022-06-17 23:16:31 -0400
 categories: postgresql

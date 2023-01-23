@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title:  "OpenStore App v2"
 date:   2017-09-23 00:46:00 -0400
 categories: openstore releases

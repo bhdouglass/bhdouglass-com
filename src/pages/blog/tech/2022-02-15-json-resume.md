@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/TechPostLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 title: "JSON Resume"
 date: 2022-02-15 22:14:17 -0500
 categories: tutorials
