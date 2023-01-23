@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title:  "Publishing apps to the OpenStore with GitLab CI"
 date:   2019-03-19 00:02:00 -0400
 categories: clickable openstore tutorial
@@ -34,7 +34,7 @@ Once the app is ready to be published, [create a new GitLab repo](https://docs.g
 for pushing your code.
 After that log into your OpenStore account and navigate to the [submission page](https://open-store.io/submit).
 Enter the app's name and title. It is very important to use the same app name as in your manifest.json or you will not be able to publish your app.
-For more information, read [my guide to submitting apps to the OpenStore](../2022-09-15-how-to-publish-an-ubuntu-touch-app/).
+For more information, read [my guide to submitting apps to the OpenStore](/blog/how-to-publish-an-ubuntu-touch-app/).
 
 ![Submit Apps](/images/blog/gitlab-ci/submit-apps.png)
 

@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title:  "Testing and Linting a Node.js Api"
 date:   2019-06-24 00:34:00 -0400
 categories: nodejs tutorial

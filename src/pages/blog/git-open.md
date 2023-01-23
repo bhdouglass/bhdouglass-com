@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: "Git Open"
 date: 2022-07-08 23:42:19 -0400
 categories: git tools

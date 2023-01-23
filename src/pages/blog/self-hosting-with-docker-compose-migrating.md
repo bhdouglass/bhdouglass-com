@@ -1,11 +1,11 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: "Self-hosting with Docker Compose: Migrating"
 date: 2022-06-07 09:03:06 -0400
 categories: docker self-hosting
 ---
 
-In [my recent post](../2022-03-26-selfhosting-with-docker-compose-leaving-yunohost/),
+In [my recent post](/blog/selfhosting-with-docker-compose-leaving-yunohost/),
 I talked about leaving YunoHost and switching to Docker Compose. A large driver
 of the switch was to be able to move some of my important services offsite to a
 hosted VPS. I was able to set up my new self-hosting setup with one giant Docker Compose

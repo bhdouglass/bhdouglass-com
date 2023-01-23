@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../../../../layouts/BaseLayout.astro';
-import { categoriesToTags, sortPosts, tagTitleCase } from '../../../../utilities';
-import { BLOG } from '../../../../constants';
-import Hero from '../../../../components/Hero.astro';
-import BlogList from '../../../../components/BlogList.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { categoriesToTags, sortPosts, tagTitleCase } from '../../../utilities';
+import { BLOG } from '../../../constants';
+import Hero from '../../../components/Hero.astro';
+import BlogList from '../../../components/BlogList.astro';
 import { MarkdownInstance, Page } from 'astro';
 import { Frontmatter } from '../../../types';
 
@@ -22,7 +22,7 @@ export async function getStaticPaths({ paginate }) {
     const filteredPosts = posts.filter((post) => post.frontmatter.categories && post.frontmatter.categories.includes(tag));
     return paginate(filteredPosts, {
       params: { tag },
-      pageSize: 30
+      pageSize: 15
     });
   });
 }
@@ -31,7 +31,7 @@ const { page } = Astro.props;
 const { tag } = Astro.params;
 ---
 
-<BaseLayout pageTitle={`${BLOG.title} | ${tagTitleCase(tag)} | Page ${page.currentPage}`} title={`${BLOG.title} | ${tagTitleCase(tag)}`} siteName={BLOG.title} description={BLOG.tagline} noindex={true}>
+<BaseLayout pageTitle={`${BLOG.title} | ${tagTitleCase(tag)} | Page ${page.currentPage}`} title={`${BLOG.title} - ${tagTitleCase(tag)} (Page ${page.currentPage})`} siteName={BLOG.title} description={BLOG.tagline} noindex={true}>
   <Hero header={BLOG.title}>
     <h2>by Brian Douglass</h2>
     <h3>{BLOG.tagline}</h3>

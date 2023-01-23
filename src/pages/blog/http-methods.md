@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: "HTTP Methods"
 date: 2022-01-25 22:55:21 -0500
 categories: web

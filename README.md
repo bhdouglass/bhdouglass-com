@@ -11,7 +11,7 @@
 ## Built with Astro
 
 This site is built with [Astro](https://astro.build/)! For more information
-check out [my blog post](https://bhdouglass.com/blog/tech/2022-02-07-built-with-astro/).
+check out [my blog post](https://bhdouglass.com/blog/built-with-astro/).
 
 ## JSON Resume
 

@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title:  "Ubuntu Touch Web App Plugins"
 date:   2018-02-04 00:36:00 -0500
 categories: ubuntu-touch-apps releases

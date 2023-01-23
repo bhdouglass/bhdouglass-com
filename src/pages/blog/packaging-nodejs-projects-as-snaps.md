@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title:  "Packaging Node.js Projects as Snaps"
 date:   2016-08-06 17:56:00 -0400
 categories: snap tutorial

@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title:  "OpenStore Badges"
 date:   2019-08-07 23:22:00 -0400
 categories: openstore releases

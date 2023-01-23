@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: "Astro 1.0 Release"
 date: 2022-08-23 16:45:38 -0400
 categories: astro
@@ -11,7 +11,7 @@ shipping minimal JavaScript to the browser. It has a novel
 ["island architecture"](https://docs.astro.build/en/concepts/islands/)
 where you can partially hydrate a page with interactivity.
 In fact, Astro is the very thing generating this blog. I wrote about my initial
-experience with Astro in [a post earlier this year](../2022-02-07-built-with-astro/).
+experience with Astro in [a post earlier this year](/blog/built-with-astro/).
 
 Just a few days before the release, I started upgrading this website from v0.22
 to the latest release candidate. The [migration guide](https://docs.astro.build/en/migrate/)

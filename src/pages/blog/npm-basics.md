@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: "NPM Basics"
 date: 2022-02-28 09:58:11 -0500
 categories: nodejs links

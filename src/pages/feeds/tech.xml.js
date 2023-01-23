@@ -2,7 +2,7 @@ import rss from '@astrojs/rss';
 import { sortPosts, getRssLink } from '../../utilities';
 import { BLOG } from '../../constants';
 
-const postImportResult = import.meta.glob('../blog/tech/*.md', { eager: true });
+const postImportResult = import.meta.glob('../blog/*.md', { eager: true });
 const posts = Object.values(postImportResult);
 
 export const get = () => rss({

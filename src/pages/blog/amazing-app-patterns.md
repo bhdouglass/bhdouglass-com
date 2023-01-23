@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: "Amazing App Patterns"
 date: 2022-10-19 23:22:28 -0400
 categories: discoveries

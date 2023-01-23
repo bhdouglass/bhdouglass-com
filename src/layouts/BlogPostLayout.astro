@@ -9,6 +9,9 @@ export type Props = {
   frontmatter: Frontmatter;
 };
 
+// TODO blog descriptions
+// TODO blog images
+
 const { frontmatter } = Astro.props;
 const hide = frontmatter.draft && process.env.NODE_ENV !== 'development';
 ---
