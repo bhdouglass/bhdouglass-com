@@ -9,8 +9,6 @@ if (!filePath) {
   process.exit(1);
 }
 
-const fileName = path.basename(filePath);
-const dirPath = path.dirname(filePath);
 const data = await fs.readFile(filePath, { encoding: 'utf-8' });
 
 const content = data.split('\n').map((line) => {
@@ -21,12 +19,5 @@ const content = data.split('\n').map((line) => {
   return line;
 }).filter((line) => line.trim() !== 'draft: true');
 
-const newName = `${format(new Date(), 'yyyy-MM-dd')}-${fileName.substring(11)}`;
-const newPath = path.join(dirPath, newName);
-
-await fs.writeFile(newPath, content.join('\n'));
-if (filePath != newPath) {
-  await fs.unlink(filePath);
-}
-
-console.log(chalk.green(`Publishing draft to ${newPath}`));
+await fs.writeFile(filePath, content.join('\n'));
+console.log(chalk.green(`Publishing draft to ${filePath}`));

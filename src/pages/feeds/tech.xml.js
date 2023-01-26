@@ -9,6 +9,9 @@ export const get = () => rss({
   title: `${BLOG.title} by Brian Douglass`,
   description: BLOG.tagline,
   site: import.meta.env.SITE,
+  xmlns: {
+     media: 'http://search.yahoo.com/mrss/', // Needed to use the <media:content> tag
+  },
   items: sortPosts(posts).map(item => {
     let description = item.compiledContent().replace(/<[^>]*>/g, '');
     const space = description.substring(0, 200).lastIndexOf(' ');
@@ -20,6 +23,7 @@ export const get = () => rss({
       // Create a full url, otherwise the utm params will have a / appended to them by @astrojs/rss
       link: getRssLink(item.url, import.meta.env.SITE),
       pubDate: item.frontmatter.date,
+      customData: item.frontmatter.image ? `<media:content url="${new URL(item.frontmatter.image, import.meta.env.SITE).href}" medium="image" />` : '',
     };
   }),
 });

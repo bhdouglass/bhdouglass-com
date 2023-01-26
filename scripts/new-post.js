@@ -20,7 +20,7 @@ draft: true
 const fileTitle = answers.title.toLowerCase()
   .replace(/ /g, '-')
   .replace(/[:.!?]/g, '');
-const path = `src/pages/blog/${answers.blog}/${fileTitle}.md`;
+const path = `src/pages/blog/${fileTitle}.md`;
 
 await fs.writeFile(path, content);
 

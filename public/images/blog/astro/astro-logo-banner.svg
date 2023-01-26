@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1024"
+   height="512"
+   fill="none"
+   version="1.1"
+   id="svg218"
+   sodipodi:docname="astro-logo-banner.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview220"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.43760845"
+     inkscape:cx="230.79993"
+     inkscape:cy="363.33851"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg218" />
+  <rect
+     style="opacity:0.99;fill:#0f172a;stroke-width:18.0208;fill-opacity:1"
+     id="rect437"
+     width="1024"
+     height="512"
+     x="0"
+     y="0" />
+  <g
+     id="g329"
+     transform="matrix(1.7016061,0,0,1.7016061,349.0006,31.45691)">
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m 131.008,18.929 c 1.944,2.413 2.935,5.67 4.917,12.181 l 43.309,142.27 A 180.277,180.277 0 0 0 127.456,155.85 L 99.258,60.56 a 3.67,3.67 0 0 0 -7.042,0.01 l -27.857,95.232 a 180.225,180.225 0 0 0 -52.01,17.557 L 55.869,31.078 c 1.99,-6.502 2.983,-9.752 4.927,-12.16 A 15.999,15.999 0 0 1 67.28,14.12 c 2.872,-1.154 6.271,-1.154 13.07,-1.154 h 31.085 c 6.807,0 10.211,0 13.086,1.157 a 16.004,16.004 0 0 1 6.487,4.806 z"
+       fill="url(#paint0_linear)"
+       id="path200"
+       style="fill:url(#paint0_linear)" />
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m 136.19,180.151 c -7.139,6.105 -21.39,10.268 -37.804,10.268 -20.147,0 -37.033,-6.272 -41.513,-14.707 -1.602,4.835 -1.961,10.367 -1.961,13.902 0,0 -1.056,17.355 11.015,29.426 0,-6.268 5.081,-11.349 11.35,-11.349 10.742,0 10.73,9.373 10.72,16.977 v 0.679 c 0,11.542 7.054,21.436 17.086,25.606 a 23.27,23.27 0 0 1 -2.339,-10.2 c 0,-11.008 6.463,-15.107 13.974,-19.87 5.976,-3.79 12.616,-8.001 17.192,-16.449 a 31.024,31.024 0 0 0 3.743,-14.82 c 0,-3.299 -0.513,-6.479 -1.463,-9.463 z"
+       fill="#ff5d01"
+       id="path202" />
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m 136.19,180.151 c -7.139,6.105 -21.39,10.268 -37.804,10.268 -20.147,0 -37.033,-6.272 -41.513,-14.707 -1.602,4.835 -1.961,10.367 -1.961,13.902 0,0 -1.056,17.355 11.015,29.426 0,-6.268 5.081,-11.349 11.35,-11.349 10.742,0 10.73,9.373 10.72,16.977 v 0.679 c 0,11.542 7.054,21.436 17.086,25.606 a 23.27,23.27 0 0 1 -2.339,-10.2 c 0,-11.008 6.463,-15.107 13.974,-19.87 5.976,-3.79 12.616,-8.001 17.192,-16.449 a 31.024,31.024 0 0 0 3.743,-14.82 c 0,-3.299 -0.513,-6.479 -1.463,-9.463 z"
+       fill="url(#paint1_linear)"
+       id="path204"
+       style="fill:url(#paint1_linear)" />
+  </g>
+  <defs
+     id="defs216">
+    <linearGradient
+       id="paint0_linear"
+       x1="144.599"
+       y1="5.4229999"
+       x2="95.791"
+       y2="173.38"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#fff"
+         id="stop206" />
+      <stop
+         offset="1"
+         stop-color="#F9FAFB"
+         id="stop208" />
+    </linearGradient>
+    <linearGradient
+       id="paint1_linear"
+       x1="168.336"
+       y1="130.49001"
+       x2="126.065"
+       y2="218.98199"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#FF1639"
+         id="stop211" />
+      <stop
+         offset="1"
+         stop-color="#FF1639"
+         stop-opacity="0"
+         id="stop213" />
+    </linearGradient>
+  </defs>
+</svg>
