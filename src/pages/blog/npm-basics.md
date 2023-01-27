@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "NPM Basics"
 date: 2022-02-28 09:58:11 -0500
+updatedDate: 2022-11-03 00:01:37 -0400
 categories: nodejs links
 image: /images/blog/logos/nodejs-logo.svg
 imageAlt: Node.js' logo

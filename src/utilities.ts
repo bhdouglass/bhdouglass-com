@@ -1,5 +1,6 @@
 import { MarkdownInstance } from "astro";
 import { Frontmatter } from "./types";
+import { format } from "date-fns";
 
 export function titleCase(str: string) {
   return str.replace(/_/g, ' ').replace(/\w\S*/g, (txt) => {
@@ -29,4 +30,16 @@ export function getRssLink(url: string, base: string) {
   rssUrl.searchParams.append('utm_source', 'rss');
   rssUrl.searchParams.append('utm_medium', 'rss');
   return rssUrl.href;
+}
+
+export function getBlogDate(frontmatter: Frontmatter) {
+  let date = frontmatter.date;
+  if (frontmatter.updatedDate === 'now') {
+    date = format(new Date(), 'yyyy-MM-dd HH:mm:ss xx');
+  }
+  else if (frontmatter.updatedDate) {
+    date = frontmatter.updatedDate;
+  }
+
+  return date;
 }

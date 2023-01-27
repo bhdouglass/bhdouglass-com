@@ -1,7 +1,7 @@
 ---
 import { format } from 'date-fns';
 import { Frontmatter } from '../types';
-import { categoriesToTags } from '../utilities';
+import { categoriesToTags, getBlogDate } from '../utilities';
 import PostTags from './PostTags.astro';
 
 export type Props = {
@@ -10,7 +10,7 @@ export type Props = {
 
 const { frontmatter } = Astro.props;
 
-const { title, date, categories, draft, description, image, imageAlt } = frontmatter;
+const { title, date, updatedDate, categories, draft, description, image, imageAlt } = frontmatter;
 const tags = categoriesToTags(categories);
 ---
 
@@ -18,8 +18,14 @@ const tags = categoriesToTags(categories);
   <article>
     <header>
       <div class="flex justify-between flex-col sm:flex-row max-w-3xl mx-auto mt-0 mb-2 px-4 sm:px-6 sm:items-center">
+        {frontmatter.updatedDate && (
+          <p>
+            Updated <time datetime={getBlogDate(frontmatter)}>{format(new Date(getBlogDate(frontmatter)), 'MMMM d, yyyy')}</time>
+          </p>
+        )}
+
         <p>
-          <time datetime={date}>{format(new Date(date), 'MMMM d, yyyy')}</time>
+          Published <time datetime={date}>{format(new Date(date), 'MMMM d, yyyy')}</time>
         </p>
       </div>
       <h1

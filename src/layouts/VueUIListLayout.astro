@@ -75,12 +75,6 @@ enrichedProjects.sort((a, b) => {
 <BlogPostLayout frontmatter={frontmatter}>
   <slot />
 
-  <p>
-    Last updated: {format(new Date(), 'M/d/yyyy')}
-    <br>
-    Vue 3 Support Last Updated: 11/11/2022
-  </p>
-
   <div class="mb-4">
     <TableOfContents client:load>
       <ol>

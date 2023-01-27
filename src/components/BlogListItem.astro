@@ -2,7 +2,7 @@
 import { MarkdownInstance } from "astro";
 import { format } from "date-fns";
 import { Frontmatter } from "../types";
-import { categoriesToTags } from "../utilities";
+import { categoriesToTags, getBlogDate } from "../utilities";
 import PostTags from "./PostTags.astro";
 
 export type Props = {
@@ -12,6 +12,7 @@ export type Props = {
 const { post } = Astro.props;
 const image = post.frontmatter.image;
 const link = `${post.url}/`;
+const date = getBlogDate(post.frontmatter);
 ---
 
 <article class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 ${image ? 'md:grid-cols-2' : ''}`}>
@@ -35,7 +36,7 @@ const link = `${post.url}/`;
     <header>
       <div class="mb-1">
         <span class="text-sm">
-          <time datetime={post.frontmatter.date}>{format(new Date(post.frontmatter.date), 'MMMM d, yyyy')}</time>
+          <time datetime={date}>{format(new Date(date), 'MMMM d, yyyy')}</time>
         </span>
       </div>
       <h2 class="text-xl sm:text-2xl font-bold leading-tight mb-2 font-heading text-gray-700 dark:text-slate-300">

@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Astro 2.0 Release"
 date: 2023-01-25 21:54:28 -0500
+updatedDate: 2023-01-27 13:04:34 -0500
 categories: astro
 image: /images/blog/astro/astro-logo-banner.svg
 imageAlt: Astro's Logo
@@ -45,8 +46,13 @@ The next new feature in Astro 2.0 is [Hybrid Rendering](https://astro.build/blog
 Hybrid Rendering allows you to combine both static and server side rendering.
 Use server side rendering when you need it and static when you don't.
 
-Follow the [Astro blog](https://astro.build/blog/) for a deep dive into Hybrid
-Rendering later this week.
+It is a simple one-liner to made a page build statically for a server side rendered app.
+Just add `export const prerender = true` and the page in question will be rendered
+at build time.
+
+This opens possibilities to add apis to a static site or improve render performance.
+Take a look at the [Hybrid Rendering deep dive](https://astro.build/blog/hybrid-rendering/)
+on the [Astro blog](https://astro.build/blog/) for more details on how to use this new feature.
 
 ## Updates
 

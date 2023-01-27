@@ -2,14 +2,12 @@
 layout: ../../layouts/BlogPostLayout.astro
 title:  "Publishing apps to the OpenStore with GitLab CI"
 date:   2019-03-19 00:02:00 -0400
+updatedDate: 2022-09-20 00:13:10 -0400
 categories: clickable openstore tutorial
 image: /images/blog/openstore/openstore-apps.png
 imageAlt: A list of apps on the website open-store.io.
 description: Use Clickable to automatically publish your apps to the OpenStore.
 ---
-
-- Updated 09/16/2019: Updated for Clickable v6 changes.
-- Updated 09/20/2022: Updated for Clickable v7 changes, added link to OpenStore submission guide, and updated for the new GitLab CI format.
 
 Recently UBports completed a migration of the click based core apps to GitLab.
 You can find them all in our [GitLab organization](https://gitlab.com/ubports/apps).
