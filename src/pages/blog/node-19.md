@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "Node 19"
 date: 2022-10-25 20:06:47 -0400
 categories: nodejs
+image: /images/blog/logos/nodejs-logo.svg
+imageAlt: Node.js' logo
+description: The latest release of Node.js is out now with some cool new features.
 ---
 
 Last week Node.js announced the [release of version 19](https://nodejs.org/en/blog/announcements/v19-release-announce/).

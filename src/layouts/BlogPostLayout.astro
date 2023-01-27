@@ -1,16 +1,12 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
-import { categoriesToTags } from '../utilities';
 import { BLOG } from '../constants';
 import { Frontmatter } from '../types';
 
 export type Props = {
   frontmatter: Frontmatter;
 };
-
-// TODO blog descriptions
-// TODO blog images
 
 const { frontmatter } = Astro.props;
 const hide = frontmatter.draft && process.env.NODE_ENV !== 'development';

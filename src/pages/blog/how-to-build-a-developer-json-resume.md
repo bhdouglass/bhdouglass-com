@@ -3,14 +3,15 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "How to Build a Developer JSON Resume 2023"
 date: 2022-11-03 00:01:37 -0400
 categories: resume tutorials
+image: /images/blog/json-resume/json-resume.png
+imageAlt: An example JSON Resume with the code to generate it.
+description: All the details on how to create your own JSON Resume.
 ---
 
 Looking for a great way to share your resume with the world? Miss the developer
 stories from Stack Overflow? Build your own resume with [JSON Resume](https://jsonresume.org/).
 I have [written before](/blog/json-resume/) about JSON Resume, but
 this post will be a full tutorial from start to finish.
-
-![JSON Resume Example](/images/blog/json-resume/json-resume.png)
 
 ## Table of contents
 

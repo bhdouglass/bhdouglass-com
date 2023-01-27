@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "HTTP Methods"
 date: 2022-01-25 22:55:21 -0500
 categories: web
+image: /images/blog/generic/http-methods.png
+imageAlt: A list of HTTP Methods from IANA.
+description: Getting back to basics on HTTP Methods.
 ---
 
 Recently I have been reading ["Design and Build Great Web APIs"](https://pragprog.com/titles/maapis/design-and-build-great-web-apis/) by Mike Amundsen. And in there is a brief section

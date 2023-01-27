@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title:  "OpenStore Badges"
 date:   2019-08-07 23:22:00 -0400
 categories: openstore releases
+image: /images/blog/openstore/openstore-badge.svg
+imageAlt: A badge saying "Download from the OpenStore".
+description: The OpenStore now has cool badges to display on your website or code repository.
 ---
 
 A few weeks back (before vacation and a business trip), Ben from the OpenStore

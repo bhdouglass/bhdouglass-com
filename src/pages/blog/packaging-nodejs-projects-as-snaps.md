@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title:  "Packaging Node.js Projects as Snaps"
 date:   2016-08-06 17:56:00 -0400
 categories: snap tutorial
+image: /images/blog/logos/snapcraft-logo.svg
+imageAlt: Snapcraft's logo
+description: Learn how to turn a Node.js app into a Snap package.
 ---
 
 ## Introduction

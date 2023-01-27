@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "Commands.dev"
 date: 2022-05-18 09:12:29 -0400
 categories: bash links
+image: /images/blog/generic/command-line-junky.png
+imageAlt: An ASCII art rendition of the words 'Command Line Junky'.
+description: A short post about a resource for command-line love.
 ---
 
 As a short follow-up to [my recent post about Bash Oneliner](/blog/bash-oneliner/),

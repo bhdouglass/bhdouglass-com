@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "Git Open"
 date: 2022-07-08 23:42:19 -0400
 categories: git tools
+image: /images/blog/generic/git.png
+imageAlt: A Git log from a Git repository
+description: A quick tip about and awesome little command-line tool.
 ---
 
 I am very much a terminal junky. I will do most tasks in a terminal window rather

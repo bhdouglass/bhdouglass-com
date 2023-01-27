@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "JSON Resume"
 date: 2022-02-15 22:14:17 -0500
 categories: tutorials
+image: /images/blog/json-resume/json-resume.png
+imageAlt: An example JSON Resume with the code to generate it.
+description: An introduction to using JSON Resume and details on how I use it.
 ---
 
 Recently Stack Overflow announced that they are discontinuing their job board and

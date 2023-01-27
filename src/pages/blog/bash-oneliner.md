@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "Bash-Oneliner"
 date: 2022-05-09 09:11:27 -0400
 categories: bash links
+image: /images/blog/generic/command-line-junky.png
+imageAlt: An ASCII art rendition of the words 'Command Line Junky'.
+description: A short post about a collection of command-line tips.
 ---
 
 I discovered a great resource for various bash tips and tricks called

@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title:  "Ubuntu Touch: My Personal Journey"
 date:   2017-04-06 23:50:00 -0400
 categories: ubuntu-touch-apps
+image: /images/blog/logos/ubports-logo.svg
+imageAlt: The Ubport's mascot Yumi.
+description: My journey with Ubuntu Touch through out the years.
 ---
 
 As with many other I've been disappointed by [the news](https://insights.ubuntu.com/2017/04/05/growing-ubuntu-for-cloud-and-iot-rather-than-phone-and-convergence/)

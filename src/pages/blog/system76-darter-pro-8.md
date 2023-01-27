@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "System76 Darter Pro 8"
 date: 2022-08-08 09:43:53 -0400
 categories: computer system76
+image: /images/blog/darter/darter1.jpg
+imageAlt: Darter Pro laptop
+description: A review of the latest model Darter Pro from System76.
 ---
 
 For about a month now I have been using the new [System76](https://system76.com/)
@@ -13,8 +16,6 @@ away from having a dedicated GPU. I had hardly used the GPU in my old laptop at 
 I also knew I wanted to keep with a 15-inch screen as my wife's 14-inch screen seemed
 too small. The Darter Pro fit into my requirements nicely and System76 was about
 to release the latest revision soon after I started looking.
-
-<img src="/images/blog/darter/darter1.jpg" alt="Darter Pro" class="img-fluid mb-2">
 
 The specs that I got on the Darter Pro were:
 
@@ -54,7 +55,7 @@ decent battery life, especially compared to my last laptop where 3 hours was a g
 day. System76 claims 9 hours of battery life, but I generally need to plug in
 once during the workday.
 
-<img src="/images/blog/darter/darter2.jpg" alt="Darter Pro Internals" class="img-fluid mb-2">
+<img src="/images/blog/darter/darter2.jpg" alt="Darter Pro Internals">
 
 Despite the couple issues that I described above, I have really been enjoying
 using the Darter Pro. It has the power I need for programming and runs Linux

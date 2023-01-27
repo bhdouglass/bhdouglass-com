@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "Built with Astro"
 date: 2022-02-07 22:25:17 -0500
 categories: astro web
+image: /images/blog/astro/astro-logo-banner.svg
+imageAlt: Astro's Logo
+description: Transitioning my blog from Jekyll to Astro.
 ---
 
 I recently went through the exercise of rebuilding my website and blog. Previously

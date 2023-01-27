@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "NPM Basics"
 date: 2022-02-28 09:58:11 -0500
 categories: nodejs links
+image: /images/blog/logos/nodejs-logo.svg
+imageAlt: Node.js' logo
+description: Tips and resources for getting started with NPM and Package.json.
 ---
 
 - Updated 11/03/2022: Updated to the new `.npmrc` format

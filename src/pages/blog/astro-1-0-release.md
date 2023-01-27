@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "Astro 1.0 Release"
 date: 2022-08-23 16:45:38 -0400
 categories: astro
+image: /images/blog/astro/astro-logo-banner.svg
+imageAlt: Astro's Logo
+description: Astro's 1.0 release marks the beginning of an awesome static site generator.
 ---
 
 Astro [recently announced](https://astro.build/blog/astro-1/) that it had released

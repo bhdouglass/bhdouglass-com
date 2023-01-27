@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "How to Publish an Ubuntu Touch App"
 date: 2022-09-15 00:07:12 -0400
 categories: openstore tutorials
+image: /images/blog/openstore/openstore-apps.png
+imageAlt: A list of apps on the website open-store.io.
+description: Learn how to publish an Ubuntu Touch app from start to finish.
 ---
 
 Once you have created an app for Ubuntu Touch, it is time to publish the app to

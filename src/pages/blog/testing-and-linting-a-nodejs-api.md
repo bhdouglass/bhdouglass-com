@@ -3,6 +3,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title:  "Testing and Linting a Node.js Api"
 date:   2019-06-24 00:34:00 -0400
 categories: nodejs tutorial
+image: /images/blog/nodejs-testing-mocha.png
+imageAlt: A terminal with some Mocha test output.
+description: Learn how to test a Node.js Api using Mocha, Chai, Sinon, SuperTest, and factory-girl.
 ---
 
 A few weeks back I was doing some refactoring of the api code for [the OpenStore](https://open-store.io/).
