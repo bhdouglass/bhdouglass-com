@@ -2,11 +2,10 @@
 import BlogListItem from "./BlogListItem.astro";
 import TextSection from "./TextSection.astro";
 import { tagTitleCase } from '../utilities';
-import { Frontmatter } from "../types";
-import { MarkdownInstance } from "astro";
+import type { CollectionEntry } from "astro:content";
 
 export type Props = {
-  posts: MarkdownInstance<Frontmatter>[];
+  posts: CollectionEntry<'blog'>[];
   nextUrl: string;
   prevUrl: string;
   tag?: string;

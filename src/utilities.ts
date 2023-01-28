@@ -1,6 +1,5 @@
-import { MarkdownInstance } from "astro";
-import { Frontmatter } from "./types";
 import { format } from "date-fns";
+import type { CollectionEntry } from 'astro:content';
 
 export function titleCase(str: string) {
   return str.replace(/_/g, ' ').replace(/\w\S*/g, (txt) => {
@@ -16,12 +15,12 @@ export function categoriesToTags(categories?: string) {
   return (categories ?? '').trim().split(' ').map((category) => category.trim());
 }
 
-export function sortPosts(posts: MarkdownInstance<Frontmatter>[]) {
+export function sortPosts(posts: CollectionEntry<'blog'>[]) {
   if (process.env.NODE_ENV !== 'development') {
-    posts = posts.filter((post) => !post.frontmatter.draft);
+    posts = posts.filter((post) => !post.data.draft);
   }
 
-  posts.sort((a, b) => (new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()))
+  posts.sort((a, b) => (new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()))
   return posts;
 }
 
@@ -32,13 +31,13 @@ export function getRssLink(url: string, base: string) {
   return rssUrl.href;
 }
 
-export function getBlogDate(frontmatter: Frontmatter) {
-  let date = frontmatter.date;
-  if (frontmatter.updatedDate === 'now') {
+export function getBlogDate(date: string, updatedDate?: string) {
+  let blogData = date;
+  if (updatedDate === 'now') {
     date = format(new Date(), 'yyyy-MM-dd HH:mm:ss xx');
   }
-  else if (frontmatter.updatedDate) {
-    date = frontmatter.updatedDate;
+  else if (updatedDate) {
+    date = updatedDate;
   }
 
   return date;

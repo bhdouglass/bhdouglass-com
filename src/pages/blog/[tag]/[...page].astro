@@ -4,22 +4,23 @@ import { categoriesToTags, sortPosts, tagTitleCase } from '../../../utilities';
 import { BLOG } from '../../../constants';
 import Hero from '../../../components/Hero.astro';
 import BlogList from '../../../components/BlogList.astro';
-import { MarkdownInstance, Page } from 'astro';
-import { Frontmatter } from '../../../types';
+import { Page } from 'astro';
+import { CollectionEntry, getCollection } from 'astro:content';
 
 export type Props = {
-  page: Page<MarkdownInstance<Frontmatter>>;
+  page: Page<CollectionEntry<'blog'>>;
 };
 
 export async function getStaticPaths({ paginate }) {
-  let posts = sortPosts(await Astro.glob('../*.md'));
+  const blogEntries = await getCollection('blog', (post): post is CollectionEntry<"blog"> => !post.data.draft || process.env.NODE_ENV === 'development');
+  const posts = sortPosts(blogEntries);
 
   const categories = Array.from(new Set(posts.reduce((acc, cur) => {
-    return [...acc, ...categoriesToTags(cur.frontmatter.categories)];
+    return [...acc, ...categoriesToTags(cur.data.categories)];
   }, []))).filter((category) => !!category);
 
   return categories.map((tag) => {
-    const filteredPosts = posts.filter((post) => post.frontmatter.categories && post.frontmatter.categories.includes(tag));
+    const filteredPosts = posts.filter((post) => post.data.categories && post.data.categories.includes(tag));
     return paginate(filteredPosts, {
       params: { tag },
       pageSize: 15

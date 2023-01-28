@@ -9,13 +9,10 @@ export type Props = {
 };
 
 const { frontmatter } = Astro.props;
-const hide = frontmatter.draft && process.env.NODE_ENV !== 'development';
 ---
 
 <BaseLayout pageTitle={`${frontmatter.title} | ${BLOG.title} by Brian Douglass`} title={frontmatter.title} prism={true} siteName={BLOG.title} description={frontmatter.description || frontmatter.title} image={frontmatter.image} imageAlt={frontmatter.imageAlt}>
-  {hide ? (<h1 class="text-center mt-2">There isn't anything here yet!</h1>) : (
-    <BlogPost frontmatter={frontmatter}>
-      <slot />
-    </BlogPost>
-  )}
+  <BlogPost frontmatter={frontmatter}>
+    <slot />
+  </BlogPost>
 </BaseLayout>

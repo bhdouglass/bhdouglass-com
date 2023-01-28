@@ -8,7 +8,7 @@ imageAlt: An astronaut making discoveries in space.
 description: A quick post about a resource for app patterns in web apps.
 ---
 
-The blog, [web.dev](https://web.dev/) isa great resource for developers.
+The blog, [web.dev](https://web.dev/) is a great resource for developers.
 In one of their recent posts,
 [New patterns for amazing apps](https://web.dev/new-patterns-for-amazing-apps/),
 Thomas Steiner details some of the resources present on web.dev. There a lots of

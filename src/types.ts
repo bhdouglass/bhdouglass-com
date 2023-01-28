@@ -1,4 +1,4 @@
-export type Frontmatter = {
+export type Frontmatter = { // TODO figure out how to get this from the content collection
   title: string;
   date: string;
   updatedDate?: string;

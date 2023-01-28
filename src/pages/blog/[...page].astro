@@ -1,19 +1,19 @@
 ---
+import { CollectionEntry, getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { sortPosts } from '../../utilities';
 import { BLOG } from '../../constants';
 import BlogList from '../../components/BlogList.astro';
 import Hero from '../../components/Hero.astro';
-import { MarkdownInstance, Page } from 'astro';
-import { Frontmatter } from '../../types';
+import { Page } from 'astro';
 
 export type Props = {
-  page: Page<MarkdownInstance<Frontmatter>>;
+  page: Page<CollectionEntry<'blog'>>;
 };
 
 export async function getStaticPaths({ paginate }) {
-  // This is a separate scope, you cannot pass in variables: https://docs.astro.build/en/reference/api-reference/#getstaticpaths
-  let posts = sortPosts(await Astro.glob('./*.md'));
+  const blogEntries = await getCollection('blog', (post): post is CollectionEntry<"blog"> => !post.data.draft || process.env.NODE_ENV === 'development');
+  let posts = sortPosts(blogEntries);
 
   return paginate(posts, { pageSize: 15 });
 }

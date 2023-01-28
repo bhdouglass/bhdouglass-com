@@ -1,0 +1,23 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+
+export type Props = {
+  post: CollectionEntry<'blog'>;
+};
+
+export async function getStaticPaths({ paginate }) {
+  const blogEntries = await getCollection('blog', (post): post is CollectionEntry<"blog"> => !post.data.draft || process.env.NODE_ENV === 'development');
+
+  return blogEntries.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: { post },
+    };
+  });
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Content />
