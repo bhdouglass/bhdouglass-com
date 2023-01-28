@@ -16,7 +16,7 @@ check out [my blog post](https://bhdouglass.com/blog/built-with-astro/).
 ## JSON Resume
 
 My resume is built using [JSON Resume](https://jsonresume.org/).
-It can be viewed on [my own site](https://bhdouglass.com/resume) or on the [JSON Resume Registry](https://registry.jsonresume.org/bhdouglass).
+It can be viewed on [my own site](https://bhdouglass.com/resume/) or on the [JSON Resume Registry](https://registry.jsonresume.org/bhdouglass).
 
 ## Blog Post License
 

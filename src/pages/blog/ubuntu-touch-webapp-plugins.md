@@ -43,4 +43,4 @@ from Nextcloud (something that is impossible in the browser). This is not my
 app but I have contributed to its development.
 
 If you have any questions about either plugin or need help integrating them
-into your webapp please don't hesitate to [contact me](http://bhdouglass.com/contact.html).
+into your webapp please don't hesitate to [contact me](https://bhdouglass.com/#contact).

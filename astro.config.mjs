@@ -17,9 +17,7 @@ export default defineConfig({
   integrations: [
     tailwind({ config: { applyBaseStyles: false } }),
     vue(),
-    sitemap({
-      filter: (page) => page !== 'https://bhdouglass.com/projects.html/' && page !== 'https://bhdouglass.com/contact.html/',
-    }),
+    sitemap(),
     robotsTxt({ sitemapBaseFileName: 'sitemap' }),
   ],
   markdown: {

@@ -167,7 +167,7 @@ This setup can be viewed in action with any of the UBports core apps
 (for example: [the weather app](https://gitlab.com/ubports/development/apps/weather-app/-/pipelines)) and also
 in this [test repository](https://gitlab.com/clickable/clickable-gitlab-ci-test).
 If you have an questions or suggestions feel free to reach out to me via
-[my website](https://bhdouglass.com/contact.html)
+[my website](https://bhdouglass.com/#contact)
 
 ## Resources
 

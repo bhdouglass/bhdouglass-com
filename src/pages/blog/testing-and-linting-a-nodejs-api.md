@@ -408,7 +408,7 @@ the .gitlab-ci.yml file and push the code to GitLab.
 If you want to see the complete example api with tests, linting, and CI just check
 out the [project on GitLab](https://gitlab.com/bhdouglass/testing-node-api).
 If you have an questions or suggestions feel free to reach out to me via
-[my website](https://bhdouglass.com/contact.html) or file an issue on
+[my website](https://bhdouglass.com/#contact) or file an issue on
 [the GitLab project](https://gitlab.com/bhdouglass/testing-node-api/issues).
 
 ## Resources

@@ -242,7 +242,7 @@ you have successfully published a snap!
 I hope that you have found this tutorial useful. If you have any feedback you
 can submit an issue to the
 [hello-node-snap GitHub repo](https://github.com/bhdouglass/hello-node-snap/issues)
-or contact me via [my website](http://bhdouglass.com/contact.html).
+or contact me via [my website](https://bhdouglass.com/#contact).
 
 ## Resources
 

@@ -23,7 +23,7 @@ import Features from '../components/Features.astro';
   <Features
     items={[
       {
-        title: '<a href="/resume" class="underline">Full Stack Engineer</a>',
+        title: '<a href="/resume/" class="underline">Full Stack Engineer</a>',
         description:
           "I've worked on a variety of different projects, spanning the backend and frontend. And I've developed in a variety of different languages."
       },
@@ -46,7 +46,7 @@ import Features from '../components/Features.astro';
   />
 
   <Features
-    title='<a href="/resume" class="underline">Work History</a>'
+    title='<a href="/resume/" class="underline">Work History</a>'
     altColor={true}
     items={resume.work.filter((job) => !job.position.includes("Freelance")).map((job) => {
       return {
