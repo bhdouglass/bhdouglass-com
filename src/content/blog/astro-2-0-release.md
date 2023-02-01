@@ -10,9 +10,9 @@ description: Astro's 2.0 release comes with some great new features and improvem
 ---
 
 Astro 2.0 was [released on January 24th](https://astro.build/blog/astro-2/). Astro is an
-up and coming framework that powers [this blog](/blog/built-with-astro/) and many
-other content-focused sites. It is crazy fast framework that allows you to use
-your favorite frameworks while also shipping lest JavaScript to the user.
+up-and-coming framework that powers [this blog](/blog/built-with-astro/) and many
+other content-focused sites. It is a crazy fast framework that allows you to use
+your favorite frameworks while also shipping less JavaScript to the user.
 
 The 2.0 release comes only months after their [1.0 release](/blog/astro-1-0-release/).
 The [Astro team](https://astro.build/) has been hard at work with several new features
@@ -30,12 +30,12 @@ The headlining feature in Astro 2.0 is [Content Collections](https://docs.astro.
 What exactly is a Content Collection and how will it improve your content?
 
 Content Collections are a way to validate the schema of a Markdown or MDX file.
-Say goodbye to mispelled and forgotten frontmatter fields. And say hello to
+Say goodbye to misspelled and forgotten frontmatter fields. And say hello to
 Typescript types that make generating pages based on that content event easier.
 
-With the Content Collections you aren't locked into someone's preconcived notion
-of a blog post. You aren't event locked into using this for only one type of data.
-You can define collections for various different aspects of your site. For example:
+With Content Collections, you aren't locked into someone's preconceived notion
+of a blog post. You aren't even locked into using this for only one type of data.
+You can define collections for various different aspects of your site. For example,
 blog posts and products.
 
 Read an [overview of Content Collections on the Astro blog](https://astro.build/blog/introducing-content-collections/).
@@ -43,10 +43,10 @@ Read an [overview of Content Collections on the Astro blog](https://astro.build/
 ### Hybrid Rendering
 
 The next new feature in Astro 2.0 is [Hybrid Rendering](https://astro.build/blog/astro-2/#hybrid-rendering-static-meets-dynamic).
-Hybrid Rendering allows you to combine both static and server side rendering.
+Hybrid Rendering allows you to combine both static and server-side rendering.
 Use server side rendering when you need it and static when you don't.
 
-It is a simple one-liner to made a page build statically for a server side rendered app.
+It is a simple one-liner to made a page build statically for a server-side rendered app.
 Just add `export const prerender = true` and the page in question will be rendered
 at build time.
 
@@ -67,7 +67,7 @@ It's easier now to start debugging your problems. And the error messages just lo
 Astro 2.0 also brings performance improvements to the dev server. This includes
 some investment in improvements for the Hot Module Reloading that Astro supports.
 
-Under the hood this release of Astro also includes [Vite 4.0](https://vitejs.dev/).
+Under the hood, this release of Astro also includes [Vite 4.0](https://vitejs.dev/).
 This version of Vite includes upstream patches from Astro team members. It is awesome
 to see projects collaborate together like this.
 

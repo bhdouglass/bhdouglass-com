@@ -9,8 +9,6 @@ imageAlt: Node.js' logo
 description: Tips and resources for getting started with NPM and Package.json.
 ---
 
-- Updated 11/03/2022: Updated to the new `.npmrc` format
-
 [NodeSource](https://nodesource.com/) has recently released a 3-part blog series
 about NPM basics. This is a good resource for developers new to NPM and the package.json
 format. But it is a good refresher for experienced developers as well. I believe
