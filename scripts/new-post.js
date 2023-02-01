@@ -13,6 +13,9 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "${answers.title}"
 date: ${format(new Date(), 'yyyy-MM-dd HH:mm:ss xx')}
 categories: ${answers.categories}
+image: /images/blog/generic/placeholder.svg
+imageAlt: TODO
+description: TODO
 draft: true
 ---
 `;
