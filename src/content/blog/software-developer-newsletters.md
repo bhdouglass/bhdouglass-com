@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Software Developer Newsletters for 2023"
 date: 2023-02-01 09:43:55 -0500
+updatedDate: 2023-02-16 21:50:36 -0500
 categories: recommendations
 image: /images/blog/newsletter-subscribe.png
 imageAlt: A screenshot of a newsletter signup page
@@ -16,6 +17,8 @@ They contain links to articles that keep you informed about the latest developme
 and also can provide insights to help you improve your skills and advance your career.
 Whether you're a beginner or a seasoned pro, these newsletters will help you stay
 ahead of the curve and stay relevant in the ever-evolving tech industry.
+
+Prefer listening to reading? Check out some [great podcasts](/blog/software-developer-podcasts)!
 
 ## Table of contents
 
