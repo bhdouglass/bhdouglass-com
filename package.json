@@ -30,28 +30,28 @@
   },
   "homepage": "https://bhdouglass.com",
   "devDependencies": {
-    "@astrojs/rss": "^2.1.0",
-    "@astrojs/sitemap": "^1.0.0",
-    "astro": "^2.0.2",
-    "autoprefixer": "^10.4.13",
+    "@astrojs/rss": "^2.3.1",
+    "@astrojs/sitemap": "^1.2.1",
+    "astro": "^2.1.4",
+    "autoprefixer": "^10.4.14",
     "chalk": "^5.2.0",
     "date-fns": "^2.29.3",
     "fractional": "^1.0.0",
-    "inquirer": "^9.1.4",
+    "inquirer": "^9.1.5",
     "jsonresume-theme-kendall": "^0.2.0",
     "jsonresume-theme-kendall-projects": "^0.2.1",
     "resume-cli": "^3.0.8"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^3.0.0",
-    "@astrojs/vue": "^2.0.0",
+    "@astrojs/tailwind": "^3.1.1",
+    "@astrojs/vue": "^2.1.0",
     "@tailwindcss/typography": "^0.5.9",
-    "astro-robots-txt": "^0.3.11",
-    "astro-seo": "^0.7.0",
+    "astro-robots-txt": "^0.4.0",
+    "astro-seo": "^0.7.1",
     "rehype-highlight": "^6.0.0",
     "remark-toc": "^8.0.1",
     "remixicon": "^2.5.0",
-    "tailwindcss": "^3.2.4",
+    "tailwindcss": "^3.2.7",
     "vue": "^3.2.45"
   }
 }
