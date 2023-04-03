@@ -46,3 +46,8 @@ pre {
 .dark #logo {
   content: url("/images/logo.dark.svg")
 }
+
+.youtube {
+  margin-left: auto;
+  margin-right: auto;
+}
