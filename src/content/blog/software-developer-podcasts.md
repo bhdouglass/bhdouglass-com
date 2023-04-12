@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Software Developer Podcasts for 2023"
 date: 2023-02-16 23:23:54 -0500
+updatedDate: 2023-04-11 23:43:04 -0400
 categories: recommendations
 image: /images/blog/podcast-headphones.png
 imageAlt: Some headphones laying on the ground.
@@ -35,8 +36,9 @@ it's a whole network of podcasts for developers. There is a diverse number of
 topics covered on each of the podcasts. There are several language-specific podcasts
 like [JS Party](https://changelog.com/jsparty) and [Go Time](https://changelog.com/gotime).
 The network also offers other options like [Ship It!](https://changelog.com/shipit), a
-podcast about pushing out ideas, and [The Changelog](https://changelog.com/podcast) itself
-with short, humor-infused news segments and long-form technology discussions.
+podcast about pushing out ideas, [Changelog News](https://changelog.com/news) with
+short, humor-infused news segments, and [The Changelog](https://changelog.com/podcast) itself
+a podcast with long-form technology discussions.
 
 ## JS Party
 

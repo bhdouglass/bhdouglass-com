@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Software Developer Newsletters for 2023"
 date: 2023-02-01 09:43:55 -0500
-updatedDate: 2023-02-16 21:50:36 -0500
+updatedDate: 2023-04-11 23:43:04 -0400
 categories: recommendations
 image: /images/blog/newsletter-subscribe.png
 imageAlt: A screenshot of a newsletter signup page
@@ -49,11 +49,12 @@ grab their RSS feed and stay up to date on all the latest articles.
 that is more geared toward leads and managers. Many of the linked articles are
 about culture and people.
 
-## Changelog
+## Changelog News
 
-[Changelog](https://changelog.com/) is an awesome podcast network for developers.
-They also put out a weekly newsletter with their latest podcast and a bunch of
-news articles about software development.
+[Changelog](https://changelog.com/news) is an awesome podcast network for developers.
+They also put out a weekly newsletter with articles about software development.
+They also product a podcast of the newsletter, just search for Changelog News
+in your podcast player of choice.
 
 ## HTMHell Newsletter
 
