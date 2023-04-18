@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Will AI Replace Software Engineers?"
 date: 2023-04-02 13:42:01 -0400
+updatedDate: 2023-04-17 20:54:21 -0400
 categories: ai discoveries
 image: /images/blog/computer-in-space.png
 imageAlt: A computer floating is space
@@ -53,5 +54,6 @@ I, for one, welcome our new robot overlords.
 
 ## Further Reading/Listening
 
-- [The End of Front-End Development](https://www.joshwcomeau.com/blog/the-end-of-frontend-development/) - The article that sparked this post
+- [The End of Front-End Development](https://www.joshwcomeau.com/blog/the-end-of-frontend-development/) by Josh Comeau - The article that sparked this post
 - [Episode 511 of Coder Radio](https://coder.show/511) - Mike share's his [experience with GitHub Co-Pilot after 90+ days](https://dominickm.com/90-days-with-github-co-pilot/)
+- [AI-enhanced development makes me more ambitious with my projects](https://simonwillison.net/2023/Mar/27/ai-enhanced-development/) by Simon Willison

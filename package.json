@@ -17,7 +17,8 @@
     "resume-serve": "resume serve --theme kendall-projects --resume src/data/resume.json --dir .tmp",
     "optimize-jpeg": "jpegoptim --strip-all --overwrite --max=90",
     "optimize-png": "optipng",
-    "sync": "astro sync"
+    "sync": "astro sync",
+    "date": "echo 'console.log(require(\"date-fns\").format(new Date(), \"yyyy-MM-dd HH:mm:ss xx\"))' | node"
   },
   "repository": {
     "type": "git",
