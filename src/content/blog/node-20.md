@@ -23,7 +23,7 @@ Then you can use flags like
 [`--allow-child-process`](https://nodejs.org/api/cli.html#--allow-child-process)
 to give granular permissions to a given process.
 
-For more details, check out the [permission model docs](https://nodejs.org/api/permissions.html#permission-model).
+For more details, check out [my short tutorial on the Permission Model](../the-nodejs-permission-model).
 
 The other notable feature of Node.js 20 is the now-stable [test runner](https://nodejs.org/api/test.html).
 The test runner offers basic testing features like those of [Jest](https://jestjs.io/)
@@ -42,3 +42,4 @@ At the time of writing, the current LTS is [Node.js 18](https://nodejs.org/en/do
 - [Full version 20 changelog](https://github.com/nodejs/node/releases/tag/v20.0.0)
 - [Node.js Test Runner docs](https://nodejs.org/api/test.html)
 - [Node.js Permission Model](https://nodejs.org/api/permissions.html#permission-model)
+- [Permission Model tutorial](../the-nodejs-permission-model)

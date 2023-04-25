@@ -1,0 +1,88 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: "The Node.js Permission Model"
+date: 2023-04-24 20:13:17 -0400
+categories: nodejs tutorials
+image: /images/blog/computer-with-a-lock-icon.png
+imageAlt: A computer with a lock icon
+description: Learn the ins and outs of the new Node.js Permission Model.
+---
+
+The release of [Node.js 20](../node-20) includes a new [Permission Model](https://nodejs.org/api/permissions.html#permission-model).
+Why is this important? It allows developers to restrict Node.js scripts from
+accessing the filesystem, child processes, and worker threads.
+
+## Table of Contents
+
+## Getting Started
+
+To use the new Permission model you will need to [download version 20](https://nodejs.org/en/download)
+from [nodejs.org](https://nodejs.org/) or your favorite Node.js version manager.
+(Check out [Volta](https://volta.sh/)!)
+
+Enable the experimental Permission Model by passing the
+[`--experimental-permission`](https://nodejs.org/api/cli.html#--experimental-permission)
+flag to the node command. For example: `node --experimental-permission some-script.js`.
+
+## Permissions
+
+By itself, `--experimental-permission` will lock down the process and prevent access
+to the filesystem, child processes, and worker threads. Use this flag in conjunction
+with the following flags to granularly enable permissions on a per-process basis.
+
+### [`--allow-fs-read`](https://nodejs.org/api/cli.html#--allow-fs-read)
+
+This flag allows access to read from the filesystem (not write). To allow
+full read access, use: `--allow-fs-read=*`. Or pass a comma-separated list
+of paths to limit access: `--allow-fs-read=/some/path,/some/other/file.json`.
+
+### [`--allow-fs-write`](https://nodejs.org/api/cli.html#--allow-fs-write)
+
+This flag allows access to write to the filesystem (not read). To allow
+full write access, use: `--allow-fs-write=*`. Or pass a comma-separated list
+of paths to limit access: `--allow-fs-write=/some/path,/some/other/file.json`.
+
+### [`--allow-child-process`](https://nodejs.org/api/cli.html#--allow-child-process)
+
+This flag allows access to running child processes. Currently, there is no way to
+restrict while child processes can be spawned. This means that a script could use
+a child process to gain write access to the system without specifically allowing
+it via `--allow-fs-write`.
+
+### [`--allow-worker`](https://nodejs.org/api/cli.html#--allow-worker)
+
+This flag allows worker threads to be spawned. The worker thread will retain the
+same permissions as the process that spawned it.
+
+## Checking for Filesystem Permissions
+
+Now that you can restrict permissions to a given script. How does the script see
+if it has the necessary permissions to proceed?
+
+To check permissions, a script can use [`process.permission.has()`](https://nodejs.org/api/process.html#processpermissionhasscope-reference).
+This new function returns true or false if the given process has permission to the
+provided `scope`. The scope can be either `fs`, `fs.read`, or `fs.write` for filesystem access,
+read access, and write access respectively.
+
+The second, optional, argument to `process.permission.has()` is a path to test
+for access. For example, to check for write access to a certain path, use:
+`process.permission.has('fs.write', '/some/path')`.
+
+## Checking Permissions for Child Processes and Worker Threads
+
+The `process.permission.has()` function will only tell you if the script has
+file system access. The only way to check for child process and worker thread access
+is to handle the `ERR_ACCESS_DENIED` error that gets thrown if permission is denied.
+
+## Conclusion
+
+It is important to note that the permission model is experimental in Node.js version
+20. And also, at this time Node.js 20 is not the supported LTS. So the Permission
+Model may be subject to change in the future. That being said, it is exciting to
+see where Node.js will be in the coming releases!
+
+## Further Reading
+
+- [Permission Model docs](https://nodejs.org/api/permissions.html#permission-model)
+- [Node.js version 20 release announcement](https://nodejs.org/en/blog/announcements/v20-release-announce)
+- [`process.permission.has()` docs](https://nodejs.org/api/process.html#processpermissionhasscope-reference)
