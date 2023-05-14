@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Node 20"
 date: 2023-04-23 20:51:59 -0400
+updatedDate: 2023-05-13 22:45:36 -0400
 categories: nodejs
 image: /images/blog/logos/nodejs-logo.svg
 imageAlt: Node.js' logo
@@ -30,6 +31,8 @@ The test runner offers basic testing features like those of [Jest](https://jestj
 and [Mocha](https://mochajs.org/). These features include `describe` and `it`/`test`
 functions, mocks, and parallel test execution.
 
+For more details, check out [my tutorial on the Test Runner](../nodejs-test-runner).
+
 I do not believe that the Node.js test runner will replace Jest and Mocha, but rather
 it will give a lightweight option when needed.
 
@@ -43,3 +46,4 @@ At the time of writing, the current LTS is [Node.js 18](https://nodejs.org/en/do
 - [Node.js Test Runner docs](https://nodejs.org/api/test.html)
 - [Node.js Permission Model](https://nodejs.org/api/permissions.html#permission-model)
 - [Permission Model tutorial](../the-nodejs-permission-model)
+- [Test Runner tutorial](../nodejs-test-runner)
