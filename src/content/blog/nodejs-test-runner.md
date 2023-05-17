@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Node.js Test Runner"
 date: 2023-05-13 22:45:36 -0400
+updatedDate: 2023-05-16 21:29:44 -0400
 categories: nodejs tutorials
 image: /images/blog/nodejs-test-runner.png
 imageAlt: An example test suite using the Node.js Test Runner
@@ -170,29 +171,34 @@ for a potential solution in a future release of Node.js.
 
 Within a test file, you can also filter and limit tests using
 [`describe.skip()`](https://nodejs.org/api/test.html#describeskipname-options-fn),
+[`test.skip()`](https://nodejs.org/api/test.html#testskipname-options-fn),
 [`it.skip()`](https://nodejs.org/api/test.html#itskipname-options-fn),
 [`describe.only()`](https://nodejs.org/api/test.html#describeonlyname-options-fn),
+[`test.only()`](https://nodejs.org/api/test.html#testonlyname-options-fn),
 and [`it.only()`](https://nodejs.org/api/test.html#itonlyname-options-fn).
 These work just like the
 standard `describe()` and `it()` functions as detailed above. The key difference
 is that the `skip` variant will not run the test and the `only` variant will
 restrict the Test Runner to only running that test or suite.
 
-It is important to note that to use `skip` and `only` requires using `it()`
-rather than using `test()` as `test.skip()` and `test.only()` are not valid functions.
+Before [version 20.2.0](https://nodejs.org/en/blog/release/v20.2.0) `test.skip()`
+and `test.only()` were not available. If you prefer using `test()` over `it()`,
+make sure you are on the latest version of Node.js!
 
 ### TODO tests
 
 Not ready to implement a test yet, but you know ahead of time what you want to test?
 Then use
-[`describe.todo()`](https://nodejs.org/api/test.html#describetodoname-options-fn)
+[`describe.todo()`](https://nodejs.org/api/test.html#describetodoname-options-fn),
+[`test.todo()`](https://nodejs.org/api/test.html#testtodoname-options-fn),
 and [`it.todo()`](https://nodejs.org/api/test.html#ittodoname-options-fn).
 These mark the tests as TODO so you can
 come back to them later. This can be useful when working on other tests as the
 number of TODO tests is printed in the output, reminding you to get back to them.
 
-It is important to note that to use `todo` requires using `it()`
-rather than using `test()` as `test.todo()` is not a valid function.
+Before [version 20.2.0](https://nodejs.org/en/blog/release/v20.2.0) `test.todo()`
+was not available. If you prefer using `test()` over `it()`, make sure you are on
+the latest version of Node.js!
 
 ## Hooks
 
