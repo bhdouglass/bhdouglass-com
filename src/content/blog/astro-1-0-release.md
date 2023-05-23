@@ -8,7 +8,7 @@ imageAlt: Astro's Logo
 description: Astro's 1.0 release marks the beginning of an awesome static site generator.
 ---
 
-Astro [recently announced](https://astro.build/blog/astro-1/) that it had released
+[Astro](../astro/) [recently announced](https://astro.build/blog/astro-1/) that it had released
 version 1.0. Astro is a static site generator that focuses on performance and
 shipping minimal JavaScript to the browser. It has a novel
 ["island architecture"](https://docs.astro.build/en/concepts/islands/)

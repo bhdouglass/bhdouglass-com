@@ -9,7 +9,7 @@ imageAlt: Astro's Logo
 description: Astro's 2.0 release comes with some great new features and improvements.
 ---
 
-Astro 2.0 was [released on January 24th](https://astro.build/blog/astro-2/). Astro is an
+[Astro](../astro/) 2.0 was [released on January 24th](https://astro.build/blog/astro-2/). Astro is an
 up-and-coming framework that powers [this blog](/blog/built-with-astro/) and many
 other content-focused sites. It is a crazy fast framework that allows you to use
 your favorite frameworks while also shipping less JavaScript to the user.
