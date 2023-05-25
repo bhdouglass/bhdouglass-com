@@ -35,6 +35,22 @@ Data and Content Collections can now reference one another via the new `referenc
 function. For example, this can be useful for tasks like linking an author
 to a blog post.
 
+Example Data Collection config:
+
+```javascript
+import { defineCollection, z } from "astro:content";
+
+const authors = defineCollection({
+  type: "data",
+  schema: z.object({
+    name: z.string(),
+    avatar: z.string().url(),
+  }),
+});
+
+export const collections = { authors };
+```
+
 For further details, read the [Astro guide on Content Collections](https://docs.astro.build/en/guides/content-collections/).
 
 ## Static-by-default Hybrid Rendering

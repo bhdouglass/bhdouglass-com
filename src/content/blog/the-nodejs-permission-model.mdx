@@ -7,6 +7,7 @@ image: /images/blog/computer-with-a-lock-icon.png
 imageAlt: A computer with a lock icon
 description: Learn the ins and outs of the new Node.js Permission Model.
 ---
+import ImageWithAttribution from '../../components/ImageWithAttribution.astro';
 
 The release of [Node.js 20](../node-20) includes a new [Permission Model](https://nodejs.org/api/permissions.html#permission-model).
 Why is this important? It allows developers to restrict Node.js scripts from
@@ -25,6 +26,11 @@ Enable the experimental Permission Model by passing the
 flag to the node command. For example: `node --experimental-permission some-script.js`.
 
 ## Permissions
+
+<ImageWithAttribution src="/images/blog/node-tutorials/restricted-area-sign.jpg" alt="A sign that says 'Restricted Area: Do Not Enter'">
+  <a href="https://commons.wikimedia.org/wiki/File:Not_My_Presidents_Day_IMG_1928_(32663134670).jpg">Elvert Barnes</a>,
+  <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons
+</ImageWithAttribution>
 
 By itself, `--experimental-permission` will lock down the process and prevent access
 to the filesystem, child processes, and worker threads. Use this flag in conjunction
@@ -55,6 +61,10 @@ This flag allows worker threads to be spawned. The worker thread will retain the
 same permissions as the process that spawned it.
 
 ## Checking for Filesystem Permissions
+
+<ImageWithAttribution src="/images/blog/node-tutorials/id-badges.jpg" alt="A bunch of ID badges hanging from lanyards">
+  <a href="https://www.freepik.com/free-vector/id-cards-badges-realistic-set_6168872.htm">Image by macrovector</a> on Freepik
+</ImageWithAttribution>
 
 Now that you can restrict permissions to a given script. How does the script see
 if it has the necessary permissions to proceed?
