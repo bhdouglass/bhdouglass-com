@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "JSON Manipulation with PostgreSQL"
 date: 2022-06-17 23:16:31 -0400
+updatedDate: 2023-05-24 22:42:52 -0400
 categories: postgresql
 image: /images/blog/generic/database.png
 imageAlt: Rows of computers with hexadecimal numbers written on them.
@@ -13,6 +14,10 @@ PostgreSQL, which has great JSON column support. I have learned a few queries fo
 manipulating JSON data and wanted to share there here. Maybe my future self
 will rediscover these someday!
 
+## Table of Contents
+
+## Remove a Property
+
 Removing a property from a json column is pretty simple, you just need to do:
 
 ```sql
@@ -21,6 +26,8 @@ UPDATE table_name SET json_column=json_column - 'remove_this_property';
 
 This will take an object like `{"keep_me": 1, "remove_this_property": 2}` and update
 to be `{"keep_me": 1}`.
+
+## Update a Property
 
 Updating a value in an object is also easy:
 
@@ -35,6 +42,8 @@ UPDATE table_name SET json_column=jsonb_set(
 
 The `true` argument tells `jsonb_set` to create `update_property` if it doesn't exist.
 
+## Remove a Nested Property
+
 You can then combine the last two queries if you need to remove a property from a nested json object:
 
 ```sql
@@ -46,6 +55,8 @@ UPDATE table_name SET json_column=jsonb_set(
 );
 ```
 
+## Rename a Property
+
 If you need to rename a property in a json object you can combine removing the
 old property with setting the new property with the existing value:
 
@@ -55,6 +66,8 @@ UPDATE table_name SET json_column=(
     jsonb_build_object('new_property', json_column->'old_property')
 );
 ```
+
+## Rename a Nested Property
 
 You can rename a property of a nested object in a similar way to removing a nested property:
 
@@ -70,6 +83,8 @@ UPDATE table_name SET json_column=jsonb_set(
 );
 ```
 
+## Find and Replace
+
 And if your json objects are really crazy, you could opt to do a find and replace.
 However, this should really only be used as a last resort as it may have unintended consequences!
 
@@ -80,3 +95,8 @@ UPDATE table_name SET json_column=REPLACE(
     'new_data'
 )::jsonb;
 ```
+
+## Further Reading
+
+- [PostgreSQL: Remove attribute from JSON column](https://stackoverflow.com/questions/23490965/postgresql-remove-attribute-from-json-column)
+- [Updating JSON Data in PostgreSQL](https://aaronbos.dev/posts/update-json-postgresql)

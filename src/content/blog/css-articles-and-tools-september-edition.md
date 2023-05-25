@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Discoveries Sep 30"
+title: "CSS Articles and Tools (September Edition)"
 date: 2022-09-30 22:41:09 -0400
 categories: discoveries
 image: /images/blog/generic/astronaut-in-space2.png

@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "How to Publish an Ubuntu Touch App"
 date: 2022-09-15 00:07:12 -0400
+updatedDate: 2023-05-24 22:42:52 -0400
 categories: openstore tutorials
 image: /images/blog/openstore/openstore-apps.png
 imageAlt: A list of apps on the website open-store.io.
@@ -12,6 +13,10 @@ Once you have created an app for Ubuntu Touch, it is time to publish the app to
 the OpenStore. The OpenStore is the app store for Ubuntu Touch. It is a place
 to find and install apps for Ubuntu Touch phones and tablets. While it encourages
 open-source apps, it also accepts proprietary apps.
+
+## Table of Contents
+
+## Getting Started
 
 To get started, you will need to create an account on [open-store.io](https://open-store.io/login).
 You can create the account using an existing GitHub, GitLab, or Ubuntu One account.
@@ -29,6 +34,8 @@ the name matches exactly with your manifest.json file, otherwise, the OpenStore 
 reject any updates.
 
 ![Manifest](/images/blog/openstore/submit-tutorial/manifest.jpg)
+
+## Upload a Revision
 
 Once you have submitted the app name and title to the OpenStore you are presented
 with a page to edit your app's information. Be sure to upload screenshots, select
@@ -51,13 +58,24 @@ that [Clickable](https://clickable-ut.dev/) runs when building your app.
 
 ![Click Review](/images/blog/openstore/submit-tutorial/click-review.jpg)
 
+## Manual Review
+
 If your app is rejected because it needs a manual review, then
 [join the OpenStore Telegram group](https://open-store.io/telegram) to get started.
 If your app passes the automated review, then your clicks have now been successfully
 uploaded to the OpenStore. The last step to publish your app publicly is to mark
 the app as published and save your changes.
 
+## Finished Publishing
+
 ![Publish](/images/blog/openstore/submit-tutorial/publish.jpg)
 
 Congratulations, you have now made your Ubuntu Touch app available to thousands
 of Ubuntu Touch users across the globe!
+
+## Further Reading
+
+- [OpenStore Badges](../openstore-badges/) - Link to your app on the OpenStore in style
+- [Publishing apps to the OpenStore with GitLab CI](../publishing-apps-to-the-openstore-with-gitlab-ci/)
+- [Clickable Docs](https://clickable-ut.dev/en/latest/)
+- [UBports App Development Docs](https://docs.ubports.com/en/latest/appdev/index.html)

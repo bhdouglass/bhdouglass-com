@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "NPM Basics"
 date: 2022-02-28 09:58:11 -0500
-updatedDate: 2022-11-03 00:01:37 -0400
+updatedDate: 2023-05-24 22:42:52 -0400
 categories: nodejs links
 image: /images/blog/logos/nodejs-logo.svg
 imageAlt: Node.js' logo
@@ -45,3 +45,10 @@ it goes over some of the host-related fields in a package.json file.
 
 Check out the [NodeSource Blog](https://nodesource.com/blog) and subscribe to their
 [RSS feed](https://nodesource.com/blog/rss) for more articles about Node.js!
+
+## Further Reading
+
+- [NPM Docs](https://docs.npmjs.com/)
+- [The Basics: Getting started with npm](https://nodesource.com/blog/the-basics-getting-started-with-npm)
+- [The Basics of Package.json](https://nodesource.com/blog/the-basics-of-package-json)
+- [Understanding dependencies inside your Package.json](https://nodesource.com/blog/understanding-dependencies-inside-your-packagejson)

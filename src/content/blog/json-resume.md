@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "JSON Resume"
 date: 2022-02-15 22:14:17 -0500
+updatedDate: 2023-05-24 22:42:52 -0400
 categories: tutorials
 image: /images/blog/json-resume/json-resume.png
 imageAlt: An example JSON Resume with the code to generate it.
@@ -44,3 +45,9 @@ If you are looking for an alternative to the Stack Overflow Developer Story then
 I highly recommend checking out JSON Resume. I'm not actively looking for a new
 job, but I will be keeping my eye out for a good replacement to the Stack Overflow
 Job Board.
+
+## Further Reading
+
+- [Make your own JSON Resume](../how-to-build-a-developer-json-resume/)
+- [JSON Resume Docs](https://jsonresume.org/getting-started/)
+- [JSON Resume Themes](https://jsonresume.org/themes/)

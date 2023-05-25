@@ -18,6 +18,8 @@ With this setup it allows each core app maintainer to have control over their ow
 apps under the UBports account on the OpenStore without ever needing to login. I have also been using this setup in my own
 apps and have written this tutorial to help others get setup with GitLab CI and their click apps.
 
+## Table of Contents
+
 ## What you will need
 
 - [A GitLab account](https://gitlab.com/users/sign_in)
@@ -169,8 +171,10 @@ in this [test repository](https://gitlab.com/clickable/clickable-gitlab-ci-test)
 If you have an questions or suggestions feel free to reach out to me via
 [my website](https://bhdouglass.com/#contact)
 
-## Resources
+## Further Reading
 
 - [GitLab docs for .gitlab-ci.yml](https://docs.gitlab.com/ee/ci/yaml/)
 - [GitLab docs for CI variables](https://docs.gitlab.com/ee/ci/variables/)
 - [Clickable Docs](http://clickable-ut.dev/en/latest/)
+- [UBports App Development Docs](https://docs.ubports.com/en/latest/appdev/index.html)
+- [OpenStore Badges](../openstore-badges/) - Link to your app on the OpenStore in style
