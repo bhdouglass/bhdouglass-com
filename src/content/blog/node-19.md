@@ -2,14 +2,14 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Node 19"
 date: 2022-10-25 20:06:47 -0400
-updatedDate: 2023-04-23 20:49:14 -0400
+updatedDate: 2023-06-07 22:35:58 -0400
 categories: nodejs
 image: /images/blog/logos/nodejs-logo.svg
 imageAlt: Node.js' logo
 description: The latest release of Node.js is out now with some cool new features.
 ---
 
-Update: Version 19 is old news, check out [Node.js 20](../node-20)!
+Update: Version 19 has reached its [end of life](https://github.com/nodejs/Release?#end-of-life-releases), check out [Node.js 20](../node-20)!
 
 Last week Node.js announced the [release of version 19](https://nodejs.org/en/blog/announcements/v19-release-announce/).
 
