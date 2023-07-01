@@ -1,0 +1,123 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: "My Developer Toolbox"
+date: 2023-06-30 23:04:37 -0400
+categories: tools
+image: /images/blog/logos/toolbox-logos.png
+imageAlt: The git, GitHub, GitLab, Linux, Docker, Slack, and VSCodium logos
+description: The tools I use daily for development.
+---
+
+
+Welcome to the inner sanctum of my developer toolbox, where lines of code mingle
+with whimsical gadgets and mysterious shortcuts. It's a place where software
+sorcery meets a touch of madness and a dash of caffeine-induced inspiration.
+In this blog post, I'll briefly discuss the quirky treasures that reside within
+my digital workshop. Join me as we explore the tools that keep my programming
+adventures both entertaining and productive.
+
+## Table of Contents
+
+## IDE
+
+The first stop in our toolbox tour is none other than my IDE of choice,
+[VSCodium](https://vscodium.com/). VSCodium is to VSCode as Chromium is to Chrome.
+Yes, VSCode is an open-source project, but its binaries are proprietary. Call me
+a purist, but if I'm using an open-source IDE, I would like the whole thing to be
+open-source.
+
+## Terminal
+
+When developing I always have 3 programs running: Firefox, VSCodium, and my terminal
+of choice, [Tilix](https://gnunn1.github.io/tilix-web/). The main reason I like
+Tilix is that with a single keyboard shortcut, I can cut the window vertically
+or horizontally into more terminals. Generally when programming I have a project
+open in two panes of one tab in Tilix. This works especially well with the monorepo
+I work on for my day job. One pane is the root of the monorepo while the other
+is the API portion of the monorepo (and occasionally there will be a third with the
+UI).
+
+## Operating System
+
+With most of my tools being open-source, it should come as no surprise that I run
+Linux as my Operating System. Specifically, I'm running [Kubuntu](https://kubuntu.org/)
+with the Plasma desktop for its flexibility and customization options.
+
+## Docker
+
+I run Docker and Docker Compose frequently for both work and side projects. I even
+built a [project around Docker](https://clickable-ut.dev/en/latest/) that makes
+compiling apps for Ubuntu Touch easy. I find the tooling around Docker to be
+easy to use and ubiquitous.
+
+For ease of use, I have a [Bash alias](https://tldp.org/LDP/abs/html/aliases.html)
+setup to invoke the docker compose command via the shortcut `dc`.
+
+## Communication
+
+Communication is one area where I veer away from my open-source tendencies as
+my main communication platform is [Slack](https://slack.com/). Since this is for
+work there isn't much choice, but I like Slack for its features like threads and search.
+I have minimized my notification preferences as much as possible so I can avoid unnecessary distractions
+while coding.
+
+On the non-proprietary side of things, I use Thunderbird as my email
+client and it allows me to pull in multiple email accounts under one interface.
+
+## Version Control
+
+My main go-to for version control is Git. I've used a few different version control
+systems over the years and prefer to work in Git. I also prefer to use it
+via the command line rather than through the VSCodium integration. I find myself
+most comfortable at the command line since it is generally faster and I can rely
+on muscle memory more than an interface.
+
+I use Git via a shortcut `g`, provided by [mingit](https://gitlab.com/bhdouglass/mingit).
+Mingit takes the already short `git` command to the next level, so I can type
+`g co <branch name>` rather than the longer `git checkout <branch name>`.
+
+As for other shortcuts, I use [git-open](../git-open/) via the command `ggo`.
+Git-open lets me quickly open up a repository in GitHub/GitLab/Bitbucket from the
+command line. Then I can jump straight into issues or pull requests.
+
+For Git hosting I use both [GitLab](https://gitlab.com/) and [GitHub](https://github.com/)
+frequently. I mainly use GitHub for work and GitLab for side projects. I like the
+logical split and I especially like hosting my personal projects on GitLab due to
+its open-source nature and the ability to self-host it if I were to choose to
+do so in the future.
+
+## Command Line & Scripts
+
+I've already briefly talked about some of the shortcuts I use for Docker and Git.
+But I also have a quick and dirty script for NPM called `n`. Written in Python
+it allows me to run NPM scripts without typing out `npm run <script>`. I have a similar
+script for Yarn, `y`, but thatis mostly just a shortcut without anything added.
+
+The other big shortcut I use constantly is my start script `s`. It'll automatically
+start a project I'm working on by detecting if it should run an NPM/Yarn command,
+start Docker Compose, or run a custom `start.sh` script.
+
+Since I greatly prefer the command line over GUIs, I also use the [DBCLI](https://www.dbcli.com/)
+tools `mycli` and `pgcli` for database access. These tools vastly improve the default
+database shell tools. No more having to remember to put a semicolon at the end of your
+SQL statements!
+
+## Notes
+
+While not directly programming related, I do use a note-taking tool called
+[Logseq](https://logseq.com/) daily. I'll keep notes for projects, cool new tools
+or libraries I find, and much more. I've found the daily log feature of Logseq useful
+for jotting down notes to track what I've been working on for my day job.
+
+Logseq has some advantages over its competition since all of its notes are stored
+privately and locally in text files. But Logseq itself is more than a glorified text
+editor as it excels at linking notes together (among other things).
+
+It also contains notes outside of programming (like when I last got an oil change
+for my car) and has been indispensable in keeping myself organized.
+
+## Conclusion
+
+Thanks for joining me on this trip through my toolbox. If you would like to discuss
+anything about these tools or show me a shiny new tool to replace my existing tools
+just [contact me](/#contact) via my website!
