@@ -11,5 +11,11 @@ import BaseLayout from '../layouts/BaseLayout.astro'
       Check out the <a href="https://gitlab.com/bhdouglass/bhdouglass-com/-/tree/master/archive" class="underline">archives</a> if you think this page existed in the past.
     </div>
   </TextSection>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", function () {
+      plausible("404", { props: { path: document.location.pathname } });
+    });
+  </script>
 </BaseLayout>
 
