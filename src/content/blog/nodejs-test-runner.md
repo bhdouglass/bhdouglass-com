@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Node.js Test Runner"
+title: "The Complete Guide to the Node.js Test Runner"
 date: 2023-05-13 22:45:36 -0400
-updatedDate: 2023-05-16 21:29:44 -0400
+updatedDate: 2023-08-10 23:36:08 -0400
 categories: nodejs tutorials
 image: /images/blog/nodejs-test-runner.png
 imageAlt: An example test suite using the Node.js Test Runner
@@ -289,6 +289,31 @@ test('spies on an object method', (t) => {
   assert.equal(call.error, undefined);
   assert.equal(call.target, undefined);
   assert.equal(call.this, number);
+});
+```
+
+### Mocking Timers
+
+In addition to mocking function you can also test code that uses `setTimeout()` and
+`setInterval()`. This feature is new in [v20.4.0](https://nodejs.org/en/blog/release/v20.4.0),
+so make sure you have the latest version!
+You need to enable the function you want to mock by calling `mock.timers.enable(['setTimeout', 'setInterval'])`, then call `mock.timers.tick(x)` to simulate time passing.
+
+Example (Modified from the Node.js Release Blog Post):
+
+```javascript
+const { test, mock } = require('node:test');
+const assert = require('node:assert/strict');
+
+test('mocks setTimeout', () => {
+  const fn = mock.fn();
+  mock.timers.enable(['setTimeout']);
+  setTimeout(fn, 100);
+
+  mock.timers.tick(50);
+  mock.timers.tick(50);
+
+  assert.strictEqual(fn.mock.callCount(), 1);
 });
 ```
 
