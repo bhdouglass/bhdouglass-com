@@ -1,0 +1,73 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: "Astro 3.0 Release"
+date: 2023-09-12 10:15:51 -0400
+categories: astro
+image: /images/blog/astro/astro-logo-banner.svg
+imageAlt: Astro's Logo
+description: Astro pumps out another great release with version 3.0
+---
+
+The [Astro](https://astro.build/) framework has been constantly churning out great updates.
+The project released [version 1.0](../astro-1-0-release/) only about a year before
+the current [3.0 release](https://astro.build/blog/astro-3/). This release
+contains several new features and some breaking changes to be aware of. Let's
+dive into the latest release notes!
+
+## Table of contents
+
+## New Features
+
+Image optimization is now stable and available without any hoops to jump through.
+Check out the [Astro image guide](https://docs.astro.build/en/guides/images/)
+for how to use the `<Image>` element. If you were previously using `@astrojs/image`
+then you'll want to check out the [image migration guide](https://docs.astro.build/en/guides/images/#upgrade-to-v30-from-v2x). I've been using the `@astrojs/image` components on
+various sites and have been very pleased with the results. It is great to see this
+get first-class support in Astro.
+
+According to their benchmarks, Astro now renders 30-75% faster than version 2.9.
+This is on top of the gains they have already gotten from parallelizing their
+component rendering in [Astro 2.5](../astro-2-5-release/).
+
+<img src="/images/blog/memes/i-am-speed.jpg" alt="A meme of Lightning McQueen saying 'Speed. I am Speed.'">
+
+Astro 3.0's headline feature is the view transitions support. This can turn multi-page
+apps (MPAs) into slick apps that you might think was a single-page app (SPA). You can
+transition between pages with fade, slide, and morph animations. Check out the full
+[view transitions guide](https://docs.astro.build/en/guides/view-transitions/) to
+get started with your own site. Or see it in action with this [live demo](https://astro-records.pages.dev/) created by [Maxi Ferreira](https://twitter.com/charca).
+
+<img src="/images/blog/astro/astro-3-0-view-transitions.gif" alt="A gif of the Astro view transitions in action">
+
+Additionally, Astro 3.0 has enhanced its Serverless support, enabled "Fast Refresh"
+support when working with React and Preact, and has optimized its build output
+with cleaner HTML.
+
+## Breaking Changes
+
+Astro 3.0 drops support for Node.js 16 (which hit end of life recently) and TypeScript
+4. So make sure you upgrade your versions accordingly.
+
+As mentioned above, `@astrojs/image` has been removed in favor of integrated image support.
+
+The `getStaticPaths()` function's return value is no longer flattened. I ran into this
+while upgrading [this site](../built-with-astro/), but it was a simple fix from using
+`map()` to using `flatMap()`.
+
+The default port that the dev server uses has been changed from `3000` to `4321`.
+Get it? 🚀
+
+Compressing built HTML is now the default, so if you were using the `compressHTML: true`
+setting, you can remove it.
+
+These are just some of the bigger breaking changes that I noticed. Take a look a
+the full [v3 migration guide](https://docs.astro.build/en/guides/upgrade-to/v3/)
+for further help upgrading.
+
+## Further Reading
+
+- [Astro 3.0 Blog Post](https://astro.build/blog/astro-3/)
+- [Astro 3.0 Migration Guide](https://docs.astro.build/en/guides/upgrade-to/v3/)
+- [Astro Image Guide](https://docs.astro.build/en/guides/images/)
+- [Astro Image Migration Guide](https://docs.astro.build/en/guides/images/#upgrade-to-v30-from-v2x)
+- [Astro View Transitions Guide](https://docs.astro.build/en/guides/view-transitions/)
