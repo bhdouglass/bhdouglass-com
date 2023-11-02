@@ -189,7 +189,7 @@ ocat --dump=friends
 
 Now you and your friends/family can view each other's locations from within the app.
 
-<img src="images/blog/owntracks/owntracks-android-app-map.png" alt="The OwnTracks Android app map with friend locations.">
+<img src="/images/blog/owntracks/owntracks-android-app-map.png" alt="The OwnTracks Android app map with friend locations.">
 
 ## Pretty Images on the Map
 

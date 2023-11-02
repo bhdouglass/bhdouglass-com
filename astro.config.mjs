@@ -19,7 +19,10 @@ export default defineConfig({
     tailwind({ config: { applyBaseStyles: false } }),
     vue(),
     mdx(),
-    sitemap(),
+    sitemap({
+       // TODO filter out noindex pages
+      customPages: ['https://bhdouglass.com/resume/'],
+    }),
     robotsTxt({ sitemapBaseFileName: 'sitemap' }),
   ],
   markdown: {
