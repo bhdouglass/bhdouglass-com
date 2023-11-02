@@ -9,7 +9,7 @@ imageAlt: Astro's Logo
 description: Astro's 2.5 release rolls out with many new features.
 ---
 
-Update: Version 2.5 is old news, check out [Astro 3.0](../astro-3.0-release/)!
+Update: Version 2.5 is old news, check out [Astro 3.0](../astro-3-0-release/)!
 
 [Astro](../astro/), the innovative static site builder, has recently [released version 2.5](https://astro.build/blog/astro-250/),
 bringing a range of exciting updates and enhancements to its already impressive features.
