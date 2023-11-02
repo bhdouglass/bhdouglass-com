@@ -17,7 +17,7 @@ because these podcasts offer a wealth of information and insight for developers
 at any level. So grab your headphones and get ready to tune in to some of the
 best software developer podcasts out there!
 
-Prefer reading to listening? Check out some [great newsletters](/blog/software-developer-newsletters)!
+Prefer reading to listening? Check out some [great newsletters](/blog/software-developer-newsletters/)!
 
 ## Table of contents
 

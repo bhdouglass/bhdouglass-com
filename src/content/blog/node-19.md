@@ -9,7 +9,7 @@ imageAlt: Node.js' logo
 description: The latest release of Node.js is out now with some cool new features.
 ---
 
-Update: Version 19 has reached its [end of life](https://github.com/nodejs/Release?#end-of-life-releases), check out [Node.js 20](../node-20)!
+Update: Version 19 has reached its [end of life](https://github.com/nodejs/Release?#end-of-life-releases), check out [Node.js 20](../node-20/)!
 
 Last week Node.js announced the [release of version 19](https://nodejs.org/en/blog/announcements/v19-release-announce/).
 

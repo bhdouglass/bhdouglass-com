@@ -11,7 +11,7 @@ description: The latest release of Node.js is out now with some cool new feature
 
 Node.js recently announced that [version 20](https://nodejs.org/en/blog/announcements/v20-release-announce) has been released.
 
-It was only a few months ago that [Node.js 19](../node-19) was released. But this
+It was only a few months ago that [Node.js 19](../node-19/) was released. But this
 release improves upon 19 with performance improvements and new features.
 
 A headline feature of Node.js 20 is the experimental [permission model](https://nodejs.org/api/permissions.html#permission-model).
@@ -24,14 +24,14 @@ Then you can use flags like
 [`--allow-child-process`](https://nodejs.org/api/cli.html#--allow-child-process)
 to give granular permissions to a given process.
 
-For more details, check out [my short tutorial on the Permission Model](../the-nodejs-permission-model).
+For more details, check out [my short tutorial on the Permission Model](../the-nodejs-permission-model/).
 
 The other notable feature of Node.js 20 is the now-stable [test runner](https://nodejs.org/api/test.html).
 The test runner offers basic testing features like those of [Jest](https://jestjs.io/)
 and [Mocha](https://mochajs.org/). These features include `describe` and `it`/`test`
 functions, mocks, and parallel test execution.
 
-For more details, check out [my tutorial on the Test Runner](../nodejs-test-runner).
+For more details, check out [my tutorial on the Test Runner](../nodejs-test-runner/).
 
 I do not believe that the Node.js test runner will replace Jest and Mocha, but rather
 it will give a lightweight option when needed.
@@ -45,5 +45,5 @@ At the time of writing, the current LTS is [Node.js 18](https://nodejs.org/en/do
 - [Full version 20 changelog](https://github.com/nodejs/node/releases/tag/v20.0.0)
 - [Node.js Test Runner docs](https://nodejs.org/api/test.html)
 - [Node.js Permission Model](https://nodejs.org/api/permissions.html#permission-model)
-- [Permission Model tutorial](../the-nodejs-permission-model)
-- [Test Runner tutorial](../nodejs-test-runner)
+- [Permission Model tutorial](../the-nodejs-permission-model/)
+- [Test Runner tutorial](../nodejs-test-runner/)

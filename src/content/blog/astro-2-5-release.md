@@ -23,7 +23,7 @@ look at what's new in Astro version 2.5!
 
 ## Data Collections
 
-Content Collections were [introduced in 2.0](../astro-2-0-release), now in version
+Content Collections were [introduced in 2.0](../astro-2-0-release/), now in version
 2.5 Astro has added Data Collections. Data Collections live alongside content
 in the `src/content` directory. These will typically be JSON or YAML files.
 
@@ -58,7 +58,7 @@ For further details, read the [Astro guide on Content Collections](https://docs.
 
 ## Static-by-default Hybrid Rendering
 
-In [Astro 2.0](../astro-2-0-release), they released [Hybrid Rendering](https://docs.astro.build/en/guides/server-side-rendering/#hybrid-rendering).
+In [Astro 2.0](../astro-2-0-release/), they released [Hybrid Rendering](https://docs.astro.build/en/guides/server-side-rendering/#hybrid-rendering).
 The new static pre-rendering by default option flips normal Hybrid Rendering on
 its head by pre-rendering all but a select few pages. This differs from Hybrid
 Rendering's default which only pre-renders a select few pages.
@@ -107,4 +107,4 @@ for more details.
 - [Astro 2.5 Release Announcement](https://astro.build/blog/astro-250/)
 - [Astro 2.5 Full Changelog](https://github.com/withastro/astro/pull/7090)
 - [Astro Public Roadmap](https://github.com/orgs/withastro/projects/11/views/1)
-- [Astro 2.0 Release](../astro-2-0-release)
+- [Astro 2.0 Release](../astro-2-0-release/)

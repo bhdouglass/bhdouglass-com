@@ -18,7 +18,7 @@ and also can provide insights to help you improve your skills and advance your c
 Whether you're a beginner or a seasoned pro, these newsletters will help you stay
 ahead of the curve and stay relevant in the ever-evolving tech industry.
 
-Prefer listening to reading? Check out some [great podcasts](/blog/software-developer-podcasts)!
+Prefer listening to reading? Check out some [great podcasts](/blog/software-developer-podcasts/)!
 
 ## Table of contents
 
