@@ -20,7 +20,7 @@ With YunoHost you can easily set up multiple domains on the same server and inst
 [Let's Encrypt](https://letsencrypt.org/) certificates with a few button clicks.
 It also has great app discovery. You can search for apps by name or keyword. Plus
 you can browse based on different categories. If you want to check out the app
-list before installing, you can find the full list on the [YunoHost website](https://yunohost.org/en/apps?q=%2Fapps).
+list before installing, you can find the full list on the [YunoHost website](https://apps.yunohost.org/catalog).
 With many of the popular apps, YunoHost offers LDAP integration
 which allows you to have one login across all your applications.
 

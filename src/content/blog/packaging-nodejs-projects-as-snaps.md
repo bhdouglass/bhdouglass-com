@@ -23,7 +23,7 @@ snap store.
 To get started snapping Node.js modules you'll need to have `snapd` and `snapcraft`
 installed. snapd will include the `snap` command that will allow you to search
 and install snaps from the store. snapd is available on
-[many different Linux distributions](http://snapcraft.io/docs/core/install),
+[many different Linux distributions](https://snapcraft.io/docs/installing-snapd),
 but if you are using Ubuntu 16.04 or greater you can just run:
 
 ```bash
@@ -109,7 +109,7 @@ is the path to the command to run. This is relative to the root of the snap.
 After the command is the plugs section. The plugs section is a list of interfaces
 that allow a command to access shared resources on the host machine. They could
 be loosely thought of as permissions. A list of common and reserved interfaces
-can be found in the [snapcraft documentation](http://snapcraft.io/docs/reference/interfaces).
+can be found in the [snapcraft documentation](https://snapcraft.io/docs/interface-management).
 In this example we are requesting access to the `network`. `network` is for accessing
 the network as a client. On the other hand, you may need `network-bind` if you
 want to set up a server. Another common interface is the `home` interface, which
@@ -222,7 +222,7 @@ url, in case users run into any issues using your snap. You need to set your
 snap channels by clicking on the latest release (since this is the first
 upload it will be #1). Then click the "Edit" button next to "Channels". For an
 explanation of the different channels, check out this
-[guide to publishing snaps](http://snapcraft.io/docs/build-snaps/publish).
+[guide to publishing snaps](https://snapcraft.io/docs/releasing-to-the-snap-store).
 
 After you square away the details of your snap, click the "Publish your application"
 button to publish it to the store. Now you can find your snap and install it with
@@ -248,7 +248,7 @@ or contact me via [my website](https://bhdouglass.com/#contact).
 
 * [hello-node-snap source on GitHub](https://github.com/bhdouglass/hello-node-snap)
 * The [Snappy Playpen](https://github.com/ubuntu/snappy-playpen) is a great collection of snaps that can help you get squared away with your snap.
-* The [Snapcraft Docs](http://snapcraft.io/docs/) has a wealth of information on all things snap.
+* The [Snapcraft Docs](https://snapcraft.io/docs) has a wealth of information on all things snap.
 * [Ask Ubuntu](http://askubuntu.com/search?q=snappy) already has questions and answers about snaps.
 * Other Node.js Snap examples:
   * [uApp Explorer CLI](https://github.com/bhdouglass/uappexplorer-cli) - Very similar to this example.

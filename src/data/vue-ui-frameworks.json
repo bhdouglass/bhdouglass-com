@@ -249,7 +249,8 @@
     "githubRepo": "Qvant-lab/qui",
     "vue3": false,
     "npmPackage": "@qvant/qui",
-    "description": "A Vue.js Neumorphism Design System for Web"
+    "description": "A Vue.js Neumorphism Design System for Web",
+    "hideWebsite": true
   },
   {
     "name": "Qui Max",

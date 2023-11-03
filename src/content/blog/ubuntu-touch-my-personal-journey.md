@@ -8,7 +8,7 @@ imageAlt: The Ubport's mascot Yumi.
 description: My journey with Ubuntu Touch through out the years.
 ---
 
-As with many other I've been disappointed by [the news](https://insights.ubuntu.com/2017/04/05/growing-ubuntu-for-cloud-and-iot-rather-than-phone-and-convergence/)
+As with many other I've been disappointed by [the news](https://canonical.com/blog/growing-ubuntu-for-cloud-and-iot-rather-than-phone-and-convergence)
 that Canonical will no longer be the driving force behind Ubuntu Touch and Unity8.
 Ubuntu Touch has been a fascinating project that I've been following for a few years
 now. It has really given me a creative space to expand my programing horizons.

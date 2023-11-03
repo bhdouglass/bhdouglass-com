@@ -26,7 +26,7 @@ Prefer listening to reading? Check out some [great podcasts](/blog/software-deve
 
 [Node Weekly](https://nodeweekly.com/) is a newsletter for JavaScript developers
 centered around [Node.js](https://nodejs.org/). But it also has articles about
-[Deno](https://deno.land/) and [Bun](https://bun.sh/). This is a fantastic weekly
+[Deno](https://deno.com/) and [Bun](https://bun.sh/). This is a fantastic weekly
 read that provides quick summaries of articles for you to scan.
 
 ## Frontend Focus Newsletter
@@ -107,7 +107,7 @@ to fulfill? Skimming is your friend here. Skim over the articles and see if any
 spark your imagination or might apply to you currently. Then, save the articles
 somewhere to read later. There are plenty of services that provide this functionality,
 like [Pocket](https://getpocket.com/), [Instapaper](https://www.instapaper.com/),
-or the [self-hosted](/blog/self-hosting/) [Wallabag](https://www.wallabag.org/).
+or the [self-hosted](/blog/self-hosting/) [Wallabag](https://wallabag.org/).
 Come back later when you have dedicated time to read through the articles. Don't
 feel like you need to read every word of every article, skim and skip around as
 you need to. If something doesn't make sense you can always go back and read from

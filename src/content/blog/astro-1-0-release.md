@@ -20,7 +20,7 @@ In fact, Astro is the very thing generating this blog. I wrote about my initial
 experience with Astro in [a post earlier this year](/blog/built-with-astro/).
 
 Just a few days before the release, I started upgrading this website from v0.22
-to the latest release candidate. The [migration guide](https://docs.astro.build/en/migrate/)
+to the latest release candidate. The [migration guide](https://docs.astro.build/en/guides/upgrade-to/v1/)
 was very thorough and I was able to avoid anything painful. The biggest change
 came from the fact that the RSS feed generation was moved from the `getStaticPaths`
 function to a separate module. I believe this is a smart move and would allow

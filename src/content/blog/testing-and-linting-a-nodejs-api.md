@@ -12,8 +12,8 @@ A few weeks back I was doing some refactoring of the api code for [the OpenStore
 Not wanting to do a bunch of manual testing, I decided it was time to implement
 some testing to better ensure that restrictions around app management are working as expected.
 For this I decided to use the tools [Mocha](https://mochajs.org/), [Chai](https://www.chaijs.com/),
-[Sinon](https://sinonjs.org/), [SuperTest](https://github.com/visionmedia/supertest),
-and [factory-girl](https://github.com/aexmachina/factory-girl). Why these tools in
+[Sinon](https://sinonjs.org/), [SuperTest](https://github.com/ladjs/supertest),
+and [factory-girl](https://github.com/simonexmachina/factory-girl). Why these tools in
 particular? Mostly due to familiarity from a prvious job. This approach is working
 for me, so I wanted to write a tutorial to help others get setup with a
 testing environment for their Node.js api.
@@ -171,10 +171,10 @@ that you will need to install several dependencies: `npm install --save-dev moch
 Each of these packages has a different role to play in testing our app.
 [Mocha](https://mochajs.org/) is a testing framework for JavaScript.
 [Chai](https://www.chaijs.com/) is an assertion library that complements Mocha.
-[factory-girl](https://github.com/aexmachina/factory-girl) is a factory library that makes it simple to generate test data models.
+[factory-girl](https://github.com/simonexmachina/factory-girl) is a factory library that makes it simple to generate test data models.
 [Sinon](https://sinonjs.org/) is a library for mocking, stubbing, and spying function calls for your tests.
 [sinon-chai](https://github.com/domenic/sinon-chai) is an extension to Chai that allows you to assert calls to your mocks from Sinon.
-[SuperTest](https://github.com/visionmedia/supertest) is a library for testing http servers.
+[SuperTest](https://github.com/ladjs/supertest) is a library for testing http servers.
 
 Once everything finishes installing, add a new script to your package.json called
 `test` and have it run the `mocha` command. Then you can create the following files:
@@ -243,7 +243,7 @@ factory.define('widget', Widget, {
 The widget factory simply sets up the rules for generating new widgets. These will
 be persisted in the database and be made available in our tests. For more information
 on how to setup a factory, check out this
-[FactoryGirl tutorial](https://github.com/aexmachina/factory-girl/blob/master/docs/tutorial.md).
+[FactoryGirl tutorial](https://github.com/simonexmachina/factory-girl/blob/master/docs/tutorial.md).
 
 ### [test/api-test.js](https://gitlab.com/bhdouglass/testing-node-api/blob/master/test/api-test.js)
 
@@ -362,7 +362,7 @@ This config file tells ESLint which config we want to follow, in this case
 Node environment and we are also using Mocha. This will prevent errors on our tests
 for Mocha's globals. If you want to customize the linting rules for this project
 you can set them in the `rules` section. You can see the list of available rules in
-the [ESLint docs](https://eslint.org/docs/rules/). Lastly we need to set specific
+the [ESLint docs](https://eslint.org/docs/latest/rules/). Lastly we need to set specific
 rules on our test files to prevent ESLint from giving us issues with lines like
 `expect(findStub).to.have.been.calledOnce;`. Since the configuration is completed,
 you can now add a new script to your package.json, called `lint` and make it call `eslint`.
@@ -409,15 +409,15 @@ If you want to see the complete example api with tests, linting, and CI just che
 out the [project on GitLab](https://gitlab.com/bhdouglass/testing-node-api).
 If you have an questions or suggestions feel free to reach out to me via
 [my website](https://bhdouglass.com/#contact) or file an issue on
-[the GitLab project](https://gitlab.com/bhdouglass/testing-node-api/issues).
+[the GitLab project](https://gitlab.com/bhdouglass/testing-node-api/-/issues).
 
 ## Resources
 
 - [Mocha Documentation](https://mochajs.org/#getting-started)
 - [Chai Documentation](https://www.chaijs.com/api/)
-- [factory-girl Tutorial](https://github.com/aexmachina/factory-girl/blob/master/docs/tutorial.md)
+- [factory-girl Tutorial](https://github.com/simonexmachina/factory-girl/blob/master/docs/tutorial.md)
 - [Sinon Documentation](https://sinonjs.org/releases/v7/)
 - [sinon-chai Documentation](https://github.com/domenic/sinon-chai#assertions)
-- [SuperTest Documentation](https://github.com/visionmedia/supertest)
-- [ESLint Documentation](https://eslint.org/docs/rules/)
+- [SuperTest Documentation](https://github.com/ladjs/supertest)
+- [ESLint Documentation](https://eslint.org/docs/latest/rules/)
 - [GitLab CI Documentation](https://docs.gitlab.com/ee/ci/yaml/)

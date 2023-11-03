@@ -12,7 +12,7 @@ I try to read a lot of development related articles and newsletters. I desire to
 keep up with the latest trends to have a better understanding of the industry as
 a whole. Here are a few articles and tools that I have discovered.
 
-## [Creative list styling](https://web.dev/creative-list-styling/)
+## [Creative list styling](https://web.dev/articles/creative-list-styling)
 
 Michelle Barker writes an in-depth guide to the ubiquitous HTML list element.
 The articles listed several features I wasn't aware of, like setting the starting

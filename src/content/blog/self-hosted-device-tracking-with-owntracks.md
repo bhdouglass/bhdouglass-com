@@ -10,7 +10,7 @@ description: Be in control of your own location data with OwnTracks!
 
 [OwnTracks](https://owntracks.org/) is a location-tracking app for both
 [Android](https://play.google.com/store/apps/details?id=org.owntracks.android)
-and [iOS](https://itunes.apple.com/us/app/mqttitude/id692424691?mt=8). OwnTracks
+and [iOS](https://apps.apple.com/us/app/owntracks/id692424691). OwnTracks
 is an open-source alternative to the popular Life360 app. While the OwnTracks
 app can be used on its own, setting up an OwnTracks server offers additional
 benefits, such as the ability to share your location with others and having complete
@@ -124,7 +124,7 @@ on the map for you and your friends.
 
 ### iOS
 
-Once you [download the iOS app from the App Store](https://itunes.apple.com/us/app/mqttitude/id692424691?mt=8)
+Once you [download the iOS app from the App Store](https://apps.apple.com/us/app/owntracks/id692424691)
 you can easily get set up with your new OwnTracks server. Head into the menu and
 enter the "Settings" screen.
 
@@ -252,5 +252,5 @@ and that you're now ready to start using your own OwnTracks server!
 - [Quick OwnTracks-Recorder-in-Docker dummies guide (Reddit)](https://www.reddit.com/r/selfhosted/comments/raade4/quick_owntracksrecorderindocker_dummies_guide/)
 - [OwnTracks Recorder README](https://github.com/owntracks/recorder)
 - [OwnTracks Android App](https://play.google.com/store/apps/details?id=org.owntracks.android)
-- [OwnTracks iOS App](https://itunes.apple.com/us/app/mqttitude/id692424691?mt=8)
+- [OwnTracks iOS App](https://apps.apple.com/us/app/owntracks/id692424691)
 - [Traefik Basic Auth Docs](https://doc.traefik.io/traefik/middlewares/http/basicauth/)

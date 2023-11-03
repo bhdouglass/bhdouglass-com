@@ -13,7 +13,7 @@ web apps that work around some issues with the platform. The first plugin is
 [BlobSaver](https://github.com/bhdouglass/blobsaver). It saves data from blob
 urls that the download manager doesn't know how to handle. If you are not
 familiar with blob urls (and I was not before this project), there is a brief
-overview on [this Stack Overflow question](https://stackoverflow.com/a/30881444).
+overview on [this Stack Overflow question](https://stackoverflow.com/questions/30864573/what-is-a-blob-url-and-why-it-is-used/30881444#30881444).
 since blob urls look similar to normal urls the web browser or web app will
 pass the url over to the Ubuntu Touch download manager, but the download
 manager doesn't know what to do with a blob url and it throws an error (and

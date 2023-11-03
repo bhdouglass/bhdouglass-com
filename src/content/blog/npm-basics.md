@@ -30,13 +30,13 @@ init-license=GPL-3.0
 init-version=0.0.1
 ```
 
-Check out the [NPM docs](https://docs.npmjs.com/cli/v8/using-npm/config#init-author-email)
+Check out the [NPM docs](https://docs.npmjs.com/cli/v10/using-npm/config#init-author-email)
 for further information about the `.npmrc` file options.
 
 The second post is: "[The Basics of Package.json](https://nodesource.com/blog/the-basics-of-package-json)".
 This goes over most of the parts of a package.json file, including dependencies
 and metadata-related fields. If you are interested in the full package.json schema,
-read more on the [NPM docs](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
+read more on the [NPM docs](https://docs.npmjs.com/cli/v10/configuring-npm/package-json).
 
 The final post is: "[Understanding dependencies inside your Package.json](https://nodesource.com/blog/understanding-dependencies-inside-your-packagejson)".
 It gives a brief overview of the various lesser-known dependency options. This includes

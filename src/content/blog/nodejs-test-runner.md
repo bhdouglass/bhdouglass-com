@@ -69,7 +69,7 @@ exactly the same parameters.
 
 So then, why use one over the other?
 
-The difference is readability, as a [Stack Overflow answer](https://stackoverflow.com/a/56072272)
+The difference is readability, as a [Stack Overflow answer](https://stackoverflow.com/questions/45778192/what-is-the-difference-between-it-and-test-in-jest/56072272#56072272)
 states. When using `it()`, the tendency is to read it as part of the test name.
 So `it('should do this thing')` is read as: "It should do this thing".
 

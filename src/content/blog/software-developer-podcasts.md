@@ -46,7 +46,7 @@ a podcast with long-form technology discussions.
 mentioned above but deserves its own separate section. As you might have guessed
 from the name, this is a mostly JavaScript-focused podcast. Not only JavaScript,
 this podcast also covers frontend technology and [Node.js](https://nodejs.org/en/)
-with an occasional look at alternatives like [Deno](https://deno.land/).
+with an occasional look at alternatives like [Deno](https://deno.com/).
 
 ## Coder Radio
 

@@ -115,15 +115,15 @@ enrichedProjects.sort((a, b) => {
       <div class="flex flex-col max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex flex-col md:flex-row justify-between w-full">
           <div class="w-full" title="GitHub Stars">
-            <i class="ri-star-line"></i>
+            <i class="ri-star-line mr-1"></i>
             {project.github.stargazers_count.toLocaleString()}
           </div>
           <div class="w-full md:text-center" title="NPM Downloads (last 30 days)">
-            <i class="ri-download-cloud-2-line"></i>
+            <i class="ri-download-cloud-2-line mr-1"></i>
             {project.npm?.downloads?.downloads?.toLocaleString() ?? '-'}
           </div>
           <div class="w-full md:text-right" title="Version">
-            <i class="ri-code-box-line"></i>
+            <i class="ri-code-box-line mr-1"></i>
             {project.npm ? project.npm['dist-tags'].latest : '-'}
           </div>
         </div>
@@ -138,15 +138,17 @@ enrichedProjects.sort((a, b) => {
 
         <div class="flex flex-col md:flex-row justify-between w-full">
           <div class="w-full">
-            <i class="ri-link"></i>
-            <a href={project.github.homepage}>Website</a>
+            {!project.hideWebsite && (
+              <i class="ri-link mr-1"></i>
+              <a href={project.github.homepage}>Website</a>
+            )}
           </div>
           <div class="w-full md:text-center">
-            <i class="ri-github-fill"></i>
+            <i class="ri-github-fill mr-1"></i>
             <a href={project.github.html_url}>GitHub</a>
           </div>
           <div class="w-full md:text-right">
-            <i class="ri-npmjs-fill"></i>
+            <i class="ri-npmjs-fill mr-1"></i>
             <a href={`https://www.npmjs.com/package/${project.npmPackage}`}>NPM</a>
           </div>
         </div>

@@ -10,7 +10,7 @@ description: Use Clickable to automatically publish your apps to the OpenStore.
 ---
 
 Recently UBports completed a migration of the click based core apps to GitLab.
-You can find them all in our [GitLab organization](https://gitlab.com/ubports/apps).
+You can find them all in our [GitLab organization](https://gitlab.com/ubports/development/apps).
 The reason we moved the click base apps over to GitLab was to take advantage of their awesome CI solution.
 With the GitLab CI we have each app building a click for each commit and each merge request. On top of this we can also
 easily publish new version directly to the OpenStore without needing to log into [open-store.io](https://open-store.io/).
@@ -166,7 +166,7 @@ Once GitLab receives the commits and tags it will start building your app and pu
 ## Closing
 
 This setup can be viewed in action with any of the UBports core apps
-(for example: [the weather app](https://gitlab.com/ubports/development/apps/weather-app/-/pipelines)) and also
+(for example: [the weather app](https://gitlab.com/ubports/development/apps/lomiri-weather-app/-/pipelines)) and also
 in this [test repository](https://gitlab.com/clickable/clickable-gitlab-ci-test).
 If you have an questions or suggestions feel free to reach out to me via
 [my website](https://bhdouglass.com/#contact)

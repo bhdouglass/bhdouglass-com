@@ -17,7 +17,7 @@ this post will be a full tutorial from start to finish.
 
 ## Prerequisites
 
-You must have [Node.js](https://nodejs.org/en/download/) and `npm` installed on
+You must have [Node.js](https://nodejs.org/en/download) and `npm` installed on
 your machine.
 
 ## Install
