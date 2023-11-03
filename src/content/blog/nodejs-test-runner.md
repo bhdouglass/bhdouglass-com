@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "The Complete Guide to the Node.js Test Runner"
 date: 2023-05-13 22:45:36 -0400
-updatedDate: 2023-08-10 23:36:08 -0400
+updatedDate: 2023-11-03 08:56:46 -0400
 categories: nodejs tutorials
 image: /images/blog/nodejs-test-runner.png
 imageAlt: An example test suite using the Node.js Test Runner
@@ -11,7 +11,7 @@ description: Learn how to test JavaScript using the Node.js Test Runner
 
 Node.js is a popular runtime environment for building server-side applications
 using JavaScript. Testing is an essential part of any software development process,
-and the release of [Node.js 20](../node-20) brings an exciting update for developers.
+and the release of [Node.js 20](../node-20/) brings an exciting update for developers.
 Node.js 20 promotes the built-in [Test Runner](https://nodejs.org/api/test.html)
 from experimental to stable.
 
@@ -160,6 +160,11 @@ any of the following files:
 
 Testing a large code base can sometimes be a time-consuming process. if you want
 to limit the test files being run, just pass them as arguments to `node --test`.
+
+You can also pass [globs](https://nodejs.org/api/test.html#running-tests-from-the-command-line)
+to `node --test` (as of [Node.js 21](https://nodejs.org/en/blog/announcements/v21-release-announce))
+instead of a file path. This allows you, for example, to specify all files under a
+certain directory: `node --test some/path/**/*.test.js`.
 
 Alternatively, you can use [`--test-name-pattern`](https://nodejs.org/api/test.html#filtering-tests-by-name)
 to filter to just specific tests by regex pattern. For example:
@@ -334,15 +339,26 @@ But that is outside of the scope of this blog post.
 ## Watch Mode
 
 If you want to automatically retry a test whenever a file is changed, you can use
-[watch mode](https://nodejs.org/api/test.html#watch-mode). It is currently experimental in Node.js 20,
+[watch mode](https://nodejs.org/api/test.html#watch-mode). It is currently experimental in [Node.js 20](/blog/node-20/),
 but you can use it with the `--watch` flag. For example: `node --test --watch`
 
 Watch mode will continue running until you explicitly stop it, using the `CTRL + C`
 keyboard shortcut.
 
+## Test Concurrency
+
+As of [Node.js 21](https://nodejs.org/en/blog/announcements/v21-release-announce)
+you can also specify the maximum number of tests you want to run simultaneously.
+The default value is generally the number of CPUs available to your machine
+(see [`os.availableParallelism()`](https://nodejs.org/dist/latest-v21.x/docs/api/os.html#osavailableparallelism)
+for more details).
+
+To change this from the detected default, pass `--test-concurrency` to Node
+when running the test runner. For example `node --test --test-concurrency 4 path/to/tests/**/*.js`.
+
 ## Code Coverage
 
-Another experimental feature (in Node.js 20) that you can use today, is
+Another experimental feature (as of [Node.js 20](/blog/node-20/)) that you can use today, is
 [code coverage](https://nodejs.org/api/test.html#collecting-code-coverage).
 Enable it via the `--experimental-test-coverage` flag. This will print out
 a summary of covered after printing the test results. For example:
@@ -350,7 +366,7 @@ a summary of covered after printing the test results. For example:
 
 ## Conclusion
 
-In conclusion, the new stable Test Runner in Node.js 20 is a valuable addition
+In conclusion, the new stable Test Runner in [Node.js 20](/blog/node-20/) is a valuable addition
 for developers who want to test without much overhead. By following this tutorial,
 you should now have a solid understanding of how to use the Test Runner to its
 full potential.
