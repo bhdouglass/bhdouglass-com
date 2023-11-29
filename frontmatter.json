@@ -60,6 +60,11 @@
           "title": "Categories",
           "name": "categories",
           "type": "categories"
+        },
+        {
+          "title": "draft",
+          "name": "draft",
+          "type": "boolean"
         }
       ]
     }
