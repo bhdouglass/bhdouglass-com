@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title:  "OpenStore Badges"
-date:   2019-08-07 23:22:00 -0400
+title: OpenStore Badges
+date: 2019-08-07T23:22:00.000Z
 categories: openstore releases
 image: /images/blog/openstore/openstore-badge.svg
 imageAlt: A badge saying "Download from the OpenStore".

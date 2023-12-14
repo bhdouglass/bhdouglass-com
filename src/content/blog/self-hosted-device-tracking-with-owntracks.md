@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Self-Hosted device tracking with OwnTracks"
-date: 2023-03-18 23:57:53 -0400
+title: Self-Hosted device tracking with OwnTracks
+date: 2023-03-18T23:57:53.000Z
 categories: self-hosting docker
 image: /images/blog/logos/owntracks-logo.png
 imageAlt: The OwnTracks logo

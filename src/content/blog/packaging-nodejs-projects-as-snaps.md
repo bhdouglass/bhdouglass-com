@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title:  "Packaging Node.js Projects as Snaps"
-date:   2016-08-06 17:56:00 -0400
+title: Packaging Node.js Projects as Snaps
+date: 2016-08-06T17:56:00.000Z
 categories: snap tutorial
 image: /images/blog/logos/snapcraft-logo.svg
 imageAlt: Snapcraft's logo

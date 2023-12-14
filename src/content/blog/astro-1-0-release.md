@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Astro 1.0 Release"
-date: 2022-08-23 16:45:38 -0400
-updatedDate: 2023-09-11 16:31:17 -0400
+title: Astro 1.0 Release
+date: 2022-08-23T16:45:38.000Z
+updatedDate: 2023-09-11T16:31:17.000Z
 categories: astro
 image: /images/blog/astro/astro-logo-banner.svg
 imageAlt: Astro's Logo

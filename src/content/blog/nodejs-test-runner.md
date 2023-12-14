@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "The Complete Guide to the Node.js Test Runner"
-date: 2023-05-13 22:45:36 -0400
-updatedDate: 2023-11-03 08:56:46 -0400
+title: The Complete Guide to the Node.js Test Runner
+date: 2023-05-13T22:45:36.000Z
+updatedDate: 2023-11-03T08:56:46.000Z
 categories: nodejs tutorials
 image: /images/blog/nodejs-test-runner.png
 imageAlt: An example test suite using the Node.js Test Runner

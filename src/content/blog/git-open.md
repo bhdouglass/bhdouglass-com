@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Git Open"
-date: 2022-07-08 23:42:19 -0400
+title: Git Open
+date: 2022-07-08T23:42:19.000Z
 categories: git tools
 image: /images/blog/generic/git.png
 imageAlt: A Git log from a Git repository

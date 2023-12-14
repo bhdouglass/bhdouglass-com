@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Will AI Replace Software Engineers?"
-date: 2023-04-02 13:42:01 -0400
-updatedDate: 2023-04-17 20:54:21 -0400
+title: Will AI Replace Software Engineers?
+date: 2023-04-02T13:42:01.000Z
+updatedDate: 2023-04-17T20:54:21.000Z
 categories: ai discoveries
 image: /images/blog/computer-in-space.png
 imageAlt: A computer floating is space

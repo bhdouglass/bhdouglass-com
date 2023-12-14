@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title:  "Ubuntu Touch Web App Plugins"
-date:   2018-02-04 00:36:00 -0500
+title: Ubuntu Touch Web App Plugins
+date: 2018-02-04T00:36:00.000Z
 categories: ubuntu-touch-apps releases
 image: /images/blog/logos/ubports-logo.svg
 imageAlt: The Ubport's mascot Yumi.

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Bash-Oneliner"
-date: 2022-05-09 09:11:27 -0400
+title: Bash-Oneliner
+date: 2022-05-09T09:11:27.000Z
 categories: bash links
 image: /images/blog/generic/command-line-junky.png
 imageAlt: An ASCII art rendition of the words 'Command Line Junky'.

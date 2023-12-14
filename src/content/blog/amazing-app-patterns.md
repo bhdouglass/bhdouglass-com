@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Amazing App Patterns"
-date: 2022-10-19 23:22:28 -0400
+title: Amazing App Patterns
+date: 2022-10-19T23:22:28.000Z
 categories: discoveries
 image: /images/blog/generic/astronaut-in-space1.png
 imageAlt: An astronaut making discoveries in space.

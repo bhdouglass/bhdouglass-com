@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "System76 Darter Pro 8"
-date: 2022-08-08 09:43:53 -0400
+title: System76 Darter Pro 8
+date: 2022-08-08T09:43:53.000Z
 categories: computer system76
 image: /images/blog/darter/darter1.jpg
 imageAlt: Darter Pro laptop

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title:  "Testing and Linting a Node.js Api"
-date:   2019-06-24 00:34:00 -0400
+title: Testing and Linting a Node.js Api
+date: 2019-06-24T00:34:00.000Z
 categories: nodejs tutorial
 image: /images/blog/nodejs-testing-mocha.png
 imageAlt: A terminal with some Mocha test output.

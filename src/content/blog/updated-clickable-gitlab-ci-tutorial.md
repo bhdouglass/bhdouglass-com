@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Updated Clickable GitLab CI Tutorial"
-date: 2022-09-21 00:13:00 -0400
+title: Updated Clickable GitLab CI Tutorial
+date: 2022-09-21T00:13:00.000Z
 categories: clickable openstore
 image: /images/blog/generic/update.png
 imageAlt: An ASCII art rendition of the word 'Update'.

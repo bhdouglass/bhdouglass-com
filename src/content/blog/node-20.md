@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Node 20"
-date: 2023-04-23 20:51:59 -0400
-updatedDate: 2023-05-13 22:45:36 -0400
+title: Node 20
+date: 2023-04-23T20:51:59.000Z
+updatedDate: 2023-05-13T22:45:36.000Z
 categories: nodejs
 image: /images/blog/logos/nodejs-logo.svg
 imageAlt: Node.js' logo

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Built with Astro"
-date: 2022-02-07 22:25:17 -0500
+title: Built with Astro
+date: 2022-02-07T22:25:17.000Z
 categories: astro web
 image: /images/blog/astro/astro-logo-banner.svg
 imageAlt: Astro's Logo

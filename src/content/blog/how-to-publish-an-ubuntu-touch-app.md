@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "How to Publish an Ubuntu Touch App"
-date: 2022-09-15 00:07:12 -0400
-updatedDate: 2023-05-24 22:42:52 -0400
+title: How to Publish an Ubuntu Touch App
+date: 2022-09-15T00:07:12.000Z
+updatedDate: 2023-05-24T22:42:52.000Z
 categories: openstore tutorials
 image: /images/blog/openstore/openstore-apps.png
 imageAlt: A list of apps on the website open-store.io.

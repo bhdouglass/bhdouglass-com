@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "HTMHell Advent Calendar"
-date: 2023-12-11 09:15:20 -0500
-categories: html discoveries
+title: HTMHell Advent Calendar
+date: 2023-12-11T09:15:20.000Z
+categories: html recommendations
 image: /images/blog/december-calendar.png
 imageAlt: The December calendar
 description: Snuggle up with some hot cocoa and the HTMHell Advent Calendar

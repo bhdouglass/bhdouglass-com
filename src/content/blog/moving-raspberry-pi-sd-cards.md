@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
 title: Moving Raspberry Pi SD Cards
-date: "2023-11-29T14:30:06.264Z"
+date: 2023-11-29T14:30:06.000Z
 categories: raspberry-pi
 image: /images/blog/raspberry-pi/raspberry-pi-sd-card.png
 imageAlt: A Raspberry Pi single board computer and a micro sd card

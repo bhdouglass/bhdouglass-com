@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Software Developer Podcasts for 2023"
-date: 2023-02-16 23:23:54 -0500
-updatedDate: 2023-04-11 23:43:04 -0400
+title: Software Developer Podcasts for 2023
+date: 2023-02-16T23:23:54.000Z
+updatedDate: 2023-04-11T23:43:04.000Z
 categories: recommendations
 image: /images/blog/podcast-headphones.png
 imageAlt: Some headphones laying on the ground.

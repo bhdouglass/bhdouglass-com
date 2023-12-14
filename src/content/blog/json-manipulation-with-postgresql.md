@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "JSON Manipulation with PostgreSQL"
-date: 2022-06-17 23:16:31 -0400
-updatedDate: 2023-05-24 22:42:52 -0400
+title: JSON Manipulation with PostgreSQL
+date: 2022-06-17T23:16:31.000Z
+updatedDate: 2023-05-24T22:42:52.000Z
 categories: postgresql
 image: /images/blog/generic/database.png
 imageAlt: Rows of computers with hexadecimal numbers written on them.

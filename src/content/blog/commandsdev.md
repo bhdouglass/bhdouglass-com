@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Commands.dev"
-date: 2022-05-18 09:12:29 -0400
+title: Commands.dev
+date: 2022-05-18T09:12:29.000Z
 categories: bash links
 image: /images/blog/generic/command-line-junky.png
 imageAlt: An ASCII art rendition of the words 'Command Line Junky'.

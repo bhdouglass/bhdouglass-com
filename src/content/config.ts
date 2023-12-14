@@ -2,8 +2,8 @@ import { z, defineCollection } from 'astro:content';
 const blogCollection = defineCollection({
   schema: z.object({
     title: z.string(),
-    date: z.string(), // TODO make a date
-    updatedDate: z.string().optional(),
+    date: z.date(),
+    updatedDate: z.date().or(z.enum(['now'])).optional(),
     categories: z.string(), // TODO make this an array
     image: z.string(),
     imageAlt: z.string(),

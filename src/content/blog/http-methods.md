@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "HTTP Methods"
-date: 2022-01-25 22:55:21 -0500
+title: HTTP Methods
+date: 2022-01-25T22:55:21.000Z
 categories: web
 image: /images/blog/generic/http-methods.png
 imageAlt: A list of HTTP Methods from IANA.
