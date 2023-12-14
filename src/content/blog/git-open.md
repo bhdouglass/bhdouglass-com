@@ -2,7 +2,8 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: Git Open
 date: 2022-07-08T23:42:19.000Z
-categories: git tools
+categories:
+  - git
 image: /images/blog/generic/git.png
 imageAlt: A Git log from a Git repository
 description: A quick tip about and awesome little command-line tool.

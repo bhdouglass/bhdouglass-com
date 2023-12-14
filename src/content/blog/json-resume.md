@@ -3,7 +3,8 @@ layout: ../../layouts/BlogPostLayout.astro
 title: JSON Resume
 date: 2022-02-15T22:14:17.000Z
 updatedDate: 2023-05-24T22:42:52.000Z
-categories: tutorials
+categories:
+  - tutorials
 image: /images/blog/json-resume/json-resume.png
 imageAlt: An example JSON Resume with the code to generate it.
 description: An introduction to using JSON Resume and details on how I use it.

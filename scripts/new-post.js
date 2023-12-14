@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
-import { format } from 'date-fns';
+import { formatISO } from 'date-fns';
 import fs from 'fs/promises';
 
 const answers = await inquirer.prompt([
@@ -10,9 +10,10 @@ const answers = await inquirer.prompt([
 
 const content = `---
 layout: ../../layouts/BlogPostLayout.astro
-title: "${answers.title}"
-date: ${format(new Date(), 'yyyy-MM-dd HH:mm:ss xx')}
-categories: ${answers.categories}
+title: ${answers.title}
+date: ${formatISO(new Date())}
+categories:
+  - ${answers.categories.split(' ').join('\n  - ')}
 image: /images/blog/generic/placeholder.svg
 imageAlt: TODO
 description: TODO

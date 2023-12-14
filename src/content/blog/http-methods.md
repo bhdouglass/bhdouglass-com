@@ -2,7 +2,8 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: HTTP Methods
 date: 2022-01-25T22:55:21.000Z
-categories: web
+categories:
+  - web
 image: /images/blog/generic/http-methods.png
 imageAlt: A list of HTTP Methods from IANA.
 description: Getting back to basics on HTTP Methods.

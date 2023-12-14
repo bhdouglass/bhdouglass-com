@@ -2,7 +2,9 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: Updated Clickable GitLab CI Tutorial
 date: 2022-09-21T00:13:00.000Z
-categories: clickable openstore
+categories:
+  - clickable
+  - openstore
 image: /images/blog/generic/update.png
 imageAlt: An ASCII art rendition of the word 'Update'.
 description: A quick update on my tutorial for publishing apps to the OpenStore via GitLab's CI.

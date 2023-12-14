@@ -3,7 +3,8 @@ layout: ../../layouts/BlogPostLayout.astro
 title: Node 20
 date: 2023-04-23T20:51:59.000Z
 updatedDate: 2023-05-13T22:45:36.000Z
-categories: nodejs
+categories:
+  - nodejs
 image: /images/blog/logos/nodejs-logo.svg
 imageAlt: Node.js' logo
 description: The latest release of Node.js is out now with some cool new features.

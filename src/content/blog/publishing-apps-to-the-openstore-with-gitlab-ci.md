@@ -3,7 +3,10 @@ layout: ../../layouts/BlogPostLayout.astro
 title: Publishing apps to the OpenStore with GitLab CI
 date: 2019-03-19T00:02:00.000Z
 updatedDate: 2022-09-20T00:13:10.000Z
-categories: clickable openstore tutorial
+categories:
+  - clickable
+  - openstore
+  - tutorial
 image: /images/blog/openstore/openstore-apps.png
 imageAlt: A list of apps on the website open-store.io.
 description: Use Clickable to automatically publish your apps to the OpenStore.

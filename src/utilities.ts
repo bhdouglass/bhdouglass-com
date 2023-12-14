@@ -11,8 +11,8 @@ export function tagTitleCase(tag: string) {
   return titleCase(tag.replace(/-/g, ' '));
 };
 
-export function categoriesToTags(categories?: string) {
-  return (categories ?? '').trim().split(' ').map((category) => category.trim());
+export function categoriesToTags(categories?: string[]) {
+  return categories?.map((category) => category.trim()) ?? [];
 }
 
 export function sortPosts(posts: CollectionEntry<'blog'>[]) {

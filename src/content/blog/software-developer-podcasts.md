@@ -3,7 +3,8 @@ layout: ../../layouts/BlogPostLayout.astro
 title: Software Developer Podcasts for 2023
 date: 2023-02-16T23:23:54.000Z
 updatedDate: 2023-04-11T23:43:04.000Z
-categories: recommendations
+categories:
+  - recommendations
 image: /images/blog/podcast-headphones.png
 imageAlt: Some headphones laying on the ground.
 description: Podcasts for learning, news, and more.

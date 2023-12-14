@@ -3,7 +3,8 @@ layout: ../../layouts/BlogPostLayout.astro
 title: JSON Manipulation with PostgreSQL
 date: 2022-06-17T23:16:31.000Z
 updatedDate: 2023-05-24T22:42:52.000Z
-categories: postgresql
+categories:
+  - postgresql
 image: /images/blog/generic/database.png
 imageAlt: Rows of computers with hexadecimal numbers written on them.
 description: Tips and tricks for manipulating JSON data with PostgreSQL.

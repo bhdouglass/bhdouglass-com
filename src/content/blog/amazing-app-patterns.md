@@ -2,7 +2,8 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: Amazing App Patterns
 date: 2022-10-19T23:22:28.000Z
-categories: discoveries
+categories:
+  - discoveries
 image: /images/blog/generic/astronaut-in-space1.png
 imageAlt: An astronaut making discoveries in space.
 description: A quick post about a resource for app patterns in web apps.

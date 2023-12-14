@@ -2,7 +2,9 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: Using dot env files with Node.js
 date: 2023-09-07T11:01:55.000Z
-categories: nodejs tutorials
+categories:
+  - nodejs
+  - tutorials
 image: /images/blog/nodejs-dot-env.png
 imageAlt: The words DOT ENV on a code editor
 description: Manage your environment variables with Node.js

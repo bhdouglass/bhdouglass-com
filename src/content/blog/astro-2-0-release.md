@@ -3,7 +3,8 @@ layout: ../../layouts/BlogPostLayout.astro
 title: Astro 2.0 Release
 date: 2023-01-25T21:54:28.000Z
 updatedDate: 2023-09-11T16:31:17.000Z
-categories: astro
+categories:
+  - astro
 image: /images/blog/astro/astro-logo-banner.svg
 imageAlt: Astro's Logo
 description: Astro's 2.0 release comes with some great new features and improvements.

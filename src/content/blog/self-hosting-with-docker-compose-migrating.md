@@ -2,7 +2,9 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Self-hosting with Docker Compose: Migrating"
 date: 2022-06-07T09:03:06.000Z
-categories: docker self-hosting
+categories:
+  - docker
+  - self-hosting
 image: /images/blog/logos/docker-logo.png
 imageAlt: Docker's whale logo
 description: My journey away from YunoHost to using Docker Compose.

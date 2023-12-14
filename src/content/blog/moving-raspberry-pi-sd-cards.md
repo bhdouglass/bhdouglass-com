@@ -2,7 +2,8 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: Moving Raspberry Pi SD Cards
 date: 2023-11-29T14:30:06.000Z
-categories: raspberry-pi
+categories:
+  - raspberry-pi
 image: /images/blog/raspberry-pi/raspberry-pi-sd-card.png
 imageAlt: A Raspberry Pi single board computer and a micro sd card
 description: Transfer your Raspberry Pi SD card to a new one with ease

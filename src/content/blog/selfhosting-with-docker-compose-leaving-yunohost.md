@@ -2,7 +2,9 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Self-hosting with Docker Compose: Leaving YunoHost"
 date: 2022-03-26T02:41:03.000Z
-categories: docker self-hosting
+categories:
+  - docker
+  - self-hosting
 image: /images/blog/logos/docker-logo.png
 imageAlt: Docker's whale logo
 description: My decision to leave YunoHost and take more ownership of my self-hosting setup.

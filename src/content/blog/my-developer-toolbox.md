@@ -2,7 +2,8 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: My Developer Toolbox
 date: 2023-06-30T23:04:37.000Z
-categories: tools
+categories:
+  - tools
 image: /images/blog/logos/toolbox-logos.png
 imageAlt: The git, GitHub, GitLab, Linux, Docker, Slack, and VSCodium logos
 description: The tools I use daily for development.

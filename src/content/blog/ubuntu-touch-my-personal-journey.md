@@ -2,7 +2,8 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Ubuntu Touch: My Personal Journey"
 date: 2017-04-06T23:50:00.000Z
-categories: ubuntu-touch-apps
+categories:
+  - ubuntu-touch
 image: /images/blog/logos/ubports-logo.svg
 imageAlt: The Ubport's mascot Yumi.
 description: My journey with Ubuntu Touch through out the years.

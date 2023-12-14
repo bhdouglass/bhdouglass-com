@@ -4,7 +4,7 @@ const blogCollection = defineCollection({
     title: z.string(),
     date: z.date(),
     updatedDate: z.date().or(z.enum(['now'])).optional(),
-    categories: z.string(), // TODO make this an array
+    categories: z.array(z.string()),
     image: z.string(),
     imageAlt: z.string(),
     description: z.string(),

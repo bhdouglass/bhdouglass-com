@@ -2,7 +2,8 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: CSS Articles and Tools (September Edition)
 date: 2022-09-30T22:41:09.000Z
-categories: discoveries
+categories:
+  - discoveries
 image: /images/blog/generic/astronaut-in-space2.png
 imageAlt: An astronaut making discoveries in space.
 description: Several articles and tools for CSS.

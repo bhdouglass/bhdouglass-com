@@ -3,7 +3,8 @@ layout: ../../layouts/BlogPostLayout.astro
 title: Software Developer Newsletters for 2023
 date: 2023-02-01T09:43:55.000Z
 updatedDate: 2023-04-11T23:43:04.000Z
-categories: recommendations
+categories:
+  - recommendations
 image: /images/blog/newsletter-subscribe.png
 imageAlt: A screenshot of a newsletter signup page
 description: A whole bunch of newsletters for every level of Software Developer.

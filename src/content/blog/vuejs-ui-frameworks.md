@@ -3,7 +3,10 @@ layout: ../../layouts/VueUIListLayout.astro
 title: 70+ Vue.js UI Frameworks for 2023
 date: 2022-11-11T23:55:45.000Z
 updatedDate: now
-categories: vue javascript ui
+categories:
+  - vue
+  - javascript
+  - ui
 image: /images/blog/logos/vue-badge.svg
 imageAlt: Vue's logo in a badge
 description: Massive list of frameworks for use with Vue.js.

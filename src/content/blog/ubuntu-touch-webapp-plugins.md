@@ -2,7 +2,9 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: Ubuntu Touch Web App Plugins
 date: 2018-02-04T00:36:00.000Z
-categories: ubuntu-touch-apps releases
+categories:
+  - ubuntu-touch
+  - releases
 image: /images/blog/logos/ubports-logo.svg
 imageAlt: The Ubport's mascot Yumi.
 description: Plugins to make Ubuntu Touch web apps work better with downloads.
