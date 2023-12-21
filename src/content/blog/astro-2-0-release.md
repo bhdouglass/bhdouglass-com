@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: Astro 2.0 Release
 date: 2023-01-25T21:54:28.000Z
-updatedDate: 2023-09-11T16:31:17.000Z
+updatedDate: 2023-12-20T20:36:17.354Z
 categories:
   - astro
 image: /images/blog/astro/astro-logo-banner.svg
@@ -10,7 +10,7 @@ imageAlt: Astro's Logo
 description: Astro's 2.0 release comes with some great new features and improvements.
 ---
 
-Update: Version 2.0 is old news, check out [Astro 3.0](../astro-3-0-release/)!
+Update: Version 2.0 is old news, check out [Astro 3.0](../astro-3-0-release/) and [Astro 4.0](../astro-4-0-release/)!
 
 [Astro](../astro/) 2.0 was [released on January 24th](https://astro.build/blog/astro-2/). Astro is an
 up-and-coming framework that powers [this blog](/blog/built-with-astro/) and many

@@ -9,6 +9,8 @@ imageAlt: Astro's Logo
 description: Astro pumps out another great release with version 3.0
 ---
 
+Update: Version 3.0 is old news, check out [Astro 4.0](../astro-4-0-release/)!
+
 The [Astro](https://astro.build/) framework has been constantly churning out great updates.
 The project released [version 1.0](../astro-1-0-release/) only about a year before
 the current [3.0 release](https://astro.build/blog/astro-3/). This release

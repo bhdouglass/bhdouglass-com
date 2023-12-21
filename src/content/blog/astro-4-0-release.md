@@ -1,0 +1,95 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: Astro 4.0 Release
+date: 2023-12-21T14:20:41.246Z
+categories:
+  - astro
+image: /images/blog/astro/astro-logo-banner.svg
+imageAlt: Astro's Logo
+description: Astro 4.0 hits the ground running
+---
+
+Another month brings another release of [Astro](/blog/astro)!
+[Astro 4.0](https://astro.build/blog/astro-4/) has hit the ground running bringing
+new features and developer experience improvements.
+
+## Table of contents
+
+## Astro Dev Toolbar
+
+A huge boon for developer productivity, the Astro Dev Toolbar contains a plethora
+of different tools. By default the toolbar provides an inspect tool and an audit tool.
+
+The Inspect tool allows you to better understand the [islands](https://docs.astro.build/en/concepts/islands/)
+in your pages. While the Audit tool runs several tests for accessibility issues.
+
+<img src="/images/blog/astro/astro-dev-toolbar.png" alt="A screenshot of the Astro Dev Toolbar" />
+
+The best feature of the dev toolbar is its extendability. There are official integrations
+with [Sentry](https://sentry.io/) and [Storyblok](https://www.storyblok.com/).
+
+Astro developers have already started working with the [dev toolbar API](https://docs.astro.build/en/reference/dev-toolbar-app-reference/).
+You can find the fruits of their work on the [Astro integration catalog](https://astro.build/integrations/?search=&categories%5B%5D=toolbar).
+
+## Incremental Content Caching
+
+Incremental content caching is an experimental feature designed to speed up the
+Astro build step. Astro accomplishes this by tracking changes in
+[content collections](https://docs.astro.build/en/guides/content-collections/)
+and only rebuilding when necessary.
+
+To enable this feature, turn on `experimental.contentCollectionCache` in your
+Astro config file.
+
+## Internationalization
+
+Astro 4.0 now includes stable support for internationalization routing. This allows
+developers to include different languages at different routes specified by language code
+(for example: `example.com/en` and `example.com/es`).
+
+For complete details on how to get started with internationalization in Astro routing,
+read the [Astro Internationalization guide](https://docs.astro.build/en/guides/internationalization/).
+
+## And More!
+
+The latest Astro also brings updates to [View Transitions](https://docs.astro.build/en/guides/view-transitions/).
+Initially introduced in [Astro 3.0](../astro-3-0-release/), view transitions are
+a slick way to move between pages with minimal JavaScript (if any!). Astro 4.0
+brings view transitions to forms and adds configuration around prefetching pages.
+
+Logging was another developer experience improvement that the latest version brings.
+Logs should now be shorter and more helpful.
+
+Read the full [Astro 4.0 release post](https://astro.build/blog/astro-4/), for all
+the juicy details.
+
+<img src="/images/blog/astro/astro-index-page.png" alt="A screenshot of the default Astro index page" />
+
+
+## Upgrading to Astro 4.0
+
+There are not many breaking changes from Astro 3.0 to Astro 4.0. Mostly just around
+the integration API. Skim the [Astro 4.0 upgrade guide](https://docs.astro.build/en/guides/upgrade-to/v4/)
+to make sure nothing negatively affects your sites.
+
+## Getting Started With Astro
+
+New to Astro? Astro 4.0 is a fantastic place to start. It's as easy as:
+
+```bash
+npm create astro@latest
+```
+
+Then Huston (Astro's mascot) will guide you through the setup process.
+Then get started with one of [Astro's tutorials](https://docs.astro.build/en/tutorial/0-introduction/).
+
+<img src="/images/blog/astro/astro-project-creation.png" alt="A screenshot of the Astro project creation process" />
+
+
+## Further Resources
+
+- [Astro 4.0 release post](https://astro.build/blog/astro-4/)
+- [Astro 4.0 upgrade guide](https://docs.astro.build/en/guides/upgrade-to/v4/)
+- [Astro Quick Start Course](https://www.youtube.com/watch?app=desktop&v=XoIHKO6AkoM) (YouTube)
+- [Astro Internationalization guide](https://docs.astro.build/en/guides/internationalization/)
+- [Astro integration catalog](https://astro.build/integrations/)
