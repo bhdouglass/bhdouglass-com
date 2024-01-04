@@ -3,7 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 
 export function titleCase(str: string) {
   return str.replace(/_/g, ' ').replace(/\w\S*/g, (txt) => {
-    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();
   });
 };
 
@@ -31,14 +31,17 @@ export function getRssLink(url: string, base: string) {
   return rssUrl.href;
 }
 
-export function getBlogDate(date: string, updatedDate?: string) {
-  let blogData = date;
+export function getBlogDate(date: string | Date, updatedDate?: string | Date) {
+  const dateString = date instanceof Date ? format(date, 'yyyy-MM-dd HH:mm:ss xx') : date;
+  const updatedDateString = updatedDate instanceof Date ? format(updatedDate, 'yyyy-MM-dd HH:mm:ss xx') : updatedDate
+
+  let blogDate = dateString;
   if (updatedDate === 'now') {
-    date = format(new Date(), 'yyyy-MM-dd HH:mm:ss xx');
+    blogDate = format(new Date(), 'yyyy-MM-dd HH:mm:ss xx');
   }
   else if (updatedDate) {
-    date = updatedDate;
+    blogDate = updatedDateString;
   }
 
-  return date;
+  return blogDate;
 }

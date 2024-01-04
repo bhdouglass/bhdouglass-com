@@ -1,11 +1,11 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection } from 'astro:content';
 
 export type Props = {
   post: CollectionEntry<'blog'>;
 };
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths() {
   const blogEntries = await getCollection('blog', (post): post is CollectionEntry<"blog"> => !post.data.draft || process.env.NODE_ENV === 'development');
 
   return blogEntries.map((post) => {

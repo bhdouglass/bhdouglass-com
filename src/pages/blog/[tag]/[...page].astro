@@ -4,8 +4,8 @@ import { categoriesToTags, sortPosts, tagTitleCase } from '../../../utilities';
 import { BLOG } from '../../../constants';
 import Hero from '../../../components/Hero.astro';
 import BlogList from '../../../components/BlogList.astro';
-import { Page } from 'astro';
-import { CollectionEntry, getCollection } from 'astro:content';
+import { type Page } from 'astro';
+import { type CollectionEntry, getCollection } from 'astro:content';
 
 export type Props = {
   page: Page<CollectionEntry<'blog'>>;

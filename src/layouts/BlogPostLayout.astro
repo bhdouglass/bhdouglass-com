@@ -1,12 +1,11 @@
 ---
+import type { MarkdownLayoutProps } from 'astro';
 import BaseLayout from './BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 import { BLOG } from '../constants';
 import type { Frontmatter } from '../types';
 
-export type Props = {
-  frontmatter: Frontmatter;
-};
+export type Props = MarkdownLayoutProps<Frontmatter>;
 
 const { frontmatter } = Astro.props;
 ---

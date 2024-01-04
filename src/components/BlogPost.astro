@@ -1,12 +1,13 @@
 ---
-import { CollectionEntry, getEntryBySlug } from 'astro:content';
+import { getEntryBySlug } from 'astro:content';
 import { format } from 'date-fns';
 import { categoriesToTags, getBlogDate } from '../utilities';
 import PostTags from './PostTags.astro';
 import BlogListItem from "./BlogListItem.astro";
+import type { Frontmatter } from '../types';
 
 export type Props = {
-  frontmatter: CollectionEntry<'blog'>['data'];
+  frontmatter: Frontmatter;
 };
 
 const { frontmatter } = Astro.props;

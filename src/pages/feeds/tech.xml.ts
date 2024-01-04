@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss';
 import { sortPosts, getRssLink } from '../../utilities';
 import { BLOG } from '../../constants';
-import { CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection } from 'astro:content';
 
 const blogEntries = await getCollection('blog', (post): post is CollectionEntry<"blog"> => !post.data.draft);
 const posts = sortPosts(blogEntries);

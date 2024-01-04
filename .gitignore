@@ -20,3 +20,5 @@ yarn-error.log*
 public/resume/index.html
 .tmp
 .astro
+.stignore
+.stversions

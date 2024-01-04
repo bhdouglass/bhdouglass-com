@@ -1,11 +1,11 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { sortPosts } from '../../utilities';
 import { BLOG } from '../../constants';
 import BlogList from '../../components/BlogList.astro';
 import Hero from '../../components/Hero.astro';
-import { Page } from 'astro';
+import { type Page } from 'astro';
 
 export type Props = {
   page: Page<CollectionEntry<'blog'>>;

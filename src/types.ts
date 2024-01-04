@@ -1,10 +1,7 @@
-export type Frontmatter = { // TODO figure out how to get this from the content collection
-  title: string;
+import type { CollectionEntry } from "astro:content";
+
+// For some reason the dates get passed into the markdown layout as strings...
+export type Frontmatter = Omit<CollectionEntry<'blog'>['data'], 'date' | 'updatedDate'> & {
   date: string;
-  updatedDate?: string;
-  description?: string;
-  categories?: string;
-  draft?: boolean;
-  image?: string;
-  imageAlt?: string;
+  updatedDate: string;
 };
