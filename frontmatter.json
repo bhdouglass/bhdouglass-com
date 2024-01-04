@@ -65,6 +65,11 @@
           "title": "draft",
           "name": "draft",
           "type": "boolean"
+        },
+        {
+          "title": "Related Posts",
+          "name": "relatedPosts",
+          "type": "list"
         }
       ]
     }

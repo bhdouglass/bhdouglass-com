@@ -7,6 +7,10 @@ categories:
 image: /images/blog/astro/astro-logo-banner.svg
 imageAlt: Astro's Logo
 description: Astro 4.0 hits the ground running
+relatedPosts:
+  - astro-3-0-release
+  - astro-2-5-release
+  - built-with-astro
 ---
 
 Another month brings another release of [Astro](/blog/astro)!
