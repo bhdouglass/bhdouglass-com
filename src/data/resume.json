@@ -31,7 +31,7 @@
       "summary": "Developing new apis with NestJS, Typescript, GraphQL, and PostgreSQL. Also building interfaces with React and maintaining systems built with Laravel. Team lead and mentor for Jr Developers.",
       "highlights": [
         "Build apis with NestJS, Typescript, GraphQL, and PostgreSQL.",
-        "Build interfaces with React.",
+        "Build interfaces with React and Next.Js.",
         "Maintain web apps with Laravel & Javascript.",
         "Lead a team of 5-6 developers.",
         "Interface directly with stakeholders to determine direction and scope of projects.",
@@ -64,11 +64,11 @@
       "url": "https://www.eflexsystems.com/",
       "startDate": "2018-07",
       "endDate": "2019-03",
-      "summary": "Migrated legacy C# api and C++ processes to Node.js. Developed full stack applications using Koa, Ember.js, and CoffeeScript.",
+      "summary": "Migrated a legacy C# api and a C++ processes to Node.js. Developed full stack applications using Koa, Ember.js, and CoffeeScript.",
       "highlights": [
         "Developed full stack solutions to improve efficiency for manufacturing clients.",
-        "Migrated legacy api from C# to Node.js and legacy C++ process to Node.js.",
-        "Autonomous and self motivated telecommuter."
+        "Migrated a legacy api from C# to Node.js and a legacy C++ process to Node.js.",
+        "Autonomous and self-motivated telecommuter."
       ]
     },
     {
@@ -98,10 +98,10 @@
       "summary": "Developed fullstack applications using PHP and AngularJS. Created new full stack applications using Python and Django. Lead a small project team and optimized systems for scaling up massively.",
       "highlights": [
         "Technical lead for small project teams.",
-        "Develop api interactions with Google AdWords, BingAds, Facebook, and AutoWeb.",
-        "Self organizing and autonomous telecommuting.",
+        "Developed api interactions with Google AdWords, BingAds, Facebook, and AutoWeb.",
+        "Self-organizing and autonomous telecommuting.",
         "Maintained services hosted in AWS.",
-        "Developing large scale ad generation systems with Python and Django.",
+        "Developed large scale ad generation systems with Python and Django.",
         "Rebuilt ad generation system to maximize performance syncing tens of thousands of ads.",
         "Maintaining legacy systems using PHP, Doctrine2, and AngularJS."
       ]
@@ -119,7 +119,7 @@
         "Developed new graphical user interface for aging app.",
         "Interfaced Matlab backend with new Qt interface.",
         "Rewrote company website.",
-        "Self motivated and driven telecommuter."
+        "Self-motivated and driven telecommuter."
       ]
     },
     {
@@ -129,6 +129,7 @@
       "position": "Freelance Software Engineer",
       "url": "https://www.mymapscoach.com/",
       "startDate": "2019-06",
+      "endDate": "2023-03",
       "summary": "Architected and built a full stack application to meet growing business needs.",
       "highlights": [
         "Developed an application using PHP, Larvel, JavaScript, and Vue.js.",
@@ -155,7 +156,7 @@
   "volunteer": [
     {
       "organization": "UBports",
-      "position": "UBports App Dev Steering Committee Head",
+      "position": "App Dev Steering Committee Head",
       "url": "https://ubports.com/",
       "startDate": "2018-08",
       "endDate": "2021-04",
@@ -209,9 +210,10 @@
         "TypeScript",
         "HTML",
         "CSS",
+        "TailwindCSS",
         "Vue.js",
         "React",
-        "Ember.js",
+        "Next.js",
         "Astro"
       ]
     },
@@ -238,7 +240,7 @@
       "name": "Board Games",
       "keywords": [
         "Terraforming Mars",
-        "Agricola",
+        "Wingspan",
         "Ticket to Ride",
         "Catan"
       ]
@@ -256,7 +258,8 @@
       "keywords": [
         "Fire Emblem",
         "XCOM",
-        "Civilization"
+        "Civilization",
+        "Into the Breach"
       ]
     },
     {
@@ -328,10 +331,11 @@
     },
     {
       "name": "Personal Blog",
-      "description": "Tutorials about various technologies and release announcements for my projects",
+      "description": "Tutorials about various technologies and release announcements",
       "highlights": [
-        "Wrote tutorials spanning technologies from Node.js to Ubuntu Touch Apps.",
-        "Created release announcements for various projects."
+        "Wrote tutorials spanning from Node.js to self-hosting.",
+        "Created release announcements for various projects.",
+        "Built using Astro JS"
       ],
       "startDate": "2016-03",
       "url": "https://bhdouglass.com/blog/",
@@ -341,6 +345,10 @@
       "type": "blog"
     }
   ],
+  "custom": {
+    "xTwitterHandle": "bhdouglass",
+    "metaDescription": "Resume of Brian Douglass, a Senior Software Engineer"
+  },
   "meta": {
     "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
     "version": "v1.0.0",
