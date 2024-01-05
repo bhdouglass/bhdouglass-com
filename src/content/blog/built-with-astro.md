@@ -8,6 +8,10 @@ categories:
 image: /images/blog/astro/astro-logo-banner.svg
 imageAlt: Astro's Logo
 description: Transitioning my blog from Jekyll to Astro.
+relatedPosts:
+  - astro-4-0-release
+  - astro-3-0-release
+  - astro-2-5-release
 ---
 
 I recently went through the exercise of rebuilding my website and blog. Previously

@@ -7,6 +7,10 @@ categories:
 image: /images/blog/astro/astro-logo-banner.svg
 imageAlt: Astro's Logo
 description: Astro pumps out another great release with version 3.0
+relatedPosts:
+  - astro-4-0-release
+  - astro-2-5-release
+  - built-with-astro
 ---
 
 Update: Version 3.0 is old news, check out [Astro 4.0](../astro-4-0-release/)!

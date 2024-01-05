@@ -8,6 +8,9 @@ categories:
 image: /images/blog/generic/update.png
 imageAlt: An ASCII art rendition of the word 'Update'.
 description: A quick update on my tutorial for publishing apps to the OpenStore via GitLab's CI.
+relatedPosts:
+  - publishing-apps-to-the-openstore-with-gitlab-ci
+  - how-to-publish-an-ubuntu-touch-app
 ---
 
 In my [last post](/blog/how-to-publish-an-ubuntu-touch-app/), I wrote about

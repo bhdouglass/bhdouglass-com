@@ -8,6 +8,9 @@ categories:
 image: /images/blog/newsletter-subscribe.png
 imageAlt: A screenshot of a newsletter signup page
 description: A whole bunch of newsletters for every level of Software Developer.
+relatedPosts:
+  - software-developer-podcasts
+  - htmhell-advent-calendar
 ---
 
 In this blog post, I would like to share some of my favorite newsletters for software developers.

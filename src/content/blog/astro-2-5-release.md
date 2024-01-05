@@ -8,6 +8,10 @@ categories:
 image: /images/blog/astro/astro-logo-banner.svg
 imageAlt: Astro's Logo
 description: Astro's 2.5 release rolls out with many new features.
+relatedPosts:
+  - astro-4-0-release
+  - astro-3-0-release
+  - built-with-astro
 ---
 
 Update: Version 2.5 is old news, check out [Astro 3.0](../astro-3-0-release/) and [Astro 4.0](../astro-4-0-release/)!

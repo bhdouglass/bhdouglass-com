@@ -8,6 +8,9 @@ categories:
 image: /images/blog/podcast-headphones.png
 imageAlt: Some headphones laying on the ground.
 description: Podcasts for learning, news, and more.
+relatedPosts:
+  - software-developer-newsletters
+  - htmhell-advent-calendar
 ---
 
 As a software developer, keeping up with the latest trends and technologies in the

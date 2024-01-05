@@ -8,6 +8,8 @@ categories:
 image: /images/blog/json-resume/json-resume.png
 imageAlt: An example JSON Resume with the code to generate it.
 description: An introduction to using JSON Resume and details on how I use it.
+relatedPosts:
+  - how-to-build-a-developer-json-resume
 ---
 
 Recently Stack Overflow announced that they are discontinuing their job board and

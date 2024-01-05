@@ -8,6 +8,9 @@ categories:
 image: /images/blog/openstore/openstore-badge.svg
 imageAlt: A badge saying "Download from the OpenStore".
 description: The OpenStore now has cool badges to display on your website or code repository.
+relatedPosts:
+  - how-to-publish-an-ubuntu-touch-app
+  - publishing-apps-to-the-openstore-with-gitlab-ci
 ---
 
 A few weeks back (before vacation and a business trip), Ben from the OpenStore

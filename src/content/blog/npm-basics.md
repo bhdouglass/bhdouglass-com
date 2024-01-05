@@ -9,6 +9,10 @@ categories:
 image: /images/blog/logos/nodejs-logo.svg
 imageAlt: Node.js' logo
 description: Tips and resources for getting started with NPM and Package.json.
+relatedPosts:
+  - using-dot-env-files-with-nodejs
+  - nodejs-test-runner
+  - the-nodejs-permission-model
 ---
 
 [NodeSource](https://nodesource.com/) has recently released a 3-part blog series

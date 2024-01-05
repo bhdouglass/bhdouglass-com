@@ -8,6 +8,9 @@ categories:
 image: /images/blog/december-calendar.png
 imageAlt: The December calendar
 description: Snuggle up with some hot cocoa and the HTMHell Advent Calendar
+relatedPosts:
+  - software-developer-podcasts
+  - software-developer-newsletters
 ---
 
 'Tis the season to code and create! It's that time of year again my fellow developers.

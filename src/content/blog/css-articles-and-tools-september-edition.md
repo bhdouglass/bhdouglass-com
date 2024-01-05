@@ -7,6 +7,9 @@ categories:
 image: /images/blog/generic/astronaut-in-space2.png
 imageAlt: An astronaut making discoveries in space.
 description: Several articles and tools for CSS.
+relatedPosts:
+  - amazing-app-patterns
+  - will-ai-replace-software-engineers
 ---
 
 I try to read a lot of development related articles and newsletters. I desire to

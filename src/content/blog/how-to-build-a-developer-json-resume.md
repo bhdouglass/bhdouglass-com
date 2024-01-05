@@ -8,6 +8,8 @@ categories:
 image: /images/blog/json-resume/json-resume.png
 imageAlt: An example JSON Resume with the code to generate it.
 description: All the details on how to create your own JSON Resume.
+relatedPosts:
+  - json-resume
 ---
 
 Looking for a great way to share your resume with the world? Miss the developer

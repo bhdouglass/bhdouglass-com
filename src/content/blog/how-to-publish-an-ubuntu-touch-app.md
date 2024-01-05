@@ -9,6 +9,8 @@ categories:
 image: /images/blog/openstore/openstore-apps.png
 imageAlt: A list of apps on the website open-store.io.
 description: Learn how to publish an Ubuntu Touch app from start to finish.
+relatedPosts:
+  - publishing-apps-to-the-openstore-with-gitlab-ci
 ---
 
 Once you have created an app for Ubuntu Touch, it is time to publish the app to

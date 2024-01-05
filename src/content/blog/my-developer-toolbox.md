@@ -7,6 +7,8 @@ categories:
 image: /images/blog/logos/toolbox-logos.png
 imageAlt: The git, GitHub, GitLab, Linux, Docker, Slack, and VSCodium logos
 description: The tools I use daily for development.
+relatedPosts:
+  - built-with-astro
 ---
 
 

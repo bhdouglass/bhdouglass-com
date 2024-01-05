@@ -8,6 +8,9 @@ categories:
 image: /images/blog/logos/docker-logo.png
 imageAlt: Docker's whale logo
 description: My decision to leave YunoHost and take more ownership of my self-hosting setup.
+relatedPosts:
+  - self-hosting-with-docker-compose-migrating
+  - self-hosted-device-tracking-with-owntracks
 ---
 
 I have always been intrigued by self-hosting. It is powerful to be able to

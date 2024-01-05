@@ -7,6 +7,9 @@ categories:
 image: /images/blog/generic/git.png
 imageAlt: A Git log from a Git repository
 description: A quick tip about and awesome little command-line tool.
+relatedPosts:
+  - commandsdev
+  - bash-oneliner
 ---
 
 I am very much a terminal junky. I will do most tasks in a terminal window rather

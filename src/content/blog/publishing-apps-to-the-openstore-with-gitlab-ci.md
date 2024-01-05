@@ -10,6 +10,8 @@ categories:
 image: /images/blog/openstore/openstore-apps.png
 imageAlt: A list of apps on the website open-store.io.
 description: Use Clickable to automatically publish your apps to the OpenStore.
+relatedPosts:
+  - how-to-publish-an-ubuntu-touch-app
 ---
 
 Recently UBports completed a migration of the click based core apps to GitLab.

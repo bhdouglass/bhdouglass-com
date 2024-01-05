@@ -8,6 +8,9 @@ categories:
 image: /images/blog/logos/docker-logo.png
 imageAlt: Docker's whale logo
 description: My journey away from YunoHost to using Docker Compose.
+relatedPosts:
+  - selfhosting-with-docker-compose-leaving-yunohost
+  - self-hosted-device-tracking-with-owntracks
 ---
 
 In [my recent post](/blog/selfhosting-with-docker-compose-leaving-yunohost/),

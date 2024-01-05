@@ -8,6 +8,10 @@ categories:
 image: /images/blog/nodejs-testing-mocha.png
 imageAlt: A terminal with some Mocha test output.
 description: Learn how to test a Node.js Api using Mocha, Chai, Sinon, SuperTest, and factory-girl.
+relatedPosts:
+  - using-dot-env-files-with-nodejs
+  - nodejs-test-runner
+  - the-nodejs-permission-model
 ---
 
 A few weeks back I was doing some refactoring of the api code for [the OpenStore](https://open-store.io/).

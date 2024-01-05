@@ -8,6 +8,10 @@ categories:
 image: /images/blog/nodejs-dot-env.png
 imageAlt: The words DOT ENV on a code editor
 description: Manage your environment variables with Node.js
+relatedPosts:
+  - nodejs-test-runner
+  - the-nodejs-permission-model
+  - npm-basics
 ---
 
 Environment variables, or env vars for short, are commonly used to store configuration

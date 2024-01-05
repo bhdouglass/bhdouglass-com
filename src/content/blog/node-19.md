@@ -8,6 +8,11 @@ categories:
 image: /images/blog/logos/nodejs-logo.svg
 imageAlt: Node.js' logo
 description: The latest release of Node.js is out now with some cool new features.
+relatedPosts:
+  - node-20
+  - using-dot-env-files-with-nodejs
+  - nodejs-test-runner
+  - the-nodejs-permission-model
 ---
 
 Update: Version 19 has reached its [end of life](https://github.com/nodejs/Release?#end-of-life-releases), check out [Node.js 20](../node-20/)!

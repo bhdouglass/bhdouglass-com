@@ -7,6 +7,9 @@ categories:
 image: /images/blog/generic/astronaut-in-space1.png
 imageAlt: An astronaut making discoveries in space.
 description: A quick post about a resource for app patterns in web apps.
+relatedPosts:
+  - css-articles-and-tools-september-edition
+  - will-ai-replace-software-engineers
 ---
 
 The blog, [web.dev](https://web.dev/) is a great resource for developers by

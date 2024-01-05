@@ -8,6 +8,9 @@ categories:
 image: /images/blog/generic/command-line-junky.png
 imageAlt: An ASCII art rendition of the words 'Command Line Junky'.
 description: A short post about a collection of command-line tips.
+relatedPosts:
+  - commandsdev
+  - npm-basics
 ---
 
 I discovered a great resource for various bash tips and tricks called
