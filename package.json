@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro sync && NODE_ENV=development astro dev --verbose",
+    "dev": "astro sync && NODE_ENV=development astro dev",
     "start": "npm run dev",
     "check": "rm -rf dist && astro check",
     "pre-build": "npm run resume-export",
@@ -14,8 +14,8 @@
     "preview": "NODE_ENV=development astro preview",
     "new-post": "node scripts/new-post.js",
     "publish-draft": "node scripts/publish-draft.js",
-    "resume-export": "resume export --theme kendall-projects --resume src/data/resume.json public/resume/index.html",
-    "resume-serve": "resume serve --theme kendall-projects --resume src/data/resume.json --dir .tmp",
+    "resume-export": "resume export --theme bhdouglass --resume src/data/resume.json public/resume/index.html",
+    "resume-serve": "resume serve --theme bhdouglass --resume src/data/resume.json --dir .tmp",
     "optimize-jpeg": "jpegoptim --strip-all --overwrite --max=90",
     "optimize-png": "optipng",
     "sync": "astro sync",
@@ -40,9 +40,8 @@
     "chalk": "^5.3.0",
     "date-fns": "^3.0.6",
     "fractional": "^1.0.0",
+    "gray-matter": "^4.0.3",
     "inquirer": "^9.2.12",
-    "jsonresume-theme-kendall": "^0.2.0",
-    "jsonresume-theme-kendall-projects": "^0.2.1",
     "resume-cli": "^3.0.8"
   },
   "dependencies": {
@@ -53,6 +52,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "astro-robots-txt": "^1.0.0",
     "astro-seo": "^0.8.0",
+    "jsonresume-theme-bhdouglass": "^1.0.0",
     "rehype-highlight": "^7.0.0",
     "remark-toc": "^9.0.0",
     "remixicon": "^4.0.1",
