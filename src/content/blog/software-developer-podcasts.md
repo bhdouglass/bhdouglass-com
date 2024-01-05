@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: Software Developer Podcasts for 2023
+title: Software Developer Podcasts for 2024
 date: 2023-02-16T23:23:54.000Z
-updatedDate: 2023-04-11T23:43:04.000Z
+updatedDate: 2024-01-05T03:20:30.194Z
 categories:
   - recommendations
 image: /images/blog/podcast-headphones.png
@@ -62,6 +62,11 @@ for keeping up with tech trends and isn't overly technical.
 [Jupiter Broadcasting](https://www.jupiterbroadcasting.com/) also hosts many
 technology-related podcasts like [Linux Unplugged](https://www.jupiterbroadcasting.com/show/linux-unplugged/)
 and [Self-Hosted](https://www.jupiterbroadcasting.com/show/self-hosted/).
+
+## Linux Dev Time
+
+[Linux Dev Time](https://www.linuxdevtime.com/) is a show about the intersection
+of development and Linux. It covers both developing on and for Linux.
 
 ## How to subscribe to these podcasts
 

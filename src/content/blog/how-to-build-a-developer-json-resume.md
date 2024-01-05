@@ -1,7 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: How to Build a Developer JSON Resume 2023
+title: How to Build a Developer JSON Resume 2024
 date: 2022-11-03T00:01:37.000Z
+updatedDate: 2024-01-05T03:21:20.795Z
 categories:
   - resume
   - tutorials
@@ -45,7 +46,7 @@ faster project initialization.
 After your project is set up, install the JSON Resume CLI tool and a theme:
 
 ```bash
-npm install --save-dev resume-cli jsonresume-theme-kendall
+npm install --save-dev resume-cli jsonresume-theme-bhdouglass
 ```
 
 ## JSON Resume File
@@ -178,11 +179,12 @@ For the full explanation of all the different sections and properties, check out
 
 When exporting your resume you can choose from [over 400 different themes](https://www.npmjs.com/search?ranking=maintenance&q=jsonresume-theme). You can preview
 a few of them on [jsonresume.org](https://jsonresume.org/themes/). Previously
-we got the `kendall` theme by installing `jsonresume-theme-kendall`. Change
+we got the `bhdouglass` theme by installing `jsonresume-theme-bhdouglass`. Change
 your theme by installing the specific package and specify the theme when exporting
-via the CLI tool. Use `--theme jsonresume-theme-kendall` for the theme we installed
+via the CLI tool. Use `--theme jsonresume-theme-bhdouglass` for the theme we installed
 earlier. You will also want to specify the `theme` property in the `meta` section
 of your resume.json file to set your theme when hosting on [jsonresume.org](https://jsonresume.org/).
+Not all themes are available on theregistry, so [check the list](https://registry.jsonresume.org/themes) before picking one for the `theme` property.
 
 ![JSON Resume Themes](/images/blog/json-resume/themes.png)
 
@@ -191,7 +193,7 @@ of your resume.json file to set your theme when hosting on [jsonresume.org](http
 You will want to have [`npx`](https://www.npmjs.com/package/npx) installed, then run:
 
 ```bash
-npx resume export --theme jsonresume-theme-kendall --resume resume.json resume.html
+npx resume export --theme jsonresume-theme-bhdouglass --resume resume.json resume.html
 ```
 
 This will include all HTML and CSS needed to render your resume! You are now ready
@@ -202,7 +204,7 @@ to host your resume online.
 This is just like exporting to HTML, but specify `.pdf` in your output file:
 
 ```bash
-npx resume export --theme jsonresume-theme-kendall --resume resume.json resume.pdf
+npx resume export --theme jsonresume-theme-bhdouglass --resume resume.json resume.pdf
 ```
 
 This is perfect for sending your resume via email or an online application.
@@ -228,4 +230,5 @@ and view it at <https://registry.jsonresume.org/bhdouglass>.
 - [My JSON Resume](https://gitlab.com/bhdouglass/bhdouglass-com/-/blob/master/src/data/resume.json)
   - [HTML Version](https://bhdouglass.com/resume/)
 - [Themes on NPM](https://www.npmjs.com/search?ranking=maintenance&q=jsonresume-theme)
+  - [My Personal Theme](https://gitlab.com/bhdouglass/json-resume-bhdouglass)
 - [Example JSON Resume Project](https://gitlab.com/bhdouglass/json-resume-example)

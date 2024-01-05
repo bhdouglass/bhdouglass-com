@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: Software Developer Newsletters for 2023
+title: Software Developer Newsletters for 2024
 date: 2023-02-01T09:43:55.000Z
-updatedDate: 2023-04-11T23:43:04.000Z
+updatedDate: 2024-01-05T03:20:18.847Z
 categories:
   - recommendations
 image: /images/blog/newsletter-subscribe.png
@@ -103,6 +103,12 @@ other relevant coding topics.
 [Go Make Things](https://gomakethings.com/) produces short, daily blog posts
 with tips for developers. Many of the tips focus on vanilla JavaScript because
 you don't always need a heavy-handed framework for everything.
+
+## Human Skills
+
+[Human Skills](https://www.humanskills.co/) is a blog/newsletter about programmer Skills
+that are beyond just programming. It is a series of interviews with experienced
+engineers from different companies.
 
 ## Tips for Reading Newsletters
 
