@@ -18,13 +18,9 @@ check out [my blog post](https://bhdouglass.com/blog/built-with-astro/).
 My resume is built using [JSON Resume](https://jsonresume.org/).
 It can be viewed on [my own site](https://bhdouglass.com/resume/) or on the [JSON Resume Registry](https://registry.jsonresume.org/bhdouglass).
 
-## Blog Post License
+## License
 
-The blog posts are licensed under [Creative Commons Attribution Share Alike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
-
-## Code License
-
-Copyright (C) 2023 [Brian Douglass](http://bhdouglass.com/)
+Copyright (C) 2024 [Brian Douglass](http://bhdouglass.com/)
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3, as published
 by the Free Software Foundation.
