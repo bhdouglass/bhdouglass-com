@@ -3,6 +3,7 @@ import { SEO } from 'astro-seo';
 import '../styles/base.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { generateSchema } from '../schema.utilities';
 
 export type Props = {
   pageTitle: string;
@@ -13,15 +14,15 @@ export type Props = {
   image?: string;
   imageAlt?: string;
   noindex?: boolean;
+  schema?: Record<string, any>;
 };
 
-// TODO switch for setting itemtype to https://schema.org/Article & add article stuff to opengraph - https://ogp.me/#types
-// TODO use https://schema.org/datePublished
+const { pageTitle, title, prism, description, siteName, image, imageAlt, noindex, schema } = Astro.props;
 
-const { pageTitle, title, prism, description, siteName, image, imageAlt, noindex } = Astro.props;
+const actualSchema = schema ?? generateSchema(Astro.url.href, title);
 ---
 
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,6 +53,8 @@ const { pageTitle, title, prism, description, siteName, image, imageAlt, noindex
     <link rel="alternate" href="/feeds/tech.xml" type="application/rss+xml" title="RSS feed">
 
     {prism && (<link rel="stylesheet" href="/css/prism.css" />)}
+
+    <script type="application/ld+json" set:html={JSON.stringify(actualSchema)} />
 
     <script defer data-domain="bhdouglass.com" src="https://stats.bhdouglass.com/js/script.tagged-events.outbound-links.js"></script>
     <script is:inline>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>

@@ -4,10 +4,13 @@ import BaseLayout from './BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 import { BLOG } from '../constants';
 import type { Frontmatter } from '../types';
+import { generateSchema } from '../schema.utilities';
 
 export type Props = MarkdownLayoutProps<Frontmatter>;
 
 const { frontmatter } = Astro.props;
+
+const schema = generateSchema(Astro.url.href, frontmatter.title, frontmatter);
 ---
 
 <BaseLayout
@@ -18,6 +21,7 @@ const { frontmatter } = Astro.props;
   description={frontmatter.description || frontmatter.title}
   image={frontmatter.image}
   imageAlt={frontmatter.imageAlt}
+  schema={schema}
 >
   <BlogPost frontmatter={frontmatter}>
     <slot />
