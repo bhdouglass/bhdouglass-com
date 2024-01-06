@@ -5,10 +5,14 @@ import vue from '@astrojs/vue';
 import robotsTxt from 'astro-robots-txt';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
+import taxonomyDb from './.frontmatter/database/taxonomyDb.json';
+
+const SITE = 'https://bhdouglass.com/';
+const categoryPages = taxonomyDb.taxonomy.categories.map((category) => `${SITE}blog/${category}/`);
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://bhdouglass.com/',
+  site: SITE,
   server: {
     host: true
   },
@@ -22,6 +26,7 @@ export default defineConfig({
     sitemap({
        // TODO filter out noindex pages
       customPages: ['https://bhdouglass.com/resume/'],
+      filter: (page) => !categoryPages.includes(page),
     }),
     robotsTxt({ sitemapBaseFileName: 'sitemap' }),
   ],
