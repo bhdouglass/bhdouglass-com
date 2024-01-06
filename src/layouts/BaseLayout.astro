@@ -34,7 +34,7 @@ const { pageTitle, title, prism, description, siteName, image, imageAlt, noindex
         basic: {
           title: title,
           type: 'website',
-          image: new URL(image, import.meta.env.SITE).href || 'https://bhdouglass.com/images/logo.png',
+          image: new URL(image ?? '/images/logo.png', import.meta.env.SITE).href,
         },
         optional: {
           siteName: siteName || 'Brian Douglass',
