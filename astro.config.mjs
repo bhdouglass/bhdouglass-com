@@ -24,7 +24,6 @@ export default defineConfig({
     vue(),
     mdx(),
     sitemap({
-       // TODO filter out noindex pages
       customPages: ['https://bhdouglass.com/resume/'],
       filter: (page) => !categoryPages.includes(page),
     }),

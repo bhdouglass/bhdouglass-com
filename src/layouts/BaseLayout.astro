@@ -20,6 +20,15 @@ export type Props = {
 const { pageTitle, title, prism, description, siteName, image, imageAlt, noindex, schema } = Astro.props;
 
 const actualSchema = schema ?? generateSchema(Astro.url.href, title);
+const articleData = actualSchema['@graph'].find((s) => s['@type'] === 'Article');
+const ogArticleData = articleData ? {
+  publishedTime: articleData.datePublished,
+  modifiedTime: articleData.updatedDate,
+  author: articleData.author.name,
+  tags: articleData.keywords,
+} : undefined;
+const ogImage = new URL(image ?? '/images/logo.png', import.meta.env.SITE).href;
+const ogImageAlt = imageAlt || "Brian Douglass' logo";
 ---
 
 <html lang="en">
@@ -33,19 +42,26 @@ const actualSchema = schema ?? generateSchema(Astro.url.href, title);
       noindex={noindex ?? false}
       openGraph={{
         basic: {
-          title: title,
-          type: 'website',
-          image: new URL(image ?? '/images/logo.png', import.meta.env.SITE).href,
+          title,
+          type: articleData ? 'article' : 'website',
+          image: ogImage,
         },
         optional: {
           siteName: siteName || 'Brian Douglass',
+          locale: 'en_US',
         },
         image: {
-          alt: imageAlt || "Brian Douglass' logo",
-        }
+          alt: ogImageAlt,
+        },
+        article: ogArticleData,
       }}
       twitter={{
-        creator: '@bhdouglass'
+        creator: '@bhdouglass',
+        card: 'summary',
+        title,
+        image: ogImage,
+        imageAlt: ogImageAlt,
+        description,
       }}
     />
 
