@@ -1,0 +1,59 @@
+---
+export interface Props {
+  text: string;
+  url: string;
+  class?: string;
+}
+
+const { text, url, class: className = "inline-block" } = Astro.props;
+
+const encodedUrl = encodeURIComponent(url);
+const encodedText = encodeURIComponent(text);
+
+const twitterUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`;
+const facebookUrl = `https://www.facebook.com/sharer.php?u=${encodedUrl}`;
+const linkedinUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedText}`;
+const mailUrl = `mailto:?subject=%22${encodedText}%22&body=${encodedText}%20${encodedUrl}`;
+---
+
+<div class={className}>
+  <span class="font-bold text-gray-400 dark:text-slate-400"
+    >Share:</span
+  >
+  <a
+    class="ml-2 rtl:ml-0 rtl:mr-2"
+    title="Twitter/X Share"
+    href={twitterUrl}
+    target="_blank"
+    rel="noopener noreferrer nofollow"
+    >
+      <i class="ri-twitter-x-fill ri-xl text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"></i>
+  </a>
+  <a
+    class="ml-2 rtl:ml-0 rtl:mr-2"
+    title="Facebook Share"
+    href={facebookUrl}
+    target="_blank"
+    rel="noopener noreferrer nofollow"
+    >
+      <i class="ri-facebook-box-fill ri-xl text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"></i>
+  </a>
+  <a
+    class="ml-2 rtl:ml-0 rtl:mr-2"
+    title="Linkedin Share"
+    href={linkedinUrl}
+    target="_blank"
+    rel="noopener noreferrer nofollow"
+    >
+      <i class="ri-linkedin-box-fill ri-xl text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"></i>
+  </a>
+  <a
+    class="ml-2 rtl:ml-0 rtl:mr-2"
+    title="Email Share"
+    href={mailUrl}
+    target="_blank"
+    rel="noopener noreferrer nofollow"
+    >
+      <i class="ri-mail-fill ri-xl text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"></i>
+  </a>
+</div>

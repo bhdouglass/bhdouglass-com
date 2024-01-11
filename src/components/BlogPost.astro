@@ -5,6 +5,7 @@ import { categoriesToTags, getBlogDate } from '../utilities';
 import PostTags from './PostTags.astro';
 import BlogListItem from "./BlogListItem.astro";
 import type { Frontmatter } from '../types';
+import SocialShare from './SocialShare.astro';
 
 export type Props = {
   frontmatter: Frontmatter;
@@ -66,13 +67,26 @@ const relatedPosts = await Promise.all(frontmatter.relatedPosts?.map((slug) => g
           </div>
         )
       }
+
+      <div
+        class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-right"
+      >
+        <SocialShare url={Astro.url.href} text={title} />
+      </div>
     </header>
+
     <div
       class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-800 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
     >
       <slot />
     </div>
   </article>
+
+  <div
+    class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-right"
+  >
+    <SocialShare url={Astro.url.href} text={title} />
+  </div>
 
   {relatedPosts.length > 0 && (
     <div
