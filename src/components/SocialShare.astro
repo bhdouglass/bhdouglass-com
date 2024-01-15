@@ -14,6 +14,7 @@ const twitterUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${en
 const facebookUrl = `https://www.facebook.com/sharer.php?u=${encodedUrl}`;
 const linkedinUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedText}`;
 const mailUrl = `mailto:?subject=%22${encodedText}%22&body=${encodedText}%20${encodedUrl}`;
+const redditUrl = `https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedText}`
 ---
 
 <div class={className}>
@@ -46,6 +47,15 @@ const mailUrl = `mailto:?subject=%22${encodedText}%22&body=${encodedText}%20${en
     rel="noopener noreferrer nofollow"
     >
       <i class="ri-linkedin-box-fill ri-xl text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"></i>
+  </a>
+  <a
+    class="ml-2 rtl:ml-0 rtl:mr-2"
+    title="Reddit Share"
+    href={redditUrl}
+    target="_blank"
+    rel="noopener noreferrer nofollow"
+    >
+      <i class="ri-reddit-fill ri-xl text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"></i>
   </a>
   <a
     class="ml-2 rtl:ml-0 rtl:mr-2"
