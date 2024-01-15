@@ -3,7 +3,7 @@ import type { Frontmatter } from './types';
 export function generateSchema(url: string, title: string, frontmatter?: Frontmatter) {
   const image = new URL(frontmatter?.image ?? '/images/logo.png', import.meta.env.SITE);
 
-  const updatedDate = frontmatter?.updatedDate ? (frontmatter.updatedDate === 'now' ? new Date() : new Date(frontmatter.updatedDate)).toISOString() : undefined;
+  const dateModified = frontmatter?.updatedDate ? (frontmatter.updatedDate === 'now' ? new Date() : new Date(frontmatter.updatedDate)).toISOString() : undefined;
 
   return {
     '@context': 'https://schema.org',
@@ -22,7 +22,7 @@ export function generateSchema(url: string, title: string, frontmatter?: Frontma
         description: frontmatter.description || frontmatter.title,
         keywords: frontmatter.categories ?? [],
         datePublished: new Date(frontmatter.date).toISOString(),
-        updatedDate,
+        dateModified,
         mainEntityOfPage: {
           '@id': url,
         },
@@ -48,7 +48,7 @@ export function generateSchema(url: string, title: string, frontmatter?: Frontma
         },
         thumbnailUrl: image,
         datePublished: frontmatter?.date ? new Date(frontmatter.date).toISOString() : undefined,
-        updatedDate,
+        dateModified,
         description: frontmatter?.description || frontmatter?.title,
         breadcrumb: {
           '@id': `${url}#breadcrumb`,
