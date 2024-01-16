@@ -52,7 +52,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "astro-robots-txt": "^1.0.0",
     "astro-seo": "^0.8.0",
-    "jsonresume-theme-bhdouglass": "^1.0.0",
+    "jsonresume-theme-bhdouglass": "^1.0.1",
     "rehype-highlight": "^7.0.0",
     "remark-toc": "^9.0.0",
     "remixicon": "^4.0.1",
