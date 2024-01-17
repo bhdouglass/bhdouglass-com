@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: The Complete Guide to the Node.js Test Runner
 date: 2023-05-13T22:45:36.000Z
-updatedDate: 2023-11-03T08:56:46.000Z
+updatedDate: 2024-01-17T03:33:25.545Z
 categories:
   - nodejs
   - tutorials
@@ -12,7 +12,6 @@ description: Learn how to test JavaScript using the Node.js Test Runner
 relatedPosts:
   - using-dot-env-files-with-nodejs
   - the-nodejs-permission-model
-  - node-20
   - npm-basics
 ---
 
@@ -31,7 +30,7 @@ So, let's get started and see how you can use the Node.js [Test Runner](https://
 
 ## Getting Started with the Test Runner
 
-To use the stable Test Runner you will need to [download version 20](https://nodejs.org/en/download)
+To use the stable Test Runner you will need to [download version 20](https://nodejs.org/en/download) (or later)
 from [nodejs.org](https://nodejs.org/) or your favorite Node.js version manager.
 (Check out [Volta](https://volta.sh/)!)
 
@@ -212,6 +211,15 @@ Before [version 20.2.0](https://nodejs.org/en/blog/release/v20.2.0) `test.todo()
 was not available. If you prefer using `test()` over `it()`, make sure you are on
 the latest version of Node.js!
 
+## Test Timeouts
+
+By default, tests will not timeout. So if you want to cut off long-running tests
+you can add [`--test-timeout`](https://nodejs.org/docs/latest/api/cli.html#--test-timeout)
+to your `node --test` call. The `--test-timeout` flag will take the number of
+milliseconds that you want to set the timeout to. For example: `node --test --test-timeout=3000`.
+
+Please be aware that this feature was released in [Node.js version 20.11.0](https://nodejs.org/en/blog/release/v20.11.0).
+
 ## Hooks
 
 Hooks are a great way to reuse common set up and tear down processes. Hooks come in
@@ -309,7 +317,7 @@ test('spies on an object method', (t) => {
 In addition to mocking function you can also test code that uses `setTimeout()` and
 `setInterval()`. This feature is new in [v20.4.0](https://nodejs.org/en/blog/release/v20.4.0),
 so make sure you have the latest version!
-You need to enable the function you want to mock by calling `mock.timers.enable(['setTimeout', 'setInterval'])`, then call `mock.timers.tick(x)` to simulate time passing.
+You need to enable the function you want to mock by calling `mock.timers.enable({ apis: ['setTimeout', 'setInterval'] })`, then call `mock.timers.tick(x)` to simulate time passing.
 
 Example (Modified from the Node.js Release Blog Post):
 
@@ -319,7 +327,7 @@ const assert = require('node:assert/strict');
 
 test('mocks setTimeout', () => {
   const fn = mock.fn();
-  mock.timers.enable(['setTimeout']);
+  mock.timers.enable({ apis: ['setTimeout'] });
   setTimeout(fn, 100);
 
   mock.timers.tick(50);
@@ -328,6 +336,19 @@ test('mocks setTimeout', () => {
   assert.strictEqual(fn.mock.callCount(), 1);
 });
 ```
+
+### Mocking Dates
+
+As of [Node.js version 20.11.0](https://nodejs.org/en/blog/release/v20.11.0),
+you can also [mock the `Date.now()` function](https://nodejs.org/api/test.html#dates).
+
+The setup is similar to the timers mock. Enable it by calling: `mock.timers.enable({ apis: ['Date'] })`
+and then `mock.timers.setTime(1000)`. Alternatively, you can enable the mock and
+set the value all in one go: `mock.timers.enable({ apis: ['Date'], now: 1000 })`.
+
+One thing to be aware of when working with both the mock timers and the mock date is
+ dvancing the time via `mock.timers.tick(x)` will also advance the time produced
+by the mocked `Date.now()`.
 
 ## Test Reporters
 
@@ -370,6 +391,10 @@ Another experimental feature (as of [Node.js 20](/blog/node-20/)) that you can u
 Enable it via the `--experimental-test-coverage` flag. This will print out
 a summary of covered after printing the test results. For example:
 `node --test --experimental-test-coverage`
+
+As of [Node.js version 20.11.0](https://nodejs.org/en/blog/release/v20.11.0), there
+is a ["lcov" reporter](https://nodejs.org/docs/latest/api/test.html#coverage-reporters)
+included by default. to use it specify `--test-reporter=lcov` along with `--experimental-test-coverage`.
 
 ## Conclusion
 
