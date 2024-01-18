@@ -13,7 +13,7 @@ relatedPosts:
   - built-with-astro
 ---
 
-Another month brings another release of [Astro](/blog/astro)!
+Another month brings another release of [Astro](/blog/astro/)!
 [Astro 4.0](https://astro.build/blog/astro-4/) has hit the ground running bringing
 new features and developer experience improvements.
 
