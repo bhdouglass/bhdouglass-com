@@ -496,5 +496,12 @@
     "vue3": true,
     "npmPackage": "element-pro-components",
     "description": "A component library for Vue 3 base on element-plus."
+  },
+  {
+    "name": "Nuxt UI",
+    "githubRepo": "nuxt/ui",
+    "vue3": true,
+    "npmPackage": "@nuxt/ui",
+    "description": "Nuxt UI simplifies the creation of stunning and responsive web applications."
   }
 ]
