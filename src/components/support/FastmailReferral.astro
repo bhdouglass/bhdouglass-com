@@ -1,0 +1,20 @@
+---
+import SupportWrapper from './SupportWrapper.astro';
+
+export const FASTMAIL_URL = 'https://ref.fm/u30156328';
+---
+
+<SupportWrapper isAffiliate={true}>
+  <p>
+    Looking for private email but don't want to worry about hosting it yourself?
+    Check out <a href={FASTMAIL_URL} target="_blank">Fastmail</a> for affordable
+    and private email on your own domain. I have had my email for this domain
+    and a few others with Fastmail and have not had any issues.
+  </p>
+
+  <div class="my-6 max-w-xs mx-auto">
+    <a class="btn btn-primary !text-white w-full sm:w-auto !no-underline" href={FASTMAIL_URL} target="_blank">
+      Try Fastmail Today!
+    </a>
+  </div>
+</SupportWrapper>

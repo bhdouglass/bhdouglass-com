@@ -1,0 +1,21 @@
+---
+import SupportWrapper from './SupportWrapper.astro';
+
+export const NAMECHEAP_URL = "https://namecheap.pxf.io/dajBKk";
+---
+
+<SupportWrapper isAffiliate={true}>
+  <p>
+    Looking for a domain name for your next project or website? Check out
+    <a href={NAMECHEAP_URL} target="_blank" class="underline">Namecheap</a>!
+    I originally registered this very domain, <a href="https://bhdouglass.com/" class="underline">bhdouglass.com</a>
+    with Namecheap. They have a great domain lookup too where you can search for
+    your desired name in hundreds of different TLDs from ".com" to ".dev" and ".yoga".
+  </p>
+
+  <div class="my-6 max-w-xs mx-auto">
+    <a class="btn btn-primary !text-white w-full sm:w-auto !no-underline" href={NAMECHEAP_URL} target="_blank">
+      Try Namecheap Today!
+    </a>
+  </div>
+</SupportWrapper>

@@ -1,0 +1,36 @@
+---
+import SupportWrapper from './SupportWrapper.astro';
+
+export type Props = {
+  isSelfHosting?: boolean;
+};
+
+const { isSelfHosting } = Astro.props;
+export const DIGITAL_OCEAN_URL = "https://digitalocean.pxf.io/XY3BQg";
+---
+
+<SupportWrapper isAffiliate={true}>
+  {isSelfHosting ? (
+    <p>
+      Looking for an offsite place to host your own services? Check out
+      <a href={DIGITAL_OCEAN_URL} target="_blank" class="underline">Digital Ocean</a>!
+      I personally host some services I want to always be available,
+       regardless of my home server and internet status. All on a $6/month server!
+    </p>
+  ) : (
+    <p>
+      Looking for a place to host your next project or website? Check out
+      <a href={DIGITAL_OCEAN_URL} target="_blank" class="underline">Digital Ocean</a>!
+      I have been running the <a href="https://open-store.io/" target="_blank" class="underline">OpenStore</a>
+      on Digital Ocean for many years now. It serves apps to over 10,000
+      <a href="https://ubuntu-touch.io/">Ubuntu Touch</a> devices.
+      Digital Ocean has been rock solid throughout the OpenStore's lifetime.
+    </p>
+  )}
+
+  <div class="my-6 max-w-xs mx-auto">
+    <a class="btn btn-primary !text-white w-full sm:w-auto !no-underline" href={DIGITAL_OCEAN_URL} target="_blank">
+      Try Digital Ocean Today!
+    </a>
+  </div>
+</SupportWrapper>

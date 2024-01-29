@@ -1,0 +1,27 @@
+---
+export type Props = {
+  isAffiliate?: boolean;
+};
+
+const { isAffiliate } = Astro.props;
+---
+<aside class="relative">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="py-6 md:py-10">
+      <div
+        class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600"
+      >
+        <slot />
+
+        {isAffiliate && (
+          <p class="text-sm">
+            The above link is an <a href="/support" class="underline">affiliate link</a>.
+            By using this link you'll be supporting my work at no extra cost to yourself.
+            Or consider another way to <a href="/support" class="underline">support my work</a>
+            if you find value in it. Thank you!
+          </p>
+        )}
+      </div>
+    </div>
+  </div>
+</aside>

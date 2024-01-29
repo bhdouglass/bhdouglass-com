@@ -1,0 +1,17 @@
+---
+import DigitalOceanAffiliate from './DigitalOceanAffiliate.astro';
+import NamecheapAffiliate from './NamecheapAffiliate.astro';
+import Donate from './Donate.astro';
+import FastmailReferral from './FastmailReferral.astro';
+
+const components = [
+  DigitalOceanAffiliate,
+  NamecheapAffiliate,
+  FastmailReferral,
+  Donate,
+];
+
+const Component = components[Math.floor(Math.random() * components.length)];
+---
+
+<Component />

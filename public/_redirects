@@ -1,5 +1,6 @@
 /contact.html / 301
 /projects.html / 301
+/donate /support 302
 
 /blog/tech/2016-08-06-packaging-nodejs-projects-as-snaps /blog/packaging-nodejs-projects-as-snaps/ 301
 /blog/tech/2017-04-06-ubuntu-touch-my-personal-journey /blog/ubuntu-touch-my-personal-journey/ 301

@@ -1,0 +1,62 @@
+---
+import TextSection from '../components/TextSection.astro';
+import { DIGITAL_OCEAN_URL } from '../components/support/DigitalOceanAffiliate.astro';
+import { FASTMAIL_URL } from '../components/support/FastmailReferral.astro';
+import { NAMECHEAP_URL } from '../components/support/NamecheapAffiliate.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout pageTitle="Support | Brian Douglass" title="Support Brian Douglass" description="Support to Brian Douglass' open-source work.">
+  <TextSection header="Support" h1={true}>
+    I'm <a href="/">Brian Douglass</a>, a software engineer by day and open-source developer/blogger by night.
+      I'm the lead developer for the <a href="https://open-store.io/" class="underline">OpenStore</a>,
+      an open-source app store for <a href="https://ubuntu-touch.io/" class="underline">Ubuntu Touch</a>.
+      I'm also the lead developer for
+      <a href="http://clickable-ut.dev/en/latest/" class="underline">Clickable</a>,
+      an open-source tool
+      for building and maintaining Ubuntu Touch applications. If you have gotten
+      some value out of my work or the contents of <a href="/blog/" class="underline">my blog</a>,
+      consider supporting me by <a href="https://ko-fi.com/bhdouglass" class="underline">buying me a coffee</a>,
+      or buying something via my <a href="#affiliates" class="underline">affiliate links</a>.
+  </TextSection>
+
+  <TextSection header="Affiliate Marketing on this Blog">
+    <p>
+      As an affiliate, I can earn a commission when you buy a product or service through
+      one of my affiliate links. There is no extra cost when you do, so this makes
+      it a great opportunity to support my work, while also getting a great product
+      or service.
+    </p>
+
+    <p>
+      For each affiliate partner, I have either used the products and services personally
+      or have carefully reviewed and vetted them using trusted sources.
+    </p>
+  </TextSection>
+
+  <TextSection header="Affiliates">
+    <a id="affiliates"></a>
+    <ul>
+      <li>
+        <a href={FASTMAIL_URL} class="underline" target="_blank">
+          Fastmail
+        </a>
+      </li>
+      <li>
+        <a href={DIGITAL_OCEAN_URL} class="underline" target="_blank">
+          Digital Ocean
+        </a>
+      </li>
+      <li>
+        <a href={NAMECHEAP_URL} class="underline" target="_blank">
+          Namecheap
+        </a>
+      </li>
+    </ul>
+  </TextSection>
+
+  <TextSection header="Tips">
+    You can also support me on <a href="https://liberapay.com/bhdouglass/" class="underline">Liberapay</a> or
+      <a href="https://ko-fi.com/bhdouglass" class="underline">Ko-fi</a>.
+  </TextSection>
+</BaseLayout>

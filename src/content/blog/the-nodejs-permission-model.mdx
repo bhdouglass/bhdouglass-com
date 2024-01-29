@@ -14,6 +14,7 @@ relatedPosts:
   - node-20
 ---
 import ImageWithAttribution from '../../components/ImageWithAttribution.astro';
+import RandomSupport from '../../components/support/RandomSupport.astro';
 
 The release of [Node.js 20](../node-20/) includes a new [Permission Model](https://nodejs.org/api/permissions.html#permission-model).
 Why is this important? It allows developers to restrict Node.js scripts from
@@ -70,6 +71,8 @@ same permissions as the process that spawned it.
 
 This flag allows [native addons](https://nodejs.org/api/addons.html) to be used.
 This is available in [Node.js version 21.6.0](https://nodejs.org/en/blog/release/v21.6.0#changes-to-the-permission-model).
+
+<RandomSupport />
 
 ## Checking for Filesystem Permissions
 

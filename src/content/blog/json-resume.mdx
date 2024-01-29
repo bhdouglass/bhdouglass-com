@@ -1,0 +1,59 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: JSON Resume
+date: 2022-02-15T22:14:17.000Z
+updatedDate: 2023-05-24T22:42:52.000Z
+categories:
+  - tutorials
+image: /images/blog/json-resume/json-resume.png
+imageAlt: An example JSON Resume with the code to generate it.
+description: An introduction to using JSON Resume and details on how I use it.
+relatedPosts:
+  - how-to-build-a-developer-json-resume
+---
+import RandomSupport from '../../components/support/RandomSupport.astro';
+
+Recently Stack Overflow announced that they are discontinuing their job board and
+developer stories. You can read more about it on [Stack Overflow Meta](https://meta.stackoverflow.com/questions/415293/sunsetting-jobs-developer-story).
+This is rather disappointing because I have found most, if not all, of my full-time
+positions via the Stack Overflow job board. Additionally, I use the developer story
+feature to host an online resume. Because it will be going away I went looking for
+an alternative. I found an intriguing project called [JSON Resume](https://jsonresume.org/).
+
+JSON Resume is a schema for creating resumes for developers. It has a great command
+line utility to generate a new resume, validate a resume, preview a resume, and
+export a resume. Once you've got a `resume.json` file created you can preview
+it in your browser using `resume serve`. There is a [multitude of different themes](https://jsonresume.org/themes/)
+to choose from. Then when you are satisfied with your resume and theme you can
+export it to HTML, PDF, or publish it to their registry. Publishing to the
+registry is very simple. You just create a gist on GitHub, then visit the registry
+URL with your GitHub username. Check out [my public gist](https://gist.github.com/bhdouglass/389f030a5e5f578a5b64d26ee45c3ef4)
+with my JSON resume and then see the rendered version at [registry.jsonresume.org/bhdouglass](https://registry.jsonresume.org/bhdouglass).
+
+<RandomSupport />
+
+One thing that is a bit tricky with JSON Resume is using themes from the command
+line tool. The documentation makes it sound easy, but that was not my experience. I found
+a [GitHub issue](https://github.com/jsonresume/resume-cli/issues/408) that pointed
+me in the right direction. You need to install the theme locally in order to use
+it with the `resume` command. The best way to do this is to install both the
+resume tool and theme(s) into a local npm project. For example:
+`npm install --save-dev resume-cli jsonresume-theme-kendall`.
+
+After jumping through the hurdles with themes, I set up an HTML export of my
+JSON Resume to host on my website. You can check it out by going to [bhdouglass.com/resume](/resume/).
+As I mentioned in [a previous post](/blog/built-with-astro/) my
+new website is built using [Astro](https://astro.build/). I integrated the resume
+HTML into my site by placing it in the `/public/resume` directory. Then I was
+able to drive my job history on the main page with my `resume.json` file.
+
+If you are looking for an alternative to the Stack Overflow Developer Story then
+I highly recommend checking out JSON Resume. I'm not actively looking for a new
+job, but I will be keeping my eye out for a good replacement to the Stack Overflow
+Job Board.
+
+## Further Reading
+
+- [Make your own JSON Resume](../how-to-build-a-developer-json-resume/)
+- [JSON Resume Docs](https://jsonresume.org/getting-started/)
+- [JSON Resume Themes](https://jsonresume.org/themes/)
