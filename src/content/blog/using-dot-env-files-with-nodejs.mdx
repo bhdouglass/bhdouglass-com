@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: Using dot env files with Node.js
 date: 2023-09-07T11:01:55.000Z
+updatedDate: 2024-03-13T13:38:38.941Z
 categories:
   - nodejs
   - tutorials
@@ -73,6 +74,14 @@ DB_PASSWORD=foo
 DB_USER=root
 ```
 
+As of [Node.js v21.7.0](https://nodejs.org/en/blog/release/v21.7.0), multi-line
+values are now supported.
+
+```bash
+MULTI_LINE="HELLO
+WORLD"
+```
+
 ## Loading .env Files in Node.js 20.6 and Above
 
 As of [Node.js version 20.6.0](https://nodejs.org/en/blog/release/v20.6.0), Node
@@ -83,6 +92,15 @@ into `process.env`.
 ```bash
 $ node --env-file=.env example.js
 ```
+
+Alternatively, you can load `.env` files using `process.loadEnvFile('/path/to/.env')`
+(From [Node.js v21.7.0](https://nodejs.org/en/blog/release/v21.7.0) onward).
+[This function](https://nodejs.org/docs/latest/api/process.html#processloadenvfilepath)
+will load the specified `.env` file into `process.env` without overwriting existing
+variables. If the function is called without a path specified, it will use the `.env`
+file in the current directory. It is important to note that it will not look
+in parent directories to find a `.env` file, it will throw an error if a `.env`
+file does not exist in the current directory.
 
 <Ad />
 
