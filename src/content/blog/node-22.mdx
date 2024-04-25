@@ -1,0 +1,72 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: Node 22
+date: 2024-04-24T20:46:42-04:00
+categories:
+  - nodejs
+image: /images/blog/logos/nodejs-logo.svg
+imageAlt: Node.js' logo
+description: Node.js v22 has come out with new stable features
+---
+import RandomSupport from '../../components/support/RandomSupport.astro';
+
+[Node.js version 22](https://nodejs.org/en/blog/announcements/v22-release-announce)
+has been released on April 24th, 2024. This release brings some improvements,
+new features, and newly stable features
+
+## Table of contents
+
+## Use `require()` with ESM dependencies
+
+As a new experimental feature, you can now use the [`--experimental-require-module`](https://nodejs.org/docs/latest/api/cli.html#--experimental-require-module)
+flag to have Node.js load ESM dependencies using `require()`. However, there are
+two important considerations for this to work, according to the [Node.js docs](https://nodejs.org/docs/latest/api/modules.html#loading-ecmascript-modules-using-require):
+
+- "Explicitly marked as an ES module with a `"type": "module"` field in the closest package.json or a `.mjs` extension."
+- "Fully synchronous (contains no top-level `await`)."
+
+If your ESM dependencies meet those expectations, you can now use them with CommonJS
+modules in Node.js 22.
+
+## Task Runner
+
+As an alternative to `npm run` or `yarn run`, Node.js v22 now has a built-in task
+runner to run the ["scripts"](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#scripts)
+in a `package.json` file. By using the new [`--run`](https://nodejs.org/docs/latest/api/cli.html#--run)
+flag, you can run any script. For example `node --run generate` will run the
+"generate" script.
+
+The Node.js task runner aims to be built-in and more performant than the package
+manager alternatives. By doing so, it has been intentionally limited to only the
+`package.json` file in the current directory.
+
+It will not look for any other `package.json` file to run the script.
+It will append the current `node_modules/.bin` to the PATH when running the script,
+but it won't search for the node_modules, it will just use the one in the current directory.
+The task runner will also ignore any `pre` or `post` scripts and stick to only
+running the requested script.
+
+## Now stable
+
+Both [`--watch`](https://nodejs.org/docs/latest/api/cli.html#--watch) and
+the browser-compatible [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
+are now considered stable.
+
+To use the WebSocket implementation you no longer need the `--experimental-websocket`
+as it will be enabled by default.
+
+<RandomSupport />
+
+## How to get Node.js v22
+
+To get any of these new features and improvements, download [Node.js version 22](https://nodejs.org/en/download)
+from [nodejs.org](https://nodejs.org/).
+
+You can also use a Node.js version manager like [Volta](https://volta.sh/).
+
+## Further Reading
+
+- [Node.js version 22 release announcement](https://nodejs.org/en/blog/announcements/v22-release-announce)
+- [Node.js version 22 changelog](https://nodejs.org/en/blog/release/v22.0.0)
+- [Node.js module loading docs](https://nodejs.org/docs/latest/api/modules.html#loading-ecmascript-modules-using-require)
+- [Node.js task runner docs](https://nodejs.org/docs/latest/api/cli.html#--run)

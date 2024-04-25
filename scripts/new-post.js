@@ -10,7 +10,7 @@ const answers = await inquirer.prompt([
 
 const content = `---
 layout: ../../layouts/BlogPostLayout.astro
-title: ${answers.title}
+title: "${answers.title}"
 date: ${formatISO(new Date())}
 categories:
   - ${answers.categories.split(' ').join('\n  - ')}
@@ -24,7 +24,7 @@ draft: true
 const fileTitle = answers.title.toLowerCase()
   .replace(/ /g, '-')
   .replace(/[:.!?]/g, '');
-const path = `src/content/blog/${fileTitle}.md`;
+const path = `src/content/blog/${fileTitle}.mdx`;
 
 await fs.writeFile(path, content);
 
