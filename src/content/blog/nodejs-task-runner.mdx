@@ -1,0 +1,64 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: Node.js Task Runner
+date: 2024-04-26T03:48:55.982Z
+categories:
+  - nodejs
+image: /images/blog/robots-running-a-race.png
+imageAlt: Robots running a race
+description: The new Node.js task runner sprints onto the scene
+---
+import RandomSupport from '../../components/support/RandomSupport.astro';
+import Ad from '../../components/support/Ad.astro';
+
+With the introduction of [Node.js v22](../node-22/), Node.js now has a built-in
+task runner. This is a handy alternative to `npm run` and `yarn run` that is
+focused on speed.
+
+## Table of contents
+
+## How to use the Task Runner
+
+To get started using the Node.js task runner, use
+[`node --run`](https://nodejs.org/docs/latest/api/cli.html#--run) with the latest
+version of Node.js. `node --run` allows you to quickly run one of your "scripts"
+from your `package.json` file. For example, `node --run generate` will run the
+"generate" script.
+
+<Ad />
+
+## Limitations of the Node.js Task Runner
+
+The Node.js task runner aims to be built-in and more performant than the package
+manager alternatives. By doing so, it has been intentionally limited to only the
+`package.json` file in the current directory.
+
+It will not look for any other `package.json` file to run the script.
+It will append the current `node_modules/.bin` to the PATH when running the script,
+but it won't search for the node_modules, it will just use the one in the current directory.
+The task runner will also ignore any `pre` or `post` scripts and stick to only
+running the requested script.
+
+## `node --run` vs `npm run`
+
+Barring the intentional limitations listed above, `node --run` and `npm run`
+work very similarly. However, in my testing, `node --run` outperforms `npm run`
+by about 100ms. That might not seem like much, but considering how many times
+a day one developer runs scripts from their `package.json` multiplied by the
+size of their team, it can add up to hours in development time saved over a
+year.
+
+<RandomSupport />
+
+## How to get Node.js v22
+
+To get any of these new features and improvements, download [Node.js version 22](https://nodejs.org/en/download)
+from [nodejs.org](https://nodejs.org/).
+
+You can also use a Node.js version manager like [Volta](https://volta.sh/).
+
+## Further Reading
+
+- [Node.js task runner docs](https://nodejs.org/docs/latest/api/cli.html#--run)
+- [Node.js 22 release notes](../node-22/)
+- [Node.js version 22 changelog](https://nodejs.org/en/blog/release/v22.0.0)

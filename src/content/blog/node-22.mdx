@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: Node 22
 date: 2024-04-24T20:46:42-04:00
+updatedDate: 2024-04-26T03:52:49.885Z
 categories:
   - nodejs
 image: /images/blog/logos/nodejs-logo.svg
@@ -36,15 +37,7 @@ in a `package.json` file. By using the new [`--run`](https://nodejs.org/docs/lat
 flag, you can run any script. For example `node --run generate` will run the
 "generate" script.
 
-The Node.js task runner aims to be built-in and more performant than the package
-manager alternatives. By doing so, it has been intentionally limited to only the
-`package.json` file in the current directory.
-
-It will not look for any other `package.json` file to run the script.
-It will append the current `node_modules/.bin` to the PATH when running the script,
-but it won't search for the node_modules, it will just use the one in the current directory.
-The task runner will also ignore any `pre` or `post` scripts and stick to only
-running the requested script.
+Check out my full [tutorial on the Node.js Task Runner](../nodejs-task-runner/).
 
 ## Now stable
 
