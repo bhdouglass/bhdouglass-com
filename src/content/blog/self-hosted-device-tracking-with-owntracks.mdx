@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: Self-Hosted device tracking with OwnTracks
 date: 2023-03-18T23:57:53.000Z
+updatedDate: 2024-06-21T13:14:13.145Z
 categories:
   - self-hosting
   - docker
@@ -66,6 +67,8 @@ view the basic interface by going to `http://<server-ip>:8083` in your browser.
 
 <img src="/images/blog/owntracks/owntracks-recorder-web-ui-empty.png" alt="An empty OwnTracks Recorder web UI" />
 
+<Ad />
+
 ## Make OwnTracks Accessible from the Internet
 
 Now that you have a working OwnTracks Recorder you can access it from your local
@@ -107,6 +110,9 @@ label, just separate them each with a comma.
 This setup assumes you already have a Traefik container running as part of your
 `docker-compose.yml` file. To get started with Traefik, check out their
 [getting started guide](https://doc.traefik.io/traefik/getting-started/quick-start/).
+
+If you are using Nginx, check out this [tutorial on setting up Basic auth](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/).
+Or if you are using Caddy, use this [Basic auth tutorial](https://caddyserver.com/docs/caddyfile/directives/basic_auth).
 
 <DigitalOceanAffiliate isSelfHosting />
 
