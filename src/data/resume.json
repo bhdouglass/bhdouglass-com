@@ -28,16 +28,12 @@
       "position": "Senior Software Engineer",
       "url": "https://enerflo.com/",
       "startDate": "2020-02",
-      "summary": "Developing new APIs with NestJS, Typescript, GraphQL, and PostgreSQL. Also building interfaces with React and maintaining systems built with Laravel. Team lead and mentor for Jr Developers.",
+      "summary": "Developing new APIs with NestJS, Typescript, GraphQL, and PostgreSQL. Also building interfaces with React and maintaining systems built with Laravel. Team lead and mentor for Junior Developers.",
       "highlights": [
-        "Build APIs with NestJS, Typescript, GraphQL, and PostgreSQL.",
-        "Build interfaces with React and Next.Js.",
-        "Maintain web apps with Laravel & Javascript.",
-        "Lead a team of 5-6 developers.",
-        "Interface directly with stakeholders to determine direction and scope of projects.",
-        "Mentoring Jr Developers and reviewing code pull requests.",
-        "Interviewing and onboarding new developers.",
-        "Championed documentation and developed best practices for teams."
+        "Built full-stack SAAS applications with NestJS, TypeScript, GraphQL, PostgreSQL, React, Next.js, Laravel, and PHP",
+        "Led a team of 5 developers while mentoring junior developers and interviewing and onboarding new developers.",
+        "Developed best practices for multiple teams and implemented code templates to reduce time spent developing new features.",
+        "Integrated with third-party lending APIs that led to over $200,000 in monthly recurring revenue."
       ]
     },
     {
@@ -50,10 +46,9 @@
       "endDate": "2020-01",
       "summary": "Developed lambda microservices in Node.js and Typescript. Built interfaces using React. Also created developer tools to improve error tracking and implemented testing solutions using Docker.",
       "highlights": [
-        "Develop web apps with React.",
-        "Maintain and improve microservices.",
-        "Improve testing solutions with docker.",
-        "Create developer tools to improve error tracking."
+        "Developed full-stack consumer apps with AWS Lambda microservices and React",
+        "Improved the developer experience by creating testing solutions with docker.",
+        "Created developer tools to improve error tracking."
       ]
     },
     {
@@ -64,11 +59,10 @@
       "url": "https://www.eflexsystems.com/",
       "startDate": "2018-07",
       "endDate": "2019-03",
-      "summary": "Migrated a legacy C# api and a C++ processes to Node.js. Developed full stack applications using Koa, Ember.js, and CoffeeScript.",
+      "summary": "Migrated a legacy C# API and C++ processes to Node.js. Developed full-stack applications using Koa, Ember.js, and CoffeeScript.",
       "highlights": [
-        "Developed full-stack solutions to improve efficiency for manufacturing clients.",
-        "Migrated a legacy API from C# to Node.js and a legacy C++ process to Node.js.",
-        "Autonomous and self-motivated telecommuter."
+        "Developed full-stack solutions with Node.js and Ember.js to improve efficiency for manufacturing clients.",
+        "Migrated a legacy API from C# to Node.js and a legacy C++ process to Node.js."
       ]
     },
     {
@@ -83,8 +77,7 @@
       "highlights": [
         "Architected improved web scraping technologies utilizing serverless functions.",
         "Solely responsible for maintaining legacy systems.",
-        "Optimized systems running in AWS.",
-        "Driven and autonomous telecommuter."
+        "Optimized systems running in AWS."
       ]
     },
     {
@@ -95,15 +88,12 @@
       "url": "https://web.archive.org/web/20170824221623/https://www.showroomlogic.com/",
       "startDate": "2013-06",
       "endDate": "2017-09",
-      "summary": "Developed fullstack applications using PHP and AngularJS. Created new full stack applications using Python and Django. Led a small project team and optimized systems for scaling up massively.",
+      "summary": "Developed full-stack applications using PHP and AngularJS. Created new full-stack applications using Python and Django. Led a small project team and optimized systems for scaling up massively.",
       "highlights": [
-        "Technical lead for small project teams.",
-        "Developed API interactions with Google AdWords, BingAds, Facebook, and AutoWeb.",
-        "Self-organizing and autonomous telecommuting.",
-        "Maintained services hosted in AWS.",
-        "Developed large-scale ad generation systems with Python and Django.",
-        "Rebuilt ad generation system to maximize performance syncing tens of thousands of ads.",
-        "Maintaining legacy systems using PHP, Doctrine2, and AngularJS."
+        "Technical lead for small project teams developing a full-stack application using PHP and AngularJS.",
+        "Increased revenue by integrating with the BingAds API.",
+        "Improved application efficiency and performance by rewriting the ad sync engine to scale to tens of thousands of ads.",
+        "Created a full-stack web scraping solution with Python and Django."
       ]
     },
     {
@@ -114,12 +104,10 @@
       "url": "http://diversilabs.com/",
       "startDate": "2010-05",
       "endDate": "2013-06",
-      "summary": "Developed new Qt based interfaces for aging Matlab application. Developed new company website.",
+      "summary": "Developed new Qt-based interface for an aging Matlab application. Developed a new company website.",
       "highlights": [
-        "Developed a new graphical user interface for an aging app.",
-        "Interfaced Matlab backend with new Qt interface.",
-        "Rewrote company website.",
-        "Self-motivated and driven telecommuter."
+        "Designed a new graphical user interface in C++ and Qt to replace an aging Matlab-based UI.",
+        "Rewrote company website to be more modern."
       ]
     },
     {
@@ -130,11 +118,11 @@
       "url": "https://www.millionairebusinessnetwork.com/",
       "startDate": "2019-06",
       "endDate": "2023-03",
-      "summary": "Architected and built a full stack application to meet growing business needs.",
+      "summary": "Architected and built a full-stack application to meet growing business needs.",
       "highlights": [
-        "Developed an application using PHP, Larvel, JavaScript, and Vue.js.",
-        "Interfaced closely with executives to develop solutions to business problems.",
-        "Replaced legacy scripts for payment calculations with modern solutions."
+        "Developed a custom CRM application using PHP, Larvel, JavaScript, and Vue.js.",
+        "Enabled the business to scale by replacing legacy scripts for payment calculations.",
+        "Interfaced directly with executives to develop solutions to business problems."
       ]
     },
     {
@@ -147,9 +135,9 @@
       "endDate": "2021-05",
       "summary": "Created new applications using Python, Django, JavaScript, and Vue.js. Replaced aging spreadsheet tracking with modern applications.",
       "highlights": [
-        "Architected and developed full-stack solutions for work order management.",
-        "Created a progressive web app for mobile work order input.",
-        "Interfaced closely with the client's employees to meet their needs."
+        "Architected a full-stack application using Python, Django, JavaScript, and Vue.js",
+        "Replaced spreadsheets with a scalable and accurate work order management solution.",
+        "Collaborated closely with the client's employees to best solve their problems."
       ]
     }
   ],
@@ -162,10 +150,10 @@
       "endDate": "2021-04",
       "summary": "Lead the UBports App Development committee and championed developer experience for the Ubuntu Touch operating system.",
       "highlights": [
-        "Support and develop the open-source Ubuntu Touch operating system.",
-        "Organize global contributors to develop apps and write documentation.",
+        "Supported and developed the open-source Ubuntu Touch operating system.",
+        "Organized global contributors to develop apps and write documentation.",
         "Built and maintained UI toolkits and themes for app development.",
-        "Pioneered quality-of-life improvements for core app developers."
+        "Pioneered quality-of-life improvements for app developers."
       ]
     }
   ],
@@ -334,7 +322,6 @@
       "description": "Tutorials about various technologies and release announcements",
       "highlights": [
         "Wrote tutorials spanning from Node.js to self-hosting.",
-        "Created release announcements for various projects.",
         "Built using Astro JS"
       ],
       "startDate": "2016-03",
