@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: The Complete Guide to the Node.js Test Runner
 date: 2023-05-13T22:45:36.000Z
-updatedDate: 2024-04-17T19:30:22.001Z
+updatedDate: 2024-07-12T14:44:52.609Z
 categories:
   - nodejs
   - tutorials
@@ -54,6 +54,8 @@ The essential test functions can be imported from the `node:test` module.
 ```javascript
 const { describe, test } = require('node:test');
 ```
+
+<Ad />
 
 ### test()
 
@@ -154,6 +156,30 @@ describe('compare()', () => {
   test('Throws an error when one of the inputs is not a number', () => {
     assert.throws(() => compare('test', 1));
   });
+});
+```
+
+<Ad />
+
+### Test Plans
+
+[Node.js version 20.15.0](https://nodejs.org/en/blog/release/v20.15.0) introduced [test plans](https://nodejs.org/docs/latest/api/test.html#contextplancount). Test plans are just
+letting Node know how many asserts you plan to call and how many
+sub tests you plan to run.
+
+This is perfect for tests that require you to loop over a set of data.
+
+In order to use this feature, you must use the assertions library passed in as part of the test context, rather than from
+the `assert` module. For example:
+
+```javascript
+// Using the compare function from the above example
+test('Returns a 1 when a is greater than b', (context) => {
+  context.plan(1); // We plan to call 1 assert function
+  const result = compare(2, 1);
+
+  // Calling the root `assert` here doesn't work with the test plan because they are in different contexts
+  context.assert.equal(result, 1);
 });
 ```
 
@@ -359,6 +385,16 @@ by the mocked `Date.now()`.
 
 <Ad />
 
+### Mocking Modules
+
+As of [Node.js version 22.3.0](https://nodejs.org/en/blog/release/v22.3.0) there is experimental support for [mocking modules](https://nodejs.org/docs/latest/api/test.html#class-mockmodulecontext).
+
+To enable this feature, you must pass the [`--experimental-test-module-mocks`](https://nodejs.org/docs/latest/api/test.html#class-mockmodulecontext) to `node`.
+
+When this feature becomes more stable this guide will be updated to cover it.
+
+<Ad />
+
 ## Test Reporters
 
 When using the Test Runner, by default the tests are reported in a human-readable
@@ -405,6 +441,8 @@ As of [Node.js version 20.11.0](https://nodejs.org/en/blog/release/v20.11.0), th
 is a ["lcov" reporter](https://nodejs.org/docs/latest/api/test.html#coverage-reporters)
 included by default. to use it specify `--test-reporter=lcov` along with `--experimental-test-coverage`.
 
+<Ad />
+
 ## Conclusion
 
 In conclusion, the new stable Test Runner in [Node.js 20](/blog/node-20/) is a valuable addition
@@ -416,6 +454,7 @@ Happy testing!
 
 ## Further Reading
 
+- [Node.js Test Runner Guide (Official)](https://nodejs.org/en/learn/test-runner/using-test-runner)
 - [Node.js Test Runner docs](https://nodejs.org/api/test.html)
 - [Node.js Test CLI docs](https://nodejs.org/api/cli.html#--test)
 - [Node.js Assert docs](https://nodejs.org/api/assert.html)

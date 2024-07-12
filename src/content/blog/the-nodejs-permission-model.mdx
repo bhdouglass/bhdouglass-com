@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: The Node.js Permission Model
 date: 2023-04-24T20:13:17.000Z
-updatedDate: 2024-01-31T20:53:31.304Z
+updatedDate: 2024-07-12T14:24:22.867Z
 categories:
   - nodejs
   - tutorials
@@ -73,6 +73,11 @@ same permissions as the process that spawned it.
 
 This flag allows [native addons](https://nodejs.org/api/addons.html) to be used.
 This is available in [Node.js version 21.6.0](https://nodejs.org/en/blog/release/v21.6.0#changes-to-the-permission-model).
+
+## [`--allow-wasi`](https://nodejs.org/docs/latest/api/cli.html#--allow-wasi)
+
+This flag allows WASI instances using the [web assembly system interface module](https://nodejs.org/docs/latest/api/wasi.html).
+This is avaiable in [Node.js version 22.3.0](https://nodejs.org/en/blog/release/v22.3.0)
 
 <RandomSupport />
 
