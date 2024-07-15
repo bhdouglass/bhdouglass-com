@@ -1,0 +1,180 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: "Node.js Performance: Loops"
+date: 2024-07-15T03:52:51.129Z
+categories:
+  - nodejs
+  - javascript
+  - performance
+image: /images/blog/javascript-performance/roller-coaster-loops.jpg
+imageAlt: Roller coaster loops
+description: What's the best way to loop over an array?
+relatedPosts:
+  - nodejs-task-runner
+  - nodejs-test-runner
+  - using-dot-env-files-with-nodejs
+---
+
+JavaScript has several different ways to loop over array-like data. There are
+standard for loops, for-of loops, the `.forEach()` method and, even `while` loops
+if you want to get fancy.
+
+But which loop is the best loop to use in your code?
+
+## Table of contents
+
+## The Different Ways to Loop
+
+### Standard For Loop
+
+```javascript
+for (let index = 0; index < array.length; index++) {
+  const value = array[index];`
+}
+```
+
+The humble for loop is a staple among many different programming languages. You
+define an index, then increment the index until you hit the end of the array.
+
+### Standard For Loop (With Length Variable)
+
+```javascript
+for (let index = 0, length = array.length; index < length; index++) {
+  const value = array[index];
+}
+```
+
+This variant of the for loop is similar to the standard for loop with one key difference.
+The length of the array is stored in a variable once, avoiding any potential
+slowdowns when looking up the array's length.
+
+### Reverse For Loop
+
+```javascript
+for (let index = array.length - 1; index >= 0; index--) {
+  const value = array[index];
+}
+```
+
+Similar to the above "standard for loop with length variable", this loop only
+looks up the array's length once and then processes the array in reverse order.
+
+### `Array.forEach()`
+
+```javascript
+array.forEach((value) => {});
+```
+
+Unlike the rest of the loop options, the `Array.forEach()` method is not a language
+construct, but a function of the Array prototype. The other major difference is
+that you are calling a function on each of the array elements.
+
+### For-of
+
+```javascript
+for (const value of array) {}
+```
+
+The for-of loop is by far the most developer-friendly way of looping over an array.
+It does lack the flexibility of some of the other options (for example a standard for
+loop could only iterate over every other element), but it is the simplest to read.
+
+### Reverse While
+
+```javascript
+let index = array.length;
+while (index--) {
+  const value = array[index];
+}
+```
+
+The reverse while loop is similar to the reverse for loop. But it is simpler
+to reason about.
+
+### Forward While
+
+```javascript
+let index = -1;
+while (++index < array.length) {
+  const value = array[index];
+}
+```
+
+The forward while is more complex to reason about than any of the other options.
+I would recommend avoiding it if you can.
+
+## Testing Methodology
+
+In order to determine which looping method was the best I devised a set of benchmarks.
+Using the [Tinybench](https://github.com/tinylibs/tinybench) library I tested
+each loop method's effectiveness at calculating the sum of an array of numbers.
+This way the JavaScript engine wouldn't see the loops as a no-op and optimize them
+away.
+
+I ran the tests at different array lengths to see a which point one method was better
+than another. This way the results should show which loop is most effective for
+a given data set.
+
+The tests also use different run times to compare performance across engines.
+Currently, the engines included are:
+
+- Node.js v18
+- Node.js v20
+- Node.js v22
+- Bun v1.1.18
+- Deno v1.44.4
+
+You can see the full test suite over at my [GitHub Repo](https://gitlab.com/bhdouglass/javascript-performance/-/blob/master/loops-tests.js).
+
+Browsers weren't considered for this test as I'm mainly focusing on server-side
+JavaScript engines.
+
+![Loops benchmark log output](/images/blog/javascript-performance/loops-log-output.png)
+
+## The Test Machine
+
+Because context matters here, the machine I'm running these tests on is a
+[System76 Darter Pro 8](/blog/system76-darter-pro-8). It has a 12th-generation
+Intel CPU that clocks in around 4.70 GHz (model i7-1260P). And it has 32 GB of RAM.
+
+![System Information](/images/blog/system-information.png)
+
+## Results
+
+Here are the results using arrays with lengths of ten, one thousand, and one million.
+
+![Array Length 10](/images/blog/javascript-performance/loops-array-length-10.png)
+![Array Length 1,000](/images/blog/javascript-performance/loops-array-length-1000.png)
+![Array Length 1,000,000](/images/blog/javascript-performance/loops-array-length-1000000.png)
+
+[Download the full results.](https://gitlab.com/bhdouglass/javascript-performance/-/blob/master/loops.ods)
+
+## Conclusions
+
+Generally speaking, the standard for loop and the for loop with array length both
+performed similarly. This leads me to believe that optimizations around the array length
+lookups aren't necessary.
+
+`Array.forEach()` performed the poorest across all array sizes. This is even more
+apparent at large array sizes. This is because a function is being
+invoked for each element, which leads to more processing than the other loop types.
+
+The while loops didn't perform quite as well as the standard for loops.
+
+The for-of loop performed worse compared to the standard for as the size of the array grew.
+
+## So, what is the best loop for JavaScript?
+
+The developer-friendly nature of the for-of loop makes it the best for small arrays.
+
+However, when dealing with larger arrays and performance matters, switch to using
+a standard for loop.
+
+Avoid `Array.forEach()` as much as possible. The performance implications of calling
+a function for each element causes this looping method to not be recommended.
+
+## Feedback
+
+If you have any feedback on my testing methodologies or suggestions for improvement,
+just create an issue on my [GitLab repo for this blog](https://gitlab.com/bhdouglass/bhdouglass-com/-/issues/new)
+or on the [GitLab repo for the benchmarks](https://gitlab.com/bhdouglass/javascript-performance/-/issues/new).

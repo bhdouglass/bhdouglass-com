@@ -1,11 +1,11 @@
 ---
-import { getEntryBySlug } from 'astro:content';
-import { format } from 'date-fns';
-import { categoriesToTags, getBlogDate } from '../utilities';
-import PostTags from './PostTags.astro';
+import { getEntryBySlug } from "astro:content";
+import { format } from "date-fns";
+import { categoriesToTags, getBlogDate } from "../utilities";
+import PostTags from "./PostTags.astro";
 import BlogListItem from "./BlogListItem.astro";
-import type { Frontmatter } from '../types';
-import SocialShare from './SocialShare.astro';
+import type { Frontmatter } from "../types";
+import SocialShare from "./SocialShare.astro";
 
 export type Props = {
   frontmatter: Frontmatter;
@@ -17,48 +17,50 @@ const { title, date, updatedDate, categories, draft, description, image, imageAl
 const tags = categoriesToTags(categories);
 const updated = getBlogDate(date, updatedDate);
 
-const relatedPosts = await Promise.all(frontmatter.relatedPosts?.map((slug) => getEntryBySlug('blog', slug)) ?? []);
+const relatedPosts = await Promise.all(frontmatter.relatedPosts?.map((slug) => getEntryBySlug("blog", slug)) ?? []);
 ---
 
 <section class="py-8 sm:py-16 lg:py-20 mx-auto">
   <article>
     <header>
       <div class="flex justify-between flex-col sm:flex-row max-w-3xl mx-auto mt-0 mb-2 px-4 sm:px-6 sm:items-center">
-        {frontmatter.updatedDate && (
-          <p>
-            Updated <time datetime={updated}>{format(new Date(updated), 'MMMM d, yyyy')}</time>
-          </p>
-        )}
+        {
+          frontmatter.updatedDate && (
+            <p>
+              Updated <time datetime={updated}>{format(new Date(updated), "MMMM d, yyyy")}</time>
+            </p>
+          )
+        }
 
         <p>
-          Published <time datetime={date}>{format(new Date(date), 'MMMM d, yyyy')}</time>
+          Published <time datetime={date}>{format(new Date(date), "MMMM d, yyyy")}</time>
         </p>
       </div>
-      <h1
-        class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading"
-      >
-        {title} {draft && '(DRAFT)'}
+      <h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        {title}
+        {draft && "(DRAFT)"}
       </h1>
 
       <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between flex-col sm:flex-row">
         <PostTags tags={tags} class="mr-5" />
       </div>
 
-      {description && (
-        <p
-          class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-gray-500 dark:text-slate-400 font-medium text-justify"
-        >
-          {description}
-        </p>
-      )}
+      {
+        description && (
+          <p class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-gray-500 dark:text-slate-400 font-medium text-justify">
+            {description}
+          </p>
+        )
+      }
 
       {
         image ? (
           <img
             src={image}
+            fetchpriority="high"
             class="max-w-full lg:max-w-6xl mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
             sizes="(max-width: 900px) 400px, 900px"
-            alt={imageAlt || ''}
+            alt={imageAlt || ""}
             loading="eager"
           />
         ) : (
@@ -68,9 +70,7 @@ const relatedPosts = await Promise.all(frontmatter.relatedPosts?.map((slug) => g
         )
       }
 
-      <div
-        class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-right"
-      >
+      <div class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-right">
         <SocialShare url={Astro.url.href} text={title} />
       </div>
     </header>
@@ -82,20 +82,18 @@ const relatedPosts = await Promise.all(frontmatter.relatedPosts?.map((slug) => g
     </div>
   </article>
 
-  <div
-    class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-right"
-  >
+  <div class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-right">
     <SocialShare url={Astro.url.href} text={title} />
   </div>
 
-  {relatedPosts.length > 0 && (
-    <div
-      class="border-t border-gray-400 dark:border-slate-600 pt-6 mx-auto px-6 sm:px-6 max-w-3xl mt-8"
-    >
-      <h2 class="text-3xl font-bold leading-tighter tracking-tighter font-heading mb-8">Related Posts</h2>
-      {relatedPosts.map((post) => (
-        <BlogListItem post={post} slim={true} />
-      ))}
-    </div>
-  )}
+  {
+    relatedPosts.length > 0 && (
+      <div class="border-t border-gray-400 dark:border-slate-600 pt-6 mx-auto px-6 sm:px-6 max-w-3xl mt-8">
+        <h2 class="text-3xl font-bold leading-tighter tracking-tighter font-heading mb-8">Related Posts</h2>
+        {relatedPosts.map((post) => (
+          <BlogListItem post={post} slim={true} />
+        ))}
+      </div>
+    )
+  }
 </section>
