@@ -28,7 +28,7 @@ const ogArticleData = articleData ? {
   author: articleData.author.name,
   tags: articleData.keywords,
 } : undefined;
-const ogImage = new URL(image ?? '/images/logo.png', import.meta.env.SITE).href;
+const ogImage = new URL(image ?? '/images/logo.webp', import.meta.env.SITE).href;
 const ogImageAlt = imageAlt || "Brian Douglass' logo";
 ---
 

@@ -7,7 +7,7 @@ categories:
   - clickable
   - openstore
   - tutorial
-image: /images/blog/openstore/openstore-apps.png
+image: /images/blog/openstore/openstore-apps.webp
 imageAlt: A list of apps on the website open-store.io.
 description: Use Clickable to automatically publish your apps to the OpenStore.
 relatedPosts:
@@ -45,7 +45,7 @@ After that log into your OpenStore account and navigate to the [submission page]
 Enter the app's name and title. It is very important to use the same app name as in your manifest.json or you will not be able to publish your app.
 For more information, read [my guide to submitting apps to the OpenStore](/blog/how-to-publish-an-ubuntu-touch-app/).
 
-![Submit Apps](/images/blog/gitlab-ci/submit-apps.png)
+![Submit Apps](/images/blog/gitlab-ci/submit-apps.webp)
 
 ## Setting up the GitLab repo
 
@@ -54,7 +54,7 @@ First, navigate to "Settings" > "Repository" and find the "Protected Tags" secti
 Add a wildcard tag, `v*`, and set Maintainers as the ones allowed to create these.
 This allows you to publish the app whenever a new tag starting with `v` is pushed (ex: `v1.2.3`).
 
-![Protected Tags](/images/blog/gitlab-ci/protected-tags.png)
+![Protected Tags](/images/blog/gitlab-ci/protected-tags.webp)
 
 Once that is done navigate to "Settings" > "CI / CD" and find the "Environment variables" section. Add the variable `OPENSTORE_API_KEY`,
 and enter your OpenStore api key. You can find your api key on the [manage apps page](https://open-store.io/manage) by
@@ -63,7 +63,7 @@ By keeping the api key a protected variable it is only available on protected br
 (And only maintainers will have access to protected tags as was previously setup).
 This means that someone making a merge request to your application can not make a malicious update to your app on the OpenStore.
 
-![Environment Variables](/images/blog/gitlab-ci/environment-variables.png)
+![Environment Variables](/images/blog/gitlab-ci/environment-variables.webp)
 
 ## .gitlab-ci.yml
 
@@ -132,7 +132,7 @@ The argument passed to `clickable publish` will get added to the OpenStore chang
 In this case the special GitLab CI variable called `CI_COMMIT_MESSAGE` is used. This variable will hold the value of the last commit message.
 With this setup the an app can be built and published without ever needing to log into the OpenStore.
 
-![CI Pipeline](/images/blog/gitlab-ci/ci-pipeline.png)
+![CI Pipeline](/images/blog/gitlab-ci/ci-pipeline.webp)
 
 ## Git workflow
 
@@ -169,7 +169,7 @@ Having completed the version update commit, the next step is to tag that commit 
 Push both your commits and the new tag to GitLab using `git push && git push --tags`.
 Once GitLab receives the commits and tags it will start building your app and publish it to the OpenStore.
 
-![CI Job](/images/blog/gitlab-ci/ci-job.png)
+![CI Job](/images/blog/gitlab-ci/ci-job.webp)
 
 ## Closing
 

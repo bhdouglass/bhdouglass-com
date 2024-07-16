@@ -17,10 +17,10 @@
     "resume-export": "resume export --theme bhdouglass --resume src/data/resume.json public/resume/index.html",
     "resume-export-pdf": "resume export --theme bhdouglass --resume src/data/resume.json brian-douglass-resume.pdf",
     "resume-serve": "resume serve --theme bhdouglass --resume src/data/resume.json --dir .tmp",
-    "optimize-jpeg": "jpegoptim --strip-all --overwrite --max=90",
-    "optimize-png": "optipng",
-    "sync": "astro sync",
-    "date": "echo 'console.log(require(\"date-fns\").format(new Date(), \"yyyy-MM-dd HH:mm:ss xx\"))' | node"
+    "images": "find ./public -type f -regex \".*\\.\\(jpg\\|jpeg\\|png\\)\" -exec mogrify -format webp {}  \\; -print",
+    "optimize": "find ./public -type f -name *.webp -exec cwebp -q 70 -m 6 {} -o {} \\; -print",
+    "originals": "find ./public -type f -regex \".*\\.\\(jpg\\|jpeg\\|png\\)\" -exec mv {} ./originals  \\; -print",
+    "sync": "astro sync"
   },
   "repository": {
     "type": "git",

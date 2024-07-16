@@ -4,7 +4,7 @@ title: Moving Raspberry Pi SD Cards
 date: 2023-11-29T14:30:06.000Z
 categories:
   - raspberry-pi
-image: /images/blog/raspberry-pi/raspberry-pi-sd-card.png
+image: /images/blog/raspberry-pi/raspberry-pi-sd-card.webp
 imageAlt: A Raspberry Pi single board computer and a micro sd card
 description: Transfer your Raspberry Pi SD card to a new one with ease
 ---
@@ -25,7 +25,7 @@ After inserting the SD card into a computer, run `lsblk -p` to find the device
 ID of the SD card. Usually, this looks something like `/dev/mmcblk0`. Be sure to
 select the root of the SD card, not the partition (for example, `/dev/mmcblk0p1`).
 
-![The output of the terminal command "lsblk -p"](/images/blog/raspberry-pi/lsblk-p.png)
+![The output of the terminal command "lsblk -p"](/images/blog/raspberry-pi/lsblk-p.webp)
 
 ## Clone the SD Card
 
@@ -40,7 +40,7 @@ to copy the card. For example:
 sudo dd bs=4M if=/dev/mmcblk0 of=~/path/to/storage/rpi.img conv=fsync
 ```
 
-![The output of the terminal command "dd"](/images/blog/raspberry-pi/dd.png)
+![The output of the terminal command "dd"](/images/blog/raspberry-pi/dd.webp)
 
 <RandomSupport />
 
@@ -77,7 +77,7 @@ Example `dd` command (replace `/dev/mmcblk0` with your SD card): `sudo dd bs=4M 
 Now the next time you boot your Raspberry Pi it will automatically expand to the
 full size of the SD card without any data loss.
 
-![The Raspberry Pi 4 Model B Small Board Computer](/images/blog/raspberry-pi/raspberry-pi-4.jpg)
+![The Raspberry Pi 4 Model B Small Board Computer](/images/blog/raspberry-pi/raspberry-pi-4.webp)
 
 ## Further Resources
 

@@ -6,7 +6,7 @@ updatedDate: 2024-06-21T13:14:13.145Z
 categories:
   - self-hosting
   - docker
-image: /images/blog/logos/owntracks-logo.png
+image: /images/blog/logos/owntracks-logo.webp
 imageAlt: The OwnTracks logo
 description: Be in control of your own location data with OwnTracks!
 ---
@@ -65,7 +65,7 @@ Start the OwnTracks Recorder server with the command `docker compose up`. The
 server will be listening on your server's IP address at port 8083. You can
 view the basic interface by going to `http://<server-ip>:8083` in your browser.
 
-<img src="/images/blog/owntracks/owntracks-recorder-web-ui-empty.png" alt="An empty OwnTracks Recorder web UI" />
+<img src="/images/blog/owntracks/owntracks-recorder-web-ui-empty.webp" alt="An empty OwnTracks Recorder web UI" />
 
 <Ad />
 
@@ -132,7 +132,7 @@ unique to the device (no spaces allowed). Be sure to remember it later if you wa
 set up friends. The "Tracker ID" is a two-character identifier that will show up
 on the map for you and your friends.
 
-<img src="/images/blog/owntracks/owntracks-android-app-configuration.png" alt="Side-by-side screenshots of the OwnTracks Android app. On the left is the Host configuration and on the right is the Identification configuration." />
+<img src="/images/blog/owntracks/owntracks-android-app-configuration.webp" alt="Side-by-side screenshots of the OwnTracks Android app. On the left is the Host configuration and on the right is the Identification configuration." />
 
 ### iOS
 
@@ -149,7 +149,7 @@ to match the basic auth credentials that you set on your reverse proxy.
 
 Finally, set the "URL" as `https://<your domain>/pub`.
 
-<img src="/images/blog/owntracks/owntracks-ios-app-configuration-and-friends.png" alt="Side-by-side screenshots of the OwnTracks iOS app. On the left is the Settings page and on the right is the friends list." />
+<img src="/images/blog/owntracks/owntracks-ios-app-configuration-and-friends.webp" alt="Side-by-side screenshots of the OwnTracks iOS app. On the left is the Settings page and on the right is the friends list." />
 
 ### Verify it Works
 
@@ -160,7 +160,7 @@ credentials, revisit your reverse proxy settings.
 
 You should see any devices registered both in the list and on the provided map.
 
-<img src="/images/blog/owntracks/owntracks-recorder-web-ui.png" alt="The OwnTracks Recorder web UI with data." />
+<img src="/images/blog/owntracks/owntracks-recorder-web-ui.webp" alt="The OwnTracks Recorder web UI with data." />
 
 <Ad />
 
@@ -203,7 +203,7 @@ ocat --dump=friends
 
 Now you and your friends/family can view each other's locations from within the app.
 
-<img src="/images/blog/owntracks/owntracks-android-app-map.png" alt="The OwnTracks Android app map with friend locations." />
+<img src="/images/blog/owntracks/owntracks-android-app-map.webp" alt="The OwnTracks Android app map with friend locations." />
 
 ## Pretty Images on the Map
 
@@ -236,7 +236,7 @@ Make sure you have the `convert` command installed from ImageMagic.
 Set the script as executable (`chmod +x image2card.sh`), then run:
 
 ```bash
-image2card.sh /path/to/file.jpg "FULL NAME" > card.json
+image2card.sh /path/to/file.webp "FULL NAME" > card.json
 ```
 
 ### Put the Cards on the Server
@@ -247,7 +247,7 @@ be served by OwnTracks Recorder. Store the files for each user in
 
 Now you can have nice images on your maps!
 
-<img src="/images/blog/owntracks/owntracks-android-app-map-avatars.png" alt="The OwnTracks Android app map with friend locations marked with avatars." />
+<img src="/images/blog/owntracks/owntracks-android-app-map-avatars.webp" alt="The OwnTracks Android app map with friend locations marked with avatars." />
 
 <Ad />
 

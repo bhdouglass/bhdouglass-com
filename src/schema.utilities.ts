@@ -1,7 +1,7 @@
 import type { Frontmatter } from './types';
 
 export function generateSchema(url: string, title: string, frontmatter?: Frontmatter) {
-  const image = new URL(frontmatter?.image ?? '/images/logo.png', import.meta.env.SITE);
+  const image = new URL(frontmatter?.image ?? '/images/logo.webp', import.meta.env.SITE);
 
   const dateModified = frontmatter?.updatedDate ? (frontmatter.updatedDate === 'now' ? new Date() : new Date(frontmatter.updatedDate)).toISOString() : undefined;
 
