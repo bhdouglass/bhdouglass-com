@@ -1,0 +1,32 @@
+---
+import sizeOf from "image-size";
+
+export type Props = {
+  src: string;
+  alt: string;
+  attrib?: string;
+  link?: string;
+  loading?: "eager" | "lazy";
+};
+
+const { src, alt, attrib, link, loading = "lazy" } = Astro.props;
+
+const size = src.startsWith('/images/') ? sizeOf(`./public${src}`) : {};
+---
+
+<figure class="not-prose">
+  <img src={src} alt={alt} class="sm:rounded-md" width={size.width} height={size.height} loading={loading} />
+  {attrib && (
+    <figcaption class="text-sm text-gray-400">
+      {
+        link ? (
+          <a class="underline" rel="noopener noreferrer nofollow" target="_blank" href={link}>
+            {attrib}
+          </a>
+        ) : (
+          <>{attrib}</>
+        )
+      }
+    </figcaption>
+  )}
+</figure>

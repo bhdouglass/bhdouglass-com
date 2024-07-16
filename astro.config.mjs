@@ -11,6 +11,7 @@ import m2dx from 'astro-m2dx';
 /** @type {import('astro-m2dx').Options} */
 const m2dxOptions = {
   autoImports: true,
+  exportComponents: true,
 };
 
 const SITE = 'https://bhdouglass.com/';

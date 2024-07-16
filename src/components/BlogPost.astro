@@ -6,6 +6,7 @@ import PostTags from "./PostTags.astro";
 import BlogListItem from "./BlogListItem.astro";
 import type { Frontmatter } from "../types";
 import SocialShare from "./SocialShare.astro";
+import sizeOf from "image-size";
 
 export type Props = {
   frontmatter: Frontmatter;
@@ -16,6 +17,7 @@ const { frontmatter } = Astro.props;
 const { title, date, updatedDate, categories, draft, description, image, imageAlt } = frontmatter;
 const tags = categoriesToTags(categories);
 const updated = getBlogDate(date, updatedDate);
+const size = sizeOf(`./public${image}`);
 
 const relatedPosts = await Promise.all(frontmatter.relatedPosts?.map((slug) => getEntryBySlug("blog", slug)) ?? []);
 ---
@@ -61,6 +63,8 @@ const relatedPosts = await Promise.all(frontmatter.relatedPosts?.map((slug) => g
             class="max-w-full lg:max-w-6xl mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
             sizes="(max-width: 900px) 400px, 900px"
             alt={imageAlt || ""}
+            width={size.width}
+            height={size.height}
             loading="eager"
           />
         ) : (
