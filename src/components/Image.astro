@@ -11,7 +11,7 @@ export type Props = {
 
 const { src, alt, attrib, link, loading = "lazy" } = Astro.props;
 
-const size = src.startsWith('/images/') ? sizeOf(`./public${src}`) : {};
+const size = src.startsWith('/images/') ? sizeOf(`./public${src}`) : { width: undefined, height: undefined };
 ---
 
 <figure class="not-prose">
