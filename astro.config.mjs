@@ -6,6 +6,12 @@ import robotsTxt from 'astro-robots-txt';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import taxonomyDb from './.frontmatter/database/taxonomyDb.json';
+import m2dx from 'astro-m2dx';
+
+/** @type {import('astro-m2dx').Options} */
+const m2dxOptions = {
+  autoImports: true,
+};
 
 const SITE = 'https://bhdouglass.com/';
 const categoryPages = taxonomyDb.taxonomy.categories.map((category) => `${SITE}blog/${category}/`);
@@ -30,6 +36,6 @@ export default defineConfig({
     robotsTxt({ sitemapBaseFileName: 'sitemap' }),
   ],
   markdown: {
-    remarkPlugins: [remarkToc],
+    remarkPlugins: [[m2dx, m2dxOptions], remarkToc],
   }
 });
