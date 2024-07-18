@@ -1,0 +1,153 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: Node.js' Built-in SQLite Support
+date: 2024-07-18T03:57:14.256Z
+categories:
+  - nodejs
+  - tutorial
+image: /images/blog/node-tutorials/nodejs-database.webp
+imageAlt: A picture of the Node.js logo over rows of computers.
+description: Getting up to speed on the new SQLite module in Node.js
+relatedPosts:
+  - nodejs-task-runner
+  - nodejs-test-runner
+  - nodejs-performance-loops
+---
+
+[Node.js version 22.5.0](https://nodejs.org/en/blog/release/v22.5.0) was recently
+released bringing various fixes and improvements. This release also brings an
+experimental SQLite module.With the introduction of the new built-in SQLite module,
+Node.js becomes even more versatile.
+
+Does this mean you need to dump your favorite ORM? No, but it does offer a compelling,
+built-in option for small to medium-sized applications, prototyping, and testing.
+
+Let's dive in a see how we can start using the SQLite module.
+
+## Table of contents
+
+## Warning: Experimental
+
+Everything in this tutorial could be out of date by the time you read it. As of
+v22.5.0, this information is up to date. The SQLite module is under active development
+and may go through several iterations before becoming stable.
+
+I don't recommend building your startup on it!
+
+## Getting Started
+
+As of the time of writing, the [documentation](https://nodejs.org/docs/latest/api/sqlite.html)
+does not [yet mention](https://github.com/nodejs/node/issues/53906)
+that you need to have the [`--experimental-sqlite`](https://nodejs.org/docs/latest/api/cli.html#--experimental-sqlite)
+passed to Node.js in order to use the SQLite module.
+
+Without the `--experimental-sqlite` argument, you will get this error: `No such built-in module: node:sqlite`.
+
+To use the SQLite module, you will need to require/import `node:sqlite`.
+As with other recent modules like the [test runner](/blog/nodejs-test-runner/),
+there is no `sqlite` module. You must import it using the `node:` prefix.
+
+This indicates that the module is built into Node and other modules cannot
+overwrite it.
+
+```javascript
+const { DatabaseSync } = require('node:sqlite');
+```
+
+## Opening a Database
+
+To set up a new sqlite connection, you'll need to instantiate the [`DatabaseSync`](https://nodejs.org/docs/latest/api/sqlite.html#class-databasesync)
+class. To do this you can either pass it a path to a file. If the file does not
+exist, it will automatically be created for you.
+
+Alternatively, you can use `:memory:` to just use the database in memory, without
+writing to a file.
+
+```javascript
+const { DatabaseSync } = require('node:sqlite');
+
+const fileDatabase = new DatabaseSync('/path/to/a/database.sqlite');
+
+const memoryDatabase = new DatabaseSync(':memory:');
+```
+
+By default the connection with be automatically opened when the `DatabaseSync`
+class has been instantiated. However, if you pass, as the second argument, `{ open: false }`.
+Then the database will not automatically be opened.
+
+In this case, you will need to open the database connection yourself using [`.open()`](https://nodejs.org/docs/latest/api/sqlite.html#databaseopen).
+
+## Closing a Database
+
+After a database connection has been opened, you can then close it by using the
+[`.close()`](https://nodejs.org/docs/latest/api/sqlite.html#databaseclose) of
+the `DatabaseSync` class.
+
+Once closed, the database connection cannot be used again until it has been re-opened.
+
+## Executing SQL
+
+There are two ways to execute SQL statements, either using [`.exec()`](https://nodejs.org/docs/latest/api/sqlite.html#databaseclose)
+or [`.prepare()`](https://nodejs.org/docs/latest/api/sqlite.html#databasepreparesql).
+
+The `.exec()` function simply executes the passed SQL. It does not protect
+against SQL injections and is best used with data that you control. For example,
+from a hard-coded string or read from a file.
+
+`.exec()` does not return any results.
+
+It is recommended to use `.exec()` sparingly and use `.prepare()` for most of your needs.
+
+## Prepared Statements
+
+Other than `.exec()` there is the `.prepare()` function. This function creates a
+prepared statement that you can then use to execute SQL against the database.
+
+The returned [`StatementSync`](https://nodejs.org/docs/latest/api/sqlite.html#class-statementsync)
+object can be used to execute multiple SQL queries using passed parameters.
+
+For example:
+
+```javascript
+const statement = database.prepare('INSERT INTO table_name VALUES (?, ?, ?)');
+statement.run(1, 2, 'abc');
+statement.run(3, 4, 'def');
+```
+
+The above example will insert two rows into the table using the same prepared statement,
+but different parameters.
+
+The [`.run()`](https://nodejs.org/docs/latest/api/sqlite.html#statementrunnamedparameters-anonymousparameters)
+method executes the statement and returns a summary of the changes. The variables
+passed into the `.run()` function must match the number of parameters specified
+by the SQL you created. In the above example, there are three `?`, meaning we need
+to supply 3 parameters.
+
+## Getting Back Results
+
+Now that there is data in our SQLite table, we will need to be able to retrieve that
+data.
+
+There are two methods to return data from a prepared statement, [`.get()`](https://nodejs.org/docs/latest/api/sqlite.html#statementgetnamedparameters-anonymousparameters)
+and [`.all()`](https://nodejs.org/docs/latest/api/sqlite.html#statementallnamedparameters-anonymousparameters).
+The `.get()` method will return a single result as an object, while `.all()`
+will return multiple result objects.
+
+The objects returned by both functions will have keys defined by the database columns.
+
+For example:
+
+```javascript
+const allStatement = database.prepare('SELECT * FROM table_name');
+console.log(allStatement.all()); // Returns something like [{ id: ... }, { id: ... }]
+
+const getStatement = database.prepare(`SELECT * FROM table_name WHERE id=?`);
+console.log(getStatement.get(1)); // Returns something like { id: ... }
+```
+
+As with the `.run()` function, both `.get()` and `.all()` will accept a number
+of parameters as needed by the prepared statement.
+
+## Further Reading
+
+- [SQLite module documentation](https://nodejs.org/docs/latest/api/sqlite.html)
