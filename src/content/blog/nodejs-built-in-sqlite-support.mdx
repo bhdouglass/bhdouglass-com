@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: Node.js' Built-in SQLite Support
 date: 2024-07-18T03:57:14.256Z
+updatedDate: 2024-07-29T01:39:29.536Z
 categories:
   - nodejs
   - tutorial
@@ -29,8 +30,11 @@ Let's dive in a see how we can start using the SQLite module.
 ## Warning: Experimental
 
 Everything in this tutorial could be out of date by the time you read it. As of
-v22.5.0, this information is up to date. The SQLite module is under active development
+v22.5.1, this information is up to date. The SQLite module is under active development
 and may go through several iterations before becoming stable.
+
+Version 22.5.0 had a serious bug in it that has been fixed by [v22.5.1](https://nodejs.org/en/blog/release/v22.5.1).
+Make sure you use that version (or later) when trying out `node:sqlite`!
 
 I don't recommend building your startup on it!
 
