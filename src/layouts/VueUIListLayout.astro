@@ -57,7 +57,7 @@ const enrichedProjects = await Promise.all(projects.filter((project) => Boolean(
   });
 }));
 
-enrichedProjects.sort((a, b) => {
+enrichedProjects.sort((a: any, b: any) => {
   if (!a.github.stargazers_count) {
     console.log(a.github);
   }
@@ -76,7 +76,7 @@ enrichedProjects.sort((a, b) => {
   <div class="mb-4">
     <TableOfContents client:load>
       <ol>
-        {enrichedProjects.map((project) => (
+        {enrichedProjects.map((project: any) => (
           <li>
             <a href={`#${project.githubRepo.replace('/', '-')}`}>{project.name}</a>
           </li>
@@ -94,7 +94,7 @@ enrichedProjects.sort((a, b) => {
     />
   </div>
 
-  {enrichedProjects.map((project) => (
+  {enrichedProjects.map((project: any) => (
     <div class={project.vue3 ? '' : 'no-vue3'}>
       <a id={project.githubRepo.replace('/', '-')}></a>
       <TextSection header={project.name}>
