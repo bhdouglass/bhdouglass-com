@@ -1,0 +1,141 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: "Node.js Performance: Array.concat() vs the spread operator"
+date: 2024-08-14T02:13:04.237Z
+categories:
+  - nodejs
+  - javascript
+  - performance
+image: /images/blog/javascript-performance/cats-in-a-row.webp
+imageAlt: Cats lined up in a row
+description: What is the best way to concatenate arrays in JavaScript?
+draft: true
+relatedPosts:
+  - nodejs-performance-loops
+  - nodejs-task-runner
+  - nodejs-test-runner
+---
+
+<ImageAttrib attrib="Image by vector_corp on Freepik" link="hhttps://www.freepik.com/free-ai-image/group-cute-cats-photography_66841281.htm" />
+
+In JavaScript there are two ways to combine arrays. Using the old standard `Array.concat()`
+method. Or the more modern spread operator (`...`). But which method is the most
+performant way to combine arrays?
+
+This article will help you find the *purr*-fect way to con-*cat*-enate your arrays!
+
+<Ad />
+
+## Table of contents
+
+## The Different Ways to Combine Arrays
+
+### `Array.concat()`
+
+```javascript
+const combined = array1.concat(array2);
+```
+
+This is the traditional way to combine two arrays, simply call the `concat()`
+function of the one array with the second array as the input. Then you get a new
+array with the combined data of both arrays without modifying the original arrays.
+
+### The Spread Operator (`...`)
+
+```javascript
+const combined = [...array1, ...array2];
+```
+
+This is a more modern way to combine two arrays. As with `concat()` the original
+arrays are not changed by using the spread operator.
+
+### `Array.flat()`
+
+```javascript
+const combined = [array1, array2].flat();
+```
+
+This method is a bit out there, but I found myself reaching for it when trying
+to make code more readable. Ultimately I didn't stick with it as the results will
+show.
+
+<Ad />
+
+## Testing Methodology
+
+As with my previous [benchmarking of loops](/blog/nodejs-performance-loops),
+I used the [Tinybench](https://github.com/tinylibs/tinybench) library. The benchmarks
+simply combine an array with itself to make a new array. This test was run against
+different array lengths to see if one method or another was more effective at different
+sizes.
+
+The tests also use different run times to compare performance across engines.
+Currently, the engines included are:
+
+- Node.js v18
+- Node.js v20
+- Node.js v22
+- Bun v1.1.18
+- Deno v1.44.4
+
+You can see the full test suite over at my [GitHub Repo](https://gitlab.com/bhdouglass/javascript-performance/-/blob/master/concat/concat-tests.js).
+
+Browsers weren't considered for this test as I'm mainly focusing on server-side
+JavaScript engines.
+
+![Concat benchmark log output](/images/blog/javascript-performance/concat-log-output.webp)
+
+## The Test Machine
+
+The machine I'm running these tests on is a
+[System76 Darter Pro 8](/blog/system76-darter-pro-8). It has a 12th-generation
+Intel CPU that clocks in around 4.70 GHz (model i7-1260P). And it has 32 GB of RAM.
+
+![System Information](/images/blog/system-information.webp)
+
+<Ad />
+
+## Results
+
+Here are the results combining two arrays with lengths of ten, one hundred, one thousand, and one hundred thousand.
+
+![Array Length 10](/images/blog/javascript-performance/concat-array-length-10.webp)
+
+![Array Length 100](/images/blog/javascript-performance/concat-array-length-100.webp)
+
+![Array Length 1,000](/images/blog/javascript-performance/concat-array-length-1000.webp)
+
+![Array Length 100,000](/images/blog/javascript-performance/concat-array-length-100000.webp)
+
+[Download the full results.](https://gitlab.com/bhdouglass/javascript-performance/-/blob/master/concat/concat.ods)
+
+## Conclusions
+
+For Node.js, `Array.concat()` is more performant when combining arrays of length
+around 100 and more. For Bun, `Array.concat()` is more performant at any array length.
+
+The `Array.flat()` fails to perform well at any array length. Plus, it is a little
+weird so it doesn't provide a very good developer experience.
+
+So, when you know the array sizes will remain small, using the spread operator
+can be good for developer experience. However, most of the time `Array.concat()`
+will be more performant.
+
+The spread operator can be used in other contexts, like when using iterators.
+To quote this [Stack Overflow answer](https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat):
+"Performance-wise `concat` is faster, probably because it can benefit from array-specific optimizations, while `...` has to conform to the common iteration protocol."
+
+<Ad />
+
+## So, what is the best way to combine arrays in JavaScript?
+
+`Array.concat()` is the most performant way to combine arrays in JavaScript at
+most array lengths. It is well understood and optimized compared to the spread operator.
+
+<Ad />
+
+## Feedback
+
+If you have any feedback on my testing methodologies or suggestions for improvement,
+just create an issue on my [GitLab repo for this blog](https://gitlab.com/bhdouglass/bhdouglass-com/-/issues/new)
+or on the [GitLab repo for the benchmarks](https://gitlab.com/bhdouglass/javascript-performance/-/issues/new).
