@@ -58,10 +58,6 @@ const enrichedProjects = await Promise.all(projects.filter((project) => Boolean(
 }));
 
 enrichedProjects.sort((a: any, b: any) => {
-  if (!a.github.stargazers_count) {
-    console.log(a.github);
-  }
-
   if (a.github.stargazers_count > b.github.stargazers_count) return -1;
   if (a.github.stargazers_count < b.github.stargazers_count) return 1;
   return 0;
