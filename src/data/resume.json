@@ -32,7 +32,7 @@
       "highlights": [
         "Built full-stack SAAS applications with NestJS, TypeScript, GraphQL, PostgreSQL, React, Next.js, Laravel, and PHP",
         "Led a team of 5 developers while mentoring junior developers and interviewing and onboarding new developers.",
-        "Developed best practices for multiple teams and implemented code templates to reduce time spent developing new features.",
+        "Defined best practices for multiple teams and implemented code templates to reduce time spent developing new features.",
         "Integrated with third-party lending APIs that led to over $200,000 in monthly recurring revenue."
       ]
     },
@@ -46,9 +46,9 @@
       "endDate": "2020-01",
       "summary": "Developed lambda microservices in Node.js and Typescript. Built interfaces using React. Also created developer tools to improve error tracking and implemented testing solutions using Docker.",
       "highlights": [
-        "Developed full-stack consumer apps with AWS Lambda microservices and React",
-        "Improved the developer experience by creating testing solutions with docker.",
-        "Created developer tools to improve error tracking."
+        "Constructed full-stack consumer apps with AWS Lambda microservices and React",
+        "Enhanced the developer experience by creating testing solutions with docker.",
+        "Authored developer tools to improve error tracking."
       ]
     },
     {
@@ -92,8 +92,8 @@
       "highlights": [
         "Technical lead for small project teams developing a full-stack application using PHP and AngularJS.",
         "Increased revenue by integrating with the BingAds API.",
-        "Improved application efficiency and performance by rewriting the ad sync engine to scale to tens of thousands of ads.",
-        "Created a full-stack web scraping solution with Python and Django."
+        "Maximized application efficiency and performance by rewriting the ad sync engine to scale to tens of thousands of ads.",
+        "Authored a full-stack web scraping solution with Python and Django."
       ]
     },
     {
@@ -104,7 +104,7 @@
       "url": "http://diversilabs.com/",
       "startDate": "2010-05",
       "endDate": "2013-06",
-      "summary": "Developed new Qt-based interface for an aging Matlab application. Developed a new company website.",
+      "summary": "Designed new Qt-based interface for an aging Matlab application. Rewrote company website to be more modern.",
       "highlights": [
         "Designed a new graphical user interface in C++ and Qt to replace an aging Matlab-based UI.",
         "Rewrote company website to be more modern."
@@ -133,7 +133,7 @@
       "url": "http://www.plylers.net/",
       "startDate": "2014-04",
       "endDate": "2021-05",
-      "summary": "Created new applications using Python, Django, JavaScript, and Vue.js. Replaced aging spreadsheet tracking with modern applications.",
+      "summary": "Architected new applications using Python, Django, JavaScript, and Vue.js. Replaced aging spreadsheet tracking with modern applications.",
       "highlights": [
         "Architected a full-stack application using Python, Django, JavaScript, and Vue.js",
         "Replaced spreadsheets with a scalable and accurate work order management solution.",
@@ -152,7 +152,7 @@
       "highlights": [
         "Supported and developed the open-source Ubuntu Touch operating system.",
         "Organized global contributors to develop apps and write documentation.",
-        "Built and maintained UI toolkits and themes for app development.",
+        "Created and maintained UI toolkits and themes for app development.",
         "Pioneered quality-of-life improvements for app developers."
       ]
     }
@@ -262,8 +262,8 @@
       "name": "OpenStore",
       "description": "The official app store for Ubuntu Touch",
       "highlights": [
-        "Built an API first web service built using TypeScript, Node.js, Express, and MongoDB.",
-        "Created custom web client for searching and managing apps using JavaScript and Vue.js",
+        "Architected an API-first web service built using TypeScript, Node.js, Express, and MongoDB.",
+        "Designed custom web client for searching and managing apps using JavaScript and Vue.js",
         "Continued to maintain Qt/QML Ubuntu Touch app for installing applications."
       ],
       "startDate": "2015-04",
@@ -277,7 +277,7 @@
       "name": "Clickable",
       "description": "A tool to build and compile Ubuntu Touch apps easily from the command line.",
       "highlights": [
-        "Built a Python command line tool to vastly improve developer experience.",
+        "Produced a Python command line tool to vastly improve developer experience.",
         "Configured docker containers for easily reproducible builds.",
         "Lead a small international team."
       ],
@@ -292,7 +292,7 @@
       "name": "Recipe Boss",
       "description": "Recipe manager that makes your recipes work for you",
       "highlights": [
-        "Created a mobile-first web app in Vue.js for managing recipes,",
+        "implemented a mobile-first web app in Vue.js for managing recipes,",
         "Built without an API, leveraging the remote storage library"
       ],
       "startDate": "2018-01",
@@ -307,7 +307,7 @@
       "name": "Ubuntu Touch Apps",
       "description": "Development and maintenance of various apps for Ubuntu Touch",
       "highlights": [
-        "Built apps with native Qt and QML.",
+        "Programmed apps with native Qt and QML.",
         "Created apps using web technologies.",
         "Maintained and improved apps abandoned by other developers."
       ],
@@ -324,7 +324,7 @@
       "description": "Tutorials about various technologies and release announcements",
       "highlights": [
         "Wrote tutorials spanning from Node.js to self-hosting.",
-        "Built using Astro JS"
+        "Designed using Astro JS"
       ],
       "startDate": "2016-03",
       "url": "https://bhdouglass.com/blog/",
