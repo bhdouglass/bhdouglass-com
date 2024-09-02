@@ -1,0 +1,29 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+export interface Props extends HTMLAttributes<"a"> {}
+
+const { href: originalHref, rel: originalRel, ...rest } = Astro.props;
+
+let href = originalHref.toString();
+const isLocal = !href.startsWith("http") || href.startsWith(import.meta.env.SITE);
+
+let rel = originalRel ?? (isLocal ? "" : "noopener noreferrer");
+// Looks for |nofollow in the url to indicate we want to set the rel from markdown
+if (href.endsWith("%7Cnofollow") && !rel.includes("nofollow")) {
+  rel = `${rel} nofollow`;
+  href = href.replace("%7Cnofollow", "");
+}
+
+const url = new URL(href, import.meta.env.SITE);
+if (!isLocal) {
+  const site = new URL(import.meta.env.SITE);
+  url.searchParams.append("utm_source", site.host);
+
+  href = url.toString();
+}
+---
+
+<a href={href} rel={rel ? rel : undefined} {...rest}>
+  <slot />
+</a>
