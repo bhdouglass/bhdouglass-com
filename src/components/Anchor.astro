@@ -8,7 +8,7 @@ const { href: originalHref, rel: originalRel, ...rest } = Astro.props;
 let href = originalHref.toString();
 const isLocal = !href.startsWith("http") || href.startsWith(import.meta.env.SITE);
 
-let rel = originalRel ?? (isLocal ? "" : "noopener noreferrer");
+let rel = originalRel ?? (isLocal ? "" : "noopener");
 // Looks for |nofollow in the url to indicate we want to set the rel from markdown
 if (href.endsWith("%7Cnofollow") && !rel.includes("nofollow")) {
   rel = `${rel} nofollow`;
