@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: The Complete Guide to the Node.js Test Runner
 date: 2023-05-13T22:45:36.000Z
-updatedDate: 2024-07-12T14:44:52.609Z
+updatedDate: 2024-09-09T14:41:53.757Z
 categories:
   - nodejs
   - tutorials
@@ -439,6 +439,19 @@ is a ["lcov" reporter](https://nodejs.org/docs/latest/api/test.html#coverage-rep
 included by default. to use it specify `--test-reporter=lcov` along with `--experimental-test-coverage`.
 
 <Ad />
+
+### Code Coverage Thresholds
+
+With the release of [version 22.8.0](https://nodejs.org/en/blog/release/v22.8.0#support-for-coverage-thresholds),
+the code coverage feature, now has the ability to set thresholds for coverage.
+If the coverage falls below the thresholds then the Node process will exit
+with an error status (which should cause your CI to fail).
+
+The thresholds can be customized by different types of coverage:
+
+- Branches: [`--test-coverage-branches=<threshold percent>`](https://nodejs.org/docs/latest/api/cli.html#--test-coverage-branchesthreshold)
+- Functions: [`--test-coverage-functions=<threshold percent>`](https://nodejs.org/docs/latest/api/cli.html#--test-coverage-functionsthreshold)
+- Lines: [`--test-coverage-lines=<threshold percent>`](https://nodejs.org/docs/latest/api/cli.html#--test-coverage-linesthreshold)
 
 ## Conclusion
 
