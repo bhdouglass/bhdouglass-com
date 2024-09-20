@@ -1,0 +1,172 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: "Self-Hosting 2024 Update: Self-Hosting on the Road"
+date: 2024-09-20T03:55:46.663Z
+categories:
+  - docker
+  - self-hosting
+image: /images/blog/computer-floating-in-the-clouds-raining-bytes.webp
+imageAlt: A computer floating in the cloud raining ones and zeros
+description: How do you have a homelab without a home?
+draft: true
+relatedPosts:
+  - self-hosting-with-docker-compose-migrating
+  - self-hosted-device-tracking-with-owntracks
+---
+
+My family recently started a [new adventure](https://ourlifeisavacation.com/),
+a long-term road trip around America. If you are curious about the details, check
+out my other [blog](https://ourlifeisavacation.com/blog/) or
+[follow us on social media](https://ourlifeisavacation.com/follow/). But the
+gist of the story is that we've sold our house and are now hopping around Airbnbs.
+
+Since I'm into [self-hosting](/blog/self-hosting-with-docker-compose-migrating/)
+(and even wrote [a guide about self-hosting OwnTrack](/blog/self-hosted-device-tracking-with-owntracks/)),
+I've had to make adjustments since I no longer own a home to where I can stash my server.
+
+## Table of contents
+
+## Why Self-Hosting?
+
+Self-hosting, for me, is about sovereignty over my own data. I don't need to worry
+about some big tech platform using my data to send me ads. Or a data breach exposing
+my data to hackers (we get enough of those from other places, looking at you
+Delta dental insurance 😒).
+
+Self-hosting is also a great way to learn. In my journey, I've picked up some
+database management skills, reverse proxy skills, and, of course, Docker skills.
+
+<DigitalOceanAffiliate isSelfHosting />
+
+## My Previous Setup
+
+In my previous setup, I had two servers running my services. One was a 1 GB virtual
+server in [Digital Ocean](https://digitalocean.pxf.io/XY3BQg) and the other
+was an old 32 GB laptop with various hard drives attached via USB. I should have
+taken a picture of it before I put it into storage, but it was quite the sight with
+4 external drives hanging off of it.
+
+I split critical services off into the VPS with everything else being served
+from the laptop in my basement.
+
+## My New Setup
+
+Now I no longer have the laptop in the mix and I've updated the 1 GB VPS to a 2
+GB version to handle an increase in the services being run on it.
+
+This simplifies things as there is only 1 server to deal with. However I can't
+really host my JellyFin media server in the cloud, storage would get expensive!
+
+So my work laptop now serves as a quasi-server for media-related services. When
+we want to watch something on Jellyfin I have a docker-compose setup that I can
+spin up after attaching an external drive.
+
+<Ad />
+
+## Services I'm Self-Hosting
+
+Now that I'm more resource-contained in my self-hosting I've had to be more selective
+about what I'm self-hosting and where.
+
+### Services on My VPS
+
+If you are curious about the details of my setup, check out this
+[git repository](https://gitlab.com/bhdouglass/infra/-/tree/master/docker-compose/kepler).
+
+#### [FreshRSS](https://www.freshrss.org/)
+
+FreshRss is my RSS reader for keeping up on programming news and articles (among other things).
+I also have a few YouTube channels in there. I find it it crazy that YouTube actually supports RSS!
+
+#### [Gotify](https://gotify.net/)
+
+Gotify is a self-hosted notification service. Paired with its Android app, I
+have it set up to send me notifications from my StatPing-ng instance. You can
+also easily send messages via any HTTP tool like curl.
+
+#### [IT Tools](https://it-tools.tech/)
+
+IT Tools is a collection of utilities for programmers. I mainly use the JSON-related
+tools. I know there are other tools online, but I didn't like the idea of
+putting my JSON data into random websites.
+
+#### [Nextcloud](https://nextcloud.com/)
+
+Nextcloud is how I sync my personal calendar and contacts. It also serves as a
+file sync for my laptop.
+
+<Ad />
+
+#### [Plausible](https://plausible.io/)
+
+Plausible is an open-source website analytics tool. I even use it on this blog
+rather than using Google Analytics.
+
+#### [StatPing-ng](https://statping-ng.github.io/)
+
+StatPing-ng is a network monitoring tool that I have set up to track various
+websites and my self-hosting services. With its dashboard, I can easily tell
+if anything is down when it shouldn't be.
+
+#### [Syncthing](https://syncthing.net/)
+
+Syncthing is a file synchronization tool that I mainly use to sync my notes
+collection. I'm currently using [Logseq](https://logseq.com/) to manage them.
+
+I have it set up on my phone, laptop, and VPS. That way my notes sync across all three
+and my phone can sync when my laptop is offline and vice-versa. The Syncthing app
+has an option to only sync once an hour, saving battery life.
+
+#### [Tandoor](https://tandoor.dev/)
+
+Tandoor is a recipe manager app. It also has a nice meal-planning feature. My wife
+and I use this extensively to store our favorite recipes and organize our meal
+plans for the coming week.
+
+#### [Wallabag](https://wallabag.org/)
+
+Wallabag is a read-it-later service like Pocket or Instapaper. I don't use this
+as much for reading as I should, but I do store stuff that I would like to read later...
+
+### Services on My Laptop
+
+I also have a few services on my laptop, those that are either more resource-intensive
+or used less often.
+
+#### [Gitea](https://about.gitea.com/)
+
+Gitea is a GitHub-like service that I use mostly to back up my own Git repos
+(kinda redundant since they are all on my laptop anyway...). But I also
+use it to mirror the source code for some important open-source projects. Does anyone
+remember the yt-dl incident?
+
+#### [Calibre Web](https://github.com/janeczku/calibre-web)
+
+Calibre Web is ab ebook manager that also has a really cool extra feature. You can
+use it as a [sync backend for a Kobo e-reader](https://web.archive.org/web/20220311174306/https://www.brandonjkessler.com/2021/04/26/setup-kobo-sync-in-calibre-web/),
+which is the only reason I actually own a Kobo.
+
+<Ad />
+
+#### [Monica](https://www.monicahq.com/)
+
+Monica is a "personal relationship manager". Which is like a contact book on steroids.
+I don't use it extensively, hence putting it on my laptop, but I would like to get
+better in my relationships with other people.
+
+#### [Jellyfin](https://jellyfin.org/)
+
+And last, but not least, Jellyfin is a local media streaming app. I have to connect
+an external hard drive with all our media files, but when we want to watch something
+I can spin up the docker container and connect to it via an app on our Roku streaming
+device.
+
+## Conclusion
+
+I do miss the ability to have a beefy server for running processes like media
+encoding and paying with generative AI. Although I have whittled it down to the
+most important services. At some point when we settle down again I would like
+to build a proper server, with proper hard drive bays!
+
+If you are interested in any of the nitty-gritty details, check out my
+[infrastructure git repo](https://gitlab.com/bhdouglass/infra).
