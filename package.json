@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro sync && NODE_ENV=development astro dev",
+    "dev": "NODE_ENV=development astro dev",
     "start": "npm run dev",
     "check": "rm -rf dist && astro check",
     "pre-build": "npm run resume-export",
@@ -19,8 +19,7 @@
     "resume-serve": "resume serve --theme bhdouglass --resume src/data/resume.json --dir .tmp",
     "images": "find ./public -type f -regex \".*\\.\\(jpg\\|jpeg\\|png\\)\" -exec mogrify -format webp {}  \\; -print",
     "optimize": "find ./public -type f -name *.webp -exec cwebp -q 70 -m 6 {} -o {} \\; -print",
-    "originals": "find ./public -type f -regex \".*\\.\\(jpg\\|jpeg\\|png\\)\" -exec mv {} ./originals  \\; -print",
-    "sync": "astro sync"
+    "originals": "find ./public -type f -regex \".*\\.\\(jpg\\|jpeg\\|png\\)\" -exec mv {} ./originals  \\; -print"
   },
   "repository": {
     "type": "git",
@@ -36,7 +35,7 @@
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
     "@types/inquirer": "^9.0.7",
-    "astro": "^4.15.1",
+    "astro": "^4.15.9",
     "autoprefixer": "^10.4.16",
     "chalk": "^5.3.0",
     "date-fns": "^3.0.6",
@@ -47,9 +46,9 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
-    "@astrojs/mdx": "^3.1.5",
-    "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/vue": "^4.5.0",
+    "@astrojs/mdx": "^3.1.7",
+    "@astrojs/tailwind": "^5.1.1",
+    "@astrojs/vue": "^4.5.1",
     "@tailwindcss/typography": "^0.5.10",
     "astro-m2dx": "^0.7.16",
     "astro-robots-txt": "^1.0.0",
