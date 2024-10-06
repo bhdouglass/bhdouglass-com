@@ -1,21 +1,18 @@
 ---
-import TextSection from '../components/TextSection.astro';
-import BaseLayout from '../layouts/BaseLayout.astro'
+import TextSection from "../components/TextSection.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Plausible404 from "@bhdouglass/plausible-astro/Plausible404.astro";
 ---
 
 <BaseLayout pageTitle="Page Not Found | Brian Douglass" title="Page Not Found" description="This page could not be found">
   <TextSection header="404: Page Not Found" h1={true}>
     <div class="text-center">
       Uh oh, the page you are looking for cannot be found!
-      <br>
-      Check out the <a href="https://gitlab.com/bhdouglass/bhdouglass-com/-/tree/master/archive" class="underline">archives</a> if you think this page existed in the past.
+      <br />
+      Check out the <a href="https://gitlab.com/bhdouglass/bhdouglass-com/-/tree/master/archive" class="underline">archives</a> if you think
+      this page existed in the past.
     </div>
   </TextSection>
 
-  <script is:inline>
-    document.addEventListener("DOMContentLoaded", function () {
-      plausible("404", { props: { path: document.location.pathname } });
-    });
-  </script>
+  <Plausible404 />;
 </BaseLayout>
-
