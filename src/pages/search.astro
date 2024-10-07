@@ -1,0 +1,24 @@
+---
+import PageFind from "astro-pagefind/components/Search";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  pageTitle="Search | Brian Douglass"
+  title="Search"
+  description="Search the blog"
+>
+  <section>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="py-4 md:py-8">
+        <div class="max-w-5xl mx-auto">
+          <h1 class="text-center text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+            Search the Blog
+          </h1>
+
+          <PageFind />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -7,6 +7,7 @@ import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import taxonomyDb from './.frontmatter/database/taxonomyDb.json';
 import m2dx from 'astro-m2dx';
+import pagefind from 'astro-pagefind';
 
 /** @type {import('astro-m2dx').Options} */
 const m2dxOptions = {
@@ -35,6 +36,7 @@ export default defineConfig({
       filter: (page) => !categoryPages.includes(page),
     }),
     robotsTxt({ sitemapBaseFileName: 'sitemap' }),
+    pagefind(),
   ],
   markdown: {
     remarkPlugins: [[m2dx, m2dxOptions], remarkToc],
