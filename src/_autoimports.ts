@@ -6,6 +6,7 @@ import NamecheapAffiliate from './components/support/NamecheapAffiliate.astro';
 import Ad from './components/support/Ad.astro';
 import Image from './components/Image.astro';
 import ImageAttrib from './components/ImageAttrib.astro';
+import NewsletterForm from './components/NewsletterForm.astro';
 
 export const autoimports = {
   RandomSupport,
@@ -16,4 +17,5 @@ export const autoimports = {
   Ad,
   Image,
   ImageAttrib,
+  NewsletterForm,
 };

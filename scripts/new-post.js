@@ -19,6 +19,11 @@ imageAlt: TODO
 description: TODO
 draft: true
 ---
+
+<RandomSupport />
+<NewsletterForm />
+<Ad />
+
 `;
 
 const fileTitle = answers.title.toLowerCase()
