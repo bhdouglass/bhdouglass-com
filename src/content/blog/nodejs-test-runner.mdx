@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: The Complete Guide to the Node.js Test Runner
 date: 2023-05-13T22:45:36.000Z
-updatedDate: 2024-09-09T14:41:53.757Z
+updatedDate: 2024-10-25T15:09:13.719Z
 categories:
   - nodejs
   - tutorials
@@ -347,7 +347,7 @@ test('spies on an object method', (t) => {
 ### Mocking Timers
 
 In addition to mocking function you can also test code that uses `setTimeout()` and
-`setInterval()`. This feature is new in [v20.4.0](https://nodejs.org/en/blog/release/v20.4.0),
+`setInterval()`. This feature is stable in [v23.1.0](https://nodejs.org/en/blog/release/v23.1.0),
 so make sure you have the latest version!
 You need to enable the function you want to mock by calling `mock.timers.enable({ apis: ['setTimeout', 'setInterval'] })`, then call `mock.timers.tick(x)` to simulate time passing.
 
