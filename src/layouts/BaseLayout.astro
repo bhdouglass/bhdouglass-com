@@ -6,6 +6,7 @@ import Footer from "../components/Footer.astro";
 import Verification from "../components/Verification.astro";
 import { generateSchema } from "../schema.utilities";
 import Plausible from "@bhdouglass/plausible-astro/Plausible.astro";
+import { Head } from "astro-capo";
 
 export type Props = {
   pageTitle: string;
@@ -36,7 +37,7 @@ const ogImageAlt = imageAlt || "Brian Douglass' logo";
 ---
 
 <html lang="en">
-  <head>
+  <Head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -80,7 +81,7 @@ const ogImageAlt = imageAlt || "Brian Douglass' logo";
     <script type="application/ld+json" set:html={JSON.stringify(actualSchema)} />
 
     <Plausible domain={import.meta.env.SITE} plausibleDomain="https://stats.bhdouglass.com" customEvents outboundLinks />
-  </head>
+  </Head>
 
   <body
     class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900 flex flex-col justify-between h-full"
