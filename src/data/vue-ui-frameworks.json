@@ -133,13 +133,6 @@
     "description": "A free, beautiful and modern Vue.js UI kit based on Shards."
   },
   {
-    "name": "Fundamental Vue",
-    "githubRepo": "SAP/fundamental-vue",
-    "vue3": false,
-    "npmPackage": "fundamental-vue",
-    "description": "Vue.js components implementation of Fundamental Library Styles guidelines."
-  },
-  {
     "name": "Framevuerk",
     "githubRepo": "framevuerk/framevuerk",
     "vue3": false,
@@ -488,7 +481,8 @@
     "githubRepo": "itzvinoth/slim-ui",
     "vue3": false,
     "npmPackage": "slim-ui",
-    "description": "Simple components library used for building lightweight vuejs projects."
+    "description": "Simple components library used for building lightweight vuejs projects.",
+    "hideWebsite": true
   },
   {
     "name": "element-pro-components",
