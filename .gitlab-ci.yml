@@ -12,7 +12,8 @@ cache:
     - .npm/
 
 before_script:
-  - npm ci --cache .npm --prefer-offline
+  # TODO remove force when peer dependency issues are sorted
+  - npm ci --cache .npm --prefer-offline --force
 
 # Ref: https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_from_scratch.html
 pages:
