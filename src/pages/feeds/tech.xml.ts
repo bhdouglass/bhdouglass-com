@@ -19,7 +19,7 @@ export function GET() {
         title: post.data.title,
         description: post.data.description,
         // Create a full url, otherwise the utm params will have a / appended to them by @astrojs/rss
-        link: getRssLink(`/blog/${post.slug}`, import.meta.env.SITE),
+        link: getRssLink(`/blog/${post.id}`, import.meta.env.SITE),
         pubDate: post.data.date,
         customData: post.data.image ? `<media:content url="${new URL(post.data.image, import.meta.env.SITE).href}" medium="image" />` : '',
       };

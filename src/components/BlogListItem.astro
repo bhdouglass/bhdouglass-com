@@ -13,7 +13,7 @@ export type Props = {
 const { post, slim } = Astro.props;
 const image = post.data.image;
 const size = sizeOf(`./public${image}`);
-const link = `/blog/${post.slug}/`;
+const link = `/blog/${post.id}/`;
 const date = getBlogDate(post.data.date, post.data.updatedDate);
 ---
 

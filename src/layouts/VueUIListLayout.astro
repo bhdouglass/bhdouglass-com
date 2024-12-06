@@ -51,7 +51,7 @@ async function updateNpmInfo(project: any) { // TODO types
   return { ...project, npm: { ...npmData, downloads: downloadsData, typescript } };
 }
 
-const enrichedProjects = await Promise.all(projects.filter((project) => Boolean(project.name)).map((project) => {
+const enrichedProjects = await Promise.all(projects.filter((project: any) => Boolean(project.name)).map(async (project: any) => {
   return updateGitHubInfo(project).then((updatedProject) => {
     return updateNpmInfo(updatedProject);
   });
