@@ -1,0 +1,111 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: "Astro 5.0 Release"
+date: 2024-12-06T09:17:35-06:00
+categories:
+  - astro
+image: /images/blog/astro/astro-logo-banner.svg
+imageAlt: Astro's Logo
+description: Already time to upgrade again!
+---
+
+It feels like yesterday Astro was just releasing [version 4.0](/blog/astro-4-0-release/).
+But just in time for the Christmas holiday, [Astro 5.0](https://astro.build/blog/astro-5/).
+Did they plan that so everyone would upgrade their sites over the break? Let's be real,
+die-hard fans already upgraded yesterday!
+
+## Table of contents
+
+## Content Layer
+
+The two headline features in this release are the upgraded [Content Layer](https://docs.astro.build/en/guides/content-collections/)
+and the new [Server Islands](https://docs.astro.build/en/guides/server-islands/).
+
+The Content Layer expands their content collections from files on disk to APIs,
+databases, and more. You can define a simple loader for an HTTP request or dive
+deeper and include caching and pagination. And of course, files on disk are still
+supported with a built-in `glob` loader.
+
+There are already a bunch of [community-built loaders](https://astro.build/integrations/?search=&categories%5B%5D=loaders)
+to choose from. Or you can get started on your own [custom loader](https://docs.astro.build/en/guides/content-collections/#building-a-custom-loader).
+
+<Ad />
+
+## Server Islands
+
+The other headline feature, [Server Islands](https://docs.astro.build/en/guides/server-islands/),
+is an expansion of Astro islands architecture.
+
+Previously restricted to islands on the frontend, Server Islands brings islands
+to the backend. This allows you to cache the static parts of pages while also
+including server-rendered dynamic content like a shopping cart or user profile.
+
+Check out the full [Server Islands guide](https://docs.astro.build/en/guides/server-islands/)
+for more information.
+
+<NewsletterForm />
+
+## Other Changes & Features
+
+Astro 5 brings some other notable changes. `astro:env` has moved out of experimental
+and hopes to improve environment variable handling within Astro, both on the server
+and client (no more exposing your API keys on the client!).
+
+Astro 5 also redefines static rendering by removing the `hybrid` rendering mode.
+But you may ask, how does removing hybrid rendering improve static rendering? Well
+hybrid rendering was a bridge between server and static rendering where parts of
+your side could opt-in or opt-out of static rendering.
+
+Now that behavior has moved into the default `static` renderer. By default, pages
+will be statically rendered. Dynamic pages can opt out of static rendering by
+using the following code: `export const prerender = false;`.
+
+<Ad />
+
+## New Experiments
+
+It wouldn't be an Astro release without some hints as to where the next release
+of Astro is going. The new experiments as responsive images and SVG loading.
+
+Astro already has image handling with their built-in `Image` component. However, the
+experiment expands that to also generate different image sizes for responsive images.
+This includes settings `srcset` and `sizes` properly.
+
+SVG components are a very welcome addition for me personally. I recently started a
+new project that needed to be able to have SVG icons. The old advice was to use
+`<Fragment set:html={icon} />` which wasn't the greatest if you wanted to customize
+the icon. In that project, I ended up using [react-svgr](https://react-svgr.com/)
+which was great.
+
+But with Astro 5 you can import SVGs just like any other component.
+For example, `import Icon from '../assets/icon.svg';`
+
+<Ad />
+
+## Upgrading to Astro 5
+
+<RandomSupport />
+
+The [Astro 5 upgrade guide](https://docs.astro.build/en/guides/upgrade-to/v5/)
+seems rather intimidating, but for most people, you shouldn't have too many issues.
+
+If you are using a content collection, you'll want to read over the [upgrade guide](https://docs.astro.build/en/guides/upgrade-to/v5/#what-should-i-do-2)
+to use the new Content Layer. Mostly this involves pointing the built-in `glob` loader
+to your local files and changing from using the `slug` property to the `id` property.
+
+If you are using Typescript support with Astro, you'll need to be aware of the changes
+around `env.d.ts`. The `env.d.ts` file can be removed and your `tsconfig.json` file
+can be updated with `.astro/types.d.ts` in the includes. See the [upgrade guide](https://docs.astro.build/en/guides/upgrade-to/v5/#changed-typescript-configuration)
+for the details.
+
+When upgrading [this site](https://gitlab.com/bhdouglass/bhdouglass-com) I ran
+into some dependency issues. At the time of writing, there seems to be a peer dependency
+issue between `@astrojs/mdx` and `astro`. There was a similar issue between `astro-pagefind`
+and `astro`. Both weren't a big deal and I was able to install them with `npm install --force`.
+This may not be a long-term solution, but since Astro 5 was only released a few days ago
+these issues will likely be ironed out soon.
+
+## Further Reading
+
+- [Astro 5.0 Release Post](https://astro.build/blog/astro-5/)
+- [Astro 5.0 Upgrade Guide](https://docs.astro.build/en/guides/upgrade-to/v5/)
