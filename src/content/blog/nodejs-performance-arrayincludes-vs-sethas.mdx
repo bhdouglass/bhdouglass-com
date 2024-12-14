@@ -1,0 +1,162 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: "Node.js Performance: Array.includes vs Set.has"
+date: 2024-12-14T04:36:26.627Z
+categories:
+  - nodejs
+  - javascript
+  - performance
+image: /images/blog/javascript-performance/find.webp
+imageAlt: A magnifying glass highlighting a person in red in a lineup of people
+description: What is the fastest way to see if an array has a value?
+---
+
+<ImageAttrib attrib="Image by d3images on Freepik" link="https://www.freepik.com/free-photo/business-background-design_1065843.htm" />
+
+When you want to find out if an array contains a value, what tools do you reach for?
+There is `Array.includes()` and `Set.has()`. So which one is better? Let's dive in
+and find out!
+
+<Ad />
+
+## Table of contents
+
+## The Different Ways to Combine Arrays
+
+<NewsletterForm />
+
+### `Array.include()`
+
+```javascript
+const included = arr.include(value);
+```
+
+This is pretty straightforward, you have an array of values. You want to know
+if a specific value is contained in that array. Couldn't be more simple.
+
+### `Set.has()`
+
+```javascript
+const included = set.has(value);
+```
+
+Similar to `Array.includes()`, `Set.has()` lets you test if a set contains a certain
+value.
+
+### Creating a set from an array
+
+```javascript
+const set = new Set(arr);
+const included = set.has(value);
+```
+
+So, what if you already have an array, but have heard great things about the performance
+of `Set.has()`? You'll have to create a new set from the array using `new Set(arr)`.
+
+<Ad />
+
+## Note About Arrays vs Sets
+
+It is important to note how arrays and sets differ. Technical details aside, the
+biggest difference between an array and a set is that sets only allow unique data
+in them. By contrast, an array allows duplicate values. It depends on your
+use case when developing which one you want to use.
+
+## Testing Methodology
+
+As with my previous [benchmarking of loops](/blog/nodejs-performance-loops) and [array combining](/blog/nodejs-performance-arrayconcat-vs-the-spread-operator),
+I used the [Tinybench](https://github.com/tinylibs/tinybench) library. The benchmarks
+use sets and arrays in different variations to check if they contain a value. The
+value used in the test isn't in the arrays so we can test the worst-case scenario,
+when the whole array needs to be scanned to find the value. This test was run against
+different array lengths to see if one method or another was more effective at different
+sizes.
+
+The tests also use different run times to compare performance across engines.
+Currently, the engines included are:
+
+- Node.js v18
+- Node.js v20
+- Node.js v22
+- Bun v1.3.18
+- Deno v2.1.4
+
+You can see the full test suite over at my [GitHub Repo](https://gitlab.com/bhdouglass/javascript-performance/-/blob/master/includes/includes-tests.js).
+
+Browsers weren't considered for this test as I'm mainly focusing on server-side
+JavaScript engines.
+
+![Includes benchmark log output](/images/blog/javascript-performance/includes-log-output.webp)
+
+## The Test Machine
+
+The machine I'm running these tests on is a
+[System76 Darter Pro 8](/blog/system76-darter-pro-8). It has a 12th-generation
+Intel CPU that clocks in around 4.70 GHz (model i7-1260P). And it has 32 GB of RAM.
+
+![System Information](/images/blog/system-information.webp)
+
+<Ad />
+
+## Results
+
+Here are the results combining two arrays with lengths of ten, one thousand, ten thousand, and one hundred thousand.
+
+![Length 10](/images/blog/javascript-performance/includes-length-10.webp)
+
+![Length 1,000](/images/blog/javascript-performance/includes-length-1000.webp)
+
+![Length 10,000](/images/blog/javascript-performance/includes-length-10000.webp)
+
+![Length 100,000](/images/blog/javascript-performance/includes-length-100000.webp)
+
+[Download the full results.](https://gitlab.com/bhdouglass/javascript-performance/-/blob/master/includes/includes.ods)
+
+## Conclusions
+
+`Set.has()` has way better performance than `Array.includes()`. However, that's not
+the whole story. The `Set.has()` test doesn't include creating a set from an array.
+That benchmark reflects the case when you already have a set created.
+
+But if you create a set from an array you need to consider the performance impact
+of creating the set from the array values. But once you have the set created, well
+then you can have crazy fast lookup times if you need to query the set multiple times.
+
+If you need to look up values in an array multiple times, you take a performance
+hit each time you need to scan the array. So you may be tempted to convert it to
+a set and use `Set.has()`. However, that's not always your best option unless you
+are doing a lot of `Set.has()` calls.
+
+An interesting outcome from this benchmark shows that Node v22 may not have as good
+performance with `Array.includes()` as v18 and v20 have. This is at larger array
+lengths as smaller arrays v22 seems to have a better time with than v18 and v20.
+
+Another interesting observation is that Node v20 seems to perform extremely well
+with `Array.includes()` at large array compared to everything else. This could just
+be a fluke or a flaw in my testing.
+
+<Ad />
+
+## So, what is the best way to see if an array has a value in JavaScript?
+
+The answer is... it depends! As with everything in programming, the best tool for the
+job depends a lot on context. If you have an array and don't need to do many calls
+to `Array.includes()` you can just use `Array.includes()`. If you already have a set
+just use `Set.has()`.
+
+However, if you have an array and want to convert it to a set to use `Set.has()`
+you probably shouldn't. Unless that array is very large and you need to do a large
+number of lookups on the array, it is probably not worth the cost to initialize
+the set.
+
+However, (again) if you know you need to do lookups on an array and you can create
+a set instead of creating an array, then you might want to consider doing that to
+reap the faster lookup times of `Set.has()`.
+
+<Ad />
+
+## Feedback
+
+If you have any feedback on my testing methodologies or suggestions for improvement,
+just create an issue on my [GitLab repo for this blog](https://gitlab.com/bhdouglass/bhdouglass-com/-/issues/new)
+or on the [GitLab repo for the benchmarks](https://gitlab.com/bhdouglass/javascript-performance/-/issues/new).
