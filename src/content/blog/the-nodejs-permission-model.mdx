@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: The Node.js Permission Model
 date: 2023-04-24T20:13:17.000Z
-updatedDate: 2024-07-12T14:24:22.867Z
+updatedDate: 2024-12-23T05:16:37.120Z
 categories:
   - nodejs
   - tutorials
@@ -26,12 +26,16 @@ accessing the filesystem, child processes, and worker threads.
 <NewsletterForm />
 
 To use the new Permission model you will need to [download version 20](https://nodejs.org/en/download)
-from [nodejs.org](https://nodejs.org/) or your favorite Node.js version manager.
+or newer from [nodejs.org](https://nodejs.org/) or your favorite Node.js version manager.
 (Check out [Volta](https://volta.sh/)!)
 
-Enable the experimental Permission Model by passing the
-[`--experimental-permission`](https://nodejs.org/api/cli.html#--experimental-permission)
-flag to the node command. For example: `node --experimental-permission some-script.js`.
+Enable the Permission Model by passing the
+[`--permission`](https://nodejs.org/api/cli.html#--permission)
+flag to the node command. For example: `node --permission some-script.js`.
+
+Update! [Node v23.5.0](https://nodejs.org/en/blog/release/v23.5.0) marks the
+permissions model as stable. If you are using an older version of Node, you will
+need to use `--experimental-permission` instead.
 
 ## Permissions
 
@@ -114,3 +118,4 @@ see where Node.js will be in the coming releases!
 - [Permission Model docs](https://nodejs.org/api/permissions.html#permission-model)
 - [Node.js version 20 release announcement](https://nodejs.org/en/blog/announcements/v20-release-announce)
 - [`process.permission.has()` docs](https://nodejs.org/api/process.html#processpermissionhasscope-reference)
+- [Node.js version 23.5.0 release announcement](https://nodejs.org/en/blog/release/v23.5.0)
