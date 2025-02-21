@@ -13,12 +13,14 @@ layout: ../../layouts/BlogPostLayout.astro
 title: "${answers.title}"
 date: ${formatISO(new Date())}
 categories:
-  - ${answers.categories.split(' ').join('\n  - ')}
+  - ${answers.categories.split(" ").join("\n  - ")}
 image: /images/blog/generic/placeholder.svg
 imageAlt: TODO
 description: TODO
 draft: true
 ---
+
+## Table of Contents
 
 <RandomSupport />
 <NewsletterForm />

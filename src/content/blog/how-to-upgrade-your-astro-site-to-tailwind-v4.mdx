@@ -1,0 +1,118 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: How to Upgrade Your Astro Site to Tailwind v4
+date: 2025-02-21T04:23:08.103Z
+categories:
+  - astro
+  - javascript
+  - tutorial
+  - tailwind
+image: /images/blog/logos/tailwind-logo.svg
+imageAlt: TODO
+description: Seamlessly upgrade Tailwind CSS for an Astro site
+---
+
+With [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) recently released
+I set aside some time to upgrade my Astro sites to take advantage of the new release.
+However, the upgrade isn't fully automated. So here my guide to upgrading Astro
+sites to use Tailwind CSS v4.
+
+<NewsletterForm />
+
+## Table of Contents
+
+## Upgrade Astro
+
+First, you'll need to make sure Astro is up to date. [Astro v5.2](https://astro.build/blog/astro-520/#tailwind-4-support)
+released with support for Tailwind CSS, so you need to be at least on that version
+to have full Tailwind v4 support.
+
+If you aren't on Astro 5.x already, be sure to follow the [migration guide](https://docs.astro.build/en/guides/upgrade-to/v5/)
+to get from 4.x to 5.x. The 5.x upgrade was fairly smooth for most of my sites.
+
+To upgrade your site, run `npx @astrojs/upgrade` from the base of the project.
+
+![Astro 5.3 upgrade tool](/images/blog/astro/astro-upgrade-5-3.webp)
+
+After upgrading, double check that you site still passes the Astro checks and builds correctly.
+
+```bash
+npm run check
+npm run build
+```
+
+Also, launch your site locally and double check its functionality.
+
+<Ad />
+
+## Upgrade Tailwind
+
+You can upgrade Tailwind on your site by using the excellent migration tool:
+
+```bash
+npx @tailwindcss/upgrade
+```
+
+![Tailwind v4 uprade tool](/images/blog/astro/tailwind-upgrade.webp)
+
+Before you run the tool you'll probably want to commit your previous Astro upgrade.
+Otherwise the Tailwind migration tool will complain about the git repository not
+being clean. To bypass this complaint, use the `--force` parameter.
+
+If the tool fails to migration your site, check the [Tailwind upgrade guide](https://tailwindcss.com/docs/upgrade-guide)
+for how to manually upgrae.
+
+The migration tool failed to migrate the default postcss config (`postcss.config.cjs`).
+But you can delete that as we will configure Astro to use the Tailwind Vite plugin.
+
+<RandomSupport />
+
+## Remove the Old Astro Tailwind Integration
+
+Now that Astro and Tailwind have both been updated we can get them talking to gether again.
+But first you will need to remove the old Astro Tailwind integration. Run:
+
+```bash
+npm remove @astrojs/tailwind
+```
+
+And then delete all references to `@astrojs/tailwind` from your `astro.config.mjs` file.
+
+## Install the New Astro Tailwind Integration
+
+Out with the old and in with the new. You'll need to run `npx astro add tailwind`
+to get the new Tailwind integration for Astro (which is really just a Vite plugin).
+
+![Astro tool adding Tailwind](/images/blog/astro/astro-add-tailwind.webp)
+
+The Astro tool will add the Vite plugin to your configuration and install the correct
+dependencies. Since you already Tailwind setup you can skip the step that generates
+a `global.css` file.
+
+<Ad />
+
+## Finishing Up
+
+Since the old Tailwind integration is gone and the new one setup, the last thing
+to do is recheck everything. You can run `npm run check && npm run build`, but
+you'll really need to do a visual inspection of your site. Everything should
+"just work", but better safe than sorry!
+
+## Checklist
+
+TLDR; here are the steps needed to take to upgrade your Astro site to Tailwind v4.
+
+- <input type="checkbox" /> Upgrade Astro to v5.2 or later: `npx @astrojs/upgrade`
+- <input type="checkbox" /> Check that the upgrade went smoothly: `npm run check && npm run build`
+- <input type="checkbox" /> Upgrade Tailwind to v4: `npx @tailwindcss/upgrade`
+- <input type="checkbox" /> Remove the old Tailwind integration: `npm remove @astrojs/tailwind`
+- <input type="checkbox" /> Clean the old Tailwind integration from `astro.config.mjs`
+- <input type="checkbox" /> Install the new Tailwind integration: `npx astro add tailwind`
+- <input type="checkbox" /> Check that the upgrade went smoothly (again): `npm run check && npm run build`
+- <input type="checkbox" /> Visually check the site: `npm run dev`
+
+## Further Reading
+
+- [Astro Tailwind Docs](https://docs.astro.build/en/guides/styling/#tailwind)
+- [Astro v5.2 Release Blog Post](https://astro.build/blog/astro-520/#tailwind-4-support)
+- [Tailwind CSS v4 Upgrade Guide](https://tailwindcss.com/docs/upgrade-guide)
