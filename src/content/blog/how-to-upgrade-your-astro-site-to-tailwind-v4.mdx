@@ -105,6 +105,7 @@ TLDR; here are the steps needed to take to upgrade your Astro site to Tailwind v
 - <input type="checkbox" /> Upgrade Astro to v5.2 or later: `npx @astrojs/upgrade`
 - <input type="checkbox" /> Check that the upgrade went smoothly: `npm run check && npm run build`
 - <input type="checkbox" /> Upgrade Tailwind to v4: `npx @tailwindcss/upgrade`
+- <input type="checkbox" /> Remove the old PostCSS config, `postcss.config.cjs` (if you have one)
 - <input type="checkbox" /> Remove the old Tailwind integration: `npm remove @astrojs/tailwind`
 - <input type="checkbox" /> Clean the old Tailwind integration from `astro.config.mjs`
 - <input type="checkbox" /> Install the new Tailwind integration: `npx astro add tailwind`
