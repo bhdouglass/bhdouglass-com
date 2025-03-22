@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: The Complete Guide to the Node.js Test Runner
 date: 2023-05-13T22:45:36.000Z
-updatedDate: 2024-10-25T15:09:13.719Z
+updatedDate: 2025-03-22T04:27:19.757Z
 categories:
   - nodejs
   - tutorial
@@ -454,6 +454,33 @@ The thresholds can be customized by different types of coverage:
 - Branches: [`--test-coverage-branches=<threshold percent>`](https://nodejs.org/docs/latest/api/cli.html#--test-coverage-branchesthreshold)
 - Functions: [`--test-coverage-functions=<threshold percent>`](https://nodejs.org/docs/latest/api/cli.html#--test-coverage-functionsthreshold)
 - Lines: [`--test-coverage-lines=<threshold percent>`](https://nodejs.org/docs/latest/api/cli.html#--test-coverage-linesthreshold)
+
+## Command Line Flags
+
+So there a *lot* of flags available for the test runner, it can get quite cumbersome to
+specify all of them at once. Thankfully, in [Node.js v23.10.0](https://nodejs.org/en/blog/release/v23.10.0)
+the Node team introduced a experimental config files. The config files allow you
+to specify a bunch of different flags in a convenient JSON file.
+
+If you have a file named `node.config.json` in the root directory of your project, you can run
+you tests by using [`--experimental-default-config-file`](https://nodejs.org/docs/latest/api/cli.html#--experimental-default-config-file).
+Of if you want to use a different file, you can use [`--experimental-config-file`](https://nodejs.org/docs/latest/api/cli.html#--experimental-config-fileconfig)
+and pass the path to a config file.
+
+Here's an example of what the config file looks like:
+
+```json
+{
+  "$schema": "https://nodejs.org/dist/v23.10.0/docs/node-config-schema.json",
+  "nodeOptions": {
+    "test-reporter": "lcov",
+    "test-timeout": 3000
+  }
+}
+```
+
+The commandline flags map 1-1 to the config file options, just drop the `--` at
+the beginning.
 
 ## Conclusion
 
