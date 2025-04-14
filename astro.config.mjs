@@ -24,6 +24,7 @@ export default defineConfig({
   server: {
     host: true,
   },
+  prefetch: true,
   markdown: {
     syntaxHighlight: "prism",
   },
