@@ -25,6 +25,8 @@ built-in option for small to medium-sized applications, prototyping, and testing
 
 Let's dive in a see how we can start using the SQLite module.
 
+<Ad />
+
 ## Table of contents
 
 ## Warning: Experimental
@@ -39,6 +41,8 @@ Version 22.5.0 had a serious bug in it that has been fixed by [v22.5.1](https://
 Make sure you use that version (or later) when trying out `node:sqlite`!
 
 I don't recommend building your startup on it!
+
+<Ad />
 
 ## Getting Started
 
@@ -82,6 +86,8 @@ class has been instantiated. However, if you pass, as the second argument, `{ op
 Then the database will not automatically be opened.
 
 In this case, you will need to open the database connection yourself using [`.open()`](https://nodejs.org/docs/latest/api/sqlite.html#databaseopen).
+
+<Ad />
 
 ## Closing a Database
 
@@ -128,6 +134,8 @@ method executes the statement and returns a summary of the changes. The variable
 passed into the `.run()` function must match the number of parameters specified
 by the SQL you created. In the above example, there are three `?`, meaning we need
 to supply 3 parameters.
+
+<Ad />
 
 ## Getting Back Results
 
