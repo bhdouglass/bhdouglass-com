@@ -1,0 +1,216 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: Test an Express.js App with node:test
+date: 2025-04-22T19:16:36.010Z
+categories:
+  - tutorial
+  - nodejs
+  - javascript
+image: /images/blog/node-tutorials/node-test-example.webp
+imageAlt: Terminal output from the `node --test` program
+description: Learn how to use the builtin Node Test Runner
+relatedPosts:
+  - nodejs-test-runner
+  - testing-and-linting-a-nodejs-api
+---
+
+[Express](https://expressjs.com/) is still a solid web framework option for Node.js,
+even in 2025. Especially since [v5 was released in late 2024](https://expressjs.com/2024/10/15/v5-release.html).
+If you are looking to get some test coverage on your Express app, look no further
+than the built-in [Node.js Test Runner](/blog/nodejs-test-runner/).
+
+<InfoBlock>
+  If you are looking for something more in-depth on the Test Runner, check out
+  [my full guide to the Node Test Runner](/blog/nodejs-test-runner/).
+</InfoBlock>
+
+<Ad />
+
+## Table of contents
+
+## Initial Setup
+
+Start a new project if you want to follow along with this blog post. Set it up
+with [`npm init`](/blog/npm-basics/) and be sure to set `"type": "module"`
+in the generated `package.json` so we can use ESM imports.
+
+### Installing Dependencies
+
+In this example, we'll be using Express version 5 and testing it using supertest.
+Run `npm install express@^5 supertest` to install them both.
+
+## Basic Express Setup
+
+Here is a pretty basic Express app. The GET route returns some text and the POST
+route has some basic error handling for a pretend database call. It is split
+into two different files, `index.js` and `app.js`. Splitting the initialization
+of the Express app into `app.js` will make it easier for us to write tests for it.
+
+```javascript
+// --- index.js ---
+import { setupApi } from "./app.js";
+
+const app = setupApi();
+
+app.listen(3000, () => {
+  console.log('🚀 http://localhost:3000');
+});
+
+// --- app.js ---
+import express from 'express';
+
+export const database = {
+  saveData() {
+    // Pretend this is a database call
+  },
+};
+
+export function setupApi() {
+  const app = express();
+
+  app.get('/', (req, res) => {
+    res.send('Get Received');
+  })
+
+  app.post('/', (req, res) => {
+    try {
+      database.saveData();
+    }
+    catch (e) {
+      res.status(500);
+      res.send('Received an error');
+      return;
+    }
+
+    res.send('Post Received');
+  });
+
+  return app;
+}
+```
+
+To run this app, simply point Node at it: `node index.js`.
+
+<Ad />
+
+## Writing Tests
+
+Writing tests with `node:test` is very simple, especially if you are familiar with
+other testing frameworks like Jest or Mocha. Here is what our test file looks like:
+
+```javascript
+// --- app.test.js ---
+import { test, describe, before } from 'node:test';
+import assert from 'node:assert/strict';
+import request from 'supertest';
+import { setupApi, database } from "./app.js";
+
+// Top level test suite
+describe('API', () => {
+  let app;
+
+  // Before any tests run, setup our Express app
+  before(async () => {
+    app = setupApi();
+  });
+
+  // Test the GET request
+  test('GET request', async () => {
+    // Supertest has built-in tests/assertions for response codes
+    const { text } = await request(app).get('/').expect(200);
+    assert.equal(text, "Get Received");
+  });
+
+  // A sub test suite so we can batch related tests
+  describe('POST request', () => {
+    // Test the POST request
+    test("success", async () => {
+      const { text } = await request(app).post("/").expect(200);
+      assert.equal(text, "Post Received");
+    });
+
+    // We'll come back to this later. The Node Test Runner will print out that we have a test TODO later.
+    test.todo('error');
+  });
+});
+```
+
+### Why Are We Importing from `node:test`?
+
+If you try to just import `test` instead of `node:test` you'll get an error like this:
+`Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'test' imported from .../app.test.js`.
+
+The `node:` prefix tells Node that we are importing a core module. In this way, a
+package from NPM won't be accidentally called if it has the same name as a core
+module. `node:test` came after the `node:` prefix so node does not offer a non-prefixed
+version.
+
+<Ad />
+
+### Why Are We Importing from `node:assert/strict`?
+
+There is a strict version of `assert` and a non-strict. I've chosen the strict version
+for the same reasons you would choose `===` over `==`. Just like `false === 0`
+is false, `assert.equal(false, 0)` will throw an error because they aren't strictly
+the same. For most use cases, `node:assert/strict` is probably what you want to use.
+
+## Running the Tests
+
+`node --test`
+
+Yep! It is that simple. Node will automatically run any tests that
+[match a specific criteria](/blog/nodejs-test-runner/#how-does-node-find-tests),
+like those in a `test` directory or ending with `.test` (ex: `app.test.js`).
+
+If you want to get fancy, run `node --test --watch` and Node will
+[automatically rerun the tests](/blog/nodejs-test-runner/#watch-mode). Just use
+`CTRL + C` to kill the process (or the Mac equivalent).
+
+<Ad />
+
+The Node test runner will execute all the tests and print out if they succeeded
+or not. Then at the end, it will print a nice summary of all the tests.
+
+![Node Test Runner output](/images/blog/node-tutorials/node-test-example.webp)
+
+## Testing Error Handling With Mocks
+
+You may have noticed, our POST method has some error handling. How exactly can
+we trigger the catch part of that try/catch statement? The Node Test Runner
+has built-in mocking that we can use exactly for this. By mocking our `saveData`
+function we can test that the error handling works as expected.
+
+```javascript
+// --- app.test.js ---
+
+// ...
+test('error', async (t) => {
+  const mock = t.mock.method(database, 'saveData', () => {
+    throw new Error('uh-oh!');
+  });
+
+  await request(app).post("/").expect(500);
+  assert.equal(mock.mock.calls.length, 1);
+});
+// ...
+```
+
+<Ad />
+
+## Conclusion
+
+That is about it for basic tests on a Node Express app. If you want to see
+the full source code used in this example, check out the [GitLab repository](https://gitlab.com/bhdouglass/node-test-runner-express-example).
+
+If you want to check out a slightly more complex test suit, take a look at the
+tests for the [OpenStore API](https://gitlab.com/theopenstore/openstore-api).
+I migrated that project from using Mocha to the Node Test Runner, which inspired
+this post.
+
+<NewsletterForm />
+
+## Further Reading
+
+- [Example Code](https://gitlab.com/bhdouglass/node-test-runner-express-example)
+- [My Full Guide to the Test Runner](/blog/nodejs-test-runner/)
+- [Node Test Runner Documentation](https://nodejs.org/docs/latest/api/test.html)

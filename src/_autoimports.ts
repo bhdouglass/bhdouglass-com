@@ -7,6 +7,7 @@ import Ad from './components/support/Ad.astro';
 import Image from './components/Image.astro';
 import ImageAttrib from './components/ImageAttrib.astro';
 import NewsletterForm from './components/NewsletterForm.astro';
+import InfoBlock from './components/InfoBlock.astro';
 
 export const autoimports = {
   RandomSupport,
@@ -18,4 +19,5 @@ export const autoimports = {
   Image,
   ImageAttrib,
   NewsletterForm,
+  InfoBlock,
 };
