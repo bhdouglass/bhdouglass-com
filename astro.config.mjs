@@ -9,6 +9,8 @@ import m2dx from 'astro-m2dx';
 import pagefind from 'astro-pagefind';
 import tailwindcss from "@tailwindcss/vite";
 
+import og from 'astro-og';
+
 /** @type {import('astro-m2dx').Options} */
 const m2dxOptions = {
   autoImports: true,
@@ -28,16 +30,10 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: "prism",
   },
-  integrations: [
-    vue(),
-    mdx(),
-    sitemap({
-      customPages: ["https://bhdouglass.com/resume/"],
-      filter: (page) => !categoryPages.includes(page),
-    }),
-    robotsTxt({ sitemapBaseFileName: "sitemap" }),
-    pagefind(),
-  ],
+  integrations: [vue(), mdx(), sitemap({
+    customPages: ["https://bhdouglass.com/resume/"],
+    filter: (page) => !categoryPages.includes(page),
+  }), robotsTxt({ sitemapBaseFileName: "sitemap" }), pagefind(), og()],
   markdown: {
     remarkPlugins: [[m2dx, m2dxOptions], remarkToc],
   },
