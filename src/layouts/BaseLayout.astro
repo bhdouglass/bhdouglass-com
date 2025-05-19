@@ -80,16 +80,9 @@ const ogImageAlt = imageAlt || "Brian Douglass' logo";
 
     <script is:inline type="application/ld+json" set:html={JSON.stringify(actualSchema)} />
 
-    <Plausible domain={import.meta.env.SITE} plausibleDomain="https://stats.bhdouglass.com" customEvents outboundLinks />
-  </Head>
-
-  <body
-    class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900 flex flex-col justify-between h-full"
-  >
-    <Header />
-    <slot />
-    <Footer />
-
+    {
+      /* In the head so we make sure to not flash the white theme first: https://hollos.dev/blog/adding-dark-mode-to-your-astro-website-with-tailwind/ */
+    }
     <script is:inline>
       function applyTheme(theme) {
         if (theme === "dark") {
@@ -128,5 +121,15 @@ const ogImageAlt = imageAlt || "Brian Douglass' logo";
         });
       };
     </script>
+
+    <Plausible domain={import.meta.env.SITE} plausibleDomain="https://stats.bhdouglass.com" customEvents outboundLinks />
+  </Head>
+
+  <body
+    class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900 flex flex-col justify-between h-full"
+  >
+    <Header />
+    <slot />
+    <Footer />
   </body>
 </html>
