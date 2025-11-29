@@ -1,0 +1,17 @@
+---
+import SupportWrapper from "./SupportWrapper.astro";
+
+export const SPACESHIP_URL = "https://spaceship.sjv.io/4GQqR9";
+---
+
+<SupportWrapper isAffiliate={true}>
+  <p>
+    Looking for a domain name for your next project or website? Check out
+    <a href={SPACESHIP_URL} target="_blank" class="underline">Spaceship</a>! with Spaceship. They have a great domain lookup too where you
+    can search for your desired name in hundreds of different TLDs from ".com" to ".dev" and ".yoga".
+  </p>
+
+  <div class="my-6 max-w-xs mx-auto">
+    <a class="btn btn-primary text-white! w-full sm:w-auto no-underline!" href={SPACESHIP_URL} target="_blank"> Try Spaceship Today! </a>
+  </div>
+</SupportWrapper>
