@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: The Node.js Permission Model
 date: 2023-04-24T20:13:17.000Z
-updatedDate: 2025-10-21T20:22:09.827Z
+updatedDate: 2026-03-07T04:10:47.326Z
 categories:
   - nodejs
   - tutorial
@@ -87,9 +87,23 @@ This is available in [Node.js version 25.0.0](https://nodejs.org/en/blog/release
 
 <RandomSupport />
 
-## Checking for Filesystem Permissions
+## Auditing Permissions Without Enforcement
+
+
+When developing and testing your application's permission requirements, it can be
+helpful to see what permissions are being requested without actually denying access.
+[Node.js v25.8.0](https://nodejs.org/en/blog/release/v25.8.0) introduces the
+[`--permission-audit`](https://nodejs.org/docs/latest/api/cli.html#permission-audit)
+flag for exactly this purpose.
+
+When you use `--permission-audit`, permission checks are still performed, but
+instead of denying access with an `ERR_ACCESS_DENIED` error, Node.js emits a
+warning for each permission violation via the diagnostics channel. This allows
+you to test your permissions or identify the permissions your application needs
 
 <Image src="/images/blog/node-tutorials/id-badges.webp" alt="A bunch of ID badges hanging from lanyards" attrib="Image by macrovector on Freepik" link="https://www.freepik.com/free-vector/id-cards-badges-realistic-set_6168872.htm" />
+
+## Checking for Filesystem Permissions
 
 Now that you can restrict permissions to a given script. How does the script see
 if it has the necessary permissions to proceed?
@@ -124,3 +138,4 @@ see where Node.js will be in the coming releases!
 - [Node.js version 20 release announcement](https://nodejs.org/en/blog/announcements/v20-release-announce)
 - [`process.permission.has()` docs](https://nodejs.org/api/process.html#processpermissionhasscope-reference)
 - [Node.js version 23.5.0 release announcement](https://nodejs.org/en/blog/release/v23.5.0)
+- [Node.js version 25.8.0 release announcement](https://nodejs.org/en/blog/release/v25.8.0)
