@@ -54,9 +54,9 @@
     "astro-capo": "^0.0.1",
     "astro-m2dx": "^0.7.16",
     "astro-og": "^0.3.2",
-    "astro-pagefind": "^1.8.5",
+    "astro-pagefind": "^1.8.6",
     "astro-robots-txt": "^1.0.0",
-    "astro-seo": "^0.8.4",
+    "astro-seo": "^1.1.0",
     "image-size": "^1.2.0",
     "jsonresume-theme-bhdouglass": "^1.0.2",
     "rehype-highlight": "^7.0.2",
@@ -65,6 +65,6 @@
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3",
-    "vue": "^3.5.30"
+    "vue": "^3.5.31"
   }
 }
