@@ -1,5 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content";
+import Anchor from '../../components/Anchor.astro';
+import Image from '../../components/Image.astro';
 
 export type Props = {
   post: CollectionEntry<"blog">;
@@ -23,4 +25,4 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<Content />
+<Content components={{ img: Image, a: Anchor }} />

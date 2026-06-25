@@ -52,7 +52,6 @@
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.2",
     "astro-capo": "^0.0.1",
-    "astro-m2dx": "^0.7.16",
     "astro-og": "^0.3.2",
     "astro-pagefind": "^1.8.6",
     "astro-robots-txt": "^1.0.0",
