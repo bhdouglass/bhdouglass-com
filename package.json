@@ -50,6 +50,8 @@
     "@astrojs/mdx": "^7.0.0",
     "@astrojs/vue": "^7.0.0",
     "@bhdouglass/plausible-astro": "^0.0.1",
+    "@bhdouglass/satteri-auto-imports": "^0.0.1",
+    "@bhdouglass/satteri-toc": "^0.0.1",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.1",
     "astro-capo": "^0.0.1",
