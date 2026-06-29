@@ -1,0 +1,95 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: Astro 7.0 + Sätteri Plugins
+date: 2026-06-29T03:54:14.782Z
+categories:
+  - astro
+image: /images/blog/astro/astro-logo-banner.svg
+imageAlt: Astro's Logo
+description: Astro 7 is here with a Rust rewrite and and some plugins that I wrote
+relatedPosts:
+  - astro-5-0-release
+  - astro-4-0-release
+  - built-with-astro
+---
+
+I always tell myself I'll slow down on the Astro release posts, but then [Astro 7.0](https://astro.build/blog/astro-7/) drops and I'm back at the keyboard. While the release doesn't seem huge, under the hood everything has been vastly improved with a new Rust-based compiler and a Rust-powered Markdown pipeline.
+
+The new Markdown engine is called [Sätteri](https://satteri.bruits.org/). It's fast, it's got great built-in features, and since it has its own plugin API, I got to build a couple of packages for it.
+
+## Table of Contents
+
+## Rust All the Things
+
+Astro 7 moves two of the slowest parts of the build pipeline into Rust: the `.astro` component compiler and the Markdown/MDX processor. The compiler was previously written in Go and has been fully rewritten using [oxc](https://oxc.rs/) for parsing. The Markdown pipeline was previously running on the JavaScript-based [unified](https://unifiedjs.com/) ecosystem (remark, rehype, and all their dependencies). Astro 7 replaces it with Sätteri, a Rust-powered processor built by an Astro core team member.
+
+<NewsletterForm />
+
+
+Sätteri also brings a ton of features built-in that previously required separate remark plugins. GFM (tables, footnotes, strikethrough, task lists), smart punctuation, heading IDs, container directives, math, and more are all available out of the box. You just turn on the features you want in the config.
+
+## Farewell to remark
+
+Upgrading to Astro 7's Sätteri pipeline meant my existing remark plugins no longer worked. I was using two plugins that didn't have Sätteri equivalents: auto-importing components in my MDX files and auto-generating a table of contents.
+
+<RandomSupport />
+
+I could have kept using the unified pipeline (Astro 7 still supports it via `@astrojs/markdown-remark`), but the whole point of upgrading is the speed. Instead, I dove into the [Sätteri plugin API](https://satteri.bruits.org/docs/plugins/) and built what I needed.
+
+### @bhdouglass/satteri-auto-imports
+
+One of my biggest annoyances  with MDX has always been writing the same import statements over and over. Every blog post on this site uses the same components. Previously I had a the [astro-m2dx](https://github.com/astro-m2dx/astro-m2dx) integration injecting them (which it now seems unmaintained). With Sätteri's plugin API, I could cleanly inject the actual `import` declarations into the MDX AST.
+
+The plugin takes an array of `{ name, from }` objects and inserts the corresponding ESM import statements before the first content node in every `.mdx` file.
+
+```js
+import { satteri } from "@astrojs/markdown-satteri";
+import satteriAutoImports from "@bhdouglass/satteri-auto-imports";
+
+satteri({
+  mdastPlugins: [
+    satteriAutoImports([
+      { name: "MyComponent", from: "../components/MyComponent.astro" },
+    ]),
+  ],
+});
+```
+
+It's published as [`@bhdouglass/satteri-auto-imports`](https://www.npmjs.com/package/@bhdouglass/satteri-auto-imports) if anyone else wants to use it.
+
+### @bhdouglass/satteri-toc
+
+You know those "Table of Contents" headings you keep seeing in my posts? That's this plugin. Whenever it encounters a heading with the text "Table of Contents", it replaces it with an unordered list of links to every heading that follows in the document. Previously this was [remark-toc](https://github.com/remarkjs/remark-toc).
+
+```js
+import { satteri } from "@astrojs/markdown-satteri";
+import satteriToc from "@bhdouglass/satteri-toc";
+
+satteri({
+  mdastPlugins: [satteriToc()],
+});
+```
+
+Nothing to configure, just drop it in your plugins array. Published as [`@bhdouglass/satteri-toc`](https://www.npmjs.com/package/@bhdouglass/satteri-toc).
+
+<Ad />
+
+## Other Changes Worth Mentioning
+
+Astro 7 also brings [route caching](https://docs.astro.build/en/guides/caching/) out of experimental, with CDN cache providers for Netlify, Vercel, and Cloudflare. [Advanced Routing](https://docs.astro.build/en/guides/advanced-routing/) via `src/fetch.ts` gives you full control over the request pipeline. And there's background dev server support and JSON logging for AI-assisted development.
+
+## Upgrading
+
+The upgrade was smooth for me. If you're coming from Astro 6, the main things to watch out for are the [compiler changes](https://docs.astro.build/en/guides/upgrade-to/v7/). The new Rust compiler is stricter - it won't silently fix unclosed tags or weird HTML like the old Go compiler did. And whitespace between elements now follows JSX conventions.
+
+Just run `npx @astrojs/upgrade` and you're most of the way there. If you're using remark or rehype plugins, you'll either need to convert them to Sätteri plugins or keep the old unified pipeline with `@astrojs/markdown-remark`.
+
+<Ad />
+
+## Further Reading
+
+- [Astro 7.0 Release Post](https://astro.build/blog/astro-7/)
+- [Astro 7.0 Upgrade Guide](https://docs.astro.build/en/guides/upgrade-to/v7/)
+- [Sätteri Documentation](https://satteri.bruits.org/)
+- [@bhdouglass/satteri-auto-imports on npm](https://www.npmjs.com/package/@bhdouglass/satteri-auto-imports)
+- [@bhdouglass/satteri-toc on npm](https://www.npmjs.com/package/@bhdouglass/satteri-toc)
